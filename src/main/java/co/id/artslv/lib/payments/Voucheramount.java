@@ -1,0 +1,171 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package co.id.artslv.lib.payments;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
+import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
+import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
+import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
+import java.io.Serializable;
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Transient;
+import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Type;
+
+/**
+ *
+ * @author drikSulhan
+ */
+@JsonIgnoreProperties(ignoreUnknown = true)
+@Entity
+@Table(name = "KAIRTS_T_VOUCHERAMOUNT")
+public class Voucheramount implements Serializable {
+
+    @Id
+    @GeneratedValue(generator = "uuid")
+    @GenericGenerator(name = "uuid", strategy = "uuid2")
+    @Column(name = "C_VOUCHERAMOUNT_ID")
+    private String id;
+
+    @Column(name = "C_VOUCHERAMOUNT_VALUE")
+    private BigDecimal value;
+    @Column(name = "C_VOUCHERAMOUNT_VALUETYPE")
+    private String valuetype;
+    @Column(name = "C_VOUCHERTYPE_ID")
+    private String vouchertypeid;
+//    @Temporal(TemporalType.TIMESTAMP)
+    @JsonSerialize(using = LocalDateSerializer.class)
+    @JsonDeserialize(using = LocalDateDeserializer.class)
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    @Type(type = "org.hibernate.type.LocalDateType")
+    @Column(name = "C_VOUCHERAMOUNT_STARTDATE")
+    private LocalDate startdate;
+//    @Temporal(TemporalType.TIMESTAMP)
+    @JsonSerialize(using = LocalDateSerializer.class)
+    @JsonDeserialize(using = LocalDateDeserializer.class)
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    @Type(type = "org.hibernate.type.LocalDateType")
+    @Column(name = "C_VOUCHERAMOUNT_ENDDATE")
+    private LocalDate enddate;
+    @Column(name = "C_VOUCHERAMOUNT_STATUS")
+    private String status;
+    @Column(name = "C_VOUCHERAMOUNT_DOMAIN")
+    private String domain;
+    @Column(name = "C_VOUCHERAMOUNT_MODIFIEDBY")
+    private String modifiedby;
+//    @Temporal(TemporalType.TIMESTAMP)
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @Type(type = "org.hibernate.type.LocalDateTimeType")
+    @Column(name = "C_VOUCHERAMOUNT_MODIFIEDON")
+    private LocalDateTime modifiedon;
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    @Transient
+    Vouchertype vouchertype;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public BigDecimal getValue() {
+        return value;
+    }
+
+    public void setValue(BigDecimal value) {
+        this.value = value;
+    }
+
+    public String getValuetype() {
+        return valuetype;
+    }
+
+    public void setValuetype(String valuetype) {
+        this.valuetype = valuetype;
+    }
+
+    public String getVouchertypeid() {
+        return vouchertypeid;
+    }
+
+    public void setVouchertypeid(String vouchertypeid) {
+        this.vouchertypeid = vouchertypeid;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getDomain() {
+        return domain;
+    }
+
+    public void setDomain(String domain) {
+        this.domain = domain;
+    }
+
+    public String getModifiedby() {
+        return modifiedby;
+    }
+
+    public void setModifiedby(String modifiedby) {
+        this.modifiedby = modifiedby;
+    }
+
+    public Vouchertype getVouchertype() {
+        return vouchertype;
+    }
+
+    public void setVouchertype(Vouchertype vouchertype) {
+        this.vouchertype = vouchertype;
+    }
+
+    public LocalDate getStartdate() {
+        return startdate;
+    }
+
+    public void setStartdate(LocalDate startdate) {
+        this.startdate = startdate;
+    }
+
+    public LocalDate getEnddate() {
+        return enddate;
+    }
+
+    public void setEnddate(LocalDate enddate) {
+        this.enddate = enddate;
+    }
+
+    public LocalDateTime getModifiedon() {
+        return modifiedon;
+    }
+
+    public void setModifiedon(LocalDateTime modifiedon) {
+        this.modifiedon = modifiedon;
+    }
+
+}

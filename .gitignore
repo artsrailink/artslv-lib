@@ -1,0 +1,10 @@
+#RTSNG PAYMENT IGNORE
+.mvn
+mvnw
+mvnw.cmd
+.idea
+rtsng-lib.iml
+
+#maven ignore
+target
+
