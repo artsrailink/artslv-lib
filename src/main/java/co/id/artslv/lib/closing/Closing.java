@@ -3,7 +3,6 @@
  */
 package co.id.artslv.lib.closing;
 
-import java.io.Serializable;
 import java.math.BigInteger;
 import java.util.Date;
 import javax.persistence.Basic;
@@ -14,96 +13,94 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.persistence.UniqueConstraint;
 import org.hibernate.annotations.GenericGenerator;
 
 /**
  * @author root
  */
 @Entity
-@Table(name = "arts_t_closing", uniqueConstraints = {
-    @UniqueConstraint(columnNames = {"c_closing_docnum"})})
-public class Closing implements Serializable {
+@Table(name = "arts_t_closing")
+public class Closing {
 
-    @Column(name = "c_closing_id", table = "arts_t_closing", nullable = false, length = 36)
+    @Column(name = "c_closing_id")
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_closing_date", table = "arts_t_closing", nullable = false)
+    @Column(name = "c_closing_date")
     @Basic
     @Temporal(TemporalType.TIMESTAMP)
     private Date cClosingDate;
 
-    @Column(name = "c_closing_docnum", table = "arts_t_closing", nullable = false, length = 16)
+    @Column(name = "c_closing_docnum")
     @Basic
     private String cClosingDocnum;
 
-    @Column(name = "c_closing_totamount", table = "arts_t_closing", nullable = false)
+    @Column(name = "c_closing_totamount")
     @Basic
     private BigInteger cClosingTotamount;
 
-    @Column(name = "c_closing_a8date", table = "arts_t_closing", nullable = false)
+    @Column(name = "c_closing_a8date")
     @Basic
     @Temporal(TemporalType.TIMESTAMP)
     private Date cClosingA8date;
 
-    @Column(name = "c_closing_a8num", table = "arts_t_closing", nullable = false, length = 16)
+    @Column(name = "c_closing_a8num")
     @Basic
     private String cClosingA8num;
 
-    @Column(name = "c_closing_modifiedon", table = "arts_t_closing", nullable = false)
+    @Column(name = "c_closing_modifiedon")
     @Basic
     @Temporal(TemporalType.TIMESTAMP)
     private Date cClosingModifiedon;
 
-    @Column(name = "c_shift_id", table = "arts_t_closing", nullable = false, length = 36)
+    @Column(name = "c_shift_id")
     @Basic
     private String cShiftId;
 
-    @Column(name = "c_closing_modifiedby", table = "arts_t_closing", nullable = false, length = 36)
+    @Column(name = "c_closing_modifiedby")
     @Basic
     private String cClosingModifiedby;
 
-    @Column(name = "c_closing_status", table = "arts_t_closing", nullable = false)
+    @Column(name = "c_closing_status")
     @Basic
     private Character cClosingStatus;
 
-    @Column(name = "c_closing_domain", table = "arts_t_closing", nullable = false, length = 36)
+    @Column(name = "c_closing_domain")
     @Basic
     private String cClosingDomain;
 
-    @Column(name = "c_closing_stasiuncode", table = "arts_t_closing", length = 10)
+    @Column(name = "c_closing_stasiuncode")
     @Basic
     private String cClosingStasiuncode;
 
-    @Column(name = "c_closing_pic", table = "arts_t_closing", length = 100)
+    @Column(name = "c_closing_pic")
     @Basic
     private String cClosingPic;
 
-    @Column(name = "c_closing_areacode", table = "arts_t_closing", length = 50)
+    @Column(name = "c_closing_areacode")
     @Basic
     private String cClosingAreacode;
 
-    @Column(name = "c_closing_stasiunpc", table = "arts_t_closing", length = 15)
+    @Column(name = "c_closing_stasiunpc")
     @Basic
     private String cClosingStasiunpc;
 
-    @Column(name = "c_closing_docnumsap", table = "arts_t_closing", length = 12)
+    @Column(name = "c_closing_docnumsap")
     @Basic
     private String cClosingDocnumsap;
 
-    @Column(name = "c_closing_postingdate", table = "arts_t_closing")
+    @Column(name = "c_closing_postingdate")
     @Basic
     @Temporal(TemporalType.TIMESTAMP)
     private Date cClosingPostingdate;
 
-    @Column(name = "c_closing_createdby", table = "arts_t_closing", nullable = false, length = 36)
+    @Column(name = "c_closing_createdby")
     @Basic
     private String cClosingCreatedby;
 
-    @Column(name = "c_closing_createdon", table = "arts_t_closing", nullable = false)
+    @Column(name = "c_closing_createdon")
     @Basic
     @Temporal(TemporalType.TIMESTAMP)
     private Date cClosingCreatedon;

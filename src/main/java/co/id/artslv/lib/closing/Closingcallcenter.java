@@ -3,7 +3,6 @@
  */
 package co.id.artslv.lib.closing;
 
-import java.io.Serializable;
 import java.math.BigInteger;
 import java.util.Date;
 import javax.persistence.Basic;
@@ -21,9 +20,9 @@ import org.hibernate.annotations.GenericGenerator;
  */
 @Entity
 @Table(name = "arts_t_closingcallcenter")
-public class Closingcallcenter implements Serializable {
+public class Closingcallcenter {
 
-    @Column(name = "c_closingcc_id", table = "arts_t_closingcallcenter", nullable = false, length = 36)
+    @Column(name = "c_closingcc_id")
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
