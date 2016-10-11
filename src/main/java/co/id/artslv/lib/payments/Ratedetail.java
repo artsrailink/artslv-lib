@@ -3,7 +3,6 @@
  */
 package co.id.artslv.lib.payments;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 import javax.persistence.Basic;
@@ -14,18 +13,16 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.persistence.UniqueConstraint;
 import org.hibernate.annotations.GenericGenerator;
 
 /**
  * @author root
  */
 @Entity
-@Table(name = "arts_t_ratedetail", uniqueConstraints = {
-    @UniqueConstraint(columnNames = {"c_rate_id", "c_ratetype_id"})})
-public class Ratedetail implements Serializable {
+@Table(name = "arts_t_ratedetail")
+public class Ratedetail {
 
-    @Column(name = "c_ratedetail_id", table = "arts_t_ratedetail", nullable = false, length = 36)
+    @Column(name = "c_ratedetail_id")
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")

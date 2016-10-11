@@ -20,11 +20,10 @@ import org.hibernate.annotations.GenericGenerator;
  * @author root
  */
 @Entity
-@Table(name = "arts_t_discountunit", uniqueConstraints = {
-    @UniqueConstraint(columnNames = {"c_discount_id", "c_unit_id"})})
-public class Discountunit implements Serializable {
+@Table(name = "arts_t_discountunit")
+public class Discountunit  {
 
-    @Column(name = "c_discountunit_id", table = "arts_t_discountunit", nullable = false, length = 36)
+    @Column(name = "c_discountunit_id")
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")

@@ -3,7 +3,6 @@
  */
 package co.id.artslv.lib.trains;
 
-import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -13,16 +12,14 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.persistence.UniqueConstraint;
 import org.hibernate.annotations.GenericGenerator;
 
 /**
  * @author root
  */
 @Entity
-@Table(name = "arts_t_trainmiles", uniqueConstraints = {
-    @UniqueConstraint(columnNames = {"c_trainmiles_name", "c_trainmiles_domain"})})
-public class Trainmiles implements Serializable {
+@Table(name = "arts_t_trainmiles")
+public class Trainmiles {
 
     @Column(name = "c_trainmiles_id", table = "arts_t_trainmiles", nullable = false, length = 36)
     @Id

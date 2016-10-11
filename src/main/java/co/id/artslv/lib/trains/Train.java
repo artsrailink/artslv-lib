@@ -20,9 +20,9 @@ import org.hibernate.annotations.GenericGenerator;
  */
 @Entity
 @Table(name = "arts_t_train")
-public class Train implements Serializable {
+public class Train {
 
-    @Column(name = "c_train_id", table = "arts_t_train", nullable = false, length = 36)
+    @Column(name = "c_train_id")
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")

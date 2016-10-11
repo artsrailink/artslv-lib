@@ -3,7 +3,6 @@
  */
 package co.id.artslv.lib.members;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 import javax.persistence.Basic;
@@ -21,9 +20,9 @@ import org.hibernate.annotations.GenericGenerator;
  */
 @Entity
 @Table(name = "arts_t_memshiptrans")
-public class Memshiptrans implements Serializable {
+public class Memshiptrans {
 
-    @Column(name = "c_memshiptrans_id", table = "arts_t_memshiptrans", nullable = false, length = 36)
+    @Column(name = "c_memshiptrans_id")
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")

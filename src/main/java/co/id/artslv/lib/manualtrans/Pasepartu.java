@@ -21,9 +21,9 @@ import org.hibernate.annotations.GenericGenerator;
  */
 @Entity
 @Table(name = "arts_t_pasepartu")
-public class Pasepartu implements Serializable {
+public class Pasepartu  {
 
-    @Column(name = "c_pasepartu_id", table = "arts_t_pasepartu", nullable = false, length = 36)
+    @Column(name = "c_pasepartu_id")
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")

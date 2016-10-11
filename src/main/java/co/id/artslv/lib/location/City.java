@@ -20,11 +20,10 @@ import org.hibernate.annotations.GenericGenerator;
  * @author root
  */
 @Entity
-@Table(name = "arts_t_city", uniqueConstraints = {
-    @UniqueConstraint(columnNames = {"c_city_name", "c_province_id", "c_city_domain"})})
+@Table(name = "arts_t_city")
 public class City implements Serializable {
 
-    @Column(name = "c_city_id", table = "arts_t_city", nullable = false, length = 36)
+    @Column(name = "c_city_id")
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")

@@ -3,7 +3,6 @@
  */
 package co.id.artslv.lib.responses;
 
-import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -20,9 +19,9 @@ import org.hibernate.annotations.GenericGenerator;
  */
 @Entity
 @Table(name = "arts_t_paramrep")
-public class Paramrep implements Serializable {
+public class Paramrep {
 
-    @Column(name = "c_paramrep_id", table = "arts_t_paramrep", nullable = false, length = 36)
+    @Column(name = "c_paramrep_id")
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")

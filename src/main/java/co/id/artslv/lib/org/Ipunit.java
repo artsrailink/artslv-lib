@@ -3,7 +3,6 @@
  */
 package co.id.artslv.lib.org;
 
-import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -20,9 +19,9 @@ import org.hibernate.annotations.GenericGenerator;
  */
 @Entity
 @Table(name = "arts_t_ipunit")
-public class Ipunit implements Serializable {
+public class Ipunit {
 
-    @Column(name = "c_ipunit_id", table = "arts_t_ipunit", nullable = false, length = 36)
+    @Column(name = "c_ipunit_id")
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")

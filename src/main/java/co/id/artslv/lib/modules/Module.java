@@ -13,18 +13,16 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.persistence.UniqueConstraint;
 import org.hibernate.annotations.GenericGenerator;
 
 /**
  * @author root
  */
 @Entity
-@Table(name = "arts_t_module", uniqueConstraints = {
-    @UniqueConstraint(columnNames = {"c_module_name", "c_module_link", "c_module_seq"})})
+@Table(name = "arts_t_module")
 public class Module implements Serializable {
 
-    @Column(name = "c_module_id", table = "arts_t_module", nullable = false, length = 36)
+    @Column(name = "c_module_id")
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")

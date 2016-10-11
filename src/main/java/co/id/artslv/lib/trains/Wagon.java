@@ -3,7 +3,6 @@
  */
 package co.id.artslv.lib.trains;
 
-import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -13,18 +12,16 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.persistence.UniqueConstraint;
 import org.hibernate.annotations.GenericGenerator;
 
 /**
  * @author root
  */
 @Entity
-@Table(name = "arts_t_wagon", uniqueConstraints = {
-    @UniqueConstraint(columnNames = {"c_wagon_name"})})
-public class Wagon implements Serializable {
+@Table(name = "arts_t_wagon")
+public class Wagon {
 
-    @Column(name = "c_wagon_id", table = "arts_t_wagon", nullable = false, length = 36)
+    @Column(name = "c_wagon_id")
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")

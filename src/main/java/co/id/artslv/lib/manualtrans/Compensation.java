@@ -3,7 +3,6 @@
  */
 package co.id.artslv.lib.manualtrans;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 import javax.persistence.Basic;
@@ -21,9 +20,9 @@ import org.hibernate.annotations.GenericGenerator;
  */
 @Entity
 @Table(name = "arts_t_compensation")
-public class Compensation implements Serializable {
+public class Compensation {
 
-    @Column(name = "c_compensation_id", table = "arts_t_compensation", nullable = false, length = 36)
+    @Column(name = "c_compensation_id")
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")

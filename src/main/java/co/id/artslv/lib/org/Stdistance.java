@@ -3,7 +3,6 @@
  */
 package co.id.artslv.lib.org;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 import javax.persistence.Basic;
@@ -14,18 +13,16 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.persistence.UniqueConstraint;
 import org.hibernate.annotations.GenericGenerator;
 
 /**
  * @author root
  */
 @Entity
-@Table(name = "arts_t_stdistance", uniqueConstraints = {
-    @UniqueConstraint(columnNames = {"c_stasiunid_from", "c_stasiunid_to"})})
-public class Stdistance implements Serializable {
+@Table(name = "arts_t_stdistance")
+public class Stdistance {
 
-    @Column(name = "c_stdistance_id", table = "arts_t_stdistance", nullable = false, length = 36)
+    @Column(name = "c_stdistance_id")
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")

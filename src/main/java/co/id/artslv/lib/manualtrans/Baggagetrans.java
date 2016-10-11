@@ -3,7 +3,6 @@
  */
 package co.id.artslv.lib.manualtrans;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.Date;
@@ -22,9 +21,9 @@ import org.hibernate.annotations.GenericGenerator;
  */
 @Entity
 @Table(name = "arts_t_baggagetrans")
-public class Baggagetrans implements Serializable {
+public class Baggagetrans {
 
-    @Column(name = "c_baggagetrans_id", table = "arts_t_baggagetrans", nullable = false, length = 36)
+    @Column(name = "c_baggagetrans_id")
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")

@@ -3,7 +3,6 @@
  */
 package co.id.artslv.lib.sap;
 
-import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -13,18 +12,16 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.persistence.UniqueConstraint;
 import org.hibernate.annotations.GenericGenerator;
 
 /**
  * @author root
  */
 @Entity
-@Table(name = "arts_t_sapcoa", uniqueConstraints = {
-    @UniqueConstraint(columnNames = {"c_sapcoa_account"})})
-public class Sapcoa implements Serializable {
+@Table(name = "arts_t_sapcoa")
+public class Sapcoa {
 
-    @Column(name = "c_sapcoa_id", table = "arts_t_sapcoa", nullable = false, length = 36)
+    @Column(name = "c_sapcoa_id")
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")

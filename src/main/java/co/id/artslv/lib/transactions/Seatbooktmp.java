@@ -3,7 +3,6 @@
  */
 package co.id.artslv.lib.transactions;
 
-import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -13,18 +12,16 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.persistence.UniqueConstraint;
 import org.hibernate.annotations.GenericGenerator;
 
 /**
  * @author root
  */
 @Entity
-@Table(name = "arts_t_seatbooktmp", uniqueConstraints = {
-    @UniqueConstraint(columnNames = {"c_trip_id", "c_wagondet_id", "c_stamformdet_id", "c_schedule_id"})})
-public class Seatbooktmp implements Serializable {
+@Table(name = "arts_t_seatbooktmp")
+public class Seatbooktmp {
 
-    @Column(name = "c_seatbooktmp_id", table = "arts_t_seatbooktmp", nullable = false, length = 36)
+    @Column(name = "c_seatbooktmp_id")
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")

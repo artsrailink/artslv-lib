@@ -3,7 +3,6 @@
  */
 package users;
 
-import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -20,9 +19,9 @@ import org.hibernate.annotations.GenericGenerator;
  */
 @Entity
 @Table(name = "arts_t_user")
-public class User implements Serializable {
+public class User {
 
-    @Column(name = "c_user_id", table = "arts_t_user", nullable = false, length = 36)
+    @Column(name = "c_user_id")
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")

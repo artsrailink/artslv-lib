@@ -3,7 +3,6 @@
  */
 package co.id.artslv.lib.schedule;
 
-import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -13,18 +12,16 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.persistence.UniqueConstraint;
 import org.hibernate.annotations.GenericGenerator;
 
 /**
  * @author root
  */
 @Entity
-@Table(name = "arts_t_allocdetsubcl", uniqueConstraints = {
-    @UniqueConstraint(columnNames = {"c_subclass_id", "c_allocdet_id", "c_stop_id"})})
-public class Allocdetsubcl implements Serializable {
+@Table(name = "arts_t_allocdetsubcl")
+public class Allocdetsubcl {
 
-    @Column(name = "c_adsc_id", table = "arts_t_allocdetsubcl", nullable = false, length = 36)
+    @Column(name = "c_adsc_id")
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")

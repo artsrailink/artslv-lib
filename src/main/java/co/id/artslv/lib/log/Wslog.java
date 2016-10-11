@@ -21,9 +21,9 @@ import org.hibernate.annotations.GenericGenerator;
  */
 @Entity
 @Table(name = "arts_t_wslog")
-public class Wslog implements Serializable {
+public class Wslog {
 
-    @Column(name = "c_wslog_id", table = "arts_t_wslog", nullable = false, length = 36)
+    @Column(name = "c_wslog_id")
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")

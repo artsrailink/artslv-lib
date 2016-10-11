@@ -21,7 +21,7 @@ import org.hibernate.annotations.GenericGenerator;
  */
 @Entity
 @Table(name = "arts_t_suplisi")
-public class Suplisi implements Serializable {
+public class Suplisi {
 
     @Column(name = "c_suplisi_id", table = "arts_t_suplisi", nullable = false, length = 36)
     @Id

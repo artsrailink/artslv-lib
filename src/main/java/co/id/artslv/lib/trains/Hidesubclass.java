@@ -20,9 +20,9 @@ import org.hibernate.annotations.GenericGenerator;
  */
 @Entity
 @Table(name = "arts_t_hidesubclass")
-public class Hidesubclass implements Serializable {
+public class Hidesubclass {
 
-    @Column(name = "c_hidesubclass_id", table = "arts_t_hidesubclass", nullable = false, length = 36)
+    @Column(name = "c_hidesubclass_id")
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")

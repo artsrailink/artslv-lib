@@ -3,7 +3,6 @@
  */
 package co.id.artslv.lib.messages;
 
-import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -21,9 +20,9 @@ import org.hibernate.annotations.GenericGenerator;
  */
 @Entity
 @Table(name = "arts_t_msgattc")
-public class Msgattc implements Serializable {
+public class Msgattc {
 
-    @Column(name = "c_msgattc_id", table = "arts_t_msgattc", nullable = false, length = 36)
+    @Column(name = "c_msgattc_id")
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")

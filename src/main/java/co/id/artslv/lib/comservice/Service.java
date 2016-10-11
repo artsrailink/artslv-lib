@@ -14,18 +14,16 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.persistence.UniqueConstraint;
 import org.hibernate.annotations.GenericGenerator;
 
 /**
  * @author root
  */
 @Entity
-@Table(name = "arts_t_service", uniqueConstraints = {
-    @UniqueConstraint(columnNames = {"c_service_name"})})
+@Table(name = "arts_t_service")
 public class Service implements Serializable {
 
-    @Column(name = "c_service_id", table = "arts_t_service", nullable = false, length = 36)
+    @Column(name = "c_service_id")
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")

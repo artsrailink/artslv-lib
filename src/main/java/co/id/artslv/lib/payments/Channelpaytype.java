@@ -20,11 +20,10 @@ import org.hibernate.annotations.GenericGenerator;
  * @author root
  */
 @Entity
-@Table(name = "arts_t_channelpaytype", uniqueConstraints = {
-    @UniqueConstraint(columnNames = {"c_channel_id", "c_paytype_id"})})
-public class Channelpaytype implements Serializable {
+@Table(name = "arts_t_channelpaytype")
+public class Channelpaytype {
 
-    @Column(name = "c_channelpaytype_id", table = "arts_t_channelpaytype", nullable = false, length = 36)
+    @Column(name = "c_channelpaytype_id")
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")

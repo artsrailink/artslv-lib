@@ -3,7 +3,6 @@
  */
 package co.id.artslv.lib.schedule;
 
-import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -20,9 +19,9 @@ import org.hibernate.annotations.GenericGenerator;
  */
 @Entity
 @Table(name = "arts_t_stamformdet")
-public class Stamformdet implements Serializable {
+public class Stamformdet {
 
-    @Column(name = "c_stamformdet_id", table = "arts_t_stamformdet", nullable = false, length = 36)
+    @Column(name = "c_stamformdet_id")
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
