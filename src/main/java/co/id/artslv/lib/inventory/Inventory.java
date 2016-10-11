@@ -1,6 +1,7 @@
 package co.id.artslv.lib.inventory;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
@@ -17,6 +18,7 @@ import java.time.LocalDateTime;
 /**
  * Created by root on 07/10/16.
  */
+@JsonInclude(JsonInclude.Include.NON_NULL)
 @Entity
 @Table(name = "arts_t_inventory")
 public class Inventory {
@@ -110,8 +112,6 @@ public class Inventory {
     @Column(name="c_transaction_bookcode")
     private String bookcode;
 
-    @Column(name="c_transactiondet_releaseon")
-    private LocalDate releaseon;
 
     public String getId() {
         return id;
@@ -313,11 +313,4 @@ public class Inventory {
         this.bookcode = bookcode;
     }
 
-    public LocalDate getReleaseon() {
-        return releaseon;
-    }
-
-    public void setReleaseon(LocalDate releaseon) {
-        this.releaseon = releaseon;
-    }
 }
