@@ -1,4 +1,4 @@
-package co.id.artslv.lib.messages;
+package co.id.artslv.lib.users;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
@@ -11,7 +11,6 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Lob;
 import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
@@ -20,52 +19,61 @@ import org.hibernate.annotations.Type;
  * @author root
  */
 @Entity
-@Table(name = "arts_t_announcement")
-public class Announcement {
+@Table(name = "arts_t_shift")
+public class Shift {
 
-    @Column(name = "c_announcement_id")
+    @Column(name = "c_shift_id")
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_announcement_date", table = "arts_t_announcement", nullable = false)
+    @Column(name = "c_shift_name")
+    private String Name;
+
+    @Column(name = "c_shift_openon", table = "arts_t_shift", nullable = false)
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
-    private LocalDate Date;
+    private LocalDate Openon;
 
-    @Column(name = "c_announcement_title", table = "arts_t_announcement", nullable = false, length = 500)
-    private String Title;
+    @Column(name = "c_shift_closedon", table = "arts_t_shift")
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    @Type(type = "org.hibernate.type.LocalDateType")
+    private LocalDate Closedon;
 
-    @Column(name = "c_announcement_content", table = "arts_t_announcement", length = 2147483647)
-    @Lob
-    private String Content;
+    @Column(name = "c_shift_docnum", table = "arts_t_shift", length = 50)
+    private String Docnum;
 
-    @Column(name = "c_user_id", table = "arts_t_announcement", nullable = false, length = 36)
-    private String UserId;
-
-    @Column(name = "c_announcement_status", table = "arts_t_announcement", nullable = false)
+    @Column(name = "c_shift_status", table = "arts_t_shift", nullable = false)
     private Character Status;
 
-    @Column(name = "c_announcement_domain", table = "arts_t_announcement", nullable = false, length = 36)
+    @Column(name = "c_shift_domain", table = "arts_t_shift", nullable = false, length = 36)
     private String Domain;
 
-    @Column(name = "c_announcement_modifiedby", table = "arts_t_announcement", nullable = false, length = 36)
+    @Column(name = "c_shift_modifiedby", table = "arts_t_shift", nullable = false, length = 36)
     private String Modifiedby;
 
-    @Column(name = "c_announcement_modifiedon", table = "arts_t_announcement", nullable = false)
+    @Column(name = "c_shift_modifiedon", table = "arts_t_shift", nullable = false)
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_announcement_createdby", table = "arts_t_announcement", nullable = false, length = 36)
+    @Column(name = "c_user_id", table = "arts_t_shift", nullable = false, length = 36)
+    private String UserId;
+
+    @Column(name = "c_unit_id", table = "arts_t_shift", nullable = false, length = 36)
+    private String UnitId;
+
+    @Column(name = "c_shift_createdby", table = "arts_t_shift", nullable = false, length = 36)
     private String Createdby;
 
-    @Column(name = "c_announcement_createdon", table = "arts_t_announcement", nullable = false)
+    @Column(name = "c_shift_createdon", table = "arts_t_shift", nullable = false)
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
@@ -80,36 +88,36 @@ public class Announcement {
         this.id = id;
     }
 
-    public LocalDate getDate() {
-        return Date;
+    public String getName() {
+        return Name;
     }
 
-    public void setDate(LocalDate Date) {
-        this.Date = Date;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
-    public String getTitle() {
-        return Title;
+    public LocalDate getOpenon() {
+        return Openon;
     }
 
-    public void setTitle(String Title) {
-        this.Title = Title;
+    public void setOpenon(LocalDate Openon) {
+        this.Openon = Openon;
     }
 
-    public String getContent() {
-        return Content;
+    public LocalDate getClosedon() {
+        return Closedon;
     }
 
-    public void setContent(String Content) {
-        this.Content = Content;
+    public void setClosedon(LocalDate Closedon) {
+        this.Closedon = Closedon;
     }
 
-    public String getUserId() {
-        return UserId;
+    public String getDocnum() {
+        return Docnum;
     }
 
-    public void setUserId(String UserId) {
-        this.UserId = UserId;
+    public void setDocnum(String Docnum) {
+        this.Docnum = Docnum;
     }
 
     public Character getStatus() {
@@ -142,6 +150,22 @@ public class Announcement {
 
     public void setModifiedon(LocalDateTime Modifiedon) {
         this.Modifiedon = Modifiedon;
+    }
+
+    public String getUserId() {
+        return UserId;
+    }
+
+    public void setUserId(String UserId) {
+        this.UserId = UserId;
+    }
+
+    public String getUnitId() {
+        return UnitId;
+    }
+
+    public void setUnitId(String UnitId) {
+        this.UnitId = UnitId;
     }
 
     public String getCreatedby() {

@@ -96,7 +96,7 @@ public class Allocation {
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
-    private String modifiedon;
+    private LocalDateTime modifiedon;
 
     @Column(name="c_allocation_maxsell")
     private int maxsells;
@@ -264,11 +264,11 @@ public class Allocation {
         this.modifiedby = modifiedby;
     }
 
-    public String getModifiedon() {
+    public LocalDateTime getModifiedon() {
         return modifiedon;
     }
 
-    public void setModifiedon(String modifiedon) {
+    public void setModifiedon(LocalDateTime modifiedon) {
         this.modifiedon = modifiedon;
     }
 

@@ -1,4 +1,4 @@
-package co.id.artslv.lib.messages;
+package co.id.artslv.lib.users;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
@@ -11,7 +11,6 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Lob;
 import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
@@ -20,52 +19,64 @@ import org.hibernate.annotations.Type;
  * @author root
  */
 @Entity
-@Table(name = "arts_t_announcement")
-public class Announcement {
+@Table(name = "arts_t_usersession")
+public class Usersession {
 
-    @Column(name = "c_announcement_id")
+    @Column(name = "c_usersession_id")
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_announcement_date", table = "arts_t_announcement", nullable = false)
+    @Column(name = "c_usersession_ip")
+    private String Ip;
+
+    @Column(name = "c_usersession_app")
+    private String App;
+
+    @Column(name = "c_usersession_loginon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
-    private LocalDate Date;
+    private LocalDate Loginon;
 
-    @Column(name = "c_announcement_title", table = "arts_t_announcement", nullable = false, length = 500)
-    private String Title;
+    @Column(name = "c_usersession_logouton")
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    @Type(type = "org.hibernate.type.LocalDateType")
+    private LocalDate Logouton;
 
-    @Column(name = "c_announcement_content", table = "arts_t_announcement", length = 2147483647)
-    @Lob
-    private String Content;
+    @Column(name = "c_usersession_note")
+    private String Note;
 
-    @Column(name = "c_user_id", table = "arts_t_announcement", nullable = false, length = 36)
-    private String UserId;
-
-    @Column(name = "c_announcement_status", table = "arts_t_announcement", nullable = false)
+    @Column(name = "c_usersession_status")
     private Character Status;
 
-    @Column(name = "c_announcement_domain", table = "arts_t_announcement", nullable = false, length = 36)
+    @Column(name = "c_usersession_domain")
     private String Domain;
 
-    @Column(name = "c_announcement_modifiedby", table = "arts_t_announcement", nullable = false, length = 36)
+    @Column(name = "c_usersession_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_announcement_modifiedon", table = "arts_t_announcement", nullable = false)
+    @Column(name = "c_user_id")
+    private String UserId;
+
+    @Column(name = "c_unit_id")
+    private String UnitId;
+
+    @Column(name = "c_usersession_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_announcement_createdby", table = "arts_t_announcement", nullable = false, length = 36)
+    @Column(name = "c_usersession_createdby")
     private String Createdby;
 
-    @Column(name = "c_announcement_createdon", table = "arts_t_announcement", nullable = false)
+    @Column(name = "c_usersession_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
@@ -80,36 +91,44 @@ public class Announcement {
         this.id = id;
     }
 
-    public LocalDate getDate() {
-        return Date;
+    public String getIp() {
+        return Ip;
     }
 
-    public void setDate(LocalDate Date) {
-        this.Date = Date;
+    public void setIp(String Ip) {
+        this.Ip = Ip;
     }
 
-    public String getTitle() {
-        return Title;
+    public String getApp() {
+        return App;
     }
 
-    public void setTitle(String Title) {
-        this.Title = Title;
+    public void setApp(String App) {
+        this.App = App;
     }
 
-    public String getContent() {
-        return Content;
+    public LocalDate getLoginon() {
+        return Loginon;
     }
 
-    public void setContent(String Content) {
-        this.Content = Content;
+    public void setLoginon(LocalDate Loginon) {
+        this.Loginon = Loginon;
     }
 
-    public String getUserId() {
-        return UserId;
+    public LocalDate getLogouton() {
+        return Logouton;
     }
 
-    public void setUserId(String UserId) {
-        this.UserId = UserId;
+    public void setLogouton(LocalDate Logouton) {
+        this.Logouton = Logouton;
+    }
+
+    public String getNote() {
+        return Note;
+    }
+
+    public void setNote(String Note) {
+        this.Note = Note;
     }
 
     public Character getStatus() {
@@ -134,6 +153,22 @@ public class Announcement {
 
     public void setModifiedby(String Modifiedby) {
         this.Modifiedby = Modifiedby;
+    }
+
+    public String getUserId() {
+        return UserId;
+    }
+
+    public void setUserId(String UserId) {
+        this.UserId = UserId;
+    }
+
+    public String getUnitId() {
+        return UnitId;
+    }
+
+    public void setUnitId(String UnitId) {
+        this.UnitId = UnitId;
     }
 
     public LocalDateTime getModifiedon() {
