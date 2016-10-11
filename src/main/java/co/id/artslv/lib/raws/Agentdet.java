@@ -3,111 +3,98 @@
  */
 package co.id.artslv.lib.raws;
 
-import java.io.Serializable;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
+import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 import java.math.BigDecimal;
-import java.util.Date;
-import javax.persistence.Basic;
+import java.time.LocalDateTime;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-import javax.persistence.UniqueConstraint;
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Type;
 
 /**
  * @author root
  */
 @Entity
-@Table(name = "arts_t_agentdet", uniqueConstraints = {
-    @UniqueConstraint(columnNames = {"c_unit_id"})})
-public class Agentdet implements Serializable {
+@Table(name = "arts_t_agentdet")
+public class Agentdet {
 
-    @Column(name = "c_agentdet_id", table = "arts_t_agentdet", nullable = false, length = 36)
+    @Column(name = "c_agentdet_id")
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_unit_id", table = "arts_t_agentdet", nullable = false, length = 36)
-    @Basic
+    @Column(name = "c_unit_id")
     private String cUnitId;
 
-    @Column(name = "c_agentdet_timeout", table = "arts_t_agentdet", nullable = false)
-    @Basic
+    @Column(name = "c_agentdet_timeout")
     private short cAgentdetTimeout;
 
-    @Column(name = "c_agentdet_type", table = "arts_t_agentdet", nullable = false)
-    @Basic
+    @Column(name = "c_agentdet_type")
     private Character cAgentdetType;
 
-    @Column(name = "c_agentdet_vanum", table = "arts_t_agentdet", nullable = false, length = 36)
-    @Basic
+    @Column(name = "c_agentdet_vanum")
     private String cAgentdetVanum;
 
-    @Column(name = "c_agentdet_email", table = "arts_t_agentdet", nullable = false, length = 100)
-    @Basic
+    @Column(name = "c_agentdet_email")
     private String cAgentdetEmail;
 
-    @Column(name = "c_agentdet_address", table = "arts_t_agentdet", nullable = false)
-    @Basic
+    @Column(name = "c_agentdet_address")
     private String cAgentdetAddress;
 
-    @Column(name = "c_agentdet_phonenum", table = "arts_t_agentdet", nullable = false, length = 50)
-    @Basic
+    @Column(name = "c_agentdet_phonenum")
     private String cAgentdetPhonenum;
 
-    @Column(name = "c_agentdet_status", table = "arts_t_agentdet", nullable = false)
-    @Basic
+    @Column(name = "c_agentdet_status")
     private Character cAgentdetStatus;
 
-    @Column(name = "c_agentdet_domain", table = "arts_t_agentdet", nullable = false, length = 36)
-    @Basic
+    @Column(name = "c_agentdet_domain")
     private String cAgentdetDomain;
 
-    @Column(name = "c_agentdet_modifiedby", table = "arts_t_agentdet", nullable = false, length = 36)
-    @Basic
+    @Column(name = "c_agentdet_modifiedby")
     private String cAgentdetModifiedby;
 
-    @Column(name = "c_agentdet_modifiedon", table = "arts_t_agentdet", nullable = false)
-    @Basic
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date cAgentdetModifiedon;
+    @Column(name = "c_agentdet_modifiedon")
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @Type(type = "org.hibernate.type.LocalDateTimeType")
+    private LocalDateTime cAgentdetModifiedon;
 
-    @Column(name = "c_agentdet_idsap", table = "arts_t_agentdet", length = 36)
-    @Basic
+    @Column(name = "c_agentdet_idsap")
     private String cAgentdetIdsap;
 
-    @Column(name = "c_agentdet_sellingtime", table = "arts_t_agentdet", nullable = false)
-    @Basic
+    @Column(name = "c_agentdet_sellingtime")
     private int cAgentdetSellingtime;
 
-    @Column(name = "c_agentdet_beginningbalance", table = "arts_t_agentdet", scale = 2, precision = 11)
-    @Basic
+    @Column(name = "c_agentdet_beginningbalance")
     private BigDecimal cAgentdetBeginningbalance;
 
-    @Column(name = "c_agentdet_deposit", table = "arts_t_agentdet", scale = 2, precision = 11)
-    @Basic
+    @Column(name = "c_agentdet_deposit")
     private BigDecimal cAgentdetDeposit;
 
-    @Column(name = "c_agentdet_withdrawal", table = "arts_t_agentdet", scale = 2, precision = 11)
-    @Basic
+    @Column(name = "c_agentdet_withdrawal")
     private BigDecimal cAgentdetWithdrawal;
 
-    @Column(name = "c_agentdet_endingbalance", table = "arts_t_agentdet", scale = 2, precision = 11)
-    @Basic
+    @Column(name = "c_agentdet_endingbalance")
     private BigDecimal cAgentdetEndingbalance;
 
-    @Column(name = "c_agentdet_createdby", table = "arts_t_agentdet", nullable = false, length = 36)
-    @Basic
+    @Column(name = "c_agentdet_createdby")
     private String cAgentdetCreatedby;
 
-    @Column(name = "c_agentdet_createdon", table = "arts_t_agentdet", nullable = false)
-    @Basic
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date cAgentdetCreatedon;
+    @Column(name = "c_agentdet_createdon")
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @Type(type = "org.hibernate.type.LocalDateTimeType")
+    private LocalDateTime cAgentdetCreatedon;
 
     public String getId() {
         return id;
@@ -197,14 +184,6 @@ public class Agentdet implements Serializable {
         this.cAgentdetModifiedby = cAgentdetModifiedby;
     }
 
-    public Date getcAgentdetModifiedon() {
-        return cAgentdetModifiedon;
-    }
-
-    public void setcAgentdetModifiedon(Date cAgentdetModifiedon) {
-        this.cAgentdetModifiedon = cAgentdetModifiedon;
-    }
-
     public String getcAgentdetIdsap() {
         return cAgentdetIdsap;
     }
@@ -261,13 +240,20 @@ public class Agentdet implements Serializable {
         this.cAgentdetCreatedby = cAgentdetCreatedby;
     }
 
-    public Date getcAgentdetCreatedon() {
+    public LocalDateTime getcAgentdetModifiedon() {
+        return cAgentdetModifiedon;
+    }
+
+    public void setcAgentdetModifiedon(LocalDateTime cAgentdetModifiedon) {
+        this.cAgentdetModifiedon = cAgentdetModifiedon;
+    }
+
+    public LocalDateTime getcAgentdetCreatedon() {
         return cAgentdetCreatedon;
     }
 
-    public void setcAgentdetCreatedon(Date cAgentdetCreatedon) {
+    public void setcAgentdetCreatedon(LocalDateTime cAgentdetCreatedon) {
         this.cAgentdetCreatedon = cAgentdetCreatedon;
     }
-
     
 }
