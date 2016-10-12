@@ -29,43 +29,43 @@ public class Message {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_message_title", table = "arts_t_message", nullable = false, length = 500)
+    @Column(name = "c_message_title")
     private String Title;
 
-    @Column(name = "c_message_content", table = "arts_t_message", length = 2147483647)
+    @Column(name = "c_message_content")
     @Lob
     private String Content;
 
-    @Column(name = "c_message_date", table = "arts_t_message", nullable = false)
+    @Column(name = "c_message_date")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Date;
 
-    @Column(name = "c_user_id", table = "arts_t_message", nullable = false, length = 36)
+    @Column(name = "c_user_id")
     private String UserId;
 
-    @Column(name = "c_message_status", table = "arts_t_message", nullable = false)
+    @Column(name = "c_message_status")
     private Character Status;
 
-    @Column(name = "c_message_domain", table = "arts_t_message", nullable = false, length = 36)
+    @Column(name = "c_message_domain")
     private String Domain;
 
-    @Column(name = "c_message_modifiedby", table = "arts_t_message", nullable = false, length = 36)
+    @Column(name = "c_message_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_message_modifiedon", table = "arts_t_message", nullable = false)
+    @Column(name = "c_message_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_message_createdby", table = "arts_t_message", nullable = false, length = 36)
+    @Column(name = "c_message_createdby")
     private String Createdby;
 
-    @Column(name = "c_message_createdon", table = "arts_t_message", nullable = false)
+    @Column(name = "c_message_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

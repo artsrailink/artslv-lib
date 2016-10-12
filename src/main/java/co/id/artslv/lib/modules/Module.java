@@ -28,44 +28,44 @@ public class Module implements Serializable {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_module_name", table = "arts_t_module", nullable = false, length = 100)
+    @Column(name = "c_module_name")
     private String Name;
 
-    @Column(name = "c_module_parent", table = "arts_t_module", length = 36)
+    @Column(name = "c_module_parent")
     private String Parent;
 
-    @Column(name = "c_module_link", table = "arts_t_module")
+    @Column(name = "c_module_link")
     private String Link;
 
-    @Column(name = "c_module_seq", table = "arts_t_module", nullable = false, length = 10)
+    @Column(name = "c_module_seq")
     private String Seq;
 
-    @Column(name = "c_module_status", table = "arts_t_module", nullable = false)
+    @Column(name = "c_module_status")
     private Character Status;
 
-    @Column(name = "c_module_domain", table = "arts_t_module", nullable = false, length = 36)
+    @Column(name = "c_module_domain")
     private String Domain;
 
-    @Column(name = "c_module_modifiedby", table = "arts_t_module", nullable = false, length = 36)
+    @Column(name = "c_module_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_module_modifiedon", table = "arts_t_module", nullable = false)
+    @Column(name = "c_module_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_moduletype_id", table = "arts_t_module", nullable = false, length = 36)
+    @Column(name = "c_moduletype_id")
     private String ModuletypeId;
 
-    @Column(name = "c_module_apptype", table = "arts_t_module", nullable = false)
+    @Column(name = "c_module_apptype")
     private Character Apptype;
 
-    @Column(name = "c_module_createdby", table = "arts_t_module", nullable = false, length = 36)
+    @Column(name = "c_module_createdby")
     private String Createdby;
 
-    @Column(name = "c_module_createdon", table = "arts_t_module", nullable = false)
+    @Column(name = "c_module_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

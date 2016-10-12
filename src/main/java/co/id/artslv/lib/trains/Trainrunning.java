@@ -27,42 +27,42 @@ public class Trainrunning {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_trainrunning_name", table = "arts_t_trainrunning", nullable = false, length = 200)
+    @Column(name = "c_trainrunning_name")
     private String Name;
 
-    @Column(name = "c_trainrunning_status", table = "arts_t_trainrunning", nullable = false)
+    @Column(name = "c_trainrunning_status")
     private Character Status;
 
-    @Column(name = "c_trainrunning_domain", table = "arts_t_trainrunning", nullable = false, length = 36)
+    @Column(name = "c_trainrunning_domain")
     private String Domain;
 
-    @Column(name = "c_trainrunning_modifiedby", table = "arts_t_trainrunning", nullable = false, length = 36)
+    @Column(name = "c_trainrunning_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_trainrunning_modifiedon", table = "arts_t_trainrunning", nullable = false)
+    @Column(name = "c_trainrunning_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_trainrunning_value", table = "arts_t_trainrunning", nullable = false)
+    @Column(name = "c_trainrunning_value")
     private short Value;
 
-    @Column(name = "c_trainrunning_createdby", table = "arts_t_trainrunning", nullable = false, length = 36)
+    @Column(name = "c_trainrunning_createdby")
     private String Createdby;
 
-    @Column(name = "c_trainrunning_createdon", table = "arts_t_trainrunning", nullable = false)
+    @Column(name = "c_trainrunning_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Createdon;
 
-    @Column(name = "c_trainrunning_code", table = "arts_t_trainrunning", nullable = false, length = 10)
+    @Column(name = "c_trainrunning_code")
     private String Code;
 
-    @Column(name = "c_trainrunning_note", table = "arts_t_trainrunning", length = 100)
+    @Column(name = "c_trainrunning_note")
     private String Note;
 
     public String getId() {

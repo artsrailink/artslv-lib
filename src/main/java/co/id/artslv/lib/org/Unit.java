@@ -28,48 +28,48 @@ public class Unit {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_unit_name", table = "arts_t_unit", nullable = false, length = 50)
+    @Column(name = "c_unit_name")
     private String Name;
     
-    @Column(name = "c_unit_status", table = "arts_t_unit", nullable = false)
+    @Column(name = "c_unit_status")
     private Character Status;
 
-    @Column(name = "c_unit_domain", table = "arts_t_unit", nullable = false, length = 36)
+    @Column(name = "c_unit_domain")
     private String Domain;
 
-    @Column(name = "c_unit_modifiedby", table = "arts_t_unit", nullable = false, length = 40)
+    @Column(name = "c_unit_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_unit_modifiedon", table = "arts_t_unit", nullable = false)
+    @Column(name = "c_unit_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_stasiun_id", table = "arts_t_unit", nullable = false, length = 36)
+    @Column(name = "c_stasiun_id")
     private String StasiunId;
 
-    @Column(name = "c_unit_code", table = "arts_t_unit", nullable = false, length = 36)
+    @Column(name = "c_unit_code")
     private String Code;
 
-    @Column(name = "c_channel_id", table = "arts_t_unit", nullable = false, length = 36)
+    @Column(name = "c_channel_id")
     private String ChannelId;
 
-    @Column(name = "c_unit_balancelimit", table = "arts_t_unit", scale = 2, precision = 11)
+    @Column(name = "c_unit_balancelimit")
     private BigDecimal Balancelimit;
 
-    @Column(name = "c_paytype_id", table = "arts_t_unit", length = 36)
+    @Column(name = "c_paytype_id")
     private String PaytypeId;
-    @Column(name = "c_unit_sellnoseat", table = "arts_t_unit", nullable = false)
+    @Column(name = "c_unit_sellnoseat")
     private Character Sellnoseat;
-    @Column(name = "c_unit_localpay", table = "arts_t_unit", nullable = false)
+    @Column(name = "c_unit_localpay")
     private Character Localpay;
-    @Column(name = "c_unit_reversaltime", table = "arts_t_unit", nullable = false)
+    @Column(name = "c_unit_reversaltime")
     private short Reversaltime;
-    @Column(name = "c_unit_createdby", table = "arts_t_unit", nullable = false, length = 36)
+    @Column(name = "c_unit_createdby")
     private String Createdby;
-    @Column(name = "c_unit_createdon", table = "arts_t_unit", nullable = false)
+    @Column(name = "c_unit_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

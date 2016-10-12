@@ -28,48 +28,48 @@ public class Ticketsaleoffset {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_ticketsaleoffset_value", table = "arts_t_ticketsaleoffset", nullable = false)
+    @Column(name = "c_ticketsaleoffset_value")
     private long Value;
 
-    @Column(name = "c_ticketsaleoffset_reason", table = "arts_t_ticketsaleoffset", nullable = false, length = 100)
+    @Column(name = "c_ticketsaleoffset_reason")
     private String Reason;
 
-    @Column(name = "c_stasiun_id", table = "arts_t_ticketsaleoffset", nullable = false, length = 36)
+    @Column(name = "c_stasiun_id")
     private String cStasiunId;
 
-    @Column(name = "c_ticketsaleoffset_status", table = "arts_t_ticketsaleoffset", nullable = false)
+    @Column(name = "c_ticketsaleoffset_status")
     private Character Status;
 
-    @Column(name = "c_ticketsaleoffset_domain", table = "arts_t_ticketsaleoffset", nullable = false, length = 36)
+    @Column(name = "c_ticketsaleoffset_domain")
     private String Domain;
 
-    @Column(name = "c_ticketsaleoffset_modifiedby", table = "arts_t_ticketsaleoffset", nullable = false, length = 36)
+    @Column(name = "c_ticketsaleoffset_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_ticketsaleoffset_modifiedon", table = "arts_t_ticketsaleoffset", nullable = false)
+    @Column(name = "c_ticketsaleoffset_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_trip_id", table = "arts_t_ticketsaleoffset", nullable = false, length = 36)
+    @Column(name = "c_trip_id")
     private String TripId;
 
-    @Column(name = "c_ticketsaleoffset_tripdate", table = "arts_t_ticketsaleoffset", nullable = false)
+    @Column(name = "c_ticketsaleoffset_tripdate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Tripdate;
 
-    @Column(name = "c_ticketsaleoffset_noka", table = "arts_t_ticketsaleoffset", nullable = false, length = 50)
+    @Column(name = "c_ticketsaleoffset_noka")
     private String Noka;
 
-    @Column(name = "c_ticketsaleoffset_createdby", table = "arts_t_ticketsaleoffset", nullable = false, length = 36)
+    @Column(name = "c_ticketsaleoffset_createdby")
     private String Createdby;
 
-    @Column(name = "c_ticketsaleoffset_createdon", table = "arts_t_ticketsaleoffset", nullable = false)
+    @Column(name = "c_ticketsaleoffset_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

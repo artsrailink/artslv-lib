@@ -30,52 +30,52 @@ public class Baggage {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_wagonclass_id", table = "arts_t_baggage", nullable = false, length = 36)
+    @Column(name = "c_wagonclass_id")
     private String WagonclassId;
 
-    @Column(name = "c_baggage_startdate", table = "arts_t_baggage", nullable = false)
+    @Column(name = "c_baggage_startdate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Startdate;
 
-    @Column(name = "c_baggage_enddate", table = "arts_t_baggage", nullable = false)
+    @Column(name = "c_baggage_enddate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Enddate;
 
-    @Column(name = "c_baggage_amount", table = "arts_t_baggage", nullable = false, scale = 2, precision = 11)
+    @Column(name = "c_baggage_amount")
     private BigDecimal Amount;
 
-    @Column(name = "c_baggage_status", table = "arts_t_baggage", nullable = false)
+    @Column(name = "c_baggage_status")
     private Character Status;
 
-    @Column(name = "c_baggage_domain", table = "arts_t_baggage", nullable = false, length = 36)
+    @Column(name = "c_baggage_domain")
     private String Domain;
 
-    @Column(name = "c_baggage_modifiedby", table = "arts_t_baggage", nullable = false, length = 36)
+    @Column(name = "c_baggage_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_baggage_modifiedon", table = "arts_t_baggage", nullable = false)
+    @Column(name = "c_baggage_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_baggage_name", table = "arts_t_baggage", nullable = false, length = 50)
+    @Column(name = "c_baggage_name")
     private String Name;
 
-    @Column(name = "c_baggage_code", table = "arts_t_baggage", nullable = false, length = 10)
+    @Column(name = "c_baggage_code")
     private String Code;
 
-    @Column(name = "c_baggage_createdby", table = "arts_t_baggage", nullable = false, length = 36)
+    @Column(name = "c_baggage_createdby")
     private String Createdby;
 
-    @Column(name = "c_baggage_createdon", table = "arts_t_baggage", nullable = false)
+    @Column(name = "c_baggage_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

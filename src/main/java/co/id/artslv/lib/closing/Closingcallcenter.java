@@ -29,64 +29,64 @@ public class Closingcallcenter {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_closingcc_docnum", table = "arts_t_closingcallcenter", nullable = false, length = 36)
+    @Column(name = "c_closingcc_docnum")
     private String Docnum;
 
-    @Column(name = "c_stasiun_idorg", table = "arts_t_closingcallcenter", nullable = false, length = 36)    
+    @Column(name = "c_stasiun_idorg")
     private String StasiunIdorg;
 
-    @Column(name = "c_closingcc_noka", table = "arts_t_closingcallcenter", nullable = false, length = 50)
+    @Column(name = "c_closingcc_noka")
     private String Noka;
 
-    @Column(name = "c_wagonclass_id", table = "arts_t_closingcallcenter", nullable = false, length = 36)
+    @Column(name = "c_wagonclass_id")
     private String WagonclassId;
 
-    @Column(name = "c_closingcc_date", table = "arts_t_closingcallcenter", nullable = false)
+    @Column(name = "c_closingcc_date")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Date;
 
-    @Column(name = "c_trip_id", table = "arts_t_closingcallcenter", nullable = false, length = 36)
+    @Column(name = "c_trip_id")
     private String TripId;
 
-    @Column(name = "c_closingcc_psgnum", table = "arts_t_closingcallcenter", nullable = false)
+    @Column(name = "c_closingcc_psgnum")
     private BigInteger Psgnum;
 
-    @Column(name = "c_closingcc_amount", table = "arts_t_closingcallcenter", nullable = false)
+    @Column(name = "c_closingcc_amount")
     private BigInteger Amount;
 
-    @Column(name = "c_closingcc_modifiedon", table = "arts_t_closingcallcenter", nullable = false)
+    @Column(name = "c_closingcc_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_closingcc_postingstat", table = "arts_t_closingcallcenter", nullable = false)
+    @Column(name = "c_closingcc_postingstat")
     private Character Postingstat;
 
-    @Column(name = "c_closingcc_arrivedate", table = "arts_t_closingcallcenter")
+    @Column(name = "c_closingcc_arrivedate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Arrivedate;
 
-    @Column(name = "c_closingcc_status", table = "arts_t_closingcallcenter", nullable = false)
+    @Column(name = "c_closingcc_status")
     private Character Status;
 
-    @Column(name = "c_closingcc_domain", table = "arts_t_closingcallcenter", nullable = false, length = 36)
+    @Column(name = "c_closingcc_domain")
     private String Domain;
 
-    @Column(name = "c_closingcc_modifiedby", table = "arts_t_closingcallcenter", nullable = false, length = 36)
+    @Column(name = "c_closingcc_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_closingcallcenter_createdby", table = "arts_t_closingcallcenter", nullable = false, length = 36)
+    @Column(name = "c_closingcallcenter_createdby")
     private String Createdby;
 
-    @Column(name = "c_closingcallcenter_createdon", table = "arts_t_closingcallcenter", nullable = false)
+    @Column(name = "c_closingcallcenter_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

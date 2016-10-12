@@ -23,74 +23,74 @@ import org.hibernate.annotations.Type;
 @Table(name = "arts_t_memshiptrans")
 public class Memshiptrans {
 
-    @Column(name = "c_memshiptrans_id", table = "arts_t_memshiptrans", nullable = false, length = 36)
+    @Column(name = "c_memshiptrans_id")
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_memshiptrans_validdate", table = "arts_t_memshiptrans")
+    @Column(name = "c_memshiptrans_validdate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Validdate;
 
-    @Column(name = "c_memshiptrans_expdate", table = "arts_t_memshiptrans", nullable = false)
+    @Column(name = "c_memshiptrans_expdate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Expdate;
 
-    @Column(name = "c_memshiptrans_type", table = "arts_t_memshiptrans", nullable = false)
+    @Column(name = "c_memshiptrans_type")
     private Character Type;
 
-    @Column(name = "c_memshiptrans_status", table = "arts_t_memshiptrans", nullable = false)
+    @Column(name = "c_memshiptrans_status")
     private Character Status;
 
-    @Column(name = "c_memshiptrans_domain", table = "arts_t_memshiptrans", nullable = false, length = 36)
+    @Column(name = "c_memshiptrans_domain")
     private String Domain;
 
-    @Column(name = "c_memshiptrans_modifiedby", table = "arts_t_memshiptrans", nullable = false, length = 36)
+    @Column(name = "c_memshiptrans_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_memshiptrans_modifiedon", table = "arts_t_memshiptrans", nullable = false)
+    @Column(name = "c_memshiptrans_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_membership_id", table = "arts_t_memshiptrans", nullable = false, length = 36)
+    @Column(name = "c_membership_id")
     private String MembershipId;
 
-    @Column(name = "c_memshiptrans_date", table = "arts_t_memshiptrans", nullable = false)
+    @Column(name = "c_memshiptrans_date")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Date;
 
-    @Column(name = "c_memshiptrans_ref", table = "arts_t_memshiptrans", length = 100)
+    @Column(name = "c_memshiptrans_ref")
     private String Ref;
 
-    @Column(name = "c_memshiptrans_beginningbal", table = "arts_t_memshiptrans", nullable = false, scale = 2, precision = 11)
+    @Column(name = "c_memshiptrans_beginningbal")
     private BigDecimal Beginningbal;
 
-    @Column(name = "c_memshiptrans_earnpoint", table = "arts_t_memshiptrans", nullable = false, scale = 2, precision = 11)
+    @Column(name = "c_memshiptrans_earnpoint")
     private BigDecimal Earnpoint;
 
-    @Column(name = "c_memshiptrans_redeempoint", table = "arts_t_memshiptrans", nullable = false, scale = 2, precision = 11)
+    @Column(name = "c_memshiptrans_redeempoint")
     private BigDecimal Redeempoint;
 
-    @Column(name = "c_memshiptrans_endingbal", table = "arts_t_memshiptrans", nullable = false, scale = 2, precision = 11)
+    @Column(name = "c_memshiptrans_endingbal")
     private BigDecimal Endingbal;
 
-    @Column(name = "c_memshiptrans_createdby", table = "arts_t_memshiptrans", nullable = false, length = 36)
+    @Column(name = "c_memshiptrans_createdby")
     private String Createdby;
 
-    @Column(name = "c_memshiptrans_createdon", table = "arts_t_memshiptrans", nullable = false)
+    @Column(name = "c_memshiptrans_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

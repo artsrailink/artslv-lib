@@ -29,76 +29,76 @@ public class Transactionlog {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_transaction_id", table = "arts_t_transactionlog", nullable = false, length = 36)
+    @Column(name = "c_transaction_id")
     private String TransactionId;
 
-    @Column(name = "c_transaction_bookcode", table = "arts_t_transactionlog", nullable = false, length = 7)
+    @Column(name = "c_transaction_bookcode")
     private String TransactionBookcode;
 
-    @Column(name = "c_transactiondet_id", table = "arts_t_transactionlog", length = 36)
+    @Column(name = "c_transactiondet_id")
     private String TransactiondetId;
 
-    @Column(name = "c_cancellation_id", table = "arts_t_transactionlog", length = 36)
+    @Column(name = "c_cancellation_id")
     private String CancellationId;
 
-    @Column(name = "c_cancellationdet_id", table = "arts_t_transactionlog", length = 36)
+    @Column(name = "c_cancellationdet_id")
     private String CancellationdetId;
 
-    @Column(name = "c_transactionlog_time", table = "arts_t_transactionlog", nullable = false)
+    @Column(name = "c_transactionlog_time")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Time;
 
-    @Column(name = "c_transactionlog_type", table = "arts_t_transactionlog", length = 50)
+    @Column(name = "c_transactionlog_type")
     private String Type;
 
-    @Column(name = "c_transactionlog_value", table = "arts_t_transactionlog", nullable = false, length = 2147483647)
+    @Column(name = "c_transactionlog_value")
     @Lob
     private String Value;
 
-    @Column(name = "c_user_id", table = "arts_t_transactionlog", nullable = false, length = 36)
+    @Column(name = "c_user_id")
     private String UserId;
 
-    @Column(name = "c_user_fullname", table = "arts_t_transactionlog", nullable = false, length = 36)
+    @Column(name = "c_user_fullname")
     private String UserFullname;
 
-    @Column(name = "c_stasiun_id", table = "arts_t_transactionlog", nullable = false, length = 36)
+    @Column(name = "c_stasiun_id")
     private String StasiunId;
 
-    @Column(name = "c_stasiun_code", table = "arts_t_transactionlog", nullable = false, length = 36)
+    @Column(name = "c_stasiun_code")
     private String StasiunCode;
 
-    @Column(name = "c_unit_id", table = "arts_t_transactionlog", nullable = false, length = 36)
+    @Column(name = "c_unit_id")
     private String UnitId;
 
-    @Column(name = "c_unit_code", table = "arts_t_transactionlog", nullable = false, length = 36)
+    @Column(name = "c_unit_code")
     private String UnitCode;
 
-    @Column(name = "c_shift_id", table = "arts_t_transactionlog", length = 36)
+    @Column(name = "c_shift_id")
     private String ShiftId;
 
-    @Column(name = "c_transactionlog_status", table = "arts_t_transactionlog", nullable = false, length = 36)
+    @Column(name = "c_transactionlog_status")
     private String Status;
 
-    @Column(name = "c_transactionlog_domain", table = "arts_t_transactionlog", nullable = false, length = 36)
+    @Column(name = "c_transactionlog_domain")
     private String Domain;
 
-    @Column(name = "c_transactionlog_createdby", table = "arts_t_transactionlog", nullable = false, length = 36)
+    @Column(name = "c_transactionlog_createdby")
     private String Createdby;
 
-    @Column(name = "c_transactionlog_createdon", table = "arts_t_transactionlog", nullable = false)
+    @Column(name = "c_transactionlog_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Createdon;
 
-    @Column(name = "c_transactionlog_modifiedby", table = "arts_t_transactionlog", nullable = false, length = 36)
+    @Column(name = "c_transactionlog_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_transactionlog_modifiedon", table = "arts_t_transactionlog", nullable = false)
+    @Column(name = "c_transactionlog_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

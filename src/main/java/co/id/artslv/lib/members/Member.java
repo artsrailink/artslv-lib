@@ -28,72 +28,72 @@ public class Member {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_member_firstname", table = "arts_t_member", nullable = false, length = 100)
+    @Column(name = "c_member_firstname")
     private String Firstname;
 
-    @Column(name = "c_member_phonenum", table = "arts_t_member", nullable = false, length = 50)
+    @Column(name = "c_member_phonenum")
     private String Phonenum;
 
-    @Column(name = "c_member_email", table = "arts_t_member", length = 100)
+    @Column(name = "c_member_email")
     private String Email;
 
-    @Column(name = "c_member_status", table = "arts_t_member", nullable = false)
+    @Column(name = "c_member_status")
     private Character Status;
 
-    @Column(name = "c_member_domain", table = "arts_t_member", nullable = false, length = 36)
+    @Column(name = "c_member_domain")
     private String Domain;
 
-    @Column(name = "c_member_modifiedby", table = "arts_t_member", nullable = false, length = 36)
+    @Column(name = "c_member_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_member_modifiedon", table = "arts_t_member", nullable = false)
+    @Column(name = "c_member_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_member_lastname", table = "arts_t_member", length = 100)
+    @Column(name = "c_member_lastname")
     private String Lastname;
 
-    @Column(name = "c_member_dateofbirth", table = "arts_t_member", nullable = false)
+    @Column(name = "c_member_dateofbirth")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Dateofbirth;
 
-    @Column(name = "c_member_address1", table = "arts_t_member", nullable = false)
+    @Column(name = "c_member_address1")
     private String Address1;
     @Column(name = "c_member_address2", table = "arts_t_member")
     private String Address2;
-    @Column(name = "c_occupationtype_id", table = "arts_t_member", nullable = false, length = 36)
+    @Column(name = "c_occupationtype_id")
     private String OccupationtypeId;
-    @Column(name = "c_city_id1", table = "arts_t_member", nullable = false, length = 36)
+    @Column(name = "c_city_id1")
     private String CityId1;
-    @Column(name = "c_city_id2", table = "arts_t_member", length = 36)
+    @Column(name = "c_city_id2", table = "arts_t_member")
     private String CityId2;
-    @Column(name = "c_member_postalcode1", table = "arts_t_member", nullable = false, length = 10)
+    @Column(name = "c_member_postalcode1")
     private String Postalcode1;
-    @Column(name = "c_member_postalcode2", table = "arts_t_member", length = 10)
+    @Column(name = "c_member_postalcode2")
     private String Postalcode2;
 
-    @Column(name = "c_unit_id", table = "arts_t_member", nullable = false, length = 36)
+    @Column(name = "c_unit_id")
     private String UnitId;
 
-    @Column(name = "c_user_id", table = "arts_t_member", nullable = false, length = 36)
+    @Column(name = "c_user_id")
     private String UserId;
 
-    @Column(name = "c_member_phonenum2", table = "arts_t_member", length = 50)
+    @Column(name = "c_member_phonenum2")
     private String Phonenum2;
 
-    @Column(name = "c_title_id", table = "arts_t_member", nullable = false, length = 36)
+    @Column(name = "c_title_id")
     private String TitleId;
 
-    @Column(name = "c_member_createdby", table = "arts_t_member", nullable = false, length = 36)
+    @Column(name = "c_member_createdby")
     private String Createdby;
 
-    @Column(name = "c_member_createdon", table = "arts_t_member", nullable = false)
+    @Column(name = "c_member_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

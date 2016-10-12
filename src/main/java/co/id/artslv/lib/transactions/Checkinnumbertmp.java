@@ -28,26 +28,26 @@ public class Checkinnumbertmp {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_transaction_id", table = "arts_t_checkinnumbertmp", nullable = false, length = 36)
+    @Column(name = "c_transaction_id")
     private String TransactionId;
 
-    @Column(name = "c_checkinnumbertmp_date", table = "arts_t_checkinnumbertmp", nullable = false)
+    @Column(name = "c_checkinnumbertmp_date")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Date;
 
-    @Column(name = "c_stasiun_idcheckin", table = "arts_t_checkinnumbertmp", nullable = false, length = 36)
+    @Column(name = "c_stasiun_idcheckin")
     private String StasiunIdcheckin;
 
-    @Column(name = "c_transactiondet_id", table = "arts_t_checkinnumbertmp", nullable = false, length = 36)
+    @Column(name = "c_transactiondet_id")
     private String TransactiondetId;
 
-    @Column(name = "c_checkinnumbertmp_createdby", table = "arts_t_checkinnumbertmp", nullable = false, length = 36)
+    @Column(name = "c_checkinnumbertmp_createdby")
     private String Createdby;
 
-    @Column(name = "c_checkinnumbertmp_createdon", table = "arts_t_checkinnumbertmp", nullable = false)
+    @Column(name = "c_checkinnumbertmp_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

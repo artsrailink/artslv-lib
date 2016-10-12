@@ -27,35 +27,35 @@ public class Stamformdet {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_stamformdet_order", table = "arts_t_stamformdet", nullable = false)
+    @Column(name = "c_stamformdet_order")
     private long Order;
 
-    @Column(name = "c_stamformdet_status", table = "arts_t_stamformdet", nullable = false)
+    @Column(name = "c_stamformdet_status")
     private Character Status;
 
-    @Column(name = "c_stamformdet_domain", table = "arts_t_stamformdet", nullable = false, length = 36)
+    @Column(name = "c_stamformdet_domain")
     private String Domain;
 
-    @Column(name = "c_stamformdet_modifiedby", table = "arts_t_stamformdet", nullable = false, length = 36)
+    @Column(name = "c_stamformdet_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_stamformdet_modifiedon", table = "arts_t_stamformdet", nullable = false)
+    @Column(name = "c_stamformdet_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_wagon_id", table = "arts_t_stamformdet", nullable = false, length = 36)
+    @Column(name = "c_wagon_id")
     private String WagonId;
 
-    @Column(name = "c_trip_id", table = "arts_t_stamformdet", length = 36)
+    @Column(name = "c_trip_id", table = "arts_t_stamformdet")
     private String TripId;
 
-    @Column(name = "c_stamformdet_createdby", table = "arts_t_stamformdet", nullable = false, length = 36)
+    @Column(name = "c_stamformdet_createdby")
     private String Createdby;
 
-    @Column(name = "c_stamformdet_createdon", table = "arts_t_stamformdet", nullable = false)
+    @Column(name = "c_stamformdet_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

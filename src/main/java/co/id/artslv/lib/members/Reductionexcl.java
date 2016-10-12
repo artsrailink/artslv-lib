@@ -27,35 +27,35 @@ public class Reductionexcl {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_reduction_id", table = "arts_t_reductionexcl", nullable = false, length = 36)
+    @Column(name = "c_reduction_id")
     private String ReductionId;
 
-    @Column(name = "c_reductionexcl_status", table = "arts_t_reductionexcl", nullable = false)
+    @Column(name = "c_reductionexcl_status")
     private Character Status;
 
-    @Column(name = "c_reductionexcl_domain", table = "arts_t_reductionexcl", nullable = false, length = 36)
+    @Column(name = "c_reductionexcl_domain")
     private String Domain;
 
-    @Column(name = "c_reductionexcl_modifiedby", table = "arts_t_reductionexcl", nullable = false, length = 36)
+    @Column(name = "c_reductionexcl_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_reductionexcl_modifiedon", table = "arts_t_reductionexcl", nullable = false)
+    @Column(name = "c_reductionexcl_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_reductionexcl_setsubclass", table = "arts_t_reductionexcl", nullable = false)
+    @Column(name = "c_reductionexcl_setsubclass")
     private String Setsubclass;
 
-    @Column(name = "c_reductionexcl_schedulenoka", table = "arts_t_reductionexcl", nullable = false, length = 50)
+    @Column(name = "c_reductionexcl_schedulenoka")
     private String Schedulenoka;
 
-    @Column(name = "c_reductionexcl_createdby", table = "arts_t_reductionexcl", nullable = false, length = 36)
+    @Column(name = "c_reductionexcl_createdby")
     private String Createdby;
 
-    @Column(name = "c_reductionexcl_createdon", table = "arts_t_reductionexcl", nullable = false)
+    @Column(name = "c_reductionexcl_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

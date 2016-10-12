@@ -27,32 +27,32 @@ public class Moduletype {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_moduletype_code", table = "arts_t_moduletype", nullable = false, length = 36)
+    @Column(name = "c_moduletype_code")
     private String Code;
 
-    @Column(name = "c_moduletype_name", table = "arts_t_moduletype", nullable = false, length = 50)
+    @Column(name = "c_moduletype_name")
     private String Name;
 
-    @Column(name = "c_moduletype_status", table = "arts_t_moduletype", nullable = false)
+    @Column(name = "c_moduletype_status")
     private Character Status;
 
-    @Column(name = "c_moduletype_domain", table = "arts_t_moduletype", nullable = false, length = 36)
+    @Column(name = "c_moduletype_domain")
     private String Domain;
 
-    @Column(name = "c_moduletype_modifiedby", table = "arts_t_moduletype", nullable = false, length = 36)
+    @Column(name = "c_moduletype_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_moduletype_modifiedon", table = "arts_t_moduletype", nullable = false)
+    @Column(name = "c_moduletype_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_moduletype_createdby", table = "arts_t_moduletype", nullable = false, length = 36)
+    @Column(name = "c_moduletype_createdby")
     private String Createdby;
 
-    @Column(name = "c_moduletype_createdon", table = "arts_t_moduletype", nullable = false)
+    @Column(name = "c_moduletype_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

@@ -27,32 +27,32 @@ public class Hidenoka  {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_stasiun_id", table = "arts_t_hidenoka", nullable = false, length = 36)
+    @Column(name = "c_stasiun_id")
     private String StasiunId;
 
-    @Column(name = "c_hidenoka_status", table = "arts_t_hidenoka", nullable = false)
+    @Column(name = "c_hidenoka_status")
     private Character Status;
 
-    @Column(name = "c_hidenoka_domain", table = "arts_t_hidenoka", nullable = false, length = 36)
+    @Column(name = "c_hidenoka_domain")
     private String Domain;
 
-    @Column(name = "c_hidenoka_modifiedby", table = "arts_t_hidenoka", nullable = false, length = 36)
+    @Column(name = "c_hidenoka_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_hidenoka_modifiedon", table = "arts_t_hidenoka", nullable = false)
+    @Column(name = "c_hidenoka_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_hidenoka_schedulenoka", table = "arts_t_hidenoka", nullable = false, length = 50)
+    @Column(name = "c_hidenoka_schedulenoka")
     private String Schedulenoka;
 
-    @Column(name = "c_hidenoka_createdby", table = "arts_t_hidenoka", nullable = false, length = 36)
+    @Column(name = "c_hidenoka_createdby")
     private String Createdby;
 
-    @Column(name = "c_hidenoka_createdon", table = "arts_t_hidenoka", nullable = false)
+    @Column(name = "c_hidenoka_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

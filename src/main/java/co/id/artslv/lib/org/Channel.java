@@ -27,41 +27,41 @@ public class Channel {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_channel_code", table = "arts_t_channel", nullable = false, length = 50)
+    @Column(name = "c_channel_code")
     private String Code;
 
-    @Column(name = "c_channel_name", table = "arts_t_channel", nullable = false, length = 100)
+    @Column(name = "c_channel_name")
     private String Name;
 
-    @Column(name = "c_channel_status", table = "arts_t_channel", nullable = false)
+    @Column(name = "c_channel_status")
     private Character Status;
 
-    @Column(name = "c_channel_domain", table = "arts_t_channel", nullable = false, length = 36)
+    @Column(name = "c_channel_domain")
     private String Domain;
 
-    @Column(name = "c_channel_modifiedby", table = "arts_t_channel", nullable = false, length = 36)
+    @Column(name = "c_channel_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_channel_modifiedon", table = "arts_t_channel", nullable = false)
+    @Column(name = "c_channel_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_channel_extrafee", table = "arts_t_channel", nullable = false)
+    @Column(name = "c_channel_extrafee")
     private Character Extrafee;
 
-    @Column(name = "c_channel_paymethod", table = "arts_t_channel", nullable = false)
+    @Column(name = "c_channel_paymethod")
     private Character Paymethod;
 
-    @Column(name = "c_channel_type", table = "arts_t_channel", nullable = false)
+    @Column(name = "c_channel_type")
     private Character Type;
 
-    @Column(name = "c_channel_createdby", table = "arts_t_channel", nullable = false, length = 36)
+    @Column(name = "c_channel_createdby")
     private String Createdby;
 
-    @Column(name = "c_channel_createdon", table = "arts_t_channel", nullable = false)
+    @Column(name = "c_channel_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

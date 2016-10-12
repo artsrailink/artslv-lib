@@ -30,63 +30,63 @@ public class Baggagetrans {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_schedule_id", table = "arts_t_baggagetrans", nullable = false, length = 36)
+    @Column(name = "c_schedule_id")
     private String ScheduleId;
 
-    @Column(name = "c_wagonclass_id", table = "arts_t_baggagetrans", nullable = false, length = 36)
+    @Column(name = "c_wagonclass_id")
     private String WagonclassId;
 
-    @Column(name = "c_baggage_id", table = "arts_t_baggagetrans", nullable = false, length = 36)
+    @Column(name = "c_baggage_id")
     private String BaggageId;
 
-    @Column(name = "c_baggagetrans_doctitle", table = "arts_t_baggagetrans", nullable = false, length = 20)
+    @Column(name = "c_baggagetrans_doctitle")
     private String Doctitle;
 
-    @Column(name = "c_baggagetrans_docnum", table = "arts_t_baggagetrans", nullable = false)
+    @Column(name = "c_baggagetrans_docnum")
     private BigInteger Docnum;
 
-    @Column(name = "c_baggagetrans_weight", table = "arts_t_baggagetrans", nullable = false, scale = 2, precision = 5)
+    @Column(name = "c_baggagetrans_weight")
     private BigDecimal Weight;
 
-    @Column(name = "c_baggagetrans_amount", table = "arts_t_baggagetrans", nullable = false, scale = 2, precision = 11)
+    @Column(name = "c_baggagetrans_amount")
     private BigDecimal Amount;
 
-    @Column(name = "c_baggagetrans_totamount", table = "arts_t_baggagetrans", nullable = false, scale = 2, precision = 11)
+    @Column(name = "c_baggagetrans_totamount")
     private BigDecimal Totamount;
 
-    @Column(name = "c_baggagetrans_status", table = "arts_t_baggagetrans", nullable = false)
+    @Column(name = "c_baggagetrans_status")
     private Character Status;
 
-    @Column(name = "c_baggagetrans_domain", table = "arts_t_baggagetrans", nullable = false, length = 36)
+    @Column(name = "c_baggagetrans_domain")
     private String Domain;
 
-    @Column(name = "c_baggagetrans_modifiedby", table = "arts_t_baggagetrans", nullable = false, length = 36)
+    @Column(name = "c_baggagetrans_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_baggagetrans_modifiedon", table = "arts_t_baggagetrans", nullable = false)
+    @Column(name = "c_baggagetrans_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_unit_id", table = "arts_t_baggagetrans", nullable = false, length = 36)
+    @Column(name = "c_unit_id")
     private String UnitId;
 
-    @Column(name = "c_baggagetrans_date", table = "arts_t_baggagetrans", nullable = false)
+    @Column(name = "c_baggagetrans_date")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Date;
 
-    @Column(name = "c_stasiun_idorg", table = "arts_t_baggagetrans", nullable = false, length = 36)
+    @Column(name = "c_stasiun_idorg")
     private String StasiunIdorg;
 
-    @Column(name = "c_baggagetrans_createdby", table = "arts_t_baggagetrans", nullable = false, length = 36)
+    @Column(name = "c_baggagetrans_createdby")
     private String Createdby;
 
-    @Column(name = "c_baggagetrans_createdon", table = "arts_t_baggagetrans", nullable = false)
+    @Column(name = "c_baggagetrans_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

@@ -29,49 +29,49 @@ public class Closingx {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_closing_date", table = "arts_t_closingx", nullable = false)
+    @Column(name = "c_closing_date")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Date;
 
-    @Column(name = "c_stasiun_idsell", table = "arts_t_closingx", nullable = false, length = 36)
+    @Column(name = "c_stasiun_idsell")
     private String StasiunIdsell;
 
-    @Column(name = "c_closing_docnum", table = "arts_t_closingx", nullable = false, length = 36)
+    @Column(name = "c_closing_docnum")
     private String Docnum;
 
-    @Column(name = "c_closing_totamount", table = "arts_t_closingx", nullable = false)
+    @Column(name = "c_closing_totamount")
     private BigInteger Totamount;
 
-    @Column(name = "c_closing_a8date", table = "arts_t_closingx", nullable = false)
+    @Column(name = "c_closing_a8date")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate A8date;
 
-    @Column(name = "c_closing_a8num", table = "arts_t_closingx", nullable = false, length = 36)
+    @Column(name = "c_closing_a8num")
     private String A8num;
 
-    @Column(name = "c_closing_modifiedon", table = "arts_t_closingx", nullable = false)
+    @Column(name = "c_closing_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_shift_id", table = "arts_t_closingx", nullable = false, length = 36)
+    @Column(name = "c_shift_id")
     private String ShiftId;
 
-    @Column(name = "c_closing_modifiedby", table = "arts_t_closingx", nullable = false, length = 36)
+    @Column(name = "c_closing_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_closing_status", table = "arts_t_closingx", nullable = false)
+    @Column(name = "c_closing_status")
     private Character Status;
 
-    @Column(name = "c_closing_domain", table = "arts_t_closingx", nullable = false, length = 36)
+    @Column(name = "c_closing_domain")
     private String Domain;
 
     public String getId() {

@@ -27,38 +27,38 @@ public class Library {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_library_parent", table = "arts_t_library", length = 36)
+    @Column(name = "c_library_parent")
     private String Parent;
 
-    @Column(name = "c_library_type", table = "arts_t_library", nullable = false)
+    @Column(name = "c_library_type")
     private Character Type;
 
-    @Column(name = "c_library_value", table = "arts_t_library")
+    @Column(name = "c_library_value")
     private Character Value;
 
-    @Column(name = "c_library_description", table = "arts_t_library", nullable = false, length = 1000)
+    @Column(name = "c_library_description")
     private String Description;
 
-    @Column(name = "c_library_status", table = "arts_t_library", nullable = false)
+    @Column(name = "c_library_status")
     private Character Status;
 
-    @Column(name = "c_library_domain", table = "arts_t_library", nullable = false, length = 36)
+    @Column(name = "c_library_domain")
     private String Domain;
 
-    @Column(name = "c_library_modifiedby", table = "arts_t_library", nullable = false, length = 36)
+    @Column(name = "c_library_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_library_modifiedon", table = "arts_t_library", nullable = false)
+    @Column(name = "c_library_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_library_createdby", table = "arts_t_library", nullable = false, length = 36)
+    @Column(name = "c_library_createdby")
     private String Createdby;
 
-    @Column(name = "c_library_createdon", table = "arts_t_library", nullable = false)
+    @Column(name = "c_library_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

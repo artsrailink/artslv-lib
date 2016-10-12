@@ -29,52 +29,52 @@ public class Memshiptype {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_memshiptype_name", table = "arts_t_memshiptype", nullable = false, length = 200)
+    @Column(name = "c_memshiptype_name")
     private String Name;
 
-    @Column(name = "c_memshiptype_minvalue", table = "arts_t_memshiptype", nullable = false)
+    @Column(name = "c_memshiptype_minvalue")
     private double Minvalue;
 
-    @Column(name = "c_memshiptype_maxvalue", table = "arts_t_memshiptype", nullable = false)
+    @Column(name = "c_memshiptype_maxvalue")
     private double Maxvalue;
 
-    @Column(name = "c_memshiptype_startdate", table = "arts_t_memshiptype", nullable = false)
+    @Column(name = "c_memshiptype_startdate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Startdate;
 
-    @Column(name = "c_memshiptype_enddate", table = "arts_t_memshiptype", nullable = false)
+    @Column(name = "c_memshiptype_enddate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Enddate;
 
-    @Column(name = "c_memshiptype_status", table = "arts_t_memshiptype", nullable = false)
+    @Column(name = "c_memshiptype_status")
     private Character Status;
 
-    @Column(name = "c_memshiptype_domain", table = "arts_t_memshiptype", nullable = false, length = 36)
+    @Column(name = "c_memshiptype_domain")
     private String Domain;
 
-    @Column(name = "c_memshiptype_modifiedby", table = "arts_t_memshiptype", nullable = false, length = 36)
+    @Column(name = "c_memshiptype_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_memshiptype_modifiedon", table = "arts_t_memshiptype", nullable = false)
+    @Column(name = "c_memshiptype_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_memshiptype_multiplier", table = "arts_t_memshiptype", nullable = false, scale = 2, precision = 5)
+    @Column(name = "c_memshiptype_multiplier")
     private BigDecimal Multiplier;
 
-    @Column(name = "c_memshiptype_createdby", table = "arts_t_memshiptype", nullable = false, length = 36)
+    @Column(name = "c_memshiptype_createdby")
     private String Createdby;
 
-    @Column(name = "c_memshiptype_createdon", table = "arts_t_memshiptype", nullable = false)
+    @Column(name = "c_memshiptype_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

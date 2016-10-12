@@ -27,32 +27,32 @@ public class Discountsch {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_discount_id", table = "arts_t_discountsch", nullable = false, length = 36)
+    @Column(name = "c_discount_id")
     private String DiscountId;
 
-    @Column(name = "c_discountsch_status", table = "arts_t_discountsch", nullable = false)
+    @Column(name = "c_discountsch_status")
     private Character Status;
 
-    @Column(name = "c_discountsch_domain", table = "arts_t_discountsch", nullable = false, length = 36)
+    @Column(name = "c_discountsch_domain")
     private String Domain;
 
-    @Column(name = "c_discountsch_modifiedby", table = "arts_t_discountsch", nullable = false, length = 36)
+    @Column(name = "c_discountsch_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_discountsch_modifiedon", table = "arts_t_discountsch", nullable = false)
+    @Column(name = "c_discountsch_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_discountsch_noka", table = "arts_t_discountsch", nullable = false, length = 50)
+    @Column(name = "c_discountsch_noka")
     private String Noka;
 
-    @Column(name = "c_discountsch_createdby", table = "arts_t_discountsch", nullable = false, length = 36)
+    @Column(name = "c_discountsch_createdby")
     private String Createdby;
 
-    @Column(name = "c_discountsch_createdon", table = "arts_t_discountsch", nullable = false)
+    @Column(name = "c_discountsch_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

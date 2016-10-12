@@ -27,50 +27,50 @@ public class Grpreservationdet {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_grpreservationdet_psgnum", table = "arts_t_grpreservationdet", nullable = false)
+    @Column(name = "c_grpreservationdet_psgnum")
     private short Psgnum;
 
-    @Column(name = "c_grpreservationdet_unitprice", table = "arts_t_grpreservationdet", nullable = false)
+    @Column(name = "c_grpreservationdet_unitprice")
     private long Unitprice;
 
-    @Column(name = "c_grpreservationdet_amount", table = "arts_t_grpreservationdet", nullable = false)
+    @Column(name = "c_grpreservationdet_amount")
     private long Amount;
 
-    @Column(name = "c_wagonclass_id", table = "arts_t_grpreservationdet", nullable = false, length = 36)
+    @Column(name = "c_wagonclass_id")
     private String WagonclassId;
 
-    @Column(name = "c_trip_id", table = "arts_t_grpreservationdet", nullable = false, length = 36)
+    @Column(name = "c_trip_id")
     private String TripId;
 
-    @Column(name = "c_grpreservation_id", table = "arts_t_grpreservationdet", nullable = false, length = 36)
+    @Column(name = "c_grpreservation_id")
     private String GrpreservationId;
 
-    @Column(name = "c_stasiun_idorg", table = "arts_t_grpreservationdet", nullable = false, length = 36)
+    @Column(name = "c_stasiun_idorg")
     private String StasiunIdorg;
 
-    @Column(name = "c_stasiun_iddest", table = "arts_t_grpreservationdet", nullable = false, length = 36)
+    @Column(name = "c_stasiun_iddest")
     private String StasiunIddest;
 
-    @Column(name = "c_grpreservationdet_status", table = "arts_t_grpreservationdet", nullable = false)
+    @Column(name = "c_grpreservationdet_status")
     private Character Status;
 
-    @Column(name = "c_grpreservationdet_domain", table = "arts_t_grpreservationdet", nullable = false, length = 36)
+    @Column(name = "c_grpreservationdet_domain")
     private String Domain;
 
-    @Column(name = "c_grpreservationdet_modifiedby", table = "arts_t_grpreservationdet", nullable = false, length = 36)
+    @Column(name = "c_grpreservationdet_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_grpreservationdet_modifiedon", table = "arts_t_grpreservationdet", nullable = false)
+    @Column(name = "c_grpreservationdet_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_grpreservationdet_createdby", table = "arts_t_grpreservationdet", nullable = false, length = 36)
+    @Column(name = "c_grpreservationdet_createdby")
     private String Createdby;
 
-    @Column(name = "c_grpreservationdet_createdon", table = "arts_t_grpreservationdet", nullable = false)
+    @Column(name = "c_grpreservationdet_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

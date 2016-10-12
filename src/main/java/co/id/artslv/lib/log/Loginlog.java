@@ -28,35 +28,35 @@ public class Loginlog {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_loginlog_time", table = "arts_t_loginlog", nullable = false)
+    @Column(name = "c_loginlog_time")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Time;
 
-    @Column(name = "c_loginlog_ip", table = "arts_t_loginlog", nullable = false, length = 36)
+    @Column(name = "c_loginlog_ip")
     private String Ip;
 
-    @Column(name = "c_loginlog_username", table = "arts_t_loginlog", nullable = false, length = 100)
+    @Column(name = "c_loginlog_username")
     private String Username;
 
-    @Column(name = "c_loginlog_status", table = "arts_t_loginlog", nullable = false)
+    @Column(name = "c_loginlog_status")
     private Character Status;
 
-    @Column(name = "c_loginlog_domain", table = "arts_t_loginlog", nullable = false, length = 36)
+    @Column(name = "c_loginlog_domain")
     private String Domain;
 
-    @Column(name = "c_user_id", table = "arts_t_loginlog", length = 36)
+    @Column(name = "c_user_id", table = "arts_t_loginlog")
     private String UserId;
 
-    @Column(name = "c_loginlog_note", table = "arts_t_loginlog", length = 300)
+    @Column(name = "c_loginlog_note", table = "arts_t_loginlog")
     private String Note;
 
-    @Column(name = "c_loginlog_createdby", table = "arts_t_loginlog", nullable = false, length = 36)
+    @Column(name = "c_loginlog_createdby")
     private String Createdby;
 
-    @Column(name = "c_loginlog_createdon", table = "arts_t_loginlog", nullable = false)
+    @Column(name = "c_loginlog_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

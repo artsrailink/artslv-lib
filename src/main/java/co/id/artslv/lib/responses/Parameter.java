@@ -28,52 +28,52 @@ public class Parameter {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_parameter_code", table = "arts_t_parameter", nullable = false, length = 100)
+    @Column(name = "c_parameter_code")
     private String Code;
 
-    @Column(name = "c_parameter_name", table = "arts_t_parameter", nullable = false, length = 200)
+    @Column(name = "c_parameter_name")
     private String Name;
 
-    @Column(name = "c_parameter_valtype", table = "arts_t_parameter", nullable = false, length = 50)
+    @Column(name = "c_parameter_valtype")
     private String Valtype;
 
-    @Column(name = "c_parameter_value", table = "arts_t_parameter", nullable = false, length = 1000)
+    @Column(name = "c_parameter_value")
     private String Value;
 
-    @Column(name = "c_parameter_status", table = "arts_t_parameter", nullable = false)
+    @Column(name = "c_parameter_status")
     private Character Status;
 
-    @Column(name = "c_parameter_domain", table = "arts_t_parameter", nullable = false, length = 36)
+    @Column(name = "c_parameter_domain")
     private String Domain;
 
-    @Column(name = "c_parameter_modifiedby", table = "arts_t_parameter", nullable = false, length = 36)
+    @Column(name = "c_parameter_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_parameter_modifiedon", table = "arts_t_parameter", nullable = false)
+    @Column(name = "c_parameter_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_parameter_startdate", table = "arts_t_parameter", nullable = false)
+    @Column(name = "c_parameter_startdate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Startdate;
 
-    @Column(name = "c_parameter_enddate", table = "arts_t_parameter", nullable = false)
+    @Column(name = "c_parameter_enddate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Enddate;
 
-    @Column(name = "c_parameter_createdby", table = "arts_t_parameter", nullable = false, length = 36)
+    @Column(name = "c_parameter_createdby")
     private String Createdby;
 
-    @Column(name = "c_parameter_createdon", table = "arts_t_parameter", nullable = false)
+    @Column(name = "c_parameter_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

@@ -27,35 +27,35 @@ public class Objactivity {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_objactivity_name", table = "arts_t_objactivity", nullable = false)
+    @Column(name = "c_objactivity_name")
     private String Name;
 
-    @Column(name = "c_objactivity_status", table = "arts_t_objactivity", nullable = false)
+    @Column(name = "c_objactivity_status")
     private Character Status;
 
-    @Column(name = "c_objactivity_domain", table = "arts_t_objactivity", nullable = false, length = 36)
+    @Column(name = "c_objactivity_domain")
     private String Domain;
 
-    @Column(name = "c_objactivity_modifiedby", table = "arts_t_objactivity", nullable = false, length = 36)
+    @Column(name = "c_objactivity_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_objactivity_modifiedon", table = "arts_t_objactivity", nullable = false)
+    @Column(name = "c_objactivity_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_module_id", table = "arts_t_objactivity", nullable = false, length = 36)
+    @Column(name = "c_module_id")
     private String ModuleId;
 
-    @Column(name = "c_objactivity_code", table = "arts_t_objactivity", nullable = false, length = 50)
+    @Column(name = "c_objactivity_code")
     private String Code;
 
-    @Column(name = "c_objactivity_createdby", table = "arts_t_objactivity", length = 36)
+    @Column(name = "c_objactivity_createdby")
     private String Createdby;
 
-    @Column(name = "c_objactivity_createdon", table = "arts_t_objactivity")
+    @Column(name = "c_objactivity_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

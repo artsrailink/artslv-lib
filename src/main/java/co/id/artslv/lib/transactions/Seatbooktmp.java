@@ -28,57 +28,57 @@ public class Seatbooktmp {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_trip_id", table = "arts_t_seatbooktmp", nullable = false, length = 36)
+    @Column(name = "c_trip_id")
     private String TripId;
 
-    @Column(name = "c_stamformdet_id", table = "arts_t_seatbooktmp", nullable = false, length = 36)
+    @Column(name = "c_stamformdet_id")
     private String StamformdetId;
 
-    @Column(name = "c_wagondet_id", table = "arts_t_seatbooktmp", nullable = false, length = 36)
+    @Column(name = "c_wagondet_id")
     private String WagondetId;
 
-    @Column(name = "c_schedule_id", table = "arts_t_seatbooktmp", nullable = false, length = 36)
+    @Column(name = "c_schedule_id")
     private String ScheduleId;
 
-    @Column(name = "c_seatbooktmp_noka", table = "arts_t_seatbooktmp", nullable = false, length = 50)
+    @Column(name = "c_seatbooktmp_noka")
     private String Noka;
 
-    @Column(name = "c_seatbooktmp_tripdate", table = "arts_t_seatbooktmp", nullable = false)
+    @Column(name = "c_seatbooktmp_tripdate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Tripdate;
 
-    @Column(name = "c_seatbooktmp_sfdorder", table = "arts_t_seatbooktmp", nullable = false)
+    @Column(name = "c_seatbooktmp_sfdorder")
     private short Sfdorder;
 
-    @Column(name = "c_seatbooktmp_wgdrow", table = "arts_t_seatbooktmp", nullable = false, length = 2)
+    @Column(name = "c_seatbooktmp_wgdrow")
     private String Wgdrow;
 
-    @Column(name = "c_seatbooktmp_wgdcol", table = "arts_t_seatbooktmp", nullable = false)
+    @Column(name = "c_seatbooktmp_wgdcol")
     private Character Wgdcol;
 
-    @Column(name = "c_seatbooktmp_expdate", table = "arts_t_seatbooktmp", nullable = false)
+    @Column(name = "c_seatbooktmp_expdate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Expdate;
 
-    @Column(name = "c_seatbooktmp_domain", table = "arts_t_seatbooktmp", nullable = false, length = 36)
+    @Column(name = "c_seatbooktmp_domain")
     private String Domain;
 
-    @Column(name = "c_seatbooktmp_sfdcode", table = "arts_t_seatbooktmp", nullable = false, length = 10)
+    @Column(name = "c_seatbooktmp_sfdcode")
     private String Sfdcode;
 
-    @Column(name = "c_seatbooktmp_legval", table = "arts_t_seatbooktmp", length = 50)
+    @Column(name = "c_seatbooktmp_legval")
     private String Legval;
 
-    @Column(name = "c_seatbooktmp_createdby", table = "arts_t_seatbooktmp", nullable = false, length = 36)
+    @Column(name = "c_seatbooktmp_createdby")
     private String Createdby;
 
-    @Column(name = "c_seatbooktmp_createdon", table = "arts_t_seatbooktmp", nullable = false)
+    @Column(name = "c_seatbooktmp_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

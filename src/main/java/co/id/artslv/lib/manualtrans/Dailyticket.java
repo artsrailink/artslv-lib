@@ -29,66 +29,66 @@ public class Dailyticket {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_dailyticket_date", table = "arts_t_dailyticket", nullable = false)
+    @Column(name = "c_dailyticket_date")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Date;
 
-    @Column(name = "c_stasiun_iddest", table = "arts_t_dailyticket", nullable = false, length = 36)
+    @Column(name = "c_stasiun_iddest")
     private String StasiunIddest;
 
-    @Column(name = "c_wagonclass_id", table = "arts_t_dailyticket", nullable = false, length = 36)
+    @Column(name = "c_wagonclass_id")
     private String WagonclassId;
 
-    @Column(name = "c_schedule_id", table = "arts_t_dailyticket", nullable = false, length = 36)
+    @Column(name = "c_schedule_id")
     private String ScheduleId;
 
-    @Column(name = "c_dailyticket_ticketidstart", table = "arts_t_dailyticket", nullable = false, length = 20)
+    @Column(name = "c_dailyticket_ticketidstart")
     private String Ticketidstart;
 
-    @Column(name = "c_dailyticket_ticketidnext", table = "arts_t_dailyticket", nullable = false, length = 20)
+    @Column(name = "c_dailyticket_ticketidnext")
     private String Ticketidnext;
 
-    @Column(name = "c_dailyticket_amount", table = "arts_t_dailyticket", nullable = false, scale = 2, precision = 11)
+    @Column(name = "c_dailyticket_amount")
     private BigDecimal Amount;
 
-    @Column(name = "c_dailyticket_ticketcancel", table = "arts_t_dailyticket", nullable = false)
+    @Column(name = "c_dailyticket_ticketcancel")
     private int Ticketcancel;
 
-    @Column(name = "c_dailyticket_status", table = "arts_t_dailyticket", nullable = false)
+    @Column(name = "c_dailyticket_status")
     private Character Status;
 
-    @Column(name = "c_dailyticket_domain", table = "arts_t_dailyticket", nullable = false, length = 36)
+    @Column(name = "c_dailyticket_domain")
     private String Domain;
 
-    @Column(name = "c_dailyticket_modifiedby", table = "arts_t_dailyticket", nullable = false, length = 36)
+    @Column(name = "c_dailyticket_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_dailyticket_modifiedon", table = "arts_t_dailyticket", nullable = false)
+    @Column(name = "c_dailyticket_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_unit_id", table = "arts_t_dailyticket", nullable = false, length = 36)
+    @Column(name = "c_unit_id")
     private String UnitId;
 
-    @Column(name = "c_stasiun_idorg", table = "arts_t_dailyticket", nullable = false, length = 36)
+    @Column(name = "c_stasiun_idorg")
     private String StasiunIdorg;
 
-    @Column(name = "c_stasiun_idbook", table = "arts_t_dailyticket", nullable = false, length = 36)
+    @Column(name = "c_stasiun_idbook")
     private String StasiunIdbook;
 
-    @Column(name = "c_dailyticket_psgnum", table = "arts_t_dailyticket", nullable = false)
+    @Column(name = "c_dailyticket_psgnum")
     private int Psgnum;
 
-    @Column(name = "c_dailyticket_createdby", table = "arts_t_dailyticket", nullable = false, length = 36)
+    @Column(name = "c_dailyticket_createdby")
     private String Createdby;
 
-    @Column(name = "c_dailyticket_createdon", table = "arts_t_dailyticket", nullable = false)
+    @Column(name = "c_dailyticket_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

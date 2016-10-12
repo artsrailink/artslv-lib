@@ -27,35 +27,35 @@ public class Sapwagonclass {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_wagonclass_id", table = "arts_t_sapwagonclass", nullable = false, length = 36)
+    @Column(name = "c_wagonclass_id")
     private String WagonclassId;
 
-    @Column(name = "c_trainmiles_id", table = "arts_t_sapwagonclass", nullable = false, length = 36)
+    @Column(name = "c_trainmiles_id")
     private String TrainmilesId;
 
-    @Column(name = "c_sapcoa_id", table = "arts_t_sapwagonclass", nullable = false, length = 36)
+    @Column(name = "c_sapcoa_id")
     private String SapcoaId;
 
-    @Column(name = "c_sapwagonclass_status", table = "arts_t_sapwagonclass", nullable = false)
+    @Column(name = "c_sapwagonclass_status")
     private Character Status;
 
-    @Column(name = "c_sapwagonclass_domain", table = "arts_t_sapwagonclass", nullable = false, length = 36)
+    @Column(name = "c_sapwagonclass_domain")
     private String Domain;
 
-    @Column(name = "c_sapwagonclass_modifiedby", table = "arts_t_sapwagonclass", nullable = false, length = 36)
+    @Column(name = "c_sapwagonclass_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_sapwagonclass_modifiedon", table = "arts_t_sapwagonclass", nullable = false)
+    @Column(name = "c_sapwagonclass_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_sapwagonclass_createdby", table = "arts_t_sapwagonclass", nullable = false, length = 36)
+    @Column(name = "c_sapwagonclass_createdby")
     private String Createdby;
 
-    @Column(name = "c_sapwagonclass_createdon", table = "arts_t_sapwagonclass", nullable = false)
+    @Column(name = "c_sapwagonclass_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

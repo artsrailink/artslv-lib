@@ -28,38 +28,38 @@ public class Grpreservationsrv {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_grpreservationpsg_id", table = "arts_t_grpreservationsrv", nullable = false, length = 36)
+    @Column(name = "c_grpreservationpsg_id")
     private String GrpreservationpsgId;
 
-    @Column(name = "c_service_id", table = "arts_t_grpreservationsrv", nullable = false, length = 36)
+    @Column(name = "c_service_id")
     private String ServiceId;
 
-    @Column(name = "c_grpreservationsrv_amount", table = "arts_t_grpreservationsrv", nullable = false, scale = 2, precision = 11)
+    @Column(name = "c_grpreservationsrv_amount")
     private BigDecimal Amount;
 
-    @Column(name = "c_grpreservationsrv_note", table = "arts_t_grpreservationsrv", length = 500)
+    @Column(name = "c_grpreservationsrv_note")
     private String Note;
 
-    @Column(name = "c_grpreservationsrv_status", table = "arts_t_grpreservationsrv", nullable = false)
+    @Column(name = "c_grpreservationsrv_status")
     private Character Status;
 
-    @Column(name = "c_grpreservationsrv_domain", table = "arts_t_grpreservationsrv", nullable = false, length = 36)
+    @Column(name = "c_grpreservationsrv_domain")
     private String Domain;
 
-    @Column(name = "c_grpreservationsrv_modifiedby", table = "arts_t_grpreservationsrv", nullable = false, length = 36)
+    @Column(name = "c_grpreservationsrv_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_grpreservationsrv_modifiedon", table = "arts_t_grpreservationsrv", nullable = false)
+    @Column(name = "c_grpreservationsrv_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_grpreservationsrv_createdby", table = "arts_t_grpreservationsrv", nullable = false, length = 36)
+    @Column(name = "c_grpreservationsrv_createdby")
     private String Createdby;
 
-    @Column(name = "c_grpreservationsrv_createdon", table = "arts_t_grpreservationsrv", nullable = false)
+    @Column(name = "c_grpreservationsrv_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

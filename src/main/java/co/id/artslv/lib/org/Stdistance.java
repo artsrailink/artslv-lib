@@ -28,35 +28,35 @@ public class Stdistance {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_stasiunid_from", table = "arts_t_stdistance", nullable = false, length = 36)
+    @Column(name = "c_stasiunid_from")
     private String StasiunidFrom;
 
-    @Column(name = "c_stasiunid_to", table = "arts_t_stdistance", nullable = false, length = 36)
+    @Column(name = "c_stasiunid_to")
     private String StasiunidTo;
 
-    @Column(name = "c_stdistance_value", table = "arts_t_stdistance", nullable = false, scale = 3, precision = 11)
+    @Column(name = "c_stdistance_value")
     private BigDecimal Value;
 
-    @Column(name = "c_stdistance_status", table = "arts_t_stdistance", nullable = false)
+    @Column(name = "c_stdistance_status")
     private Character Status;
 
-    @Column(name = "c_stdistance_domain", table = "arts_t_stdistance", nullable = false, length = 36)
+    @Column(name = "c_stdistance_domain")
     private String Domain;
 
-    @Column(name = "c_stdistance_modifiedby", table = "arts_t_stdistance", nullable = false, length = 36)
+    @Column(name = "c_stdistance_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_stdistance_modifiedon", table = "arts_t_stdistance", nullable = false)
+    @Column(name = "c_stdistance_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_stdistance_createdby", table = "arts_t_stdistance", nullable = false, length = 36)
+    @Column(name = "c_stdistance_createdby")
     private String Createdby;
 
-    @Column(name = "c_stdistance_createdon", table = "arts_t_stdistance", nullable = false)
+    @Column(name = "c_stdistance_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

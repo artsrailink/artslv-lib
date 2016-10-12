@@ -31,49 +31,49 @@ public class Shift {
     @Column(name = "c_shift_name")
     private String Name;
 
-    @Column(name = "c_shift_openon", table = "arts_t_shift", nullable = false)
+    @Column(name = "c_shift_openon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Openon;
 
-    @Column(name = "c_shift_closedon", table = "arts_t_shift")
+    @Column(name = "c_shift_closedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Closedon;
 
-    @Column(name = "c_shift_docnum", table = "arts_t_shift", length = 50)
+    @Column(name = "c_shift_docnum")
     private String Docnum;
 
-    @Column(name = "c_shift_status", table = "arts_t_shift", nullable = false)
+    @Column(name = "c_shift_status")
     private Character Status;
 
-    @Column(name = "c_shift_domain", table = "arts_t_shift", nullable = false, length = 36)
+    @Column(name = "c_shift_domain")
     private String Domain;
 
-    @Column(name = "c_shift_modifiedby", table = "arts_t_shift", nullable = false, length = 36)
+    @Column(name = "c_shift_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_shift_modifiedon", table = "arts_t_shift", nullable = false)
+    @Column(name = "c_shift_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_user_id", table = "arts_t_shift", nullable = false, length = 36)
+    @Column(name = "c_user_id")
     private String UserId;
 
-    @Column(name = "c_unit_id", table = "arts_t_shift", nullable = false, length = 36)
+    @Column(name = "c_unit_id")
     private String UnitId;
 
-    @Column(name = "c_shift_createdby", table = "arts_t_shift", nullable = false, length = 36)
+    @Column(name = "c_shift_createdby")
     private String Createdby;
 
-    @Column(name = "c_shift_createdon", table = "arts_t_shift", nullable = false)
+    @Column(name = "c_shift_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

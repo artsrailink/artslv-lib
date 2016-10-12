@@ -27,36 +27,36 @@ public class Userpass {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_userpass_createdon", table = "arts_t_userpass", nullable = false)
+    @Column(name = "c_userpass_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Createdon;
 
-    @Column(name = "c_userpass_password", table = "arts_t_userpass", nullable = false, length = 60)
+    @Column(name = "c_userpass_password")
     private String Password;
 
-    @Column(name = "c_user_id", table = "arts_t_userpass", nullable = false, length = 36)
+    @Column(name = "c_user_id")
     private String UserId;
 
-    @Column(name = "c_userpass_status", table = "arts_t_userpass", nullable = false)
+    @Column(name = "c_userpass_status")
     private Character Status;
 
-    @Column(name = "c_userpass_domain", table = "arts_t_userpass", nullable = false, length = 36)
+    @Column(name = "c_userpass_domain")
     private String Domain;
 
-    @Column(name = "c_userpass_modifiedby", table = "arts_t_userpass", nullable = false, length = 36)
+    @Column(name = "c_userpass_modifiedby")
     private String Modifiedby;
     
-    @Column(name = "c_userpass_modifiedon", table = "arts_t_userpass", nullable = false)
+    @Column(name = "c_userpass_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_userpass_createdby", table = "arts_t_userpass", length = 36)
+    @Column(name = "c_userpass_createdby")
     private String Createdby;
 
     public String getId() {

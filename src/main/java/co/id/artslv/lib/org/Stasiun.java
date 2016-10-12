@@ -27,60 +27,60 @@ public class Stasiun {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_stasiun_profitcenter", table = "arts_t_stasiun", length = 15)
+    @Column(name = "c_stasiun_profitcenter")
     private String Profitcenter;
 
-    @Column(name = "c_stasiun_name", table = "arts_t_stasiun", nullable = false, length = 100)
+    @Column(name = "c_stasiun_name")
     private String Name;
 
-    @Column(name = "c_stasiun_code", table = "arts_t_stasiun", nullable = false, length = 10)
+    @Column(name = "c_stasiun_code")
     private String Code;
 
-    @Column(name = "c_stasiun_pembatalan", table = "arts_t_stasiun", nullable = false)
+    @Column(name = "c_stasiun_pembatalan")
     private Character Pembatalan;
 
-    @Column(name = "c_stasiun_pengembalianbea", table = "arts_t_stasiun", nullable = false)
+    @Column(name = "c_stasiun_pengembalianbea")
     private Character Pengembalianbea;
 
-    @Column(name = "c_stasiun_status", table = "arts_t_stasiun", nullable = false)
+    @Column(name = "c_stasiun_status")
     private Character Status;
 
-    @Column(name = "c_stasiun_domain", table = "arts_t_stasiun", nullable = false, length = 36)
+    @Column(name = "c_stasiun_domain")
     private String Domain;
 
-    @Column(name = "c_stasiun_modifiedby", table = "arts_t_stasiun", nullable = false, length = 36)
+    @Column(name = "c_stasiun_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_stasiun_modifiedon", table = "arts_t_stasiun", nullable = false)
+    @Column(name = "c_stasiun_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_area_id", table = "arts_t_stasiun", nullable = false, length = 36)
+    @Column(name = "c_area_id")
     private String AreaId;
 
-    @Column(name = "c_city_id", table = "arts_t_stasiun", nullable = false, length = 36)
+    @Column(name = "c_city_id")
     private String CityId;
 
-    @Column(name = "c_stasiun_createdby", table = "arts_t_stasiun", nullable = false, length = 36)
+    @Column(name = "c_stasiun_createdby")
     private String Createdby;
 
-    @Column(name = "c_stasiun_createdon", table = "arts_t_stasiun", nullable = false)
+    @Column(name = "c_stasiun_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Createdon;
 
-    @Column(name = "c_stasiun_showpos", table = "arts_t_stasiun", nullable = false)
+    @Column(name = "c_stasiun_showpos")
     private Character Showpos;
 
-    @Column(name = "c_stasiun_showibook", table = "arts_t_stasiun", nullable = false)
+    @Column(name = "c_stasiun_showibook")
     private Character Showibook;
 
-    @Column(name = "c_stasiun_showmobile", table = "arts_t_stasiun", nullable = false)
+    @Column(name = "c_stasiun_showmobile")
     private Character Showmobile;
 
     public String getId() {

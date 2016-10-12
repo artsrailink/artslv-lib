@@ -21,45 +21,45 @@ import org.hibernate.annotations.Type;
 @Table(name = "arts_t_trainmiles")
 public class Trainmiles {
 
-    @Column(name = "c_trainmiles_id", table = "arts_t_trainmiles", nullable = false, length = 36)
+    @Column(name = "c_trainmiles_id")
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_trainmiles_name", table = "arts_t_trainmiles", nullable = false, length = 200)
+    @Column(name = "c_trainmiles_name")
     private String Name;
 
-    @Column(name = "c_trainmiles_status", table = "arts_t_trainmiles", nullable = false)
+    @Column(name = "c_trainmiles_status")
     private Character Status;
 
-    @Column(name = "c_trainmiles_domain", table = "arts_t_trainmiles", nullable = false, length = 36)
+    @Column(name = "c_trainmiles_domain")
     private String Domain;
 
-    @Column(name = "c_trainmiles_modifiedby", table = "arts_t_trainmiles", nullable = false, length = 36)
+    @Column(name = "c_trainmiles_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_trainmiles_modifiedon", table = "arts_t_trainmiles", nullable = false)
+    @Column(name = "c_trainmiles_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_trainmiles_createdby", table = "arts_t_trainmiles", nullable = false, length = 36)
+    @Column(name = "c_trainmiles_createdby")
     private String Createdby;
 
-    @Column(name = "c_trainmiles_createdon", table = "arts_t_trainmiles", nullable = false)
+    @Column(name = "c_trainmiles_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Createdon;
 
-    @Column(name = "c_trainmiles_code", table = "arts_t_trainmiles", nullable = false, length = 10)
+    @Column(name = "c_trainmiles_code", length = 10)
     private String Code;
 
-    @Column(name = "c_trainmiles_note", table = "arts_t_trainmiles", length = 100)
+    @Column(name = "c_trainmiles_note")
     private String Note;
 
     public String getId() {

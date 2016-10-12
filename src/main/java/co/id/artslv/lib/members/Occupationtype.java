@@ -27,32 +27,32 @@ public class Occupationtype {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_occupationtype_name", table = "arts_t_occupationtype", nullable = false, length = 100)
+    @Column(name = "c_occupationtype_name")
     private String Name;
 
-    @Column(name = "c_occupationtype_code", table = "arts_t_occupationtype", nullable = false, length = 10)
+    @Column(name = "c_occupationtype_code")
     private String Code;
 
-    @Column(name = "c_occupationtype_status", table = "arts_t_occupationtype", nullable = false)
+    @Column(name = "c_occupationtype_status")
     private Character Status;
 
-    @Column(name = "c_occupationtype_domain", table = "arts_t_occupationtype", nullable = false, length = 36)
+    @Column(name = "c_occupationtype_domain")
     private String Domain;
 
-    @Column(name = "c_occupationtype_modifiedby", table = "arts_t_occupationtype", nullable = false, length = 36)
+    @Column(name = "c_occupationtype_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_occupationtype_modifiedon", table = "arts_t_occupationtype", nullable = false)
+    @Column(name = "c_occupationtype_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_occupationtype_createdby", table = "arts_t_occupationtype", nullable = false, length = 36)
+    @Column(name = "c_occupationtype_createdby")
     private String Createdby;
 
-    @Column(name = "c_occupationtype_createdon", table = "arts_t_occupationtype", nullable = false)
+    @Column(name = "c_occupationtype_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

@@ -28,80 +28,80 @@ public class Grpreservation {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_grpreservation_docnum", table = "arts_t_grpreservation", nullable = false, length = 36)
+    @Column(name = "c_grpreservation_docnum")
     private String Docnum;
 
-    @Column(name = "c_grpreservation_custname", table = "arts_t_grpreservation", nullable = false, length = 100)
+    @Column(name = "c_grpreservation_custname")
     private String Custname;
 
-    @Column(name = "c_grpreservation_address", table = "arts_t_grpreservation", nullable = false)
+    @Column(name = "c_grpreservation_address")
     private String Address;
 
-    @Column(name = "c_grpreservation_phonenum1", table = "arts_t_grpreservation", nullable = false, length = 50)
+    @Column(name = "c_grpreservation_phonenum1")
     private String Phonenum1;
 
-    @Column(name = "c_grpreservation_email", table = "arts_t_grpreservation", length = 100)
+    @Column(name = "c_grpreservation_email")
     private String Email;
 
-    @Column(name = "c_unit_id", table = "arts_t_grpreservation", nullable = false, length = 36)
+    @Column(name = "c_unit_id")
     private String UnitId;
 
-    @Column(name = "c_grpreservation_date", table = "arts_t_grpreservation", nullable = false)
+    @Column(name = "c_grpreservation_date")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Date;
 
-    @Column(name = "c_grpreservation_totpsg", table = "arts_t_grpreservation", nullable = false)
+    @Column(name = "c_grpreservation_totpsg")
     private short Totpsg;
 
-    @Column(name = "c_grpreservation_totamount", table = "arts_t_grpreservation", nullable = false)
+    @Column(name = "c_grpreservation_totamount")
     private long Totamount;
 
-    @Column(name = "c_grpreservation_dpamount", table = "arts_t_grpreservation", nullable = false)
+    @Column(name = "c_grpreservation_dpamount")
     private long Dpamount;
 
-    @Column(name = "c_grpreservation_duedatedp", table = "arts_t_grpreservation", nullable = false)
+    @Column(name = "c_grpreservation_duedatedp")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Duedatedp;
 
-    @Column(name = "c_grpreservation_duedatepay", table = "arts_t_grpreservation", nullable = false)
+    @Column(name = "c_grpreservation_duedatepay")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Duedatepay;
 
-    @Column(name = "c_grpreservation_status", table = "arts_t_grpreservation", nullable = false)
+    @Column(name = "c_grpreservation_status")
     private Character Status;
 
-    @Column(name = "c_grpreservation_domain", table = "arts_t_grpreservation", nullable = false, length = 36)
+    @Column(name = "c_grpreservation_domain")
     private String Domain;
 
-    @Column(name = "c_grpreservation_modifiedby", table = "arts_t_grpreservation", nullable = false, length = 36)
+    @Column(name = "c_grpreservation_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_grpreservation_modifiedon", table = "arts_t_grpreservation", nullable = false)
+    @Column(name = "c_grpreservation_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_grpreservation_groupname", table = "arts_t_grpreservation", length = 100)
+    @Column(name = "c_grpreservation_groupname")
     private String Groupname;
 
-    @Column(name = "c_grpreservation_phonenum2", table = "arts_t_grpreservation", length = 50)
+    @Column(name = "c_grpreservation_phonenum2")
     private String Phonenum2;
 
-    @Column(name = "c_grpreservation_createdby", table = "arts_t_grpreservation", nullable = false, length = 36)
+    @Column(name = "c_grpreservation_createdby")
     private String Createdby;
 
-    @Column(name = "c_grpreservation_createdon", table = "arts_t_grpreservation", nullable = false)
+    @Column(name = "c_grpreservation_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

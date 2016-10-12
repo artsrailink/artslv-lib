@@ -27,22 +27,22 @@ public class City {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_city_name", table = "arts_t_city", nullable = false, length = 100)
+    @Column(name = "c_city_name")
     private String Name;
 
-    @Column(name = "c_city_gmt", table = "arts_t_city", nullable = false)
+    @Column(name = "c_city_gmt")
     private double Gmt;
 
-    @Column(name = "c_province_id", table = "arts_t_city", nullable = false, length = 36)
+    @Column(name = "c_province_id")
     private String ProvinceId;
 
-    @Column(name = "c_city_status", table = "arts_t_city", nullable = false)
+    @Column(name = "c_city_status")
     private Character Status;
 
-    @Column(name = "c_city_domain", table = "arts_t_city", nullable = false, length = 36)
+    @Column(name = "c_city_domain")
     private String Domain;
 
-    @Column(name = "c_city_modifiedby", table = "arts_t_city", nullable = false, length = 36)
+    @Column(name = "c_city_modifiedby")
     private String Modifiedby;
 
     @Column(name = "c_city_modifiedon", table = "arts_t_city")
@@ -52,10 +52,10 @@ public class City {
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_city_createdby", table = "arts_t_city", nullable = false, length = 36)
+    @Column(name = "c_city_createdby")
     private String Createdby;
 
-    @Column(name = "c_city_createdon", table = "arts_t_city", nullable = false)
+    @Column(name = "c_city_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

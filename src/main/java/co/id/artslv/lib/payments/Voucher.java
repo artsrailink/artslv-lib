@@ -28,94 +28,94 @@ public class Voucher {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_vouchertype_id", table = "arts_t_voucher", nullable = false, length = 36)
+    @Column(name = "c_vouchertype_id")
     private String VouchertypeId;
 
-    @Column(name = "c_voucheramount_id", table = "arts_t_voucher", nullable = false, length = 36)
+    @Column(name = "c_voucheramount_id")
     private String VoucheramountId;
 
-    @Column(name = "c_voucher_validstartdate", table = "arts_t_voucher", nullable = false)
+    @Column(name = "c_voucher_validstartdate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Validstartdate;
 
-    @Column(name = "c_voucher_validenddate", table = "arts_t_voucher", nullable = false)
+    @Column(name = "c_voucher_validenddate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Validenddate;
 
-    @Column(name = "c_voucher_psgname", table = "arts_t_voucher", length = 100)
+    @Column(name = "c_voucher_psgname")
     private String Psgname;
 
-    @Column(name = "c_voucher_psgid", table = "arts_t_voucher", length = 50)
+    @Column(name = "c_voucher_psgid")
     private String Psgid;
 
-    @Column(name = "c_voucher_psgbirthdate", table = "arts_t_voucher")
+    @Column(name = "c_voucher_psgbirthdate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Psgbirthdate;
 
-    @Column(name = "c_voucher_psggender", table = "arts_t_voucher")
+    @Column(name = "c_voucher_psggender")
     private Character Psggender;
 
-    @Column(name = "c_voucher_psgemail", table = "arts_t_voucher", length = 100)
+    @Column(name = "c_voucher_psgemail")
     private String Psgemail;
 
-    @Column(name = "c_voucher_psgphonenum", table = "arts_t_voucher", length = 36)
+    @Column(name = "c_voucher_psgphonenum")
     private String Psgphonenum;
 
-    @Column(name = "c_voucher_psgaddress", table = "arts_t_voucher")
+    @Column(name = "c_voucher_psgaddress")
     private String Psgaddress;
 
-    @Column(name = "c_voucher_vcnum", table = "arts_t_voucher", nullable = false, length = 100)
+    @Column(name = "c_voucher_vcnum")
     private String Vcnum;
 
-    @Column(name = "c_user_idapp1", table = "arts_t_voucher", length = 36)
+    @Column(name = "c_user_idapp1")
     private String UserIdapp1;
 
-    @Column(name = "c_user_idapp2", table = "arts_t_voucher", length = 36)
+    @Column(name = "c_user_idapp2")
     private String UserIdapp2;
 
-    @Column(name = "c_voucher_appdate1", table = "arts_t_voucher")
+    @Column(name = "c_voucher_appdate1")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Appdate1;
 
-    @Column(name = "c_voucher_appdate2", table = "arts_t_voucher")
+    @Column(name = "c_voucher_appdate2")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Appdate2;
 
-    @Column(name = "c_voucher_status", table = "arts_t_voucher", nullable = false)
+    @Column(name = "c_voucher_status")
     private Character Status;
 
-    @Column(name = "c_voucher_domain", table = "arts_t_voucher", nullable = false, length = 36)
+    @Column(name = "c_voucher_domain")
     private String Domain;
 
-    @Column(name = "c_voucher_modifiedby", table = "arts_t_voucher", nullable = false, length = 36)
+    @Column(name = "c_voucher_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_voucher_modifiedon", table = "arts_t_voucher", nullable = false)
+    @Column(name = "c_voucher_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_voucher_createdby", table = "arts_t_voucher", nullable = false, length = 36)
+    @Column(name = "c_voucher_createdby")
     private String Createdby;
 
-    @Column(name = "c_voucher_createdon", table = "arts_t_voucher", nullable = false)
+    @Column(name = "c_voucher_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

@@ -27,29 +27,29 @@ public class Train {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_train_name", table = "arts_t_train", nullable = false, length = 100)
+    @Column(name = "c_train_name")
     private String Name;
 
-    @Column(name = "c_train_status", table = "arts_t_train", nullable = false)
+    @Column(name = "c_train_status")
     private Character Status;
 
-    @Column(name = "c_train_domain", table = "arts_t_train", nullable = false, length = 36)
+    @Column(name = "c_train_domain")
     private String Domain;
 
-    @Column(name = "c_train_modifiedby", table = "arts_t_train", nullable = false, length = 36)
+    @Column(name = "c_train_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_train_modifiedon", table = "arts_t_train", nullable = false)
+    @Column(name = "c_train_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_train_createdby", table = "arts_t_train", nullable = false, length = 36)
+    @Column(name = "c_train_createdby")
     private String Createdby;
 
-    @Column(name = "c_train_createdon", table = "arts_t_train", nullable = false)
+    @Column(name = "c_train_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

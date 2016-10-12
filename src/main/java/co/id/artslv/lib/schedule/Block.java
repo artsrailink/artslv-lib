@@ -27,47 +27,47 @@ public class Block {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_wagondet_id", table = "arts_t_block", nullable = false, length = 36)
+    @Column(name = "c_wagondet_id")
     private String WagondetId;
 
-    @Column(name = "c_block_status", table = "arts_t_block", nullable = false)
+    @Column(name = "c_block_status")
     private Character Status;
 
-    @Column(name = "c_block_domain", table = "arts_t_block", nullable = false, length = 36)
+    @Column(name = "c_block_domain")
     private String Domain;
 
-    @Column(name = "c_block_modifiedby", table = "arts_t_block", nullable = false, length = 40)
+    @Column(name = "c_block_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_block_modifiedon", table = "arts_t_block", nullable = false)
+    @Column(name = "c_block_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_subclass_id", table = "arts_t_block", nullable = false, length = 36)
+    @Column(name = "c_subclass_id")
     private String SubclassId;
 
-    @Column(name = "c_stamformdet_id", table = "arts_t_block", nullable = false, length = 36)
+    @Column(name = "c_stamformdet_id")
     private String StamformdetId;
 
-    @Column(name = "c_trip_id", table = "arts_t_block", nullable = false, length = 36)
+    @Column(name = "c_trip_id")
     private String TripId;
 
-    @Column(name = "c_stop_idorg", table = "arts_t_block", nullable = false, length = 36)
+    @Column(name = "c_stop_idorg")
     private String StopIdorg;
 
-    @Column(name = "c_stop_iddest", table = "arts_t_block", nullable = false, length = 36)
+    @Column(name = "c_stop_iddest")
     private String StopIddest;
 
-    @Column(name = "c_block_legval", table = "arts_t_block", nullable = false, length = 100)
+    @Column(name = "c_block_legval")
     private String Legval;
 
-    @Column(name = "c_block_createdby", table = "arts_t_block", nullable = false, length = 36)
+    @Column(name = "c_block_createdby")
     private String Createdby;
 
-    @Column(name = "c_block_createdon", table = "arts_t_block", nullable = false)
+    @Column(name = "c_block_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

@@ -29,64 +29,64 @@ public class Closingibook {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_closingibook_docnum", table = "arts_t_closingibook", nullable = false, length = 36)    
+    @Column(name = "c_closingibook_docnum")
     private String Docnum;
 
-    @Column(name = "c_stasiun_idorg", table = "arts_t_closingibook", nullable = false, length = 36)
+    @Column(name = "c_stasiun_idorg")
     private String StasiunIdorg;
 
-    @Column(name = "c_closingibook_noka", table = "arts_t_closingibook", nullable = false, length = 50)
+    @Column(name = "c_closingibook_noka")
     private String Noka;
 
-    @Column(name = "c_wagonclass_id", table = "arts_t_closingibook", nullable = false, length = 36)
+    @Column(name = "c_wagonclass_id")
     private String WagonclassId;
 
-    @Column(name = "c_closingibook_date", table = "arts_t_closingibook", nullable = false)
+    @Column(name = "c_closingibook_date")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Date;
 
-    @Column(name = "c_trip_id", table = "arts_t_closingibook", nullable = false, length = 36)
+    @Column(name = "c_trip_id")
     private String TripId;
 
-    @Column(name = "c_closingibook_psgnum", table = "arts_t_closingibook", nullable = false)
+    @Column(name = "c_closingibook_psgnum")
     private BigInteger Psgnum;
 
-    @Column(name = "c_closingibook_amount", table = "arts_t_closingibook", nullable = false)
+    @Column(name = "c_closingibook_amount")
     private BigInteger Amount;
 
-    @Column(name = "c_closingibook_modifiedon", table = "arts_t_closingibook", nullable = false)
+    @Column(name = "c_closingibook_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_closingibook_postingstat", table = "arts_t_closingibook", nullable = false)
+    @Column(name = "c_closingibook_postingstat")
     private Character Postingstat;
 
-    @Column(name = "c_closingibook_arrivedate", table = "arts_t_closingibook")
+    @Column(name = "c_closingibook_arrivedate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Arrivedate;
     
-    @Column(name = "c_closingibook_status", table = "arts_t_closingibook", nullable = false)
+    @Column(name = "c_closingibook_status")
     private Character Status;
 
-    @Column(name = "c_closingibook_domain", table = "arts_t_closingibook", nullable = false, length = 36)
+    @Column(name = "c_closingibook_domain")
     private String Domain;
 
-    @Column(name = "c_closingibook_modifiedby", table = "arts_t_closingibook", nullable = false, length = 36)
+    @Column(name = "c_closingibook_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_closingibook_createdby", table = "arts_t_closingibook", nullable = false, length = 36)
+    @Column(name = "c_closingibook_createdby")
     private String Createdby;
 
-    @Column(name = "c_closingibook_createdon", table = "arts_t_closingibook", nullable = false)
+    @Column(name = "c_closingibook_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

@@ -27,35 +27,35 @@ public class Wagondet {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_wagondet_col", table = "arts_t_wagondet", nullable = false)
+    @Column(name = "c_wagondet_col")
     private Character Col;
 
-    @Column(name = "c_wagon_id", table = "arts_t_wagondet", nullable = false, length = 36)
+    @Column(name = "c_wagon_id")
     private String WagonId;
 
-    @Column(name = "c_wagondet_status", table = "arts_t_wagondet", nullable = false)
+    @Column(name = "c_wagondet_status")
     private Character Status;
 
-    @Column(name = "c_wagondet_domain", table = "arts_t_wagondet", nullable = false, length = 36)
+    @Column(name = "c_wagondet_domain")
     private String Domain;
 
-    @Column(name = "c_wagondet_modifiedby", table = "arts_t_wagondet", nullable = false, length = 36)
+    @Column(name = "c_wagondet_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_wagondet_modifiedon", table = "arts_t_wagondet", nullable = false)
+    @Column(name = "c_wagondet_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_wagondet_row", table = "arts_t_wagondet", nullable = false)
+    @Column(name = "c_wagondet_row")
     private short Row;
 
-    @Column(name = "c_wagondet_createdby", table = "arts_t_wagondet", nullable = false, length = 36)
+    @Column(name = "c_wagondet_createdby")
     private String Createdby;
 
-    @Column(name = "c_wagondet_createdon", table = "arts_t_wagondet", nullable = false)
+    @Column(name = "c_wagondet_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

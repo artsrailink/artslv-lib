@@ -27,19 +27,19 @@ public class Discounttype {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_discounttype_name", table = "arts_t_discounttype", nullable = false, length = 200)
+    @Column(name = "c_discounttype_name")
     private String Name;
 
-    @Column(name = "c_discounttype_status", table = "arts_t_discounttype", nullable = false)
+    @Column(name = "c_discounttype_status")
     private Character Status;
 
-    @Column(name = "c_discounttype_domain", table = "arts_t_discounttype", nullable = false, length = 36)
+    @Column(name = "c_discounttype_domain")
     private String Domain;
 
-    @Column(name = "c_discounttype_modifiedby", table = "arts_t_discounttype", nullable = false, length = 36)
+    @Column(name = "c_discounttype_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_discounttype_modifiedon", table = "arts_t_discounttype", nullable = false)
+    @Column(name = "c_discounttype_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

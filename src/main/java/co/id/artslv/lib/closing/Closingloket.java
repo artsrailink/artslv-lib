@@ -29,103 +29,103 @@ public class Closingloket {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_closingloket_docnum", table = "arts_t_closingloket", nullable = false, length = 36)
+    @Column(name = "c_closingloket_docnum")
     private String Docnum;
 
-    @Column(name = "c_stasiun_idsell", table = "arts_t_closingloket", nullable = false, length = 36)
+    @Column(name = "c_stasiun_idsell")
     private String StasiunIdsell;
 
-    @Column(name = "c_stasiun_idorg", table = "arts_t_closingloket", nullable = false, length = 36)
+    @Column(name = "c_stasiun_idorg")
     private String StasiunIdorg;
 
-    @Column(name = "c_closingloket_noka", table = "arts_t_closingloket", nullable = false, length = 50)
+    @Column(name = "c_closingloket_noka")
     private String Noka;
 
-    @Column(name = "c_wagonclass_id", table = "arts_t_closingloket", nullable = false, length = 36)
+    @Column(name = "c_wagonclass_id")
     private String WagonclassId;
 
-    @Column(name = "c_closingloket_date", table = "arts_t_closingloket", nullable = false)
+    @Column(name = "c_closingloket_date")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Date;
 
-    @Column(name = "c_trip_id", table = "arts_t_closingloket", nullable = false, length = 36)
+    @Column(name = "c_trip_id")
     private String TripId;
 
-    @Column(name = "c_closingloket_psgnum", table = "arts_t_closingloket", nullable = false)
+    @Column(name = "c_closingloket_psgnum")
     private BigInteger Psgnum;
 
-    @Column(name = "c_closingloket_amount", table = "arts_t_closingloket", nullable = false)
+    @Column(name = "c_closingloket_amount")
     private BigInteger Amount;
 
-    @Column(name = "c_shift_id", table = "arts_t_closingloket", nullable = false, length = 36)
+    @Column(name = "c_shift_id")
     private String ShiftId;
 
-    @Column(name = "c_paytype_id", table = "arts_t_closingloket", nullable = false, length = 36)
+    @Column(name = "c_paytype_id")
     private String PaytypeId;
 
-    @Column(name = "c_closingloket_type", table = "arts_t_closingloket", nullable = false)
+    @Column(name = "c_closingloket_type")
     private Character Type;
 
-    @Column(name = "c_closingloket_fee", table = "arts_t_closingloket", nullable = false)
+    @Column(name = "c_closingloket_fee")
     private BigInteger Fee;
 
-    @Column(name = "c_closingloket_modifiedon", table = "arts_t_closingloket", nullable = false)
+    @Column(name = "c_closingloket_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_closingloket_headerstat", table = "arts_t_closingloket", nullable = false)
+    @Column(name = "c_closingloket_headerstat")
     private Character Headerstat;
 
-    @Column(name = "c_closingloket_postingstat", table = "arts_t_closingloket", nullable = false)
+    @Column(name = "c_closingloket_postingstat")
     private Character Postingstat;
 
-    @Column(name = "c_sapcoa_id", table = "arts_t_closingloket", nullable = false, length = 36)
+    @Column(name = "c_sapcoa_id")
     private String SapcoaId;
 
-    @Column(name = "c_closingloket_ba", table = "arts_t_closingloket", length = 36)
+    @Column(name = "c_closingloket_ba")
     private String Ba;
 
-    @Column(name = "c_closingloket_cc", table = "arts_t_closingloket", length = 36)
+    @Column(name = "c_closingloket_cc")
     private String Cc;
 
-    @Column(name = "c_closingloket_pc", table = "arts_t_closingloket", length = 36)
+    @Column(name = "c_closingloket_pc")
     private String Pc;
 
-    @Column(name = "c_closingloket_arrivedate", table = "arts_t_closingloket")
+    @Column(name = "c_closingloket_arrivedate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Arrivedate;
 
-    @Column(name = "c_closingloket_idccstasal", table = "arts_t_closingloket", length = 36)
+    @Column(name = "c_closingloket_idccstasal")
     private String Idccstasal;
 
-    @Column(name = "c_closingloket_idccsttrans", table = "arts_t_closingloket", length = 36)
+    @Column(name = "c_closingloket_idccsttrans")
     private String Idccsttrans;
 
-    @Column(name = "c_schedule_id", table = "arts_t_closingloket", nullable = false, length = 36)
+    @Column(name = "c_schedule_id")
     private String ScheduleId;
 
-    @Column(name = "c_closingloket_modifiedby", table = "arts_t_closingloket", nullable = false, length = 36)
+    @Column(name = "c_closingloket_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_closingloket_status", table = "arts_t_closingloket", nullable = false)
+    @Column(name = "c_closingloket_status")
     private Character Status;
 
-    @Column(name = "c_closingloket_domain", table = "arts_t_closingloket", nullable = false, length = 36)
+    @Column(name = "c_closingloket_domain")
     private String Domain;
 
-    @Column(name = "c_closingloket_createdby", table = "arts_t_closingloket", nullable = false, length = 36)
+    @Column(name = "c_closingloket_createdby")
     private String Createdby;
 
-    @Column(name = "c_closingloket_createdon", table = "arts_t_closingloket", nullable = false)
+    @Column(name = "c_closingloket_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

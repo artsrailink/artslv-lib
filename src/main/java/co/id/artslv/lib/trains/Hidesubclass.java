@@ -27,32 +27,32 @@ public class Hidesubclass {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_unit_id", table = "arts_t_hidesubclass", nullable = false, length = 36)
+    @Column(name = "c_unit_id")
     private String UnitId;
 
-    @Column(name = "c_subclass_id", table = "arts_t_hidesubclass", nullable = false, length = 36)
+    @Column(name = "c_subclass_id")
     private String SubclassId;
 
-    @Column(name = "c_hidesubclass_status", table = "arts_t_hidesubclass", nullable = false)
+    @Column(name = "c_hidesubclass_status")
     private Character Status;
 
-    @Column(name = "c_hidesubclass_domain", table = "arts_t_hidesubclass", nullable = false, length = 36)
+    @Column(name = "c_hidesubclass_domain")
     private String Domain;
 
-    @Column(name = "c_hidesubclass_createdby", table = "arts_t_hidesubclass", nullable = false, length = 36)
+    @Column(name = "c_hidesubclass_createdby")
     private String Createdby;
 
-    @Column(name = "c_hidesubclass_createdon", table = "arts_t_hidesubclass", nullable = false)
+    @Column(name = "c_hidesubclass_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Createdon;
 
-    @Column(name = "c_hidesubclass_modifiedby", table = "arts_t_hidesubclass", nullable = false, length = 36)
+    @Column(name = "c_hidesubclass_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_hidesubclass_modifiedon", table = "arts_t_hidesubclass", nullable = false)
+    @Column(name = "c_hidesubclass_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

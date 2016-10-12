@@ -27,29 +27,29 @@ public class Cancelreason {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_cancelreason_description", table = "arts_t_cancelreason", nullable = false, length = 100)
+    @Column(name = "c_cancelreason_description")
     private String Description;
 
-    @Column(name = "c_cancelreason_status", table = "arts_t_cancelreason", nullable = false)
+    @Column(name = "c_cancelreason_status")
     private Character Status;
 
-    @Column(name = "c_cancelreason_domain", table = "arts_t_cancelreason", nullable = false, length = 36)
+    @Column(name = "c_cancelreason_domain")
     private String Domain;
 
-    @Column(name = "c_cancelreason_modifiedby", table = "arts_t_cancelreason", nullable = false, length = 36)
+    @Column(name = "c_cancelreason_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_cancelreason_modifiedon", table = "arts_t_cancelreason", nullable = false)
+    @Column(name = "c_cancelreason_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_cancelreason_createdby", table = "arts_t_cancelreason", length = 36)
+    @Column(name = "c_cancelreason_createdby")
     private String Createdby;
 
-    @Column(name = "c_cancelreason_createdon", table = "arts_t_cancelreason")
+    @Column(name = "c_cancelreason_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

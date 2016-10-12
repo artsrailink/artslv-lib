@@ -27,38 +27,38 @@ public class Serviceprovider {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_serviceprv_name", table = "arts_t_serviceprovider", nullable = false, length = 100)
+    @Column(name = "c_serviceprv_name")
     private String Name;
 
-    @Column(name = "c_serviceprv_domain", table = "arts_t_serviceprovider", nullable = false, length = 36)
+    @Column(name = "c_serviceprv_domain")
     private String Domain;
 
-    @Column(name = "c_serviceprv_status", table = "arts_t_serviceprovider", nullable = false)
+    @Column(name = "c_serviceprv_status")
     private Character Status;
 
-    @Column(name = "c_serviceprv_modifiedby", table = "arts_t_serviceprovider", nullable = false, length = 36)
+    @Column(name = "c_serviceprv_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_serviceprv_modifiedon", table = "arts_t_serviceprovider", nullable = false)
+    @Column(name = "c_serviceprv_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_serviceprv_address", table = "arts_t_serviceprovider", nullable = false, length = 500)
+    @Column(name = "c_serviceprv_address")
     private String Address;
 
-    @Column(name = "c_serviceprv_phonenum", table = "arts_t_serviceprovider", nullable = false, length = 20)
+    @Column(name = "c_serviceprv_phonenum")
     private String Phonenum;
 
-    @Column(name = "c_serviceprv_cp", table = "arts_t_serviceprovider", nullable = false, length = 100)
+    @Column(name = "c_serviceprv_cp")
     private String Cp;
 
-    @Column(name = "c_serviceprovider_createdby", table = "arts_t_serviceprovider", nullable = false, length = 36)
+    @Column(name = "c_serviceprovider_createdby")
     private String Createdby;
 
-    @Column(name = "c_serviceprovider_createdon", table = "arts_t_serviceprovider", nullable = false)
+    @Column(name = "c_serviceprovider_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

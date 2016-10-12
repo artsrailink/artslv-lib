@@ -30,299 +30,299 @@ public class Transactiondet {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name="c_transaction_id",table="arts_t_transactiondet",nullable=false,length=36)
+    @Column(name="c_transaction_id")
     private String TransactionId;
 
-    @Column(name="c_transaction_bookcode",table="arts_t_transactiondet",nullable=false,length=20)
+    @Column(name="c_transaction_bookcode")
     private String TransactionBookcode;
 
-    @Column(name="c_transaction_paycode",table="arts_t_transactiondet",nullable=false,length=20)
+    @Column(name="c_transaction_paycode")
     private String TransactionPaycode;
 
-    @Column(name="c_transaction_transdate",table="arts_t_transactiondet",nullable=false)
+    @Column(name="c_transaction_transdate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate TransactionTransdate;
 
-    @Column(name="c_transaction_custname",table="arts_t_transactiondet",nullable=false,scale=2,precision=11)
+    @Column(name="c_transaction_custname")
     private BigDecimal TransactionCustname;
 
-    @Column(name="c_transaction_phonenum",table="arts_t_transactiondet",length=36)
+    @Column(name="c_transaction_phonenum")
     private String TransactionPhonenum;
 
-    @Column(name="c_transaction_email",table="arts_t_transactiondet",length=100)
+    @Column(name="c_transaction_email")
     private String TransactionEmail;
 
-    @Column(name="c_stasiun_idorg",table="arts_t_transactiondet",nullable=false,length=36)
+    @Column(name="c_stasiun_idorg")
     private String StasiunIdorg;
 
-    @Column(name="c_stasiun_codeorg",table="arts_t_transactiondet",nullable=false,length=36)
+    @Column(name="c_stasiun_codeorg")
     private String StasiunCodeorg;
 
-    @Column(name="c_stasiun_iddes",table="arts_t_transactiondet",nullable=false,length=36)
+    @Column(name="c_stasiun_iddes")
     private String StasiunIddes;
 
-    @Column(name="c_stasiun_codedes",table="arts_t_transactiondet",nullable=false,length=36)
+    @Column(name="c_stasiun_codedes")
     private String StasiunCodedes;
 
-    @Column(name="c_schedule_id",table="arts_t_transactiondet",nullable=false,length=36)
+    @Column(name="c_schedule_id")
     private String ScheduleId;
 
-    @Column(name="c_schedule_noka",table="arts_t_transactiondet",nullable=false,length=50)
+    @Column(name="c_schedule_noka")
     private String ScheduleNoka;
 
-    @Column(name="c_schedule_localstat",table="arts_t_transactiondet",nullable=false)
+    @Column(name="c_schedule_localstat")
     private Character ScheduleLocalstat;
 
-    @Column(name="c_schedule_trainname",table="arts_t_transactiondet",nullable=false)
+    @Column(name="c_schedule_trainname")
     private Character ScheduleTrainname;
 
-    @Column(name="c_trip_id",table="arts_t_transactiondet",nullable=false,length=36)
+    @Column(name="c_trip_id")
     private String TripId;
 
-    @Column(name="c_trip_date",table="arts_t_transactiondet",nullable=false,length=36)
+    @Column(name="c_trip_date")
     private String TripDate;
 
-    @Column(name="c_subclass_id",table="arts_t_transactiondet",nullable=false,length=36)
+    @Column(name="c_subclass_id")
     private String SubclassId;
 
-    @Column(name="c_subclass_code",table="arts_t_transactiondet",nullable=false,length=36)
+    @Column(name="c_subclass_code")
     private String SubclassCode;
 
-    @Column(name="c_user_idbook",table="arts_t_transactiondet",nullable=false,length=36)
+    @Column(name="c_user_idbook")
     private String UserIdbook;
 
-    @Column(name="c_user_fullnamebook",table="arts_t_transactiondet",nullable=false,length=36)
+    @Column(name="c_user_fullnamebook")
     private String UserFullnamebook;
 
-    @Column(name="c_unit_idbook",table="arts_t_transactiondet",length=36)
+    @Column(name="c_unit_idbook")
     private String UnitIdbook;
 
-    @Column(name="c_unit_codebook",table="arts_t_transactiondet",length=36)
+    @Column(name="c_unit_codebook")
     private String UnitCodebook;
 
-    @Column(name="c_shift_idbook",table="arts_t_transactiondet",length=36)
+    @Column(name="c_shift_idbook")
     private String ShiftIdbook;
 
-    @Column(name="c_channel_idbook",table="arts_t_transactiondet",nullable=false,length=36)
+    @Column(name="c_channel_idbook")
     private String ChannelIdbook;
 
-    @Column(name="c_channel_codebook",table="arts_t_transactiondet",nullable=false,length=36)
+    @Column(name="c_channel_codebook")
     private String ChannelCodebook;
 
-    @Column(name="c_user_idpay",table="arts_t_transactiondet",length=36)
+    @Column(name="c_user_idpay")
     private String UserIdpay;
 
-    @Column(name="c_user_fullnamepay",table="arts_t_transactiondet",length=36)
+    @Column(name="c_user_fullnamepay")
     private String UserFullnamepay;
 
-    @Column(name="c_unit_idpay",table="arts_t_transactiondet",length=36)
+    @Column(name="c_unit_idpay")
     private String UnitIdpay;
 
-    @Column(name="c_unit_codepay",table="arts_t_transactiondet",length=36)
+    @Column(name="c_unit_codepay")
     private String UnitCodepay;
 
-    @Column(name="c_shift_idpay",table="arts_t_transactiondet",length=36)
+    @Column(name="c_shift_idpay")
     private String ShiftIdpay;
 
-    @Column(name="c_channel_idpay",table="arts_t_transactiondet",nullable=false,length=36)
+    @Column(name="c_channel_idpay")
     private String ChannelIdpay;
 
-    @Column(name="c_channel_codepay",table="arts_t_transactiondet",nullable=false,length=36)
+    @Column(name="c_channel_codepay")
     private String ChannelCodepay;
 
-    @Column(name="c_transaction_bookedon",table="arts_t_transactiondet")
+    @Column(name="c_transaction_bookedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate TransactionBookedon;
 
-    @Column(name="c_transaction_booktimeouton",table="arts_t_transactiondet")
+    @Column(name="c_transaction_booktimeouton")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate TransactionBooktimeouton;
 
-    @Column(name="c_transaction_paytimeouton",table="arts_t_transactiondet")
+    @Column(name="c_transaction_paytimeouton")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate TransactionPaytimeouton;
 
-    @Column(name="c_transaction_paidon",table="arts_t_transactiondet")
+    @Column(name="c_transaction_paidon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate TransactionPaidon;
 
-    @Column(name="c_transaction_reroutestat",table="arts_t_transactiondet")
+    @Column(name="c_transaction_reroutestat")
     private Character TransactionReroutestat;
 
-    @Column(name="c_transaction_flexiredeemstat",table="arts_t_transactiondet")
+    @Column(name="c_transaction_flexiredeemstat")
     private Character cransactionFlexiredeemstat;
 
-    @Column(name="c_transactiondet_psgname",table="arts_t_transactiondet",nullable=false,length=100)
+    @Column(name="c_transactiondet_psgname")
     private String Psgname;
 
-    @Column(name="c_transactiondet_psgid",table="arts_t_transactiondet",nullable=false,length=50)
+    @Column(name="c_transactiondet_psgid")
     private String Psgid;
 
-    @Column(name="c_stamformdet_id",table="arts_t_transactiondet",length=36)
+    @Column(name="c_stamformdet_id")
     private String StamformdetId;
 
-    @Column(name="c_stamformdet_code",table="arts_t_transactiondet",length=36)
+    @Column(name="c_stamformdet_code")
     private String StamformdetCode;
 
-    @Column(name="c_wagondet_id",table="arts_t_transactiondet",length=36)
+    @Column(name="c_wagondet_id")
     private String WagondetId;
 
-    @Column(name="c_wagondet_row",table="arts_t_transactiondet",length=36)
+    @Column(name="c_wagondet_row")
     private String WagondetRow;
 
-    @Column(name="c_wagondet_col",table="arts_t_transactiondet",length=36)
+    @Column(name="c_wagondet_col")
     private String WagondetCol;
 
-    @Column(name="c_transactiondet_amount",table="arts_t_transactiondet",nullable=false,scale=2,precision=11)
+    @Column(name="c_transactiondet_amount")
     private BigDecimal Amount;
 
-    @Column(name="c_transactiondet_ticketnum",table="arts_t_transactiondet",length=50)
+    @Column(name="c_transactiondet_ticketnum")
     private String Ticketnum;
 
-    @Column(name="c_member_id",table="arts_t_transactiondet",length=36)
+    @Column(name="c_member_id")
     private String MemberId;
 
-    @Column(name="c_reduction_id",table="arts_t_transactiondet",length=36)
+    @Column(name="c_reduction_id")
     private String ReductionId;
 
-    @Column(name="c_reduction_name",table="arts_t_transactiondet",length=36)
+    @Column(name="c_reduction_name")
     private String ReductionName;
 
-    @Column(name="c_reduction_amount",table="arts_t_transactiondet",length=36)
+    @Column(name="c_reduction_amount")
     private String ReductionAmount;
 
-    @Column(name="c_reduction_amounttype",table="arts_t_transactiondet",length=36)
+    @Column(name="c_reduction_amounttype")
     private String ReductionAmounttype;
 
-    @Column(name="c_reduction_amountconvert",table="arts_t_transactiondet",length=36)
+    @Column(name="c_reduction_amountconvert")
     private String ReductionAmountconvert;
 
-    @Column(name="c_discount_id",table="arts_t_transactiondet",length=36)
+    @Column(name="c_discount_id")
     private String DiscountId;
 
-    @Column(name="c_discount_name",table="arts_t_transactiondet",length=36)
+    @Column(name="c_discount_name")
     private String DiscountName;
 
-    @Column(name="c_discount_amount",table="arts_t_transactiondet",length=36)
+    @Column(name="c_discount_amount")
     private String DiscountAmount;
 
-    @Column(name="c_discount_amounttype",table="arts_t_transactiondet",length=36)
+    @Column(name="c_discount_amounttype")
     private String DiscountAmounttype;
 
-    @Column(name="c_discount_amountconvert",table="arts_t_transactiondet",length=36)
+    @Column(name="c_discount_amountconvert")
     private String DiscountAmountconvert;
 
-    @Column(name="c_fare_id",table="arts_t_transactiondet",length=36)
+    @Column(name="c_fare_id")
     private String FareId;
 
-    @Column(name="c_fare_basicfare",table="arts_t_transactiondet",length=36)
+    @Column(name="c_fare_basicfare")
     private String FareBasicfare;
 
-    @Column(name="c_fare_tuslahfee",table="arts_t_transactiondet",length=36)
+    @Column(name="c_fare_tuslahfee")
     private String FareTuslahfee;
 
-    @Column(name="c_fare_rsvfee",table="arts_t_transactiondet",length=36)
+    @Column(name="c_fare_rsvfee")
     private String FareRsvfee;
 
-    @Column(name="c_fare_stfee",table="arts_t_transactiondet")
+    @Column(name="c_fare_stfee")
     private Integer FareStfee;
 
-    @Column(name="c_fare_addfee",table="arts_t_transactiondet",length=36)
+    @Column(name="c_fare_addfee")
     private String FareAddfee;
 
-    @Column(name="c_fare_compinsurance",table="arts_t_transactiondet",length=36)
+    @Column(name="c_fare_compinsurance")
     private String FareCompinsurance;
 
-    @Column(name="c_fare_addinsurance",table="arts_t_transactiondet",length=36)
+    @Column(name="c_fare_addinsurance")
     private String FareAddinsurance;
 
-    @Column(name="c_fare_psofare",table="arts_t_transactiondet",length=36)
+    @Column(name="c_fare_psofare")
     private String FarePsofare;
 
-    @Column(name="c_fare_totamount",table="arts_t_transactiondet",length=36)
+    @Column(name="c_fare_totamount")
     private String FareTotamount;
 
-    @Column(name="c_flexi_id",table="arts_t_transactiondet",nullable=false,length=20)
+    @Column(name="c_flexi_id")
     private String FlexiId;
 
-    @Column(name="c_flexi_code",table="arts_t_transactiondet",nullable=false,length=20)
+    @Column(name="c_flexi_code")
     private String FlexiCode;
 
-    @Column(name="c_stasiun_idgatein",table="arts_t_transactiondet",length=36)
+    @Column(name="c_stasiun_idgatein")
     private String StasiunIdgatein;
 
-    @Column(name="c_stasiun_codegateind",table="arts_t_transactiondet",length=36)
+    @Column(name="c_stasiun_codegateind")
     private String StasiunCodegateind;
 
-    @Column(name="c_unit_idgatein",table="arts_t_transactiondet",length=36)
+    @Column(name="c_unit_idgatein")
     private String UnitIdgatein;
 
-    @Column(name="c_unit_codegatein",table="arts_t_transactiondet",length=36)
+    @Column(name="c_unit_codegatein")
     private String UnitCodegatein;
 
-    @Column(name="c_transactiondet_gateinon",table="arts_t_transactiondet")
+    @Column(name="c_transactiondet_gateinon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Gateinon;
 
-    @Column(name="c_stasiun_idgateout",table="arts_t_transactiondet",length=36)
+    @Column(name="c_stasiun_idgateout")
     private String StasiunIdgateout;
 
-    @Column(name="c_stasiun_codegateout",table="arts_t_transactiondet",length=36)
+    @Column(name="c_stasiun_codegateout")
     private String StasiunCodegateout;
 
-    @Column(name="c_unit_idgateout",table="arts_t_transactiondet",length=36)
+    @Column(name="c_unit_idgateout")
     private String UnitIdgateout;
 
-    @Column(name="c_unit_codegateout",table="arts_t_transactiondet",length=36)
+    @Column(name="c_unit_codegateout")
     private String UnitCodegateout;
 
-    @Column(name="c_transactiondet_gateouton",table="arts_t_transactiondet",nullable=false,length=20)
+    @Column(name="c_transactiondet_gateouton")
     private String Gateouton;
 
-    @Column(name="c_transactiondet_max_print",table="arts_t_transactiondet",nullable=false)
+    @Column(name="c_transactiondet_max_print")
     private short MaxPrint;
 
-    @Column(name="c_transactiondet_ref",table="arts_t_transactiondet",nullable=false)
+    @Column(name="c_transactiondet_ref")
     private short Ref;
 
-    @Column(name="c_transactiondet_status",table="arts_t_transactiondet",nullable=false)
+    @Column(name="c_transactiondet_status")
     private short Status;
 
-    @Column(name="c_transactiondet_domain",table="arts_t_transactiondet",nullable=false,length=36)
+    @Column(name="c_transactiondet_domain")
     private String Domain;
 
-    @Column(name="c_transactiondet_modifiedby",table="arts_t_transactiondet",nullable=false,length=36)
+    @Column(name="c_transactiondet_modifiedby")
     private String Modifiedby;
 
-    @Column(name="c_transactiondet_modifiedon",table="arts_t_transactiondet",nullable=false)
+    @Column(name="c_transactiondet_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name="c_transactiondet_createdby",table="arts_t_transactiondet",nullable=false,length=36)
+    @Column(name="c_transactiondet_createdby")
     private String Createdby;
 
-    @Column(name="c_transactiondet_createdon",table="arts_t_transactiondet",nullable=false)
+    @Column(name="c_transactiondet_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

@@ -27,32 +27,32 @@ public class Area {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_area_bisnis", table = "arts_t_area", length = 50)
+    @Column(name = "c_area_bisnis")
     private String Bisnis;
 
-    @Column(name = "c_area_name", table = "arts_t_area", nullable = false, length = 50)
+    @Column(name = "c_area_name")
     private String Name;
 
-    @Column(name = "c_area_status", table = "arts_t_area", nullable = false)
+    @Column(name = "c_area_status")
     private Character Status;
 
-    @Column(name = "c_area_domain", table = "arts_t_area", nullable = false, length = 36)
+    @Column(name = "c_area_domain")
     private String Domain;
 
-    @Column(name = "c_area_modifiedby", table = "arts_t_area", nullable = false, length = 36)
+    @Column(name = "c_area_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_area_modifiedon", table = "arts_t_area", nullable = false)
+    @Column(name = "c_area_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_area_createdby", table = "arts_t_area", nullable = false, length = 36)
+    @Column(name = "c_area_createdby")
     private String Createdby;
 
-    @Column(name = "c_area_createdon", table = "arts_t_area", nullable = false)
+    @Column(name = "c_area_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

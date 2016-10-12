@@ -28,47 +28,47 @@ public class Cancellationdet {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_cancellationdet_netamount", table = "arts_t_cancellationdet", nullable = false)
+    @Column(name = "c_cancellationdet_netamount")
     private long Netamount;
 
-    @Column(name = "c_cancellationdet_status", table = "arts_t_cancellationdet", nullable = false)
+    @Column(name = "c_cancellationdet_status")
     private Character Status;
 
-    @Column(name = "c_cancellationdet_domain", table = "arts_t_cancellationdet", nullable = false, length = 36)
+    @Column(name = "c_cancellationdet_domain")
     private String Domain;
 
-    @Column(name = "c_cancellationdet_modifiedby", table = "arts_t_cancellationdet", nullable = false, length = 36)
+    @Column(name = "c_cancellationdet_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_cancellationdet_modifiedon", table = "arts_t_cancellationdet", nullable = false)
+    @Column(name = "c_cancellationdet_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_cancellation_id", table = "arts_t_cancellationdet", nullable = false, length = 36)
+    @Column(name = "c_cancellation_id")
     private String CancellationId;
 
-    @Column(name = "c_transactiondetid_cancelled", table = "arts_t_cancellationdet", nullable = false, length = 36)
+    @Column(name = "c_transactiondetid_cancelled")
     private String TransactiondetidCancelled;
 
-    @Column(name = "c_transactiondetid_new", table = "arts_t_cancellationdet", length = 36)
+    @Column(name = "c_transactiondetid_new", table = "arts_t_cancellationdet")
     private String TransactiondetidNew;
 
-    @Column(name = "c_cancellationdet_fee", table = "arts_t_cancellationdet", nullable = false)
+    @Column(name = "c_cancellationdet_fee")
     private long Fee;
 
-    @Column(name = "c_cancellationdet_diff", table = "arts_t_cancellationdet", nullable = false)
+    @Column(name = "c_cancellationdet_diff")
     private long Diff;
 
-    @Column(name = "c_cancellationdet_amountticket", table = "arts_t_cancellationdet", scale = 2, precision = 11)
+    @Column(name = "c_cancellationdet_amountticket")
     private BigDecimal Amountticket;
 
-    @Column(name = "c_cancellationdet_createdby", table = "arts_t_cancellationdet", nullable = false, length = 36)
+    @Column(name = "c_cancellationdet_createdby")
     private String Createdby;
 
-    @Column(name = "c_cancellationdet_createdon", table = "arts_t_cancellationdet", nullable = false)
+    @Column(name = "c_cancellationdet_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

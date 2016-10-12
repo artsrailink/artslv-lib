@@ -21,44 +21,44 @@ import org.hibernate.annotations.Type;
 @Table(name = "arts_t_membertype")
 public class Membertype {
 
-    @Column(name = "c_membertype_id", table = "arts_t_membertype", nullable = false, length = 36)
+    @Column(name = "c_membertype_id")
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_membertype_code", table = "arts_t_membertype", nullable = false, length = 36)
+    @Column(name = "c_membertype_code")
     private String Code;
 
-    @Column(name = "c_membertype_name", table = "arts_t_membertype", nullable = false, length = 100)
+    @Column(name = "c_membertype_name")
     private String Name;
 
-    @Column(name = "c_membertype_status", table = "arts_t_membertype", nullable = false)
+    @Column(name = "c_membertype_status")
     private Character Status;
 
-    @Column(name = "c_membertype_domain", table = "arts_t_membertype", nullable = false, length = 36)
+    @Column(name = "c_membertype_domain")
     private String Domain;
 
-    @Column(name = "c_membertype_modifiedby", table = "arts_t_membertype", nullable = false, length = 36)
+    @Column(name = "c_membertype_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_membertype_modifiedon", table = "arts_t_membertype", nullable = false)
+    @Column(name = "c_membertype_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_membertype_validdays", table = "arts_t_membertype", nullable = false)
+    @Column(name = "c_membertype_validdays")
     private int Validdays;
 
-    @Column(name = "c_membertype_type", table = "arts_t_membertype", nullable = false)
+    @Column(name = "c_membertype_type")
     private Character Type;
 
-    @Column(name = "c_membertype_createdby", table = "arts_t_membertype", nullable = false, length = 36)
+    @Column(name = "c_membertype_createdby")
     private String Createdby;
 
-    @Column(name = "c_membertype_createdon", table = "arts_t_membertype", nullable = false)
+    @Column(name = "c_membertype_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

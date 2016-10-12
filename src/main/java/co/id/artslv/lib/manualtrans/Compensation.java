@@ -29,60 +29,60 @@ public class Compensation {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_compensation_date", table = "arts_t_compensation", nullable = false)
+    @Column(name = "c_compensation_date")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Date;
 
-    @Column(name = "c_compensation_doctitle", table = "arts_t_compensation", nullable = false, length = 20)
+    @Column(name = "c_compensation_doctitle")
     private String Doctitle;
 
-    @Column(name = "c_compensation_docnum", table = "arts_t_compensation", nullable = false)
+    @Column(name = "c_compensation_docnum")
     private double Docnum;
 
-    @Column(name = "c_schedule_id", table = "arts_t_compensation", nullable = false, length = 36)
+    @Column(name = "c_schedule_id")
     private String ScheduleId;
 
-    @Column(name = "c_stasiun_idorg", table = "arts_t_compensation", nullable = false, length = 36)
+    @Column(name = "c_stasiun_idorg")
     private String StasiunIdorg;
 
-    @Column(name = "c_stasiun_iddest", table = "arts_t_compensation", nullable = false, length = 36)
+    @Column(name = "c_stasiun_iddest")
     private String StasiunIddest;
 
-    @Column(name = "c_wagonclass_id", table = "arts_t_compensation", nullable = false, length = 36)
+    @Column(name = "c_wagonclass_id")
     private String WagonclassId;
 
-    @Column(name = "c_compensation_type", table = "arts_t_compensation", nullable = false)
+    @Column(name = "c_compensation_type")
     private Character Type;
 
-    @Column(name = "c_compensation_refundamount", table = "arts_t_compensation", nullable = false, scale = 2, precision = 11)
+    @Column(name = "c_compensation_refundamount")
     private BigDecimal Refundamount;
 
-    @Column(name = "c_compensation_reason", table = "arts_t_compensation", nullable = false, length = 200)
+    @Column(name = "c_compensation_reason")
     private String Reason;
 
-    @Column(name = "c_compensation_status", table = "arts_t_compensation", nullable = false)
+    @Column(name = "c_compensation_status")
     private Character Status;
 
-    @Column(name = "c_compensation_domain", table = "arts_t_compensation", nullable = false, length = 36)
+    @Column(name = "c_compensation_domain")
     private String Domain;
 
-    @Column(name = "c_compensation_modifiedby", table = "arts_t_compensation", nullable = false, length = 36)
+    @Column(name = "c_compensation_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_compensation_modifiedon", table = "arts_t_compensation", nullable = false)
+    @Column(name = "c_compensation_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_stasiun_idrefund", table = "arts_t_compensation", nullable = false, length = 36)
+    @Column(name = "c_stasiun_idrefund")
     private String StasiunIdrefund;
 
-    @Column(name = "c_shift_id", table = "arts_t_compensation", nullable = false, length = 36)
+    @Column(name = "c_shift_id")
     private String ShiftId;
 
     @Column(name = "c_compensation_bookcode", table = "arts_t_compensation", length = 1000)
@@ -91,10 +91,10 @@ public class Compensation {
     @Column(name = "c_compensation_ticketnum", table = "arts_t_compensation", length = 1000)
     private String Ticketnum;
 
-    @Column(name = "c_compensation_createdby", table = "arts_t_compensation", nullable = false, length = 36)
+    @Column(name = "c_compensation_createdby")
     private String Createdby;
 
-    @Column(name = "c_compensation_createdon", table = "arts_t_compensation", nullable = false)
+    @Column(name = "c_compensation_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

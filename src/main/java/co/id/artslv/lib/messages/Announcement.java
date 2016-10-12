@@ -29,43 +29,43 @@ public class Announcement {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_announcement_date", table = "arts_t_announcement", nullable = false)
+    @Column(name = "c_announcement_date")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Date;
 
-    @Column(name = "c_announcement_title", table = "arts_t_announcement", nullable = false, length = 500)
+    @Column(name = "c_announcement_title")
     private String Title;
 
-    @Column(name = "c_announcement_content", table = "arts_t_announcement", length = 2147483647)
+    @Column(name = "c_announcement_content")
     @Lob
     private String Content;
 
-    @Column(name = "c_user_id", table = "arts_t_announcement", nullable = false, length = 36)
+    @Column(name = "c_user_id")
     private String UserId;
 
-    @Column(name = "c_announcement_status", table = "arts_t_announcement", nullable = false)
+    @Column(name = "c_announcement_status")
     private Character Status;
 
-    @Column(name = "c_announcement_domain", table = "arts_t_announcement", nullable = false, length = 36)
+    @Column(name = "c_announcement_domain")
     private String Domain;
 
-    @Column(name = "c_announcement_modifiedby", table = "arts_t_announcement", nullable = false, length = 36)
+    @Column(name = "c_announcement_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_announcement_modifiedon", table = "arts_t_announcement", nullable = false)
+    @Column(name = "c_announcement_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_announcement_createdby", table = "arts_t_announcement", nullable = false, length = 36)
+    @Column(name = "c_announcement_createdby")
     private String Createdby;
 
-    @Column(name = "c_announcement_createdon", table = "arts_t_announcement", nullable = false)
+    @Column(name = "c_announcement_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

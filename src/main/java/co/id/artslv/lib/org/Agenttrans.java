@@ -29,60 +29,60 @@ public class Agenttrans {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_agenttrans_vanum", table = "arts_t_agenttrans", length = 36)
+    @Column(name = "c_agenttrans_vanum")
     private String Vanum;
 
-    @Column(name = "c_agenttrans_date", table = "arts_t_agenttrans", nullable = false)
+    @Column(name = "c_agenttrans_date")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Date;
 
-    @Column(name = "c_agenttrans_type", table = "arts_t_agenttrans", nullable = false)
+    @Column(name = "c_agenttrans_type")
     private Character Type;
 
-    @Column(name = "c_agentdet_id", table = "arts_t_agenttrans", nullable = false, length = 36)
+    @Column(name = "c_agentdet_id")
     private String AgentdetId;
 
-    @Column(name = "c_agenttrans_ref", table = "arts_t_agenttrans", nullable = false, length = 100)
+    @Column(name = "c_agenttrans_ref")
     private String Ref;
 
-    @Column(name = "c_agenttrans_status", table = "arts_t_agenttrans", nullable = false)
+    @Column(name = "c_agenttrans_status")
     private Character Status;
 
-    @Column(name = "c_agenttrans_domain", table = "arts_t_agenttrans", nullable = false, length = 36)
+    @Column(name = "c_agenttrans_domain")
     private String Domain;
 
-    @Column(name = "c_agenttrans_modifiedby", table = "arts_t_agenttrans", nullable = false, length = 36)
+    @Column(name = "c_agenttrans_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_agenttrans_modifiedon", table = "arts_t_agenttrans", nullable = false)
+    @Column(name = "c_agenttrans_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_agenttrans_beginningbalance", table = "arts_t_agenttrans", nullable = false, scale = 2, precision = 11)
+    @Column(name = "c_agenttrans_beginningbalance")
     private BigDecimal Beginningbalance;
 
-    @Column(name = "c_agenttrans_deposit", table = "arts_t_agenttrans", nullable = false, scale = 2, precision = 11)
+    @Column(name = "c_agenttrans_deposit")
     private BigDecimal Deposit;
 
-    @Column(name = "c_agenttrans_withdrawal", table = "arts_t_agenttrans", nullable = false, scale = 2, precision = 11)
+    @Column(name = "c_agenttrans_withdrawal")
     private BigDecimal Withdrawal;
 
-    @Column(name = "c_agenttrans_endingbalance", table = "arts_t_agenttrans", nullable = false, scale = 2, precision = 11)
+    @Column(name = "c_agenttrans_endingbalance")
     private BigDecimal Endingbalance;
 
-    @Column(name = "c_agenttrans_bankcode", table = "arts_t_agenttrans", length = 50)
+    @Column(name = "c_agenttrans_bankcode", table = "arts_t_agenttrans")
     private String Bankcode;
 
-    @Column(name = "c_agenttrans_createdby", table = "arts_t_agenttrans", nullable = false, length = 36)
+    @Column(name = "c_agenttrans_createdby")
     private String Createdby;
 
-    @Column(name = "c_agenttrans_createdon", table = "arts_t_agenttrans", nullable = false)
+    @Column(name = "c_agenttrans_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

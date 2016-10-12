@@ -27,32 +27,32 @@ public class Ipunit {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_unit_id", table = "arts_t_ipunit", nullable = false, length = 36)
+    @Column(name = "c_unit_id")
     private String UnitId;
 
-    @Column(name = "c_ip_id", table = "arts_t_ipunit", nullable = false, length = 36)
+    @Column(name = "c_ip_id")
     private String IpId;
 
-    @Column(name = "c_ipunit_status", table = "arts_t_ipunit", nullable = false)
+    @Column(name = "c_ipunit_status")
     private Character Status;
 
-    @Column(name = "c_ipunit_domain", table = "arts_t_ipunit", nullable = false, length = 36)
+    @Column(name = "c_ipunit_domain")
     private String Domain;
 
-    @Column(name = "c_ipunit_modifiedby", table = "arts_t_ipunit", nullable = false, length = 36)
+    @Column(name = "c_ipunit_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_ipunit_modifiedon", table = "arts_t_ipunit", nullable = false)
+    @Column(name = "c_ipunit_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_ipunit_createdby", table = "arts_t_ipunit", nullable = false, length = 36)
+    @Column(name = "c_ipunit_createdby")
     private String Createdby;
 
-    @Column(name = "c_ipunit_createdon", table = "arts_t_ipunit", nullable = false)
+    @Column(name = "c_ipunit_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

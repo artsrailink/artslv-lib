@@ -27,50 +27,50 @@ public class Wagon {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_wagon_name", table = "arts_t_wagon", nullable = false, length = 100)
+    @Column(name = "c_wagon_name")
     private String Name;
 
-    @Column(name = "c_wagon_cols", table = "arts_t_wagon", nullable = false)
+    @Column(name = "c_wagon_cols")
     private double Cols;
 
-    @Column(name = "c_wagon_col1seats", table = "arts_t_wagon", nullable = false)
+    @Column(name = "c_wagon_col1seats")
     private double Col1seats;
 
-    @Column(name = "c_wagon_col2seats", table = "arts_t_wagon", precision = 22)
+    @Column(name = "c_wagon_col2seats")
     private Double Col2seats;
 
-    @Column(name = "c_wagon_col3seats", table = "arts_t_wagon", precision = 22)
+    @Column(name = "c_wagon_col3seats")
     private Double Col3seats;
 
-    @Column(name = "c_wagon_rows", table = "arts_t_wagon", nullable = false)
+    @Column(name = "c_wagon_rows")
     private double Rows;
 
-    @Column(name = "c_wagon_status", table = "arts_t_wagon", nullable = false)
+    @Column(name = "c_wagon_status")
     private Character Status;
 
-    @Column(name = "c_wagon_domain", table = "arts_t_wagon", nullable = false, length = 36)
+    @Column(name = "c_wagon_domain")
     private String Domain;
 
-    @Column(name = "c_wagon_modifiedby", table = "arts_t_wagon", nullable = false, length = 36)
+    @Column(name = "c_wagon_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_wagon_modifiedon", table = "arts_t_wagon", nullable = false)
+    @Column(name = "c_wagon_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_wagonclass_id", table = "arts_t_wagon", nullable = false, length = 36)
+    @Column(name = "c_wagonclass_id")
     private String WagonclassId;
 
-    @Column(name = "c_wagon_capacity", table = "arts_t_wagon", nullable = false)
+    @Column(name = "c_wagon_capacity")
     private short Capacity;
 
-    @Column(name = "c_wagon_createdby", table = "arts_t_wagon", nullable = false, length = 36)
+    @Column(name = "c_wagon_createdby")
     private String Createdby;
 
-    @Column(name = "c_wagon_createdon", table = "arts_t_wagon", nullable = false)
+    @Column(name = "c_wagon_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

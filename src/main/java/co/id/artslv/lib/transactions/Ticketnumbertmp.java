@@ -29,23 +29,23 @@ public class Ticketnumbertmp {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_transaction_id", table = "arts_t_ticketnumbertmp", nullable = false, length = 36)
+    @Column(name = "c_transaction_id")
     private String TransactionId;
 
-    @Column(name = "c_ticketnumbertmp_date", table = "arts_t_ticketnumbertmp", nullable = false)
+    @Column(name = "c_ticketnumbertmp_date")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Date;
 
-    @Column(name = "c_stasiun_idbook", table = "arts_t_ticketnumbertmp", nullable = false, length = 36)
+    @Column(name = "c_stasiun_idbook")
     private String StasiunIdbook;
 
-    @Column(name = "c_ticketnumbertmp_createdby", table = "arts_t_ticketnumbertmp", nullable = false, length = 36)
+    @Column(name = "c_ticketnumbertmp_createdby")
     private String Createdby;
 
-    @Column(name = "c_ticketnumbertmp_createdon", table = "arts_t_ticketnumbertmp", nullable = false)
+    @Column(name = "c_ticketnumbertmp_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

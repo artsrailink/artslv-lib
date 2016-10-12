@@ -29,230 +29,230 @@ public class Transaction {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_transaction_bookcode", table = "arts_t_transaction", nullable = false, length = 20)
+    @Column(name = "c_transaction_bookcode")
     private String Bookcode;
 
-    @Column(name = "c_transaction_paycode", table = "arts_t_transaction", nullable = false, length = 20)
+    @Column(name = "c_transaction_paycode")
     private String Paycode;
 
-    @Column(name = "c_transaction_transdate", table = "arts_t_transaction", nullable = false)
+    @Column(name = "c_transaction_transdate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Transdate;
 
-    @Column(name = "c_transaction_departdate", table = "arts_t_transaction", nullable = false)
+    @Column(name = "c_transaction_departdate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Departdate;
 
-    @Column(name = "c_transaction_totamount", table = "arts_t_transaction", scale = 2, precision = 11)
+    @Column(name = "c_transaction_totamount")
     private BigDecimal Totamount;
 
-    @Column(name = "c_transaction_extrafee", table = "arts_t_transaction", nullable = false, scale = 2, precision = 11)
+    @Column(name = "c_transaction_extrafee")
     private BigDecimal Extrafee;
 
-    @Column(name = "c_transaction_netamount", table = "arts_t_transaction", scale = 2, precision = 11)
+    @Column(name = "c_transaction_netamount")
     private BigDecimal Netamount;
 
-    @Column(name = "c_transaction_paidamount", table = "arts_t_transaction", nullable = false, scale = 2, precision = 11)
+    @Column(name = "c_transaction_paidamount")
     private BigDecimal Paidamount;
 
-    @Column(name = "c_transaction_custname", table = "arts_t_transaction", nullable = false, scale = 2, precision = 11)
+    @Column(name = "c_transaction_custname")
     private BigDecimal Custname;
 
-    @Column(name = "c_transaction_phonenum", table = "arts_t_transaction", length = 36)
+    @Column(name = "c_transaction_phonenum")
     private String Phonenum;
 
-    @Column(name = "c_transaction_email", table = "arts_t_transaction", length = 100)
+    @Column(name = "c_transaction_email")
     private String Email;
 
-    @Column(name = "c_transaction_totpsgadult", table = "arts_t_transaction", nullable = false)
+    @Column(name = "c_transaction_totpsgadult")
     private double Totpsgadult;
 
-    @Column(name = "c_transaction_totpsgchild", table = "arts_t_transaction", precision = 22)
+    @Column(name = "c_transaction_totpsgchild")
     private Double Totpsgchild;
 
-    @Column(name = "c_transaction_totpsginfant", table = "arts_t_transaction", precision = 22)
+    @Column(name = "c_transaction_totpsginfant")
     private Double Totpsginfant;
 
-    @Column(name = "c_stasiun_idorg", table = "arts_t_transaction", nullable = false, length = 36)
+    @Column(name = "c_stasiun_idorg")
     private String StasiunIdorg;
 
-    @Column(name = "c_stasiun_codeorg", table = "arts_t_transaction", nullable = false, length = 36)
+    @Column(name = "c_stasiun_codeorg")
     private String StasiunCodeorg;
 
-    @Column(name = "c_stasiun_iddes", table = "arts_t_transaction", nullable = false, length = 36)
+    @Column(name = "c_stasiun_iddes")
     private String StasiunIddes;
 
-    @Column(name = "c_stasiun_codedes", table = "arts_t_transaction", nullable = false, length = 36)
+    @Column(name = "c_stasiun_codedes")
     private String StasiunCodedes;
 
-    @Column(name = "c_schedule_id", table = "arts_t_transaction", nullable = false, length = 36)
+    @Column(name = "c_schedule_id")
     private String ScheduleId;
 
-    @Column(name = "c_schedule_noka", table = "arts_t_transaction", nullable = false, length = 50)
+    @Column(name = "c_schedule_noka")
     private String ScheduleNoka;
 
-    @Column(name = "c_schedule_localstat", table = "arts_t_transaction", nullable = false)
+    @Column(name = "c_schedule_localstat")
     private Character ScheduleLocalstat;
 
-    @Column(name = "c_schedule_trainname", table = "arts_t_transaction", nullable = false)
+    @Column(name = "c_schedule_trainname")
     private Character ScheduleTrainname;
 
-    @Column(name = "c_trip_id", table = "arts_t_transaction", nullable = false, length = 36)
+    @Column(name = "c_trip_id")
     private String TripId;
 
-    @Column(name = "c_trip_date", table = "arts_t_transaction", nullable = false, length = 36)
+    @Column(name = "c_trip_date")
     private String TripDate;
 
-    @Column(name = "c_subclass_id", table = "arts_t_transaction", nullable = false, length = 36)
+    @Column(name = "c_subclass_id")
     private String SubclassId;
 
-    @Column(name = "c_subclass_code", table = "arts_t_transaction", nullable = false, length = 36)
+    @Column(name = "c_subclass_code")
     private String SubclassCode;
 
-    @Column(name = "c_paytype_id", table = "arts_t_transaction", length = 36)
+    @Column(name = "c_paytype_id")
     private String PaytypeId;
 
-    @Column(name = "c_paytype_code", table = "arts_t_transaction", length = 36)
+    @Column(name = "c_paytype_code")
     private String PaytypeCode;
 
-    @Column(name = "c_user_idbook", table = "arts_t_transaction", nullable = false, length = 36)
+    @Column(name = "c_user_idbook")
     private String UserIdbook;
 
-    @Column(name = "c_user_fullnamebook", table = "arts_t_transaction", nullable = false, length = 36)
+    @Column(name = "c_user_fullnamebook")
     private String UserFullnamebook;
 
-    @Column(name = "c_unit_idbook", table = "arts_t_transaction", length = 36)
+    @Column(name = "c_unit_idbook")
     private String UnitIdbook;
 
-    @Column(name = "c_unit_codebook", table = "arts_t_transaction", length = 36)
+    @Column(name = "c_unit_codebook")
     private String UnitCodebook;
 
-    @Column(name = "c_shift_idbook", table = "arts_t_transaction", length = 36)
+    @Column(name = "c_shift_idbook")
     private String cShiftIdbook;
 
-    @Column(name = "c_channel_idbook", table = "arts_t_transaction", nullable = false, length = 36)
+    @Column(name = "c_channel_idbook")
     private String ChannelIdbook;
 
-    @Column(name = "c_channel_codebook", table = "arts_t_transaction", nullable = false, length = 36)
+    @Column(name = "c_channel_codebook")
     private String ChannelCodebook;
 
-    @Column(name = "c_user_idpay", table = "arts_t_transaction", length = 36)
+    @Column(name = "c_user_idpay")
     private String UserIdpay;
 
-    @Column(name = "c_user_fullnamepay", table = "arts_t_transaction", length = 36)
+    @Column(name = "c_user_fullnamepay")
     private String UserFullnamepay;
 
-    @Column(name = "c_unit_idpay", table = "arts_t_transaction", length = 36)
+    @Column(name = "c_unit_idpay")
     private String UnitIdpay;
 
-    @Column(name = "c_unit_codepay", table = "arts_t_transaction", length = 36)
+    @Column(name = "c_unit_codepay")
     private String UnitCodepay;
 
-    @Column(name = "c_shift_idpay", table = "arts_t_transaction", length = 36)
+    @Column(name = "c_shift_idpay")
     private String ShiftIdpay;
 
-    @Column(name = "c_channel_idpay", table = "arts_t_transaction", nullable = false, length = 36)
+    @Column(name = "c_channel_idpay")
     private String ChannelIdpay;
 
-    @Column(name = "c_channel_codepay", table = "arts_t_transaction", nullable = false, length = 36)
+    @Column(name = "c_channel_codepay")
     private String ChannelCodepay;
 
-    @Column(name = "c_transaction_bookedon", table = "arts_t_transaction")
+    @Column(name = "c_transaction_bookedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Bookedon;
 
-    @Column(name = "c_transaction_booktimeouton", table = "arts_t_transaction")
+    @Column(name = "c_transaction_booktimeouton")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Booktimeouton;
 
-    @Column(name = "c_transaction_paytimeouton", table = "arts_t_transaction")
+    @Column(name = "c_transaction_paytimeouton")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Paytimeouton;
 
-    @Column(name = "c_transaction_paidon", table = "arts_t_transaction")
+    @Column(name = "c_transaction_paidon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Paidon;
 
-    @Column(name = "c_transaction_smsbooksent", table = "arts_t_transaction")
+    @Column(name = "c_transaction_smsbooksent")
     private Character Smsbooksent;
 
-    @Column(name = "c_transaction_emailbooksent", table = "arts_t_transaction")
+    @Column(name = "c_transaction_emailbooksent")
     private Character Emailbooksent;
 
-    @Column(name = "c_transaction_smspaysent", table = "arts_t_transaction")
+    @Column(name = "c_transaction_smspaysent")
     private Character Smspaysent;
 
-    @Column(name = "c_transaction_emailpaysent", table = "arts_t_transaction")
+    @Column(name = "c_transaction_emailpaysent")
     private Character Emailpaysent;
 
-    @Column(name = "c_transaction_reroutestat", table = "arts_t_transaction")
+    @Column(name = "c_transaction_reroutestat")
     private Character Reroutestat;
 
-    @Column(name = "c_transaction_flexiredeemstat", table = "arts_t_transaction")
+    @Column(name = "c_transaction_flexiredeemstat")
     private Character Flexiredeemstat;
 
-    @Column(name = "c_transaction_ref1", table = "arts_t_transaction", length = 100)
+    @Column(name = "c_transaction_ref1")
     private String Ref1;
 
-    @Column(name = "c_transaction_ref2", table = "arts_t_transaction", length = 100)
+    @Column(name = "c_transaction_ref2")
     private String Ref2;
 
-    @Column(name = "c_transaction_ref3", table = "arts_t_transaction", length = 100)
+    @Column(name = "c_transaction_ref3")
     private String Ref3;
 
-    @Column(name = "c_voucher_id", table = "arts_t_transaction", length = 36)
+    @Column(name = "c_voucher_id")
     private String VoucherId;
 
-    @Column(name = "c_voucher_code", table = "arts_t_transaction", length = 36)
+    @Column(name = "c_voucher_code")
     private String VoucherCode;
 
-    @Column(name = "c_voucher_amount", table = "arts_t_transaction", length = 36)
+    @Column(name = "c_voucher_amount")
     private String VoucherAmount;
 
-    @Column(name = "c_voucher_amounttype", table = "arts_t_transaction", length = 36)
+    @Column(name = "c_voucher_amounttype")
     private String VoucherAmounttype;
 
-    @Column(name = "c_voucher_amountconvert", table = "arts_t_transaction", length = 36)
+    @Column(name = "c_voucher_amountconvert")
     private String VoucherAmountconvert;
 
-    @Column(name = "c_transaction_status", table = "arts_t_transaction", nullable = false)
+    @Column(name = "c_transaction_status")
     private Character Status;
 
-    @Column(name = "c_transaction_domain", table = "arts_t_transaction", nullable = false, length = 36)
+    @Column(name = "c_transaction_domain")
     private String Domain;
 
-    @Column(name = "c_transaction_createdby", table = "arts_t_transaction", nullable = false, length = 36)
+    @Column(name = "c_transaction_createdby")
     private String Createdby;
 
-    @Column(name = "c_transaction_createdon", table = "arts_t_transaction", nullable = false)
+    @Column(name = "c_transaction_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Createdon;
 
-    @Column(name = "c_transaction_modifiedby", table = "arts_t_transaction", nullable = false, length = 36)
+    @Column(name = "c_transaction_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_transaction_modifiedon", table = "arts_t_transaction", nullable = false)
+    @Column(name = "c_transaction_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

@@ -22,52 +22,52 @@ import org.hibernate.annotations.Type;
 @Table(name = "arts_t_memmemtype")
 public class Memmemtype {
 
-    @Column(name = "c_memmemtype_id", table = "arts_t_memmemtype", nullable = false, length = 36)
+    @Column(name = "c_memmemtype_id")
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_membertype_id", table = "arts_t_memmemtype", nullable = false, length = 36)
+    @Column(name = "c_membertype_id")
     private String MembertypeId;
 
-    @Column(name = "c_member_id", table = "arts_t_memmemtype", nullable = false, length = 36)
+    @Column(name = "c_member_id")
     private String MemberId;
 
-    @Column(name = "c_memmemtype_idnum", table = "arts_t_memmemtype", nullable = false, length = 50)
+    @Column(name = "c_memmemtype_idnum")
     private String Idnum;
 
-    @Column(name = "c_memmemtype_status", table = "arts_t_memmemtype", nullable = false)
+    @Column(name = "c_memmemtype_status")
     private Character Status;
 
-    @Column(name = "c_memmemtype_domain", table = "arts_t_memmemtype", nullable = false, length = 36)
+    @Column(name = "c_memmemtype_domain")
     private String Domain;
 
-    @Column(name = "c_memmemtype_modifiedby", table = "arts_t_memmemtype", nullable = false, length = 36)
+    @Column(name = "c_memmemtype_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_memmemtype_modifiedon", table = "arts_t_memmemtype", nullable = false)
+    @Column(name = "c_memmemtype_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_memmemtype_startdate", table = "arts_t_memmemtype", nullable = false)
+    @Column(name = "c_memmemtype_startdate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Startdate;
 
-    @Column(name = "c_memmemtype_enddate", table = "arts_t_memmemtype", nullable = false)
+    @Column(name = "c_memmemtype_enddate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Enddate;
 
-    @Column(name = "c_user_idapp1", table = "arts_t_memmemtype", length = 36)
+    @Column(name = "c_user_idapp1", table = "arts_t_memmemtype")
     private String UserIdapp1;
 
     @Column(name = "c_memmemtype_appdate1", table = "arts_t_memmemtype")
@@ -77,13 +77,13 @@ public class Memmemtype {
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Appdate1;
 
-    @Column(name = "c_memmemtype_memcode", table = "arts_t_memmemtype", length = 50)
+    @Column(name = "c_memmemtype_memcode", table = "arts_t_memmemtype")
     private String Memcode;
 
-    @Column(name = "c_memmemtype_createdby", table = "arts_t_memmemtype", nullable = false, length = 36)
+    @Column(name = "c_memmemtype_createdby")
     private String Createdby;
 
-    @Column(name = "c_memmemtype_createdon", table = "arts_t_memmemtype", nullable = false)
+    @Column(name = "c_memmemtype_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

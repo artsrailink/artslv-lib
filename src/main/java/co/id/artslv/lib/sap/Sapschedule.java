@@ -28,49 +28,49 @@ public class Sapschedule {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_sapschedule_startdate", table = "arts_t_sapschedule", nullable = false)
+    @Column(name = "c_sapschedule_startdate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Startdate;
 
-    @Column(name = "c_sapschedule_enddate", table = "arts_t_sapschedule", nullable = false)
+    @Column(name = "c_sapschedule_enddate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Enddate;
 
-    @Column(name = "c_wagonclass_id", table = "arts_t_sapschedule", nullable = false, length = 36)
+    @Column(name = "c_wagonclass_id")
     private String WagonclassId;
 
-    @Column(name = "c_schedule_id", table = "arts_t_sapschedule", nullable = false, length = 36)
+    @Column(name = "c_schedule_id")
     private String ScheduleId;
 
-    @Column(name = "c_sapschedule_pc", table = "arts_t_sapschedule", nullable = false, length = 36)
+    @Column(name = "c_sapschedule_pc")
     private String Pc;
 
-    @Column(name = "c_sapschedule_status", table = "arts_t_sapschedule", nullable = false)
+    @Column(name = "c_sapschedule_status")
     private Character Status;
 
-    @Column(name = "c_sapschedule_domain", table = "arts_t_sapschedule", nullable = false, length = 36)
+    @Column(name = "c_sapschedule_domain")
     private String Domain;
 
-    @Column(name = "c_sapschedule_modifiedby", table = "arts_t_sapschedule", nullable = false, length = 36)
+    @Column(name = "c_sapschedule_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_sapschedule_modifiedon", table = "arts_t_sapschedule", nullable = false)
+    @Column(name = "c_sapschedule_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_sapschedule_createdby", table = "arts_t_sapschedule", nullable = false, length = 36)
+    @Column(name = "c_sapschedule_createdby")
     private String Createdby;
 
-    @Column(name = "c_sapschedule_createdon", table = "arts_t_sapschedule", nullable = false)
+    @Column(name = "c_sapschedule_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

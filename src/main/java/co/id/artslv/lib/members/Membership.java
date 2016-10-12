@@ -23,64 +23,64 @@ import org.hibernate.annotations.Type;
 @Table(name = "arts_t_membership")
 public class Membership {
 
-    @Column(name = "c_membership_id", table = "arts_t_membership", nullable = false, length = 36)
+    @Column(name = "c_membership_id")
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_membership_idnum", table = "arts_t_membership", nullable = false, length = 36)    
+    @Column(name = "c_membership_idnum")    
     private String Idnum;
 
-    @Column(name = "c_membership_startdate", table = "arts_t_membership", nullable = false)
+    @Column(name = "c_membership_startdate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Startdate;
 
-    @Column(name = "c_membership_enddate", table = "arts_t_membership", nullable = false)
+    @Column(name = "c_membership_enddate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Enddate;
 
-    @Column(name = "c_membership_status", table = "arts_t_membership", nullable = false)
+    @Column(name = "c_membership_status")
     private Character Status;
 
-    @Column(name = "c_membership_domain", table = "arts_t_membership", nullable = false, length = 36)
+    @Column(name = "c_membership_domain")
     private String Domain;
 
-    @Column(name = "c_membership_modifiedby", table = "arts_t_membership", nullable = false, length = 36)
+    @Column(name = "c_membership_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_membership_modifiedon", table = "arts_t_membership", nullable = false)
+    @Column(name = "c_membership_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_member_id", table = "arts_t_membership", nullable = false, length = 36)
+    @Column(name = "c_member_id")
     private String MemberId;
 
-    @Column(name = "c_membership_beginningbal", table = "arts_t_membership", nullable = false, scale = 2, precision = 11)
+    @Column(name = "c_membership_beginningbal")
     private BigDecimal Beginningbal;
 
-    @Column(name = "c_membership_earnpoint", table = "arts_t_membership", nullable = false, scale = 2, precision = 11)
+    @Column(name = "c_membership_earnpoint")
     private BigDecimal Earnpoint;
 
-    @Column(name = "c_membership_redeempoint", table = "arts_t_membership", nullable = false, scale = 2, precision = 11)
+    @Column(name = "c_membership_redeempoint")
     private BigDecimal Redeempoint;
 
-    @Column(name = "c_membership_endingbal", table = "arts_t_membership", nullable = false, scale = 2, precision = 11)
+    @Column(name = "c_membership_endingbal")
     private BigDecimal Endingbal;
 
-    @Column(name = "c_membership_createdby", table = "arts_t_membership", nullable = false, length = 36)
+    @Column(name = "c_membership_createdby")
     private String Createdby;
 
-    @Column(name = "c_membership_createdon", table = "arts_t_membership", nullable = false)
+    @Column(name = "c_membership_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

@@ -29,75 +29,75 @@ public class Discount {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_discount_value", table = "arts_t_discount", nullable = false, scale = 2, precision = 11)
+    @Column(name = "c_discount_value")
     private BigDecimal Value;
 
-    @Column(name = "c_discount_startdate", table = "arts_t_discount", nullable = false)
+    @Column(name = "c_discount_startdate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Startdate;
 
-    @Column(name = "c_discount_enddate", table = "arts_t_discount", nullable = false)
+    @Column(name = "c_discount_enddate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Enddate;
 
-    @Column(name = "c_discount_status", table = "arts_t_discount", nullable = false)
+    @Column(name = "c_discount_status")
     private Character Status;
 
-    @Column(name = "c_discount_domain", table = "arts_t_discount", nullable = false, length = 36)
+    @Column(name = "c_discount_domain")
     private String Domain;
 
-    @Column(name = "c_discount_modifiedby", table = "arts_t_discount", nullable = false, length = 36)
+    @Column(name = "c_discount_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_discount_modifiedon", table = "arts_t_discount", nullable = false)
+    @Column(name = "c_discount_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_discount_psgnum", table = "arts_t_discount")
+    @Column(name = "c_discount_psgnum")
     private Short Psgnum;
 
-    @Column(name = "c_discount_psgcount", table = "arts_t_discount")
+    @Column(name = "c_discount_psgcount")
     private Short Psgcount;
 
-    @Column(name = "c_discount_sellstartdate", table = "arts_t_discount", nullable = false)
+    @Column(name = "c_discount_sellstartdate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Sellstartdate;
 
-    @Column(name = "c_discount_sellenddate", table = "arts_t_discount", nullable = false)
+    @Column(name = "c_discount_sellenddate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Sellenddate;
 
-    @Column(name = "c_discount_valuetype", table = "arts_t_discount", nullable = false)
+    @Column(name = "c_discount_valuetype")
     private Character Valuetype;
 
-    @Column(name = "c_discount_validdays", table = "arts_t_discount", nullable = false, length = 7)
+    @Column(name = "c_discount_validdays")
     private String Validdays;
 
-    @Column(name = "c_discount_holidaystat", table = "arts_t_discount", nullable = false)
+    @Column(name = "c_discount_holidaystat")
     private Character Holidaystat;
 
-    @Column(name = "c_discounttype_id", table = "arts_t_discount", nullable = false, length = 36)
+    @Column(name = "c_discounttype_id")
     private String typeId;
 
-    @Column(name = "c_discount_createdby", table = "arts_t_discount", nullable = false, length = 36)
+    @Column(name = "c_discount_createdby")
     private String Createdby;
 
-    @Column(name = "c_discount_createdon", table = "arts_t_discount", nullable = false)
+    @Column(name = "c_discount_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

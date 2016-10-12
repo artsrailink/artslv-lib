@@ -29,73 +29,73 @@ public class Closingagent {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_closingagent_docnum", table = "arts_t_closingagent", nullable = false, length = 36)
+    @Column(name = "c_closingagent_docnum")
     private String Docnum;
 
-    @Column(name = "c_agentdet_id", table = "arts_t_closingagent", nullable = false, length = 36)
+    @Column(name = "c_agentdet_id")
     private String AgentdetId;
 
-    @Column(name = "c_stasiun_idorg", table = "arts_t_closingagent", nullable = false, length = 36)
+    @Column(name = "c_stasiun_idorg")
     private String StasiunIdorg;
 
-    @Column(name = "c_closingagent_noka", table = "arts_t_closingagent", nullable = false, length = 50)
+    @Column(name = "c_closingagent_noka")
     private String Noka;
 
-    @Column(name = "c_wagonclass_id", table = "arts_t_closingagent", nullable = false, length = 36)
+    @Column(name = "c_wagonclass_id")
     private String WagonclassId;
 
-    @Column(name = "c_closingagent_date", table = "arts_t_closingagent", nullable = false)
+    @Column(name = "c_closingagent_date")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Date;
 
-    @Column(name = "c_trip_id", table = "arts_t_closingagent", nullable = false, length = 36)
+    @Column(name = "c_trip_id")
     private String TripId;
 
-    @Column(name = "c_closingagent_psgnum", table = "arts_t_closingagent", nullable = false)
+    @Column(name = "c_closingagent_psgnum")
     private BigInteger Psgnum;
 
-    @Column(name = "c_closingagent_amount", table = "arts_t_closingagent", nullable = false)
+    @Column(name = "c_closingagent_amount")
     private BigInteger Amount;
 
-    @Column(name = "c_closingagent_type", table = "arts_t_closingagent")
+    @Column(name = "c_closingagent_type")
     private Character Type;
 
-    @Column(name = "c_closingagent_modifiedon", table = "arts_t_closingagent", nullable = false)
+    @Column(name = "c_closingagent_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_closingagent_postingstat", table = "arts_t_closingagent", nullable = false)
+    @Column(name = "c_closingagent_postingstat")
     private Character Postingstat;
 
-    @Column(name = "c_closingagent_docnumagent", table = "arts_t_closingagent", length = 36)
+    @Column(name = "c_closingagent_docnumagent")
     private String Docnumagent;
 
-    @Column(name = "c_closingagent_arrivedate", table = "arts_t_closingagent")
+    @Column(name = "c_closingagent_arrivedate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Arrivedate;
 
-    @Column(name = "c_closingagent_status", table = "arts_t_closingagent", nullable = false)
+    @Column(name = "c_closingagent_status")
     private Character Status;
 
-    @Column(name = "c_closingagent_domain", table = "arts_t_closingagent", nullable = false, length = 36)
+    @Column(name = "c_closingagent_domain")
     private String Domain;
 
-    @Column(name = "c_closingagent_modifiedby", table = "arts_t_closingagent", nullable = false, length = 36)
+    @Column(name = "c_closingagent_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_closingagent_createdby", table = "arts_t_closingagent", nullable = false, length = 36)
+    @Column(name = "c_closingagent_createdby")
     private String Createdby;
 
-    @Column(name = "c_closingagent_createdon", table = "arts_t_closingagent", nullable = false)
+    @Column(name = "c_closingagent_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

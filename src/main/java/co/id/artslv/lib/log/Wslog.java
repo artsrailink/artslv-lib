@@ -30,34 +30,34 @@ public class Wslog {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_wslog_reqtime", table = "arts_t_wslog", nullable = false)
+    @Column(name = "c_wslog_reqtime")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Reqtime;
 
-    @Column(name = "c_wslog_ip", table = "arts_t_wslog", nullable = false, length = 20)
+    @Column(name = "c_wslog_ip")
     private String Ip;
 
-    @Column(name = "c_wslog_req", table = "arts_t_wslog", nullable = false, length = 2147483647)
+    @Column(name = "c_wslog_req")
     @Lob
     private String Req;
 
-    @Column(name = "c_wslog_res", table = "arts_t_wslog", length = 2147483647)
+    @Column(name = "c_wslog_res", table = "arts_t_wslog")
     @Lob
     private String Res;
 
-    @Column(name = "c_wslog_errcode", table = "arts_t_wslog", length = 10)
+    @Column(name = "c_wslog_errcode", table = "arts_t_wslog")
     private String Errcode;
     
-    @Column(name = "c_wslog_status", table = "arts_t_wslog", nullable = false)
+    @Column(name = "c_wslog_status")
     private Character Status;
     
-    @Column(name = "c_wslog_domain", table = "arts_t_wslog", length = 36)
+    @Column(name = "c_wslog_domain", table = "arts_t_wslog")
     private String Domain;
     
-    @Column(name = "c_user_id", table = "arts_t_wslog", length = 36)
+    @Column(name = "c_user_id", table = "arts_t_wslog")
     private String UserId;
     
     @Column(name = "c_wslog_restime", table = "arts_t_wslog")
@@ -67,10 +67,10 @@ public class Wslog {
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Restime;
 
-    @Column(name = "c_wslog_createdby", table = "arts_t_wslog", nullable = false, length = 36)
+    @Column(name = "c_wslog_createdby")
     private String Createdby;
 
-    @Column(name = "c_wslog_createdon", table = "arts_t_wslog", nullable = false)
+    @Column(name = "c_wslog_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

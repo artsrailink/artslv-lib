@@ -27,32 +27,32 @@ public class Channelpaytype {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_channel_id", table = "arts_t_channelpaytype", nullable = false, length = 36)
+    @Column(name = "c_channel_id")
     private String ChannelId;
 
-    @Column(name = "c_paytype_id", table = "arts_t_channelpaytype", nullable = false, length = 36)
+    @Column(name = "c_paytype_id")
     private String PaytypeId;
 
-    @Column(name = "c_channelpaytype_status", table = "arts_t_channelpaytype", nullable = false)
+    @Column(name = "c_channelpaytype_status")
     private Character Status;
 
-    @Column(name = "c_channelpaytype_domain", table = "arts_t_channelpaytype", nullable = false, length = 36)
+    @Column(name = "c_channelpaytype_domain")
     private String Domain;
 
-    @Column(name = "c_channelpaytype_modifiedby", table = "arts_t_channelpaytype", nullable = false, length = 36)
+    @Column(name = "c_channelpaytype_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_channelpaytype_modifiedon", table = "arts_t_channelpaytype", nullable = false)
+    @Column(name = "c_channelpaytype_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_channelpaytype_createdby", table = "arts_t_channelpaytype", nullable = false, length = 36)
+    @Column(name = "c_channelpaytype_createdby")
     private String Createdby;
 
-    @Column(name = "c_channelpaytype_createdon", table = "arts_t_channelpaytype", nullable = false)
+    @Column(name = "c_channelpaytype_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

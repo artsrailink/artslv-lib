@@ -28,44 +28,44 @@ public class Paytype {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_paytype_name", table = "arts_t_paytype", nullable = false, length = 100)
+    @Column(name = "c_paytype_name")
     private String Name;
 
-    @Column(name = "c_paytype_fee", table = "arts_t_paytype", nullable = false, scale = 2, precision = 11)
+    @Column(name = "c_paytype_fee")
     private BigDecimal Fee;
 
-    @Column(name = "c_paytype_status", table = "arts_t_paytype", nullable = false)
+    @Column(name = "c_paytype_status")
     private Character Status;
 
-    @Column(name = "c_paytype_domain", table = "arts_t_paytype", nullable = false, length = 36)
+    @Column(name = "c_paytype_domain")
     private String Domain;
 
-    @Column(name = "c_paytype_modifiedby", table = "arts_t_paytype", nullable = false, length = 36)
+    @Column(name = "c_paytype_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_paytype_modifiedon", table = "arts_t_paytype", nullable = false)
+    @Column(name = "c_paytype_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_paytype_timeout", table = "arts_t_paytype", nullable = false)
+    @Column(name = "c_paytype_timeout")
     private short Timeout;
 
-    @Column(name = "c_paytype_timeoutstat", table = "arts_t_paytype", nullable = false)
+    @Column(name = "c_paytype_timeoutstat")
     private Character Timeoutstat;
 
-    @Column(name = "c_paytype_amounttype", table = "arts_t_paytype", nullable = false)
+    @Column(name = "c_paytype_amounttype")
     private Character Amounttype;
 
-    @Column(name = "c_paytype_code", table = "arts_t_paytype", nullable = false, length = 50)
+    @Column(name = "c_paytype_code")
     private String Code;
 
-    @Column(name = "c_paytype_createdby", table = "arts_t_paytype", length = 36)
+    @Column(name = "c_paytype_createdby")
     private String Createdby;
 
-    @Column(name = "c_paytype_createdon", table = "arts_t_paytype")
+    @Column(name = "c_paytype_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

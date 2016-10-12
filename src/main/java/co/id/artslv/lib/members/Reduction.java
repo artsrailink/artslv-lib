@@ -24,88 +24,88 @@ import org.hibernate.annotations.Type;
 @Table(name = "arts_t_reduction")
 public class Reduction {
 
-    @Column(name = "c_reduction_id", table = "arts_t_reduction", nullable = false, length = 36)
+    @Column(name = "c_reduction_id")
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_reduction_name", table = "arts_t_reduction", nullable = false, length = 100)
+    @Column(name = "c_reduction_name")
     private String Name;
 
-    @Column(name = "c_reduction_amount", table = "arts_t_reduction", scale = 2, precision = 11)
+    @Column(name = "c_reduction_amount")
     private BigDecimal Amount;
 
-    @Column(name = "c_reduction_amounttype", table = "arts_t_reduction", nullable = false, length = 20)
+    @Column(name = "c_reduction_amounttype")
     private String Amounttype;
 
-    @Column(name = "c_reduction_startdate", table = "arts_t_reduction", nullable = false)
+    @Column(name = "c_reduction_startdate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Startdate;
 
-    @Column(name = "c_reduction_enddate", table = "arts_t_reduction", nullable = false)
+    @Column(name = "c_reduction_enddate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Enddate;
 
-    @Column(name = "c_reduction_sellstartdate", table = "arts_t_reduction", nullable = false)
+    @Column(name = "c_reduction_sellstartdate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Sellstartdate;
 
-    @Column(name = "c_reduction_sellenddate", table = "arts_t_reduction", nullable = false)
+    @Column(name = "c_reduction_sellenddate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Sellenddate;
 
-    @Column(name = "c_reduction_note", table = "arts_t_reduction", length = 2147483647)
+    @Column(name = "c_reduction_note", table = "arts_t_reduction")
     @Lob
     private String Note;
 
-    @Column(name = "c_reduction_status", table = "arts_t_reduction", nullable = false)
+    @Column(name = "c_reduction_status")
     private Character Status;
 
-    @Column(name = "c_reduction_modifiedby", table = "arts_t_reduction", nullable = false, length = 36)
+    @Column(name = "c_reduction_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_reduction_modifiedon", table = "arts_t_reduction", nullable = false)
+    @Column(name = "c_reduction_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_membertype_id", table = "arts_t_reduction", nullable = false, length = 36)
+    @Column(name = "c_membertype_id")
     private String MembertypeId;
 
-    @Column(name = "c_reduction_maxbook", table = "arts_t_reduction", nullable = false)
+    @Column(name = "c_reduction_maxbook")
     private short Maxbook;
 
-    @Column(name = "c_reduction_domain", table = "arts_t_reduction", nullable = false, length = 36)
+    @Column(name = "c_reduction_domain")
     private String Domain;
 
-    @Column(name = "c_reduction_validdays", table = "arts_t_reduction", nullable = false, length = 7)
+    @Column(name = "c_reduction_validdays")
     private String Validdays;
 
-    @Column(name = "c_wagonclass_id", table = "arts_t_reduction", length = 36)
+    @Column(name = "c_wagonclass_id", table = "arts_t_reduction")
     private String WagonclassId;
 
-    @Column(name = "c_reduction_holidaystat", table = "arts_t_reduction", nullable = false)
+    @Column(name = "c_reduction_holidaystat")
     private Character Holidaystat;
 
-    @Column(name = "c_reduction_createdby", table = "arts_t_reduction", nullable = false, length = 36)
+    @Column(name = "c_reduction_createdby")
     private String Createdby;
 
-    @Column(name = "c_reduction_createdon", table = "arts_t_reduction", nullable = false)
+    @Column(name = "c_reduction_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

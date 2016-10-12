@@ -29,49 +29,49 @@ public class Unitfee {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_unitfee_startdate", table = "arts_t_unitfee", nullable = false)
+    @Column(name = "c_unitfee_startdate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Startdate;
 
-    @Column(name = "c_unitfee_enddate", table = "arts_t_unitfee", nullable = false)
+    @Column(name = "c_unitfee_enddate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Enddate;
 
-    @Column(name = "c_unitfee_status", table = "arts_t_unitfee", nullable = false)
+    @Column(name = "c_unitfee_status")
     private Character Status;
 
-    @Column(name = "c_unitfee_domain", table = "arts_t_unitfee", nullable = false, length = 36)
+    @Column(name = "c_unitfee_domain")
     private String Domain;
 
-    @Column(name = "c_unitfee_modifiedby", table = "arts_t_unitfee", nullable = false, length = 36)
+    @Column(name = "c_unitfee_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_unitfee_modifiedon", table = "arts_t_unitfee", nullable = false)
+    @Column(name = "c_unitfee_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_unit_id", table = "arts_t_unitfee", nullable = false, length = 36)
+    @Column(name = "c_unit_id")
     private String UnitId;
 
-    @Column(name = "c_unitfee_amountkai", table = "arts_t_unitfee", nullable = false, scale = 2, precision = 11)
+    @Column(name = "c_unitfee_amountkai")
     private BigDecimal Amountkai;
 
-    @Column(name = "c_unitfee_amountagent", table = "arts_t_unitfee", nullable = false, scale = 2, precision = 11)
+    @Column(name = "c_unitfee_amountagent")
     private BigDecimal Amountagent;
 
-    @Column(name = "c_unitfee_createdby", table = "arts_t_unitfee", nullable = false, length = 36)
+    @Column(name = "c_unitfee_createdby")
     private String Createdby;
 
-    @Column(name = "c_unitfee_createdon", table = "arts_t_unitfee", nullable = false)
+    @Column(name = "c_unitfee_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

@@ -28,35 +28,35 @@ public class Ip {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_ip_ip", table = "arts_t_ip", nullable = false, length = 50)
+    @Column(name = "c_ip_ip")
     private String Ip;
 
-    @Column(name = "c_ip_name", table = "arts_t_ip", length = 100)
+    @Column(name = "c_ip_name")
     private String Name;
 
-    @Column(name = "c_ip_status", table = "arts_t_ip", nullable = false)
+    @Column(name = "c_ip_status")
     private Character Status;
 
-    @Column(name = "c_ip_domain", table = "arts_t_ip", nullable = false, length = 36)
+    @Column(name = "c_ip_domain")
     private String Domain;
 
-    @Column(name = "c_ip_modifiedby", table = "arts_t_ip", nullable = false, length = 36)
+    @Column(name = "c_ip_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_ip_modifiedon", table = "arts_t_ip", nullable = false)
+    @Column(name = "c_ip_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_stasiun_id", table = "arts_t_ip", nullable = false, length = 36)
+    @Column(name = "c_stasiun_id")
     private String StasiunId;
 
-    @Column(name = "c_ip_createdby", table = "arts_t_ip", nullable = false, length = 36)
+    @Column(name = "c_ip_createdby")
     private String Createdby;
 
-    @Column(name = "c_ip_createdon", table = "arts_t_ip", nullable = false)
+    @Column(name = "c_ip_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

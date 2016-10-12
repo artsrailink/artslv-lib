@@ -27,34 +27,34 @@ public class Grpreservationpsg {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_grpreservationpsg_psgname", table = "arts_t_grpreservationpsg", nullable = false, length = 100)
+    @Column(name = "c_grpreservationpsg_psgname")
     private String Psgname;
 
-    @Column(name = "c_grpreservationpsg_infantname", table = "arts_t_grpreservationpsg", length = 100)
+    @Column(name = "c_grpreservationpsg_infantname")
     private String Infantname;
 
-    @Column(name = "c_grpreservationpsg_psgid", table = "arts_t_grpreservationpsg", nullable = false, length = 50)
+    @Column(name = "c_grpreservationpsg_psgid")
     private String Psgid;
 
-    @Column(name = "c_grpreservationdet_id", table = "arts_t_grpreservationpsg", nullable = false, length = 36)
+    @Column(name = "c_grpreservationdet_id")
     private String GrpreservationdetId;
 
-    @Column(name = "c_grpreservationpsg_status", table = "arts_t_grpreservationpsg", nullable = false)
+    @Column(name = "c_grpreservationpsg_status")
     private Character Status;
 
-    @Column(name = "c_grpreservationpsg_domain", table = "arts_t_grpreservationpsg", nullable = false, length = 36)
+    @Column(name = "c_grpreservationpsg_domain")
     private String Domain;
 
-    @Column(name = "c_grpreservationpsg_modifiedby", table = "arts_t_grpreservationpsg", nullable = false, length = 36)
+    @Column(name = "c_grpreservationpsg_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_grpreservationpsg_modifiedon", table = "arts_t_grpreservationpsg", nullable = false, length = 36)
+    @Column(name = "c_grpreservationpsg_modifiedon")
     private String Modifiedon;
 
-    @Column(name = "c_grpreservationpsg_createdby", table = "arts_t_grpreservationpsg", nullable = false, length = 36)
+    @Column(name = "c_grpreservationpsg_createdby")
     private String Createdby;
 
-    @Column(name = "c_grpreservationpsg_createdon", table = "arts_t_grpreservationpsg", nullable = false)
+    @Column(name = "c_grpreservationpsg_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

@@ -27,39 +27,39 @@ public class Traintype {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_traintype_name", table = "arts_t_traintype", nullable = false, length = 100)
+    @Column(name = "c_traintype_name")
     private String Name;
 
-    @Column(name = "c_traintype_status", table = "arts_t_traintype", nullable = false)
+    @Column(name = "c_traintype_status")
     private Character Status;
 
-    @Column(name = "c_traintype_domain", table = "arts_t_traintype", nullable = false, length = 36)
+    @Column(name = "c_traintype_domain")
     private String Domain;
 
-    @Column(name = "c_traintype_modifiedby", table = "arts_t_traintype", nullable = false, length = 36)
+    @Column(name = "c_traintype_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_traintype_modifiedon", table = "arts_t_traintype", nullable = false)
+    @Column(name = "c_traintype_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_traintype_code", table = "arts_t_traintype", nullable = false, length = 10)
+    @Column(name = "c_traintype_code")
     private String Code;
 
-    @Column(name = "c_traintype_createdby", table = "arts_t_traintype", nullable = false, length = 36)
+    @Column(name = "c_traintype_createdby")
     private String Createdby;
 
-    @Column(name = "c_traintype_createdon", table = "arts_t_traintype", nullable = false)
+    @Column(name = "c_traintype_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Createdon;
 
-    @Column(name = "c_traintype_note", table = "arts_t_traintype", length = 100)
+    @Column(name = "c_traintype_note")
     private String Note;
 
     public String getId() {

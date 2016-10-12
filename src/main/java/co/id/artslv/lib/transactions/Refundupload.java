@@ -29,109 +29,109 @@ public class Refundupload {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_refundupload_bookcode", table = "arts_t_refundupload", nullable = false, length = 7)
+    @Column(name = "c_refundupload_bookcode")
     private String Bookcode;
 
-    @Column(name = "c_refundupload_ticketnum", table = "arts_t_refundupload", nullable = false, length = 50)
+    @Column(name = "c_refundupload_ticketnum")
     private String Ticketnum;
 
-    @Column(name = "c_refundupload_stcodeorg", table = "arts_t_refundupload", nullable = false, length = 10)
+    @Column(name = "c_refundupload_stcodeorg")
     private String Stcodeorg;
 
-    @Column(name = "c_refundupload_stcodedest", table = "arts_t_refundupload", nullable = false, length = 10)
+    @Column(name = "c_refundupload_stcodedest")
     private String Stcodedest;
 
-    @Column(name = "c_refundupload_psgname", table = "arts_t_refundupload", nullable = false, length = 100)
+    @Column(name = "c_refundupload_psgname")
     private String Psgname;
 
-    @Column(name = "c_refundupload_amount", table = "arts_t_refundupload", nullable = false, scale = 2, precision = 11)
+    @Column(name = "c_refundupload_amount")
     private BigDecimal Amount;
 
-    @Column(name = "c_refundupload_canceldate", table = "arts_t_refundupload", nullable = false)
+    @Column(name = "c_refundupload_canceldate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Canceldate;
 
-    @Column(name = "c_refundupload_refunddatemin", table = "arts_t_refundupload", nullable = false)
+    @Column(name = "c_refundupload_refunddatemin")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Refunddatemin;
 
-    @Column(name = "c_refundupload_refunddatemax", table = "arts_t_refundupload")
+    @Column(name = "c_refundupload_refunddatemax")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Refunddatemax;
 
-    @Column(name = "c_refundupload_refundtype", table = "arts_t_refundupload", nullable = false)
+    @Column(name = "c_refundupload_refundtype")
     private Character Refundtype;
 
-    @Column(name = "c_refundupload_stcoderefund", table = "arts_t_refundupload", length = 10)
+    @Column(name = "c_refundupload_stcoderefund")
     private String Stcoderefund;
 
-    @Column(name = "c_user_id", table = "arts_t_refundupload", length = 36)
+    @Column(name = "c_user_id")
     private String UserId;
 
-    @Column(name = "c_unit_id", table = "arts_t_refundupload", length = 36)
+    @Column(name = "c_unit_id")
     private String UnitId;
 
-    @Column(name = "c_refundupload_refunddate", table = "arts_t_refundupload")
+    @Column(name = "c_refundupload_refunddate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Refunddate;
 
-    @Column(name = "c_stasiun_idrefund", table = "arts_t_refundupload", length = 36)
+    @Column(name = "c_stasiun_idrefund")
     private String StasiunIdrefund;
 
-    @Column(name = "c_refundupload_status", table = "arts_t_refundupload", nullable = false)
+    @Column(name = "c_refundupload_status")
     private Character Status;
 
-    @Column(name = "c_refundupload_domain", table = "arts_t_refundupload", nullable = false, length = 36)
+    @Column(name = "c_refundupload_domain")
     private String Domain;
 
-    @Column(name = "c_refundupload_modifiedby", table = "arts_t_refundupload", nullable = false, length = 36)
+    @Column(name = "c_refundupload_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_refundupload_modifiedon", table = "arts_t_refundupload", nullable = false)
+    @Column(name = "c_refundupload_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_refundupload_bankname", table = "arts_t_refundupload", length = 100)
+    @Column(name = "c_refundupload_bankname")
     private String Bankname;
 
-    @Column(name = "c_refundupload_bankaccname", table = "arts_t_refundupload", length = 100)
+    @Column(name = "c_refundupload_bankaccname")
     private String Bankaccname;
 
-    @Column(name = "c_refundupload_bankaccnum", table = "arts_t_refundupload", length = 100)
+    @Column(name = "c_refundupload_bankaccnum")
     private String Bankaccnum;
 
-    @Column(name = "c_refundupload_maxprint", table = "arts_t_refundupload")
+    @Column(name = "c_refundupload_maxprint")
     private Short Maxprint;
 
-    @Column(name = "c_refundupload_refundnum", table = "arts_t_refundupload", length = 50)
+    @Column(name = "c_refundupload_refundnum")
     private String Refundnum;
 
-    @Column(name = "c_refundupload_printedon", table = "arts_t_refundupload")
+    @Column(name = "c_refundupload_printedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Printedon;
 
-    @Column(name = "c_refundupload_createdby", table = "arts_t_refundupload", nullable = false, length = 36)
+    @Column(name = "c_refundupload_createdby")
     private String Createdby;
 
-    @Column(name = "c_refundupload_createdon", table = "arts_t_refundupload", nullable = false)
+    @Column(name = "c_refundupload_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

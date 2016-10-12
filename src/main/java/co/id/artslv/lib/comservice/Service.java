@@ -29,55 +29,55 @@ public class Service {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_service_name", table = "arts_t_service", nullable = false, length = 100)
+    @Column(name = "c_service_name")
     private String Name;
 
-    @Column(name = "c_service_price", table = "arts_t_service", nullable = false, scale = 2, precision = 11)
+    @Column(name = "c_service_price")
     private BigDecimal Price;
 
-    @Column(name = "c_service_status", table = "arts_t_service", nullable = false)
+    @Column(name = "c_service_status")
     private Character Status;
 
-    @Column(name = "c_service_domain", table = "arts_t_service", nullable = false, length = 36)
+    @Column(name = "c_service_domain")
     private String Domain;
 
-    @Column(name = "c_service_modifiedby", table = "arts_t_service", nullable = false, length = 40)
+    @Column(name = "c_service_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_service_modifiedon", table = "arts_t_service", nullable = false)
+    @Column(name = "c_service_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_service_subprice1", table = "arts_t_service", scale = 2, precision = 11)
+    @Column(name = "c_service_subprice1")
     private BigDecimal Subprice1;
 
-    @Column(name = "c_service_subprice2", table = "arts_t_service", scale = 2, precision = 11)
+    @Column(name = "c_service_subprice2")
     private BigDecimal Subprice2;
 
-    @Column(name = "c_service_startdate", table = "arts_t_service", nullable = false)
+    @Column(name = "c_service_startdate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Startdate;
 
-    @Column(name = "c_service_enddate", table = "arts_t_service", nullable = false)
+    @Column(name = "c_service_enddate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Enddate;
 
-    @Column(name = "c_serviceprv_id", table = "arts_t_service", nullable = false, length = 36)
+    @Column(name = "c_serviceprv_id")
     private String ServiceprvId;
 
-    @Column(name = "c_service_createdby", table = "arts_t_service", nullable = false, length = 36)
+    @Column(name = "c_service_createdby")
     private String Createdby;
 
-    @Column(name = "c_service_createdon", table = "arts_t_service", nullable = false)
+    @Column(name = "c_service_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

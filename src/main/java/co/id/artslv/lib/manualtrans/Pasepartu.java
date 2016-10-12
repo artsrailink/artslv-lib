@@ -29,69 +29,69 @@ public class Pasepartu  {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_pasepartu_date", table = "arts_t_pasepartu", nullable = false)
+    @Column(name = "c_pasepartu_date")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Date;
 
-    @Column(name = "c_schedule_id", table = "arts_t_pasepartu", nullable = false, length = 36)
+    @Column(name = "c_schedule_id")
     private String ScheduleId;
 
-    @Column(name = "c_stasiun_idorg", table = "arts_t_pasepartu", nullable = false, length = 36)
+    @Column(name = "c_stasiun_idorg")
     private String StasiunIdorg;
 
-    @Column(name = "c_stasiun_iddest", table = "arts_t_pasepartu", nullable = false, length = 36)
+    @Column(name = "c_stasiun_iddest")
     private String StasiunIddest;
 
-    @Column(name = "c_wagonclass_id", table = "arts_t_pasepartu", nullable = false, length = 36)
+    @Column(name = "c_wagonclass_id")
     private String WagonclassId;
 
-    @Column(name = "c_pasepartu_ticketidstart", table = "arts_t_pasepartu", nullable = false, length = 20)
+    @Column(name = "c_pasepartu_ticketidstart")
     private String Ticketidstart;
 
-    @Column(name = "c_pasepartu_ticketidend", table = "arts_t_pasepartu", nullable = false, length = 20)
+    @Column(name = "c_pasepartu_ticketidend")
     private String Ticketidend;
 
-    @Column(name = "c_pasepartu_ticketcancel", table = "arts_t_pasepartu", nullable = false)
+    @Column(name = "c_pasepartu_ticketcancel")
     private int Ticketcancel;
 
-    @Column(name = "c_pasepartu_ticketreduction", table = "arts_t_pasepartu", nullable = false)
+    @Column(name = "c_pasepartu_ticketreduction")
     private int Ticketreduction;
 
-    @Column(name = "c_pasepartu_totamount", table = "arts_t_pasepartu", nullable = false, scale = 2, precision = 11)
+    @Column(name = "c_pasepartu_totamount")
     private BigDecimal Totamount;
 
-    @Column(name = "c_pasepartu_status", table = "arts_t_pasepartu", nullable = false)
+    @Column(name = "c_pasepartu_status")
     private Character Status;
 
-    @Column(name = "c_pasepartu_domain", table = "arts_t_pasepartu", nullable = false, length = 36)
+    @Column(name = "c_pasepartu_domain")
     private String Domain;
 
-    @Column(name = "c_pasepartu_modifiedby", table = "arts_t_pasepartu", nullable = false, length = 36)
+    @Column(name = "c_pasepartu_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_pasepartu_modifiedon", table = "arts_t_pasepartu", nullable = false)
+    @Column(name = "c_pasepartu_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_unit_id", table = "arts_t_pasepartu", nullable = false, length = 36)
+    @Column(name = "c_unit_id")
     private String UnitId;
 
-    @Column(name = "c_stasiun_idbook", table = "arts_t_pasepartu", nullable = false, length = 36)
+    @Column(name = "c_stasiun_idbook")
     private String StasiunIdbook;
 
-    @Column(name = "c_pasepartu_psgnum", table = "arts_t_pasepartu", nullable = false)
+    @Column(name = "c_pasepartu_psgnum")
     private int Psgnum;
 
-    @Column(name = "c_pasepartu_createdby", table = "arts_t_pasepartu", nullable = false, length = 36)
+    @Column(name = "c_pasepartu_createdby")
     private String Createdby;
 
-    @Column(name = "c_pasepartu_createdon", table = "arts_t_pasepartu", nullable = false)
+    @Column(name = "c_pasepartu_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

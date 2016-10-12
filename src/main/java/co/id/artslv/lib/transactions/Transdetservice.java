@@ -21,22 +21,22 @@ import org.hibernate.annotations.Type;
 @Table(name = "arts_t_transdetservice")
 public class Transdetservice {
 
-    @Column(name = "c_transdetservice_id", table = "arts_t_transdetservice", nullable = false, length = 36)
+    @Column(name = "c_transdetservice_id")
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_transdetsrvice_status", table = "arts_t_transdetservice", nullable = false)
+    @Column(name = "c_transdetsrvice_status")
     private Character Status;
 
-    @Column(name = "c_transdetsrvice_domain", table = "arts_t_transdetservice", nullable = false, length = 36)
+    @Column(name = "c_transdetsrvice_domain")
     private String Domain;
 
-    @Column(name = "c_transdetsrvice_modifiedby", table = "arts_t_transdetservice", nullable = false, length = 36)
+    @Column(name = "c_transdetsrvice_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_transdetsrvice_modifiedon", table = "arts_t_transdetservice", nullable = false)
+    @Column(name = "c_transdetsrvice_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
@@ -46,22 +46,22 @@ public class Transdetservice {
     @Column(name = "c_transactiondet_id")
     private String TransactiondetId;
 
-    @Column(name = "c_service_id", table = "arts_t_transdetservice", nullable = false, length = 36)
+    @Column(name = "c_service_id")
     private String ServiceId;
 
-    @Column(name = "c_transdetservice_amount", table = "arts_t_transdetservice", nullable = false)
+    @Column(name = "c_transdetservice_amount")
     private long Amount;
 
-    @Column(name = "c_transdetservice_note", table = "arts_t_transdetservice", length = 500)
+    @Column(name = "c_transdetservice_note")
     private String Note;
 
-    @Column(name = "c_grpreservationsrv_id", table = "arts_t_transdetservice", length = 36)
+    @Column(name = "c_grpreservationsrv_id")
     private String GrpreservationsrvId;
 
-    @Column(name = "c_transdetservice_createdby", table = "arts_t_transdetservice", nullable = false, length = 36)
+    @Column(name = "c_transdetservice_createdby")
     private String Createdby;
 
-    @Column(name = "c_transdetservice_createdon", table = "arts_t_transdetservice", nullable = false)
+    @Column(name = "c_transdetservice_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

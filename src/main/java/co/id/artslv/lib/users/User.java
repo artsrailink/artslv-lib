@@ -28,104 +28,104 @@ public class User {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_user_username", table = "arts_t_user", nullable = false, length = 50)
+    @Column(name = "c_user_username")
     private String Username;
 
-    @Column(name = "c_user_password", table = "arts_t_user", nullable = false, length = 60)
+    @Column(name = "c_user_password")
     private String Password;
 
-    @Column(name = "c_user_rqid", table = "arts_t_user", nullable = false, length = 100)
+    @Column(name = "c_user_rqid")
     private String Rqid;
 
-    @Column(name = "c_user_firstname", table = "arts_t_user", nullable = false, length = 100)
+    @Column(name = "c_user_firstname")
     private String Firstname;
 
-    @Column(name = "c_user_lastname", table = "arts_t_user", length = 100)
+    @Column(name = "c_user_lastname")
     private String Lastname;
 
-    @Column(name = "c_user_callname", table = "arts_t_user", length = 50)
+    @Column(name = "c_user_callname")
     private String Callname;
 
-    @Column(name = "c_user_dateofbirth", table = "arts_t_user", nullable = false)
+    @Column(name = "c_user_dateofbirth")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Dateofbirth;
 
-    @Column(name = "c_user_phone", table = "arts_t_user", length = 50)
+    @Column(name = "c_user_phone")
     private String Phone;
 
-    @Column(name = "c_user_fax", table = "arts_t_user", length = 50)
+    @Column(name = "c_user_fax")
     private String Fax;
 
-    @Column(name = "c_user_mobile", table = "arts_t_user", nullable = false, length = 50)
+    @Column(name = "c_user_mobile")
     private String Mobile;
 
-    @Column(name = "c_user_email", table = "arts_t_user", nullable = false, length = 100)
+    @Column(name = "c_user_email")
     private String Email;
 
-    @Column(name = "c_user_altemail", table = "arts_t_user", length = 100)
+    @Column(name = "c_user_altemail")
     private String Altemail;
 
-    @Column(name = "c_user_address1", table = "arts_t_user", nullable = false)
+    @Column(name = "c_user_address1")
     private String Address1;
 
-    @Column(name = "c_user_address2", table = "arts_t_user")
+    @Column(name = "c_user_address2")
     private String Address2;
 
-    @Column(name = "c_user_postalcode", table = "arts_t_user", length = 10)
+    @Column(name = "c_user_postalcode")
     private String Postalcode;
 
-    @Column(name = "c_user_loginattempt", table = "arts_t_user", nullable = false)
+    @Column(name = "c_user_loginattempt")
     private double Loginattempt;
 
-    @Column(name = "c_user_startdate", table = "arts_t_user", nullable = false)
+    @Column(name = "c_user_startdate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Startdate;
 
-    @Column(name = "c_user_enddate", table = "arts_t_user", nullable = false)
+    @Column(name = "c_user_enddate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Enddate;
 
-    @Column(name = "c_usergroup_id", table = "arts_t_user", nullable = false, length = 36)
+    @Column(name = "c_usergroup_id")
     private String UsergroupId;
 
-    @Column(name = "c_user_status", table = "arts_t_user", nullable = false, length = 1)
+    @Column(name = "c_user_status")
     private String Status;
 
-    @Column(name = "c_user_domain", table = "arts_t_user", nullable = false, length = 36)
+    @Column(name = "c_user_domain")
     private String Domain;
 
-    @Column(name = "c_user_modifiedby", table = "arts_t_user", nullable = false, length = 36)
+    @Column(name = "c_user_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_user_modifiedon", table = "arts_t_user")
+    @Column(name = "c_user_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_stasiun_id", table = "arts_t_user", nullable = false, length = 36)
+    @Column(name = "c_stasiun_id")
     private String StasiunId;
 
-    @Column(name = "c_usertype_id", table = "arts_t_user", nullable = false, length = 36)
+    @Column(name = "c_usertype_id")
     private String UsertypeId;
 
-    @Column(name = "c_user_bypassip", table = "arts_t_user", nullable = false)
+    @Column(name = "c_user_bypassip")
     private Character UserBypassip;
 
-    @Column(name = "c_user_createdby", table = "arts_t_user", nullable = false, length = 36)
+    @Column(name = "c_user_createdby")
     private String Createdby;
 
-    @Column(name = "c_user_createdon", table = "arts_t_user", nullable = false)
+    @Column(name = "c_user_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

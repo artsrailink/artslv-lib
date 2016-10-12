@@ -29,93 +29,93 @@ public class Refund {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_cancellation_id", table = "arts_t_refund", nullable = false, length = 36)
+    @Column(name = "c_cancellation_id")
     private String CancellationId;
 
-    @Column(name = "c_refund_paytype", table = "arts_t_refund", nullable = false)
+    @Column(name = "c_refund_paytype")
     private Character Paytype;
 
-    @Column(name = "c_refund_paystartdate", table = "arts_t_refund", nullable = false)
+    @Column(name = "c_refund_paystartdate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Paystartdate;
 
-    @Column(name = "c_refund_payenddate", table = "arts_t_refund", nullable = false)
+    @Column(name = "c_refund_payenddate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Payenddate;
 
-    @Column(name = "c_refund_paydate", table = "arts_t_refund")
+    @Column(name = "c_refund_paydate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Paydate;
 
-    @Column(name = "c_refund_bankaccnum", table = "arts_t_refund", length = 100)
+    @Column(name = "c_refund_bankaccnum")
     private String Bankaccnum;
 
-    @Column(name = "c_refund_bankaccname", table = "arts_t_refund", length = 100)
+    @Column(name = "c_refund_bankaccname")
     private String Bankaccname;
 
-    @Column(name = "c_refund_status", table = "arts_t_refund", nullable = false)
+    @Column(name = "c_refund_status")
     private Character Status;
 
-    @Column(name = "c_refund_domain", table = "arts_t_refund", nullable = false, length = 36)
+    @Column(name = "c_refund_domain")
     private String Domain;
 
-    @Column(name = "c_refund_modifiedby", table = "arts_t_refund", nullable = false, length = 36)
+    @Column(name = "c_refund_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_refund_modifiedon", table = "arts_t_refund", nullable = false)
+    @Column(name = "c_refund_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_bank_id", table = "arts_t_refund", length = 36)
+    @Column(name = "c_bank_id")
     private String BankId;
 
-    @Column(name = "c_stasiun_id", table = "arts_t_refund", length = 36)
+    @Column(name = "c_stasiun_id")
     private String StasiunId;
 
-    @Column(name = "c_refund_maxprint", table = "arts_t_refund")
+    @Column(name = "c_refund_maxprint")
     private Short Maxprint;
 
-    @Column(name = "c_refund_refundnum", table = "arts_t_refund", length = 50)
+    @Column(name = "c_refund_refundnum")
     private String Refundnum;
 
-    @Column(name = "c_refund_printedon", table = "arts_t_refund")
+    @Column(name = "c_refund_printedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Printedon;
 
-    @Column(name = "c_refund_totamount", table = "arts_t_refund", nullable = false, scale = 2, precision = 11)
+    @Column(name = "c_refund_totamount")
     private BigDecimal Totamount;
 
-    @Column(name = "c_refund_phonenum", table = "arts_t_refund", length = 50)
+    @Column(name = "c_refund_phonenum")
     private String Phonenum;
 
-    @Column(name = "c_shift_id", table = "arts_t_refund", length = 36)
+    @Column(name = "c_shift_id")
     private String ShiftId;
 
-    @Column(name = "c_refund_noka", table = "arts_t_refund", nullable = false, length = 50)
+    @Column(name = "c_refund_noka")
     private String Noka;
 
-    @Column(name = "c_refund_contactname", table = "arts_t_refund", length = 100)
+    @Column(name = "c_refund_contactname")
     private String Contactname;
 
-    @Column(name = "c_refund_createdby", table = "arts_t_refund", nullable = false, length = 36)
+    @Column(name = "c_refund_createdby")
     private String Createdby;
 
-    @Column(name = "c_refund_createdon", table = "arts_t_refund", nullable = false)
+    @Column(name = "c_refund_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

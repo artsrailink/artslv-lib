@@ -27,32 +27,32 @@ public class Msgto {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_message_id", table = "arts_t_msgto", nullable = false, length = 36)
+    @Column(name = "c_message_id")
     private String MessageId;
 
-    @Column(name = "c_user_id", table = "arts_t_msgto", nullable = false, length = 36)
+    @Column(name = "c_user_id")
     private String UserId;
 
-    @Column(name = "c_msgto_status", table = "arts_t_msgto", nullable = false)
+    @Column(name = "c_msgto_status")
     private Character Status;
 
-    @Column(name = "c_msgto_domain", table = "arts_t_msgto", nullable = false, length = 36)
+    @Column(name = "c_msgto_domain")
     private String Domain;
 
-    @Column(name = "c_msgto_modifiedby", table = "arts_t_msgto", nullable = false, length = 36)
+    @Column(name = "c_msgto_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_msgto_modifiedon", table = "arts_t_msgto", nullable = false)
+    @Column(name = "c_msgto_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_msgto_createdby", table = "arts_t_msgto", nullable = false, length = 36)
+    @Column(name = "c_msgto_createdby")
     private String Createdby;
 
-    @Column(name = "c_msgto_createdon", table = "arts_t_msgto", nullable = false)
+    @Column(name = "c_msgto_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

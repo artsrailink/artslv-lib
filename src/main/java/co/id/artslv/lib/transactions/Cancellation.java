@@ -29,73 +29,73 @@ public class Cancellation {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_cancellation_date", table = "arts_t_cancellation", nullable = false)
+    @Column(name = "c_cancellation_date")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Date;
 
-    @Column(name = "c_cancellation_totamount", table = "arts_t_cancellation", nullable = false)
+    @Column(name = "c_cancellation_totamount")
     private long Totamount;
 
-    @Column(name = "c_cancellation_status", table = "arts_t_cancellation", nullable = false)
+    @Column(name = "c_cancellation_status")
     private Character Status;
 
-    @Column(name = "c_transactionid_cancelled", table = "arts_t_cancellation", nullable = false, length = 36)
+    @Column(name = "c_transactionid_cancelled")
     private String TransactionidCancelled;
 
-    @Column(name = "c_transactionid_new", table = "arts_t_cancellation", length = 36)
+    @Column(name = "c_transactionid_new")
     private String TransactionidNew;
 
-    @Column(name = "c_cancellation_domain", table = "arts_t_cancellation", nullable = false, length = 36)
+    @Column(name = "c_cancellation_domain")
     private String Domain;
 
-    @Column(name = "c_cancellation_modifiedby", table = "arts_t_cancellation", nullable = false, length = 36)
+    @Column(name = "c_cancellation_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_cancellation_modifiedon", table = "arts_t_cancellation", nullable = false)
+    @Column(name = "c_cancellation_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_stasiun_id", table = "arts_t_cancellation", nullable = false, length = 36)
+    @Column(name = "c_stasiun_id")
     private String StasiunId;
 
-    @Column(name = "c_cancellationtype_id", table = "arts_t_cancellation", nullable = false, length = 36)
+    @Column(name = "c_cancellationtype_id")
     private String CancellationtypeId;
 
-    @Column(name = "c_cancelreason_id", table = "arts_t_cancellation", nullable = false, length = 36)
+    @Column(name = "c_cancelreason_id")
     private String CancelreasonId;
 
-    @Column(name = "c_shift_id", table = "arts_t_cancellation", nullable = false, length = 36)
+    @Column(name = "c_shift_id")
     private String ShiftId;
 
-    @Column(name = "c_cancellation_noka", table = "arts_t_cancellation", length = 50)
+    @Column(name = "c_cancellation_noka")
     private String Noka;
 
-    @Column(name = "c_cancellation_trainname", table = "arts_t_cancellation", length = 100)
+    @Column(name = "c_cancellation_trainname")
     private String Trainname;
 
-    @Column(name = "c_cancellation_maxprint", table = "arts_t_cancellation")
+    @Column(name = "c_cancellation_maxprint")
     private Short Maxprint;
 
-    @Column(name = "c_cancellation_cancelnum", table = "arts_t_cancellation", length = 50)
+    @Column(name = "c_cancellation_cancelnum")
     private String Cancelnum;
 
-    @Column(name = "c_cancellation_printedon", table = "arts_t_cancellation")
+    @Column(name = "c_cancellation_printedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Printedon;
 
-    @Column(name = "c_cancellation_createdby", table = "arts_t_cancellation", nullable = false, length = 36)
+    @Column(name = "c_cancellation_createdby")
     private String Createdby;
 
-    @Column(name = "c_cancellation_createdon", table = "arts_t_cancellation", nullable = false)
+    @Column(name = "c_cancellation_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

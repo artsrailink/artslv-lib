@@ -27,35 +27,35 @@ public class Hobby {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_hobby_code", table = "arts_t_hobby", nullable = false, length = 20)
+    @Column(name = "c_hobby_code")
     private String Code;
 
-    @Column(name = "c_hobby_name", table = "arts_t_hobby", nullable = false, length = 50)
+    @Column(name = "c_hobby_name")
     private String Name;
 
-    @Column(name = "c_hobby_note", table = "arts_t_hobby", length = 100)
+    @Column(name = "c_hobby_note")
     private String Note;
 
-    @Column(name = "c_hobby_status", table = "arts_t_hobby", nullable = false)
+    @Column(name = "c_hobby_status")
     private Character Status;
 
-    @Column(name = "c_hobby_domain", table = "arts_t_hobby", nullable = false, length = 36)
+    @Column(name = "c_hobby_domain")
     private String Domain;
 
-    @Column(name = "c_hobby_createdby", table = "arts_t_hobby", nullable = false, length = 36)
+    @Column(name = "c_hobby_createdby")
     private String Createdby;
 
-    @Column(name = "c_hobby_createdon", table = "arts_t_hobby", nullable = false)
+    @Column(name = "c_hobby_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Createdon;
 
-    @Column(name = "c_hobby_modifiedby", table = "arts_t_hobby", nullable = false, length = 36)
+    @Column(name = "c_hobby_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_hobby_modifiedon", table = "arts_t_hobby", nullable = false)
+    @Column(name = "c_hobby_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

@@ -29,42 +29,42 @@ public class Grpreservationpay {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_grpreservationpay_date", table = "arts_t_grpreservationpay", nullable = false)
+    @Column(name = "c_grpreservationpay_date")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Date;
 
-    @Column(name = "c_grpreservationpay_amount", table = "arts_t_grpreservationpay", nullable = false, scale = 2, precision = 11)
+    @Column(name = "c_grpreservationpay_amount")
     private BigDecimal Amount;
 
-    @Column(name = "c_grpreservationpay_note", table = "arts_t_grpreservationpay", length = 300)
+    @Column(name = "c_grpreservationpay_note")
     private String Note;
 
-    @Column(name = "c_grpreservation_id", table = "arts_t_grpreservationpay", nullable = false, length = 36)
+    @Column(name = "c_grpreservation_id")
     private String GrpreservationId;
 
-    @Column(name = "c_grpreservationpay_status", table = "arts_t_grpreservationpay", nullable = false)
+    @Column(name = "c_grpreservationpay_status")
     private Character Status;
 
-    @Column(name = "c_grpreservationpay_domain", table = "arts_t_grpreservationpay", nullable = false, length = 36)
+    @Column(name = "c_grpreservationpay_domain")
     private String Domain;
 
-    @Column(name = "c_grpreservationpay_modifiedby", table = "arts_t_grpreservationpay", nullable = false, length = 36)
+    @Column(name = "c_grpreservationpay_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_grpreservationpay_modifiedon", table = "arts_t_grpreservationpay", nullable = false)
+    @Column(name = "c_grpreservationpay_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_grpreservationpay_createdby", table = "arts_t_grpreservationpay", nullable = false, length = 36)
+    @Column(name = "c_grpreservationpay_createdby")
     private String Createdby;
 
-    @Column(name = "c_grpreservationpay_createdon", table = "arts_t_grpreservationpay", nullable = false)
+    @Column(name = "c_grpreservationpay_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

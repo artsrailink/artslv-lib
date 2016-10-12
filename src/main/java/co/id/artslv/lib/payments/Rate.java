@@ -29,93 +29,93 @@ public class Rate {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_rate_totamount", table = "arts_t_rate", nullable = false, scale = 2, precision = 11)
+    @Column(name = "c_rate_totamount")
     private BigDecimal Totamount;
 
-    @Column(name = "c_rate_startdate", table = "arts_t_rate", nullable = false)
+    @Column(name = "c_rate_startdate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Startdate;
 
-    @Column(name = "c_rate_enddate", table = "arts_t_rate", nullable = false)
+    @Column(name = "c_rate_enddate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Enddate;
 
-    @Column(name = "c_stasiun_idorg", table = "arts_t_rate", nullable = false, length = 36)
+    @Column(name = "c_stasiun_idorg")
     private String StasiunIdorg;
 
-    @Column(name = "c_rate_sellstartdate", table = "arts_t_rate", nullable = false)
+    @Column(name = "c_rate_sellstartdate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Sellstartdate;
 
-    @Column(name = "c_rate_sellenddate", table = "arts_t_rate", nullable = false)
+    @Column(name = "c_rate_sellenddate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Sellenddate;
 
-    @Column(name = "c_rate_status", table = "arts_t_rate", nullable = false)
+    @Column(name = "c_rate_status")
     private Character Status;
 
-    @Column(name = "c_rate_domain", table = "arts_t_rate", nullable = false, length = 36)
+    @Column(name = "c_rate_domain")
     private String Domain;
 
-    @Column(name = "c_rate_modifiedby", table = "arts_t_rate", nullable = false, length = 36)
+    @Column(name = "c_rate_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_rate_modifiedon", table = "arts_t_rate", nullable = false)
+    @Column(name = "c_rate_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_rate_psgtype", table = "arts_t_rate")
+    @Column(name = "c_rate_psgtype")
     private Character Psgtype;
 
-    @Column(name = "c_stasiun_iddest", table = "arts_t_rate", nullable = false, length = 36)
+    @Column(name = "c_stasiun_iddest")
     private String StasiunIddest;
 
-    @Column(name = "c_rate_refunddays", table = "arts_t_rate")
+    @Column(name = "c_rate_refunddays")
     private Integer Refunddays;
 
-    @Column(name = "c_rate_refundable", table = "arts_t_rate", nullable = false)
+    @Column(name = "c_rate_refundable")
     private Character Refundable;
 
-    @Column(name = "c_rate_cancelable", table = "arts_t_rate", nullable = false)
+    @Column(name = "c_rate_cancelable")
     private Character Cancelable;
 
-    @Column(name = "c_rate_reductible", table = "arts_t_rate", nullable = false)
+    @Column(name = "c_rate_reductible")
     private Character Reductible;
 
-    @Column(name = "c_rate_reschedulable", table = "arts_t_rate", nullable = false)
+    @Column(name = "c_rate_reschedulable")
     private Character Reschedulable;
 
-    @Column(name = "c_rate_reseatable", table = "arts_t_rate", nullable = false)
+    @Column(name = "c_rate_reseatable")
     private Character Reseatable;
 
-    @Column(name = "c_rate_renamable", table = "arts_t_rate", nullable = false)
+    @Column(name = "c_rate_renamable")
     private Character Renamable;
 
-    @Column(name = "c_subclass_id", table = "arts_t_rate", nullable = false, length = 36)
+    @Column(name = "c_subclass_id")
     private String SubclassId;
 
-    @Column(name = "c_rate_schedulenoka", table = "arts_t_rate", length = 50)
+    @Column(name = "c_rate_schedulenoka")
     private String Schedulenoka;
 
-    @Column(name = "c_rate_createdby", table = "arts_t_rate", nullable = false, length = 36)
+    @Column(name = "c_rate_createdby")
     private String Createdby;
 
-    @Column(name = "c_rate_createdon", table = "arts_t_rate", nullable = false)
+    @Column(name = "c_rate_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

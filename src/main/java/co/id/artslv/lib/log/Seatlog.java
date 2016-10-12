@@ -30,45 +30,45 @@ public class Seatlog {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_wagondet_id", table = "arts_t_seatlog", nullable = false, length = 36)
+    @Column(name = "c_wagondet_id")
     private String WagondetId;
 
-    @Column(name = "c_seatlog_date", table = "arts_t_seatlog", nullable = false)
+    @Column(name = "c_seatlog_date")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Date;
 
-    @Column(name = "c_seatlog_status", table = "arts_t_seatlog", nullable = false)
+    @Column(name = "c_seatlog_status")
     private Character Status;
 
-    @Column(name = "c_seatlog_wagonorder", table = "arts_t_seatlog", nullable = false)
+    @Column(name = "c_seatlog_wagonorder")
     private short Wagonorder;
 
-    @Column(name = "c_seatlog_domain", table = "arts_t_seatlog", nullable = false, length = 36)
+    @Column(name = "c_seatlog_domain")
     private String Domain;
 
-    @Column(name = "c_user_id", table = "arts_t_seatlog", nullable = false, length = 36)
+    @Column(name = "c_user_id")
     private String UserId;
 
-    @Column(name = "c_seatlog_object", table = "arts_t_seatlog", nullable = false, length = 50)
+    @Column(name = "c_seatlog_object")
     private String Object;
 
-    @Column(name = "c_seatlog_objectid", table = "arts_t_seatlog", nullable = false, length = 36)
+    @Column(name = "c_seatlog_objectid")
     private String Objectid;
 
-    @Column(name = "c_seatlog_action", table = "arts_t_seatlog", nullable = false, length = 50)
+    @Column(name = "c_seatlog_action")
     private String Action;
 
-    @Column(name = "c_seatlog_value", table = "arts_t_seatlog", nullable = false, length = 2147483647)
+    @Column(name = "c_seatlog_value")
     @Lob
     private String Value;
 
-    @Column(name = "c_seatlog_createdby", table = "arts_t_seatlog", nullable = false, length = 36)
+    @Column(name = "c_seatlog_createdby")
     private String Createdby;
 
-    @Column(name = "c_seatlog_createdon", table = "arts_t_seatlog", nullable = false)
+    @Column(name = "c_seatlog_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

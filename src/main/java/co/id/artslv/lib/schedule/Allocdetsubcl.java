@@ -27,44 +27,44 @@ public class Allocdetsubcl {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_subclass_id", table = "arts_t_allocdetsubcl", nullable = false, length = 36)
+    @Column(name = "c_subclass_id")
     private String SubclassId;
 
-    @Column(name = "c_adsc_maxsell", table = "arts_t_allocdetsubcl", nullable = false)
+    @Column(name = "c_adsc_maxsell")
     private int Maxsell;
 
-    @Column(name = "c_adsc_status", table = "arts_t_allocdetsubcl", nullable = false)
+    @Column(name = "c_adsc_status")
     private Character Status;
 
-    @Column(name = "c_adsc_domain", table = "arts_t_allocdetsubcl", nullable = false, length = 36)
+    @Column(name = "c_adsc_domain")
     private String Domain;
 
-    @Column(name = "c_adsc_modifiedby", table = "arts_t_allocdetsubcl", nullable = false, length = 36)
+    @Column(name = "c_adsc_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_adsc_modifiedon", table = "arts_t_allocdetsubcl", nullable = false)
+    @Column(name = "c_adsc_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_allocdet_id", table = "arts_t_allocdetsubcl", nullable = false, length = 36)
+    @Column(name = "c_allocdet_id")
     private String AllocdetId;
 
-    @Column(name = "c_stop_id", table = "arts_t_allocdetsubcl", nullable = false, length = 36)
+    @Column(name = "c_stop_id")
     private String StopId;
 
-    @Column(name = "c_adsc_noseatable", table = "arts_t_allocdetsubcl", nullable = false)
+    @Column(name = "c_adsc_noseatable")
     private Character Noseatable;
 
-    @Column(name = "c_adsc_order", table = "arts_t_allocdetsubcl")
+    @Column(name = "c_adsc_order")
     private Integer Order;
 
-    @Column(name = "c_adsc_createdby", table = "arts_t_allocdetsubcl", nullable = false, length = 36)
+    @Column(name = "c_adsc_createdby")
     private String Createdby;
 
-    @Column(name = "c_adsc_createdon", table = "arts_t_allocdetsubcl", nullable = false)
+    @Column(name = "c_adsc_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

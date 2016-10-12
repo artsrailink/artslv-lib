@@ -28,76 +28,76 @@ public class Sapposting {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "file_name", table = "arts_t_sapposting", length = 16)
+    @Column(name = "file_name")
     private String fileName;
 
-    @Column(name = "record_number", table = "arts_t_sapposting", precision = 22)
+    @Column(name = "record_number")
     private Double recordNumber;
 
-    @Column(name = "tcode", table = "arts_t_sapposting", nullable = false, length = 4)
+    @Column(name = "tcode")
     private String tcode;
 
-    @Column(name = "pph", table = "arts_t_sapposting", length = 5)
+    @Column(name = "pph")
     private String pph;
 
-    @Column(name = "reversal", table = "arts_t_sapposting", nullable = false)
+    @Column(name = "reversal")
     private Character reversal;
 
-    @Column(name = "doc_type", table = "arts_t_sapposting", nullable = false, length = 2)
+    @Column(name = "doc_type")
     private String docType;
 
-    @Column(name = "posting_date", table = "arts_t_sapposting", nullable = false, length = 8)
+    @Column(name = "posting_date")
     private String postingDate;
 
-    @Column(name = "doc_date", table = "arts_t_sapposting", nullable = false, length = 8)
+    @Column(name = "doc_date")
     private String docDate;
 
-    @Column(name = "no_dok", table = "arts_t_sapposting", nullable = false, length = 25)
+    @Column(name = "no_dok")
     private String noDok;
 
-    @Column(name = "reference", table = "arts_t_sapposting", nullable = false, length = 50)
+    @Column(name = "reference")
     private String reference;
 
-    @Column(name = "debit_kredit", table = "arts_t_sapposting", nullable = false)
+    @Column(name = "debit_kredit")
     private Character debitKredit;
 
-    @Column(name = "account", table = "arts_t_sapposting", nullable = false, length = 20)
+    @Column(name = "account")
     private String account;
 
-    @Column(name = "alternative_acc", table = "arts_t_sapposting", nullable = false, length = 10)
+    @Column(name = "alternative_acc")
     private String alternativeAcc;
 
-    @Column(name = "amount", table = "arts_t_sapposting", length = 20)
+    @Column(name = "amount")
     private String amount;
 
-    @Column(name = "ba", table = "arts_t_sapposting", nullable = false, length = 4)
+    @Column(name = "ba")
     private String ba;
 
-    @Column(name = "segmen", table = "arts_t_sapposting", nullable = false, length = 5)
+    @Column(name = "segmen")
     private String segmen;
 
-    @Column(name = "fa", table = "arts_t_sapposting", nullable = false, length = 7)
+    @Column(name = "fa")
     private String fa;
 
-    @Column(name = "cc", table = "arts_t_sapposting", nullable = false, length = 10)
+    @Column(name = "cc")
     private String cc;
 
-    @Column(name = "pc", table = "arts_t_sapposting", nullable = false, length = 10)
+    @Column(name = "pc")
     private String pc;
 
     @Column(name = "internal_order", table = "arts_t_sapposting")
     private Character internalOrder;
 
-    @Column(name = "assignment", table = "arts_t_sapposting", length = 16)
+    @Column(name = "assignment")
     private String assignment;
 
-    @Column(name = "vendor", table = "arts_t_sapposting", length = 6)
+    @Column(name = "vendor", table = "arts_t_sapposting")
     private String vendor;
 
-    @Column(name = "customer", table = "arts_t_sapposting", length = 6)
+    @Column(name = "customer", table = "arts_t_sapposting")
     private String customer;
 
-    @Column(name = "pos_status", table = "arts_t_sapposting", precision = 22)
+    @Column(name = "pos_status")
     private Double posStatus;
 
     @Column(name = "pos_tgl", table = "arts_t_sapposting")
@@ -107,80 +107,80 @@ public class Sapposting {
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate posTgl;
 
-    @Column(name = "status0", table = "arts_t_sapposting", length = 1)
+    @Column(name = "status0", table = "arts_t_sapposting")
     private String status0;
 
-    @Column(name = "no_doksap", table = "arts_t_sapposting", length = 20)
+    @Column(name = "no_doksap", table = "arts_t_sapposting")
     private String noDoksap;
 
-    @Column(name = "fiscal_year", table = "arts_t_sapposting", scale = 2, precision = 8)
+    @Column(name = "fiscal_year", table = "arts_t_sapposting")
     private Double fiscalYear;
 
-    @Column(name = "status1", table = "arts_t_sapposting", length = 100)
+    @Column(name = "status1", table = "arts_t_sapposting")
     private String status1;
 
-    @Column(name = "status2", table = "arts_t_sapposting", length = 100)
+    @Column(name = "status2", table = "arts_t_sapposting")
     private String status2;
 
-    @Column(name = "status3", table = "arts_t_sapposting", length = 100)
+    @Column(name = "status3", table = "arts_t_sapposting")
     private String status3;
 
-    @Column(name = "status4", table = "arts_t_sapposting", length = 100)
+    @Column(name = "status4", table = "arts_t_sapposting")
     private String status4;
 
-    @Column(name = "status5", table = "arts_t_sapposting", length = 100)
+    @Column(name = "status5", table = "arts_t_sapposting")
     private String status5;
 
-    @Column(name = "status6", table = "arts_t_sapposting", length = 100)
+    @Column(name = "status6", table = "arts_t_sapposting")
     private String status6;
 
-    @Column(name = "status7", table = "arts_t_sapposting", length = 100)
+    @Column(name = "status7", table = "arts_t_sapposting")
     private String status7;
 
-    @Column(name = "status8", table = "arts_t_sapposting", length = 100)
+    @Column(name = "status8", table = "arts_t_sapposting")
     private String status8;
 
-    @Column(name = "status9", table = "arts_t_sapposting", length = 100)
+    @Column(name = "status9", table = "arts_t_sapposting")
     private String status9;
 
-    @Column(name = "status10", table = "arts_t_sapposting", length = 100)
+    @Column(name = "status10", table = "arts_t_sapposting")
     private String status10;
 
     @Column(name = "sts_accountfa", table = "arts_t_sapposting")
     private Character stsAccountfa;
 
-    @Column(name = "indeks", table = "arts_t_sapposting", nullable = false)
+    @Column(name = "indeks")
     private double indeks;
 
-    @Column(name = "totalidx", table = "arts_t_sapposting", nullable = false)
+    @Column(name = "totalidx")
     private double totalidx;
 
-    @Column(name = "entry_date", table = "arts_t_sapposting", nullable = false)
+    @Column(name = "entry_date")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate entryDate;
 
-    @Column(name = "virtual_acc", table = "arts_t_sapposting", length = 16)
+    @Column(name = "virtual_acc")
     private String virtualAcc;
 
-    @Column(name = "wwrvc", table = "arts_t_sapposting", length = 10)
+    @Column(name = "wwrvc", table = "arts_t_sapposting")
     private String wwrvc;
 
-    @Column(name = "kndnr", table = "arts_t_sapposting", length = 10)
+    @Column(name = "kndnr", table = "arts_t_sapposting")
     private String kndnr;
 
-    @Column(name = "wwprd", table = "arts_t_sapposting", length = 18)
+    @Column(name = "wwprd", table = "arts_t_sapposting")
     private String wwprd;
 
-    @Column(name = "value_date", table = "arts_t_sapposting", length = 8)
+    @Column(name = "value_date", table = "arts_t_sapposting")
     private String valueDate;
 
-    @Column(name = "c_sapposting_createdby", table = "arts_t_sapposting", nullable = false, length = 36)
+    @Column(name = "c_sapposting_createdby")
     private String Createdby;
 
-    @Column(name = "c_sapposting_createdon", table = "arts_t_sapposting", nullable = false)
+    @Column(name = "c_sapposting_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

@@ -27,26 +27,26 @@ public class Domain {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "c_domain_compcode", table = "arts_t_domain", nullable = false, length = 8)
+    @Column(name = "c_domain_compcode")
     private String Compcode;
 
-    @Column(name = "c_domain_name", table = "arts_t_domain", nullable = false, length = 50)
+    @Column(name = "c_domain_name")
     private String Name;
 
-    @Column(name = "c_domain_status", table = "arts_t_domain", nullable = false)
+    @Column(name = "c_domain_status")
     private Character Status;
 
-    @Column(name = "c_domain_modifiedby", table = "arts_t_domain", nullable = false, length = 36)
+    @Column(name = "c_domain_modifiedby")
     private String Modifiedby;
 
-    @Column(name = "c_domain_modifiedon", table = "arts_t_domain", nullable = false)
+    @Column(name = "c_domain_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Modifiedon;
 
-    @Column(name = "c_domain_createdby", table = "arts_t_domain", length = 36)
+    @Column(name = "c_domain_createdby", table = "arts_t_domain")
     private String Createdby;
 
     @Column(name = "c_domain_createdon", table = "arts_t_domain")
