@@ -1,8 +1,7 @@
 package co.id.artslv.lib.availability;
 
-import co.id.artslv.lib.fare.Fare;
 import co.id.artslv.lib.inventory.Inventory;
-import co.id.artslv.lib.subclass.Subclass;
+import co.id.artslv.lib.trains.Subclass;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;

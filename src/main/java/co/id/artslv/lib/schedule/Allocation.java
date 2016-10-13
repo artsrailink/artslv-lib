@@ -1,6 +1,6 @@
 package co.id.artslv.lib.schedule;
 
-import co.id.artslv.lib.fare.Fare;
+import co.id.artslv.lib.payments.Fare;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
