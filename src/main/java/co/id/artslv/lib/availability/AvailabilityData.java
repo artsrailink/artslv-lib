@@ -1,6 +1,13 @@
 package co.id.artslv.lib.availability;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
+import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
+import org.hibernate.annotations.Type;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -9,10 +16,17 @@ import java.util.List;
 /**
  * Created by root on 13/10/16.
  */
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class AvailabilityData {
+
+    @JsonSerialize(using = LocalDateSerializer.class)
+    @JsonDeserialize(using = LocalDateDeserializer.class)
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate departdate;
     private String stationOrg;
     private String stationDest;
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
     private List<ScheduleData> scheduleDatas;
 
     public LocalDate getDepartdate() {

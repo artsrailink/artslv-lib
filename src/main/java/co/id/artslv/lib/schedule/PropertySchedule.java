@@ -5,15 +5,12 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
-import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
-import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 /**
  * Created by root on 13/10/16.
@@ -88,7 +85,7 @@ public class PropertySchedule {
     private int totamount;
 
     @Column(name="c_seatavailable")
-    private String seatavailable;
+    private int seatavailable;
 
     public String getId() {
         return id;
@@ -250,11 +247,11 @@ public class PropertySchedule {
         this.totamount = totamount;
     }
 
-    public String getSeatavailable() {
+    public int getSeatavailable() {
         return seatavailable;
     }
 
-    public void setSeatavailable(String seatavailable) {
+    public void setSeatavailable(int seatavailable) {
         this.seatavailable = seatavailable;
     }
 }
