@@ -1,6 +1,8 @@
 package co.id.artslv.lib.allocation;
 
+import co.id.artslv.lib.fare.Fare;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
@@ -17,6 +19,7 @@ import java.time.LocalDateTime;
 /**
  * Created by root on 07/10/16.
  */
+@JsonInclude(JsonInclude.Include.NON_NULL)
 @Entity
 @Table(name = "arts_t_allocation")
 public class Allocation {
@@ -96,13 +99,18 @@ public class Allocation {
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
-    private String modifiedon;
+    private LocalDateTime modifiedon;
 
     @Column(name="c_allocation_maxsell")
     private int maxsells;
 
     @Column(name="c_allocation_noseatable")
     private String noseatable;
+
+    @Transient
+    private Fare fare;
+
+
 
     public String getId() {
         return id;
@@ -264,11 +272,11 @@ public class Allocation {
         this.modifiedby = modifiedby;
     }
 
-    public String getModifiedon() {
+    public LocalDateTime getModifiedon() {
         return modifiedon;
     }
 
-    public void setModifiedon(String modifiedon) {
+    public void setModifiedon(LocalDateTime modifiedon) {
         this.modifiedon = modifiedon;
     }
 
@@ -287,4 +295,13 @@ public class Allocation {
     public void setNoseatable(String noseatable) {
         this.noseatable = noseatable;
     }
+
+    public Fare getFare() {
+        return fare;
+    }
+
+    public void setFare(Fare fare) {
+        this.fare = fare;
+    }
+
 }

@@ -1,6 +1,8 @@
 package co.id.artslv.lib.schedule;
 
+import co.id.artslv.lib.allocation.Allocation;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
@@ -13,10 +15,12 @@ import org.hibernate.annotations.Type;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
 
 /**
  * Created by root on 07/10/16.
  */
+@JsonInclude(JsonInclude.Include.NON_NULL)
 @Entity
 @Table(name = "arts_t_schedule")
 public class Schedule {
@@ -105,6 +109,19 @@ public class Schedule {
 
     @Column(name= "c_train_name")
     private String trainname;
+
+    @Transient
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
+    private List<Allocation> allocations;
+
+    @Transient
+    private String departtime;
+
+    @Transient
+    private String arivingtime;
+
+    @Transient
+    private int availableseat;
 
     public Schedule() {
     }
@@ -283,5 +300,37 @@ public class Schedule {
 
     public void setTrainname(String trainname) {
         this.trainname = trainname;
+    }
+
+    public List<Allocation> getAllocations() {
+        return allocations;
+    }
+
+    public void setAllocations(List<Allocation> allocations) {
+        this.allocations = allocations;
+    }
+
+    public String getDeparttime() {
+        return departtime;
+    }
+
+    public void setDeparttime(String departtime) {
+        this.departtime = departtime;
+    }
+
+    public String getArivingtime() {
+        return arivingtime;
+    }
+
+    public void setArivingtime(String arivingtime) {
+        this.arivingtime = arivingtime;
+    }
+
+    public int getAvailableseat() {
+        return availableseat;
+    }
+
+    public void setAvailableseat(int availableseat) {
+        this.availableseat = availableseat;
     }
 }

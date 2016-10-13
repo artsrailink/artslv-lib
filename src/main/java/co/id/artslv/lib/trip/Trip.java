@@ -68,7 +68,7 @@ public class Trip {
     private LocalDateTime createdon;
 
 
-    @Column(name= "c_schedule_nokah")
+    @Column(name= "c_schedule_noka")
     private String schedulenoka;
 
     public Trip() {
