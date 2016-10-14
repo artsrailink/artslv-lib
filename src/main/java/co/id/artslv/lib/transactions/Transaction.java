@@ -39,8 +39,8 @@ public class Transaction {
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
-    @Type(type = "org.hibernate.type.LocalDateType")
-    private LocalDate Transdate;
+    @Type(type = "org.hibernate.type.LocalDateTimeType")
+    private LocalDateTime Transdate;
 
     @Column(name = "c_transaction_departdate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
@@ -167,29 +167,29 @@ public class Transaction {
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
-    @Type(type = "org.hibernate.type.LocalDateType")
-    private LocalDate Bookedon;
+    @Type(type = "org.hibernate.type.LocalDateTimeType")
+    private LocalDateTime Bookedon;
 
     @Column(name = "c_transaction_booktimeouton")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
-    @Type(type = "org.hibernate.type.LocalDateType")
-    private LocalDate Booktimeouton;
+    @Type(type = "org.hibernate.type.LocalDateTimeType")
+    private LocalDateTime Booktimeouton;
 
     @Column(name = "c_transaction_paytimeouton")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
-    @Type(type = "org.hibernate.type.LocalDateType")
-    private LocalDate Paytimeouton;
+    @Type(type = "org.hibernate.type.LocalDateTimeType")
+    private LocalDateTime Paytimeouton;
 
     @Column(name = "c_transaction_paidon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
-    @Type(type = "org.hibernate.type.LocalDateType")
-    private LocalDate Paidon;
+    @Type(type = "org.hibernate.type.LocalDateTimeType")
+    private LocalDateTime Paidon;
 
     @Column(name = "c_transaction_smsbooksent")
     private Character Smsbooksent;
@@ -271,256 +271,256 @@ public class Transaction {
         return Bookcode;
     }
 
-    public void setBookcode(String Bookcode) {
-        this.Bookcode = Bookcode;
+    public void setBookcode(String bookcode) {
+        Bookcode = bookcode;
     }
 
     public String getPaycode() {
         return Paycode;
     }
 
-    public void setPaycode(String Paycode) {
-        this.Paycode = Paycode;
+    public void setPaycode(String paycode) {
+        Paycode = paycode;
     }
 
-    public LocalDate getTransdate() {
+    public LocalDateTime getTransdate() {
         return Transdate;
     }
 
-    public void setTransdate(LocalDate Transdate) {
-        this.Transdate = Transdate;
+    public void setTransdate(LocalDateTime transdate) {
+        Transdate = transdate;
     }
 
     public LocalDate getDepartdate() {
         return Departdate;
     }
 
-    public void setDepartdate(LocalDate Departdate) {
-        this.Departdate = Departdate;
+    public void setDepartdate(LocalDate departdate) {
+        Departdate = departdate;
     }
 
     public BigDecimal getTotamount() {
         return Totamount;
     }
 
-    public void setTotamount(BigDecimal Totamount) {
-        this.Totamount = Totamount;
+    public void setTotamount(BigDecimal totamount) {
+        Totamount = totamount;
     }
 
     public BigDecimal getExtrafee() {
         return Extrafee;
     }
 
-    public void setExtrafee(BigDecimal Extrafee) {
-        this.Extrafee = Extrafee;
+    public void setExtrafee(BigDecimal extrafee) {
+        Extrafee = extrafee;
     }
 
     public BigDecimal getNetamount() {
         return Netamount;
     }
 
-    public void setNetamount(BigDecimal Netamount) {
-        this.Netamount = Netamount;
+    public void setNetamount(BigDecimal netamount) {
+        Netamount = netamount;
     }
 
     public BigDecimal getPaidamount() {
         return Paidamount;
     }
 
-    public void setPaidamount(BigDecimal Paidamount) {
-        this.Paidamount = Paidamount;
+    public void setPaidamount(BigDecimal paidamount) {
+        Paidamount = paidamount;
     }
 
     public BigDecimal getCustname() {
         return Custname;
     }
 
-    public void setCustname(BigDecimal Custname) {
-        this.Custname = Custname;
+    public void setCustname(BigDecimal custname) {
+        Custname = custname;
     }
 
     public String getPhonenum() {
         return Phonenum;
     }
 
-    public void setPhonenum(String Phonenum) {
-        this.Phonenum = Phonenum;
+    public void setPhonenum(String phonenum) {
+        Phonenum = phonenum;
     }
 
     public String getEmail() {
         return Email;
     }
 
-    public void setEmail(String Email) {
-        this.Email = Email;
+    public void setEmail(String email) {
+        Email = email;
     }
 
     public double getTotpsgadult() {
         return Totpsgadult;
     }
 
-    public void setTotpsgadult(double Totpsgadult) {
-        this.Totpsgadult = Totpsgadult;
+    public void setTotpsgadult(double totpsgadult) {
+        Totpsgadult = totpsgadult;
     }
 
     public Double getTotpsgchild() {
         return Totpsgchild;
     }
 
-    public void setTotpsgchild(Double Totpsgchild) {
-        this.Totpsgchild = Totpsgchild;
+    public void setTotpsgchild(Double totpsgchild) {
+        Totpsgchild = totpsgchild;
     }
 
     public Double getTotpsginfant() {
         return Totpsginfant;
     }
 
-    public void setTotpsginfant(Double Totpsginfant) {
-        this.Totpsginfant = Totpsginfant;
+    public void setTotpsginfant(Double totpsginfant) {
+        Totpsginfant = totpsginfant;
     }
 
     public String getStasiunIdorg() {
         return StasiunIdorg;
     }
 
-    public void setStasiunIdorg(String StasiunIdorg) {
-        this.StasiunIdorg = StasiunIdorg;
+    public void setStasiunIdorg(String stasiunIdorg) {
+        StasiunIdorg = stasiunIdorg;
     }
 
     public String getStasiunCodeorg() {
         return StasiunCodeorg;
     }
 
-    public void setStasiunCodeorg(String StasiunCodeorg) {
-        this.StasiunCodeorg = StasiunCodeorg;
+    public void setStasiunCodeorg(String stasiunCodeorg) {
+        StasiunCodeorg = stasiunCodeorg;
     }
 
     public String getStasiunIddes() {
         return StasiunIddes;
     }
 
-    public void setStasiunIddes(String StasiunIddes) {
-        this.StasiunIddes = StasiunIddes;
+    public void setStasiunIddes(String stasiunIddes) {
+        StasiunIddes = stasiunIddes;
     }
 
     public String getStasiunCodedes() {
         return StasiunCodedes;
     }
 
-    public void setStasiunCodedes(String StasiunCodedes) {
-        this.StasiunCodedes = StasiunCodedes;
+    public void setStasiunCodedes(String stasiunCodedes) {
+        StasiunCodedes = stasiunCodedes;
     }
 
     public String getScheduleId() {
         return ScheduleId;
     }
 
-    public void setScheduleId(String ScheduleId) {
-        this.ScheduleId = ScheduleId;
+    public void setScheduleId(String scheduleId) {
+        ScheduleId = scheduleId;
     }
 
     public String getScheduleNoka() {
         return ScheduleNoka;
     }
 
-    public void setScheduleNoka(String ScheduleNoka) {
-        this.ScheduleNoka = ScheduleNoka;
+    public void setScheduleNoka(String scheduleNoka) {
+        ScheduleNoka = scheduleNoka;
     }
 
     public Character getScheduleLocalstat() {
         return ScheduleLocalstat;
     }
 
-    public void setScheduleLocalstat(Character ScheduleLocalstat) {
-        this.ScheduleLocalstat = ScheduleLocalstat;
+    public void setScheduleLocalstat(Character scheduleLocalstat) {
+        ScheduleLocalstat = scheduleLocalstat;
     }
 
     public Character getScheduleTrainname() {
         return ScheduleTrainname;
     }
 
-    public void setScheduleTrainname(Character ScheduleTrainname) {
-        this.ScheduleTrainname = ScheduleTrainname;
+    public void setScheduleTrainname(Character scheduleTrainname) {
+        ScheduleTrainname = scheduleTrainname;
     }
 
     public String getTripId() {
         return TripId;
     }
 
-    public void setTripId(String TripId) {
-        this.TripId = TripId;
+    public void setTripId(String tripId) {
+        TripId = tripId;
     }
 
     public String getTripDate() {
         return TripDate;
     }
 
-    public void setTripDate(String TripDate) {
-        this.TripDate = TripDate;
+    public void setTripDate(String tripDate) {
+        TripDate = tripDate;
     }
 
     public String getSubclassId() {
         return SubclassId;
     }
 
-    public void setSubclassId(String SubclassId) {
-        this.SubclassId = SubclassId;
+    public void setSubclassId(String subclassId) {
+        SubclassId = subclassId;
     }
 
     public String getSubclassCode() {
         return SubclassCode;
     }
 
-    public void setSubclassCode(String SubclassCode) {
-        this.SubclassCode = SubclassCode;
+    public void setSubclassCode(String subclassCode) {
+        SubclassCode = subclassCode;
     }
 
     public String getPaytypeId() {
         return PaytypeId;
     }
 
-    public void setPaytypeId(String PaytypeId) {
-        this.PaytypeId = PaytypeId;
+    public void setPaytypeId(String paytypeId) {
+        PaytypeId = paytypeId;
     }
 
     public String getPaytypeCode() {
         return PaytypeCode;
     }
 
-    public void setPaytypeCode(String PaytypeCode) {
-        this.PaytypeCode = PaytypeCode;
+    public void setPaytypeCode(String paytypeCode) {
+        PaytypeCode = paytypeCode;
     }
 
     public String getUserIdbook() {
         return UserIdbook;
     }
 
-    public void setUserIdbook(String UserIdbook) {
-        this.UserIdbook = UserIdbook;
+    public void setUserIdbook(String userIdbook) {
+        UserIdbook = userIdbook;
     }
 
     public String getUserFullnamebook() {
         return UserFullnamebook;
     }
 
-    public void setUserFullnamebook(String UserFullnamebook) {
-        this.UserFullnamebook = UserFullnamebook;
+    public void setUserFullnamebook(String userFullnamebook) {
+        UserFullnamebook = userFullnamebook;
     }
 
     public String getUnitIdbook() {
         return UnitIdbook;
     }
 
-    public void setUnitIdbook(String UnitIdbook) {
-        this.UnitIdbook = UnitIdbook;
+    public void setUnitIdbook(String unitIdbook) {
+        UnitIdbook = unitIdbook;
     }
 
     public String getUnitCodebook() {
         return UnitCodebook;
     }
 
-    public void setUnitCodebook(String UnitCodebook) {
-        this.UnitCodebook = UnitCodebook;
+    public void setUnitCodebook(String unitCodebook) {
+        UnitCodebook = unitCodebook;
     }
 
     public String getcShiftIdbook() {
@@ -535,265 +535,263 @@ public class Transaction {
         return ChannelIdbook;
     }
 
-    public void setChannelIdbook(String ChannelIdbook) {
-        this.ChannelIdbook = ChannelIdbook;
+    public void setChannelIdbook(String channelIdbook) {
+        ChannelIdbook = channelIdbook;
     }
 
     public String getChannelCodebook() {
         return ChannelCodebook;
     }
 
-    public void setChannelCodebook(String ChannelCodebook) {
-        this.ChannelCodebook = ChannelCodebook;
+    public void setChannelCodebook(String channelCodebook) {
+        ChannelCodebook = channelCodebook;
     }
 
     public String getUserIdpay() {
         return UserIdpay;
     }
 
-    public void setUserIdpay(String UserIdpay) {
-        this.UserIdpay = UserIdpay;
+    public void setUserIdpay(String userIdpay) {
+        UserIdpay = userIdpay;
     }
 
     public String getUserFullnamepay() {
         return UserFullnamepay;
     }
 
-    public void setUserFullnamepay(String UserFullnamepay) {
-        this.UserFullnamepay = UserFullnamepay;
+    public void setUserFullnamepay(String userFullnamepay) {
+        UserFullnamepay = userFullnamepay;
     }
 
     public String getUnitIdpay() {
         return UnitIdpay;
     }
 
-    public void setUnitIdpay(String UnitIdpay) {
-        this.UnitIdpay = UnitIdpay;
+    public void setUnitIdpay(String unitIdpay) {
+        UnitIdpay = unitIdpay;
     }
 
     public String getUnitCodepay() {
         return UnitCodepay;
     }
 
-    public void setUnitCodepay(String UnitCodepay) {
-        this.UnitCodepay = UnitCodepay;
+    public void setUnitCodepay(String unitCodepay) {
+        UnitCodepay = unitCodepay;
     }
 
     public String getShiftIdpay() {
         return ShiftIdpay;
     }
 
-    public void setShiftIdpay(String ShiftIdpay) {
-        this.ShiftIdpay = ShiftIdpay;
+    public void setShiftIdpay(String shiftIdpay) {
+        ShiftIdpay = shiftIdpay;
     }
 
     public String getChannelIdpay() {
         return ChannelIdpay;
     }
 
-    public void setChannelIdpay(String ChannelIdpay) {
-        this.ChannelIdpay = ChannelIdpay;
+    public void setChannelIdpay(String channelIdpay) {
+        ChannelIdpay = channelIdpay;
     }
 
     public String getChannelCodepay() {
         return ChannelCodepay;
     }
 
-    public void setChannelCodepay(String ChannelCodepay) {
-        this.ChannelCodepay = ChannelCodepay;
+    public void setChannelCodepay(String channelCodepay) {
+        ChannelCodepay = channelCodepay;
     }
 
-    public LocalDate getBookedon() {
+    public LocalDateTime getBookedon() {
         return Bookedon;
     }
 
-    public void setBookedon(LocalDate Bookedon) {
-        this.Bookedon = Bookedon;
+    public void setBookedon(LocalDateTime bookedon) {
+        Bookedon = bookedon;
     }
 
-    public LocalDate getBooktimeouton() {
+    public LocalDateTime getBooktimeouton() {
         return Booktimeouton;
     }
 
-    public void setBooktimeouton(LocalDate Booktimeouton) {
-        this.Booktimeouton = Booktimeouton;
+    public void setBooktimeouton(LocalDateTime booktimeouton) {
+        Booktimeouton = booktimeouton;
     }
 
-    public LocalDate getPaytimeouton() {
+    public LocalDateTime getPaytimeouton() {
         return Paytimeouton;
     }
 
-    public void setPaytimeouton(LocalDate Paytimeouton) {
-        this.Paytimeouton = Paytimeouton;
+    public void setPaytimeouton(LocalDateTime paytimeouton) {
+        Paytimeouton = paytimeouton;
     }
 
-    public LocalDate getPaidon() {
+    public LocalDateTime getPaidon() {
         return Paidon;
     }
 
-    public void setPaidon(LocalDate Paidon) {
-        this.Paidon = Paidon;
+    public void setPaidon(LocalDateTime paidon) {
+        Paidon = paidon;
     }
 
     public Character getSmsbooksent() {
         return Smsbooksent;
     }
 
-    public void setSmsbooksent(Character Smsbooksent) {
-        this.Smsbooksent = Smsbooksent;
+    public void setSmsbooksent(Character smsbooksent) {
+        Smsbooksent = smsbooksent;
     }
 
     public Character getEmailbooksent() {
         return Emailbooksent;
     }
 
-    public void setEmailbooksent(Character Emailbooksent) {
-        this.Emailbooksent = Emailbooksent;
+    public void setEmailbooksent(Character emailbooksent) {
+        Emailbooksent = emailbooksent;
     }
 
     public Character getSmspaysent() {
         return Smspaysent;
     }
 
-    public void setSmspaysent(Character Smspaysent) {
-        this.Smspaysent = Smspaysent;
+    public void setSmspaysent(Character smspaysent) {
+        Smspaysent = smspaysent;
     }
 
     public Character getEmailpaysent() {
         return Emailpaysent;
     }
 
-    public void setEmailpaysent(Character Emailpaysent) {
-        this.Emailpaysent = Emailpaysent;
+    public void setEmailpaysent(Character emailpaysent) {
+        Emailpaysent = emailpaysent;
     }
 
     public Character getReroutestat() {
         return Reroutestat;
     }
 
-    public void setReroutestat(Character Reroutestat) {
-        this.Reroutestat = Reroutestat;
+    public void setReroutestat(Character reroutestat) {
+        Reroutestat = reroutestat;
     }
 
     public Character getFlexiredeemstat() {
         return Flexiredeemstat;
     }
 
-    public void setFlexiredeemstat(Character Flexiredeemstat) {
-        this.Flexiredeemstat = Flexiredeemstat;
+    public void setFlexiredeemstat(Character flexiredeemstat) {
+        Flexiredeemstat = flexiredeemstat;
     }
 
     public String getRef1() {
         return Ref1;
     }
 
-    public void setRef1(String Ref1) {
-        this.Ref1 = Ref1;
+    public void setRef1(String ref1) {
+        Ref1 = ref1;
     }
 
     public String getRef2() {
         return Ref2;
     }
 
-    public void setRef2(String Ref2) {
-        this.Ref2 = Ref2;
+    public void setRef2(String ref2) {
+        Ref2 = ref2;
     }
 
     public String getRef3() {
         return Ref3;
     }
 
-    public void setRef3(String Ref3) {
-        this.Ref3 = Ref3;
+    public void setRef3(String ref3) {
+        Ref3 = ref3;
     }
 
     public String getVoucherId() {
         return VoucherId;
     }
 
-    public void setVoucherId(String VoucherId) {
-        this.VoucherId = VoucherId;
+    public void setVoucherId(String voucherId) {
+        VoucherId = voucherId;
     }
 
     public String getVoucherCode() {
         return VoucherCode;
     }
 
-    public void setVoucherCode(String VoucherCode) {
-        this.VoucherCode = VoucherCode;
+    public void setVoucherCode(String voucherCode) {
+        VoucherCode = voucherCode;
     }
 
     public String getVoucherAmount() {
         return VoucherAmount;
     }
 
-    public void setVoucherAmount(String VoucherAmount) {
-        this.VoucherAmount = VoucherAmount;
+    public void setVoucherAmount(String voucherAmount) {
+        VoucherAmount = voucherAmount;
     }
 
     public String getVoucherAmounttype() {
         return VoucherAmounttype;
     }
 
-    public void setVoucherAmounttype(String VoucherAmounttype) {
-        this.VoucherAmounttype = VoucherAmounttype;
+    public void setVoucherAmounttype(String voucherAmounttype) {
+        VoucherAmounttype = voucherAmounttype;
     }
 
     public String getVoucherAmountconvert() {
         return VoucherAmountconvert;
     }
 
-    public void setVoucherAmountconvert(String VoucherAmountconvert) {
-        this.VoucherAmountconvert = VoucherAmountconvert;
+    public void setVoucherAmountconvert(String voucherAmountconvert) {
+        VoucherAmountconvert = voucherAmountconvert;
     }
 
     public Character getStatus() {
         return Status;
     }
 
-    public void setStatus(Character Status) {
-        this.Status = Status;
+    public void setStatus(Character status) {
+        Status = status;
     }
 
     public String getDomain() {
         return Domain;
     }
 
-    public void setDomain(String Domain) {
-        this.Domain = Domain;
+    public void setDomain(String domain) {
+        Domain = domain;
     }
 
     public String getCreatedby() {
         return Createdby;
     }
 
-    public void setCreatedby(String Createdby) {
-        this.Createdby = Createdby;
+    public void setCreatedby(String createdby) {
+        Createdby = createdby;
     }
 
     public LocalDateTime getCreatedon() {
         return Createdon;
     }
 
-    public void setCreatedon(LocalDateTime Createdon) {
-        this.Createdon = Createdon;
+    public void setCreatedon(LocalDateTime createdon) {
+        Createdon = createdon;
     }
 
     public String getModifiedby() {
         return Modifiedby;
     }
 
-    public void setModifiedby(String Modifiedby) {
-        this.Modifiedby = Modifiedby;
+    public void setModifiedby(String modifiedby) {
+        Modifiedby = modifiedby;
     }
 
     public LocalDateTime getModifiedon() {
         return Modifiedon;
     }
 
-    public void setModifiedon(LocalDateTime Modifiedon) {
-        this.Modifiedon = Modifiedon;
+    public void setModifiedon(LocalDateTime modifiedon) {
+        Modifiedon = modifiedon;
     }
-
-        
 }
