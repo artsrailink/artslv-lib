@@ -219,6 +219,8 @@ public class Stasiun {
         this.Showmobile = Showmobile;
     }
 
-    
-    
+    @Override
+    public String toString() {
+        return Name +" ("+Code+")";
+    }
 }

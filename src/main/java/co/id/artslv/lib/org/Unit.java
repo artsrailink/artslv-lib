@@ -202,6 +202,10 @@ public class Unit {
 
     public void setCreatedon(LocalDateTime Createdon) {
         this.Createdon = Createdon;
-    }    
-    
+    }
+
+    @Override
+    public String toString() {
+        return Code;
+    }
 }
