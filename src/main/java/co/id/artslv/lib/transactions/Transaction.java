@@ -233,7 +233,7 @@ public class Transaction {
     private String VoucherAmountconvert;
 
     @Column(name = "c_transaction_status")
-    private Character Status;
+    private String Status;
 
     @Column(name = "c_transaction_domain")
     private String Domain;
@@ -746,11 +746,11 @@ public class Transaction {
         VoucherAmountconvert = voucherAmountconvert;
     }
 
-    public Character getStatus() {
+    public String getStatus() {
         return Status;
     }
 
-    public void setStatus(Character status) {
+    public void setStatus(String status) {
         Status = status;
     }
 

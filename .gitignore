@@ -3,7 +3,8 @@
 mvnw
 mvnw.cmd
 .idea
-*.iml
+.iml
+artslv-lib.iml
 
 #maven ignore
 target

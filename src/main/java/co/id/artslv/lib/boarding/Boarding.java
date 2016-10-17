@@ -79,4 +79,115 @@ public class Boarding {
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime modifiedon;
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getBookcode() {
+        return bookcode;
+    }
+
+    public void setBookcode(String bookcode) {
+        this.bookcode = bookcode;
+    }
+
+    public String getTicketnum() {
+        return ticketnum;
+    }
+
+    public void setTicketnum(String ticketnum) {
+        this.ticketnum = ticketnum;
+    }
+
+    public LocalDate getTripdate() {
+        return tripdate;
+    }
+
+    public void setTripdate(LocalDate tripdate) {
+        this.tripdate = tripdate;
+    }
+
+    public String getStasiunid() {
+        return stasiunid;
+    }
+
+    public void setStasiunid(String stasiunid) {
+        this.stasiunid = stasiunid;
+    }
+
+    public String getStasiuncode() {
+        return stasiuncode;
+    }
+
+    public void setStasiuncode(String stasiuncode) {
+        this.stasiuncode = stasiuncode;
+    }
+
+    public String getUnitid() {
+        return unitid;
+    }
+
+    public void setUnitid(String unitid) {
+        this.unitid = unitid;
+    }
+
+    public String getUnitcode() {
+        return unitcode;
+    }
+
+    public void setUnitcode(String unitcode) {
+        this.unitcode = unitcode;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getDomain() {
+        return domain;
+    }
+
+    public void setDomain(String domain) {
+        this.domain = domain;
+    }
+
+    public String getCreatedby() {
+        return createdby;
+    }
+
+    public void setCreatedby(String createdby) {
+        this.createdby = createdby;
+    }
+
+    public LocalDateTime getCreatedon() {
+        return createdon;
+    }
+
+    public void setCreatedon(LocalDateTime createdon) {
+        this.createdon = createdon;
+    }
+
+    public String getModifiedby() {
+        return modifiedby;
+    }
+
+    public void setModifiedby(String modifiedby) {
+        this.modifiedby = modifiedby;
+    }
+
+    public LocalDateTime getModifiedon() {
+        return modifiedon;
+    }
+
+    public void setModifiedon(LocalDateTime modifiedon) {
+        this.modifiedon = modifiedon;
+    }
 }
