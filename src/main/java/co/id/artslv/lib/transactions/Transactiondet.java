@@ -31,311 +31,311 @@ public class Transactiondet {
     private String id;
 
     @Column(name="c_transaction_id")
-    private String transactionId;
+    private String transactionid;
 
     @Column(name="c_transaction_bookcode")
-    private String TransactionBookcode;
+    private String transactionbookcode;
 
     @Column(name="c_transaction_paycode")
-    private String TransactionPaycode;
+    private String transactionpaycode;
 
     @Column(name="c_transaction_transdate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
-    private LocalDateTime TransactionTransdate;
+    private LocalDateTime transactiontransdate;
 
     @Column(name="c_transaction_custname")
-    private BigDecimal TransactionCustname;
+    private BigDecimal transactioncustname;
 
     @Column(name="c_transaction_phonenum")
-    private String TransactionPhonenum;
+    private String transactionphonenum;
 
     @Column(name="c_transaction_email")
-    private String TransactionEmail;
+    private String transactionemail;
 
     @Column(name="c_stasiun_idorg")
-    private String StasiunIdorg;
+    private String stasiunidorg;
 
     @Column(name="c_stasiun_codeorg")
-    private String StasiunCodeorg;
+    private String stasiuncodeorg;
 
     @Column(name="c_stasiun_iddes")
-    private String StasiunIddes;
+    private String stasiuniddes;
 
     @Column(name="c_stasiun_codedes")
-    private String StasiunCodedes;
+    private String stasiuncodedes;
 
     @Column(name="c_schedule_id")
-    private String ScheduleId;
+    private String scheduleid;
 
     @Column(name="c_schedule_noka")
-    private String ScheduleNoka;
+    private String schedulenoka;
 
     @Column(name="c_schedule_localstat")
-    private Character ScheduleLocalstat;
+    private Character schedulelocalstat;
 
     @Column(name="c_schedule_trainname")
-    private Character ScheduleTrainname;
+    private Character scheduletrainname;
 
     @Column(name="c_trip_id")
-    private String TripId;
+    private String tripid;
 
     @Column(name = "c_trip_date")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
-    private LocalDate TripDate;
+    private LocalDate tripdate;
 
     @Column(name="c_subclass_id")
-    private String SubclassId;
+    private String subclassid;
 
     @Column(name="c_subclass_code")
-    private String SubclassCode;
+    private String subclasscode;
 
     @Column(name="c_user_idbook")
-    private String UserIdbook;
+    private String useridbook;
 
     @Column(name="c_user_fullnamebook")
-    private String UserFullnamebook;
+    private String userfullnamebook;
 
     @Column(name="c_unit_idbook")
-    private String UnitIdbook;
+    private String unitidbook;
 
     @Column(name="c_unit_codebook")
-    private String UnitCodebook;
+    private String unitcodebook;
 
     @Column(name="c_shift_idbook")
-    private String ShiftIdbook;
+    private String shiftidbook;
 
     @Column(name="c_channel_idbook")
-    private String ChannelIdbook;
+    private String channelidbook;
 
     @Column(name="c_channel_codebook")
-    private String ChannelCodebook;
+    private String channelcodebook;
 
     @Column(name="c_user_idpay")
-    private String UserIdpay;
+    private String useridpay;
 
     @Column(name="c_user_fullnamepay")
-    private String UserFullnamepay;
+    private String userfullnamepay;
 
     @Column(name="c_unit_idpay")
-    private String UnitIdpay;
+    private String unitidpay;
 
     @Column(name="c_unit_codepay")
-    private String UnitCodepay;
+    private String unitcodepay;
 
     @Column(name="c_shift_idpay")
-    private String ShiftIdpay;
+    private String shiftidpay;
 
     @Column(name="c_channel_idpay")
-    private String ChannelIdpay;
+    private String channelidpay;
 
     @Column(name="c_channel_codepay")
-    private String ChannelCodepay;
+    private String channelcodepay;
 
     @Column(name="c_transaction_bookedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
-    private LocalDateTime TransactionBookedon;
+    private LocalDateTime transactionbookedon;
 
     @Column(name="c_transaction_booktimeouton")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd  HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
-    private LocalDateTime TransactionBooktimeouton;
+    private LocalDateTime transactionbooktimeouton;
 
     @Column(name="c_transaction_paytimeouton")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd  HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
-    private LocalDateTime TransactionPaytimeouton;
+    private LocalDateTime transactionpaytimeouton;
 
     @Column(name="c_transaction_paidon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
-    private LocalDateTime TransactionPaidon;
+    private LocalDateTime transactionpaidon;
 
     @Column(name="c_transaction_reroutestat")
-    private Character TransactionReroutestat;
+    private Character transactionreroutestat;
 
     @Column(name="c_transaction_flexiredeemstat")
-    private Character cransactionFlexiredeemstat;
+    private Character transactionflexiredeemstat;
 
     @Column(name="c_transactiondet_psgname")
-    private String Psgname;
+    private String psgname;
 
     @Column(name="c_transactiondet_psgid")
-    private String Psgid;
+    private String psgid;
 
     @Column(name="c_stamformdet_id")
-    private String StamformdetId;
+    private String stamformdetid;
 
     @Column(name="c_stamformdet_code")
-    private String StamformdetCode;
+    private String stamformdetcode;
 
     @Column(name="c_wagondet_id")
-    private String WagondetId;
+    private String wagondetid;
 
     @Column(name="c_wagondet_row")
-    private String WagondetRow;
+    private String wagondetrow;
 
     @Column(name="c_wagondet_col")
-    private String WagondetCol;
+    private String wagondetcol;
 
     @Column(name="c_transactiondet_amount")
-    private BigDecimal Amount;
+    private BigDecimal amount;
 
     @Column(name="c_transactiondet_ticketnum")
-    private String Ticketnum;
+    private String ticketnum;
 
     @Column(name="c_member_id")
-    private String MemberId;
+    private String memberid;
 
     @Column(name="c_reduction_id")
-    private String ReductionId;
+    private String reductionid;
 
     @Column(name="c_reduction_name")
-    private String ReductionName;
+    private String reductionname;
 
     @Column(name="c_reduction_amount")
-    private String ReductionAmount;
+    private String reductionamount;
 
     @Column(name="c_reduction_amounttype")
-    private String ReductionAmounttype;
+    private String reductionamounttype;
 
     @Column(name="c_reduction_amountconvert")
-    private String ReductionAmountconvert;
+    private String reductionamountconvert;
 
     @Column(name="c_discount_id")
-    private String DiscountId;
+    private String discountid;
 
     @Column(name="c_discount_name")
-    private String DiscountName;
+    private String discountname;
 
     @Column(name="c_discount_amount")
-    private String DiscountAmount;
+    private String discountamount;
 
     @Column(name="c_discount_amounttype")
-    private String DiscountAmounttype;
+    private String discountamounttype;
 
     @Column(name="c_discount_amountconvert")
-    private String DiscountAmountconvert;
+    private String discountamountconvert;
 
     @Column(name="c_fare_id")
-    private String FareId;
+    private String fareid;
 
     @Column(name="c_fare_basicfare")
-    private String FareBasicfare;
+    private String farebasicfare;
 
     @Column(name="c_fare_tuslahfee")
-    private String FareTuslahfee;
+    private String faretuslahfee;
 
     @Column(name="c_fare_rsvfee")
-    private String FareRsvfee;
+    private String farersvfee;
 
     @Column(name="c_fare_stfee")
-    private Integer FareStfee;
+    private Integer farestfee;
 
     @Column(name="c_fare_addfee")
-    private String FareAddfee;
+    private String fareaddfee;
 
     @Column(name="c_fare_compinsurance")
-    private String FareCompinsurance;
+    private String farecompinsurance;
 
     @Column(name="c_fare_addinsurance")
-    private String FareAddinsurance;
+    private String fareaddinsurance;
 
     @Column(name="c_fare_psofare")
-    private String FarePsofare;
+    private String farepsofare;
 
     @Column(name="c_fare_totamount")
-    private String FareTotamount;
+    private String faretotamount;
 
     @Column(name="c_flexi_id")
-    private String FlexiId;
+    private String flexiid;
 
     @Column(name="c_flexi_code")
-    private String FlexiCode;
+    private String flexicode;
 
     @Column(name="c_stasiun_idgatein")
-    private String StasiunIdgatein;
+    private String stasiunidgatein;
 
-    @Column(name="c_stasiun_codegateind")
-    private String StasiunCodegateind;
+    @Column(name="c_stasiun_codegatein")
+    private String stasiuncodegatein;
 
     @Column(name="c_unit_idgatein")
-    private String UnitIdgatein;
+    private String unitidgatein;
 
     @Column(name="c_unit_codegatein")
-    private String UnitCodegatein;
+    private String unitcodegatein;
 
     @Column(name="c_transactiondet_gateinon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
-    private LocalDateTime Gateinon;
+    private LocalDateTime gateinon;
 
     @Column(name="c_stasiun_idgateout")
-    private String StasiunIdgateout;
+    private String stasiunidgateout;
 
     @Column(name="c_stasiun_codegateout")
-    private String StasiunCodegateout;
+    private String stasiuncodegateout;
 
     @Column(name="c_unit_idgateout")
-    private String UnitIdgateout;
+    private String unitidgateout;
 
     @Column(name="c_unit_codegateout")
-    private String UnitCodegateout;
+    private String unitcodegateout;
 
     @Column(name="c_transactiondet_gateouton")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
-    private LocalDateTime Gateouton;
+    private LocalDateTime gateouton;
 
     @Column(name="c_transactiondet_max_print")
-    private short MaxPrint;
+    private short maxprint;
 
     @Column(name="c_transactiondet_ref")
-    private short Ref;
+    private short ref;
 
     @Column(name="c_transactiondet_status")
-    private short Status;
+    private short status;
 
     @Column(name="c_transactiondet_domain")
-    private String Domain;
+    private String domain;
 
     @Column(name="c_transactiondet_modifiedby")
-    private String Modifiedby;
+    private String modifiedby;
 
     @Column(name="c_transactiondet_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
-    private LocalDateTime Modifiedon;
+    private LocalDateTime modifiedon;
 
     @Column(name="c_transactiondet_createdby")
-    private String Createdby;
+    private String createdby;
 
     @Column(name="c_transactiondet_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
-    private LocalDateTime Createdon;
+    private LocalDateTime createdon;
 
     public String getId() {
         return id;
@@ -345,715 +345,717 @@ public class Transactiondet {
         this.id = id;
     }
 
-    public String getTransactionId() {
-        return transactionId;
+    public String getTransactionid() {
+        return transactionid;
     }
 
-    public void setTransactionId(String transactionId) {
-        transactionId = transactionId;
+    public void setTransactionid(String transactionid) {
+        this.transactionid = transactionid;
     }
 
-    public String getTransactionBookcode() {
-        return TransactionBookcode;
+    public String getTransactionbookcode() {
+        return transactionbookcode;
     }
 
-    public void setTransactionBookcode(String transactionBookcode) {
-        TransactionBookcode = transactionBookcode;
+    public void setTransactionbookcode(String transactionbookcode) {
+        this.transactionbookcode = transactionbookcode;
     }
 
-    public String getTransactionPaycode() {
-        return TransactionPaycode;
+    public String getTransactionpaycode() {
+        return transactionpaycode;
     }
 
-    public void setTransactionPaycode(String transactionPaycode) {
-        TransactionPaycode = transactionPaycode;
+    public void setTransactionpaycode(String transactionpaycode) {
+        this.transactionpaycode = transactionpaycode;
     }
 
-    public LocalDateTime getTransactionTransdate() {
-        return TransactionTransdate;
+    public LocalDateTime getTransactiontransdate() {
+        return transactiontransdate;
     }
 
-    public void setTransactionTransdate(LocalDateTime transactionTransdate) {
-        TransactionTransdate = transactionTransdate;
+    public void setTransactiontransdate(LocalDateTime transactiontransdate) {
+        this.transactiontransdate = transactiontransdate;
     }
 
-    public BigDecimal getTransactionCustname() {
-        return TransactionCustname;
+    public BigDecimal getTransactioncustname() {
+        return transactioncustname;
     }
 
-    public void setTransactionCustname(BigDecimal transactionCustname) {
-        TransactionCustname = transactionCustname;
+    public void setTransactioncustname(BigDecimal transactioncustname) {
+        this.transactioncustname = transactioncustname;
     }
 
-    public String getTransactionPhonenum() {
-        return TransactionPhonenum;
+    public String getTransactionphonenum() {
+        return transactionphonenum;
     }
 
-    public void setTransactionPhonenum(String transactionPhonenum) {
-        TransactionPhonenum = transactionPhonenum;
+    public void setTransactionphonenum(String transactionphonenum) {
+        this.transactionphonenum = transactionphonenum;
     }
 
-    public String getTransactionEmail() {
-        return TransactionEmail;
+    public String getTransactionemail() {
+        return transactionemail;
     }
 
-    public void setTransactionEmail(String transactionEmail) {
-        TransactionEmail = transactionEmail;
+    public void setTransactionemail(String transactionemail) {
+        this.transactionemail = transactionemail;
     }
 
-    public String getStasiunIdorg() {
-        return StasiunIdorg;
+    public String getStasiunidorg() {
+        return stasiunidorg;
     }
 
-    public void setStasiunIdorg(String stasiunIdorg) {
-        StasiunIdorg = stasiunIdorg;
+    public void setStasiunidorg(String stasiunidorg) {
+        this.stasiunidorg = stasiunidorg;
     }
 
-    public String getStasiunCodeorg() {
-        return StasiunCodeorg;
+    public String getStasiuncodeorg() {
+        return stasiuncodeorg;
     }
 
-    public void setStasiunCodeorg(String stasiunCodeorg) {
-        StasiunCodeorg = stasiunCodeorg;
+    public void setStasiuncodeorg(String stasiuncodeorg) {
+        this.stasiuncodeorg = stasiuncodeorg;
     }
 
-    public String getStasiunIddes() {
-        return StasiunIddes;
+    public String getStasiuniddes() {
+        return stasiuniddes;
     }
 
-    public void setStasiunIddes(String stasiunIddes) {
-        StasiunIddes = stasiunIddes;
+    public void setStasiuniddes(String stasiuniddes) {
+        this.stasiuniddes = stasiuniddes;
     }
 
-    public String getStasiunCodedes() {
-        return StasiunCodedes;
+    public String getStasiuncodedes() {
+        return stasiuncodedes;
     }
 
-    public void setStasiunCodedes(String stasiunCodedes) {
-        StasiunCodedes = stasiunCodedes;
+    public void setStasiuncodedes(String stasiuncodedes) {
+        this.stasiuncodedes = stasiuncodedes;
     }
 
-    public String getScheduleId() {
-        return ScheduleId;
+    public String getScheduleid() {
+        return scheduleid;
     }
 
-    public void setScheduleId(String scheduleId) {
-        ScheduleId = scheduleId;
+    public void setScheduleid(String scheduleid) {
+        this.scheduleid = scheduleid;
     }
 
-    public String getScheduleNoka() {
-        return ScheduleNoka;
+    public String getSchedulenoka() {
+        return schedulenoka;
     }
 
-    public void setScheduleNoka(String scheduleNoka) {
-        ScheduleNoka = scheduleNoka;
+    public void setSchedulenoka(String schedulenoka) {
+        this.schedulenoka = schedulenoka;
     }
 
-    public Character getScheduleLocalstat() {
-        return ScheduleLocalstat;
+    public Character getSchedulelocalstat() {
+        return schedulelocalstat;
     }
 
-    public void setScheduleLocalstat(Character scheduleLocalstat) {
-        ScheduleLocalstat = scheduleLocalstat;
+    public void setSchedulelocalstat(Character schedulelocalstat) {
+        this.schedulelocalstat = schedulelocalstat;
     }
 
-    public Character getScheduleTrainname() {
-        return ScheduleTrainname;
+    public Character getScheduletrainname() {
+        return scheduletrainname;
     }
 
-    public void setScheduleTrainname(Character scheduleTrainname) {
-        ScheduleTrainname = scheduleTrainname;
+    public void setScheduletrainname(Character scheduletrainname) {
+        this.scheduletrainname = scheduletrainname;
     }
 
-    public String getTripId() {
-        return TripId;
+    public String getTripid() {
+        return tripid;
     }
 
-    public void setTripId(String tripId) {
-        TripId = tripId;
+    public void setTripid(String tripid) {
+        this.tripid = tripid;
     }
 
-    public LocalDate getTripDate() {
-        return TripDate;
+    public LocalDate getTripdate() {
+        return tripdate;
     }
 
-    public void setTripDate(LocalDate tripDate) {
-        TripDate = tripDate;
+    public void setTripdate(LocalDate tripdate) {
+        this.tripdate = tripdate;
     }
 
-    public String getSubclassId() {
-        return SubclassId;
+    public String getSubclassid() {
+        return subclassid;
     }
 
-    public void setSubclassId(String subclassId) {
-        SubclassId = subclassId;
+    public void setSubclassid(String subclassid) {
+        this.subclassid = subclassid;
     }
 
-    public String getSubclassCode() {
-        return SubclassCode;
+    public String getSubclasscode() {
+        return subclasscode;
     }
 
-    public void setSubclassCode(String subclassCode) {
-        SubclassCode = subclassCode;
+    public void setSubclasscode(String subclasscode) {
+        this.subclasscode = subclasscode;
     }
 
-    public String getUserIdbook() {
-        return UserIdbook;
+    public String getUseridbook() {
+        return useridbook;
     }
 
-    public void setUserIdbook(String userIdbook) {
-        UserIdbook = userIdbook;
+    public void setUseridbook(String useridbook) {
+        this.useridbook = useridbook;
     }
 
-    public String getUserFullnamebook() {
-        return UserFullnamebook;
+    public String getUserfullnamebook() {
+        return userfullnamebook;
     }
 
-    public void setUserFullnamebook(String userFullnamebook) {
-        UserFullnamebook = userFullnamebook;
+    public void setUserfullnamebook(String userfullnamebook) {
+        this.userfullnamebook = userfullnamebook;
     }
 
-    public String getUnitIdbook() {
-        return UnitIdbook;
+    public String getUnitidbook() {
+        return unitidbook;
     }
 
-    public void setUnitIdbook(String unitIdbook) {
-        UnitIdbook = unitIdbook;
+    public void setUnitidbook(String unitidbook) {
+        this.unitidbook = unitidbook;
     }
 
-    public String getUnitCodebook() {
-        return UnitCodebook;
+    public String getUnitcodebook() {
+        return unitcodebook;
     }
 
-    public void setUnitCodebook(String unitCodebook) {
-        UnitCodebook = unitCodebook;
+    public void setUnitcodebook(String unitcodebook) {
+        this.unitcodebook = unitcodebook;
     }
 
-    public String getShiftIdbook() {
-        return ShiftIdbook;
+    public String getShiftidbook() {
+        return shiftidbook;
     }
 
-    public void setShiftIdbook(String shiftIdbook) {
-        ShiftIdbook = shiftIdbook;
+    public void setShiftidbook(String shiftidbook) {
+        this.shiftidbook = shiftidbook;
     }
 
-    public String getChannelIdbook() {
-        return ChannelIdbook;
+    public String getChannelidbook() {
+        return channelidbook;
     }
 
-    public void setChannelIdbook(String channelIdbook) {
-        ChannelIdbook = channelIdbook;
+    public void setChannelidbook(String channelidbook) {
+        this.channelidbook = channelidbook;
     }
 
-    public String getChannelCodebook() {
-        return ChannelCodebook;
+    public String getChannelcodebook() {
+        return channelcodebook;
     }
 
-    public void setChannelCodebook(String channelCodebook) {
-        ChannelCodebook = channelCodebook;
+    public void setChannelcodebook(String channelcodebook) {
+        this.channelcodebook = channelcodebook;
     }
 
-    public String getUserIdpay() {
-        return UserIdpay;
+    public String getUseridpay() {
+        return useridpay;
     }
 
-    public void setUserIdpay(String userIdpay) {
-        UserIdpay = userIdpay;
+    public void setUseridpay(String useridpay) {
+        this.useridpay = useridpay;
     }
 
-    public String getUserFullnamepay() {
-        return UserFullnamepay;
+    public String getUserfullnamepay() {
+        return userfullnamepay;
     }
 
-    public void setUserFullnamepay(String userFullnamepay) {
-        UserFullnamepay = userFullnamepay;
+    public void setUserfullnamepay(String userfullnamepay) {
+        this.userfullnamepay = userfullnamepay;
     }
 
-    public String getUnitIdpay() {
-        return UnitIdpay;
+    public String getUnitidpay() {
+        return unitidpay;
     }
 
-    public void setUnitIdpay(String unitIdpay) {
-        UnitIdpay = unitIdpay;
+    public void setUnitidpay(String unitidpay) {
+        this.unitidpay = unitidpay;
     }
 
-    public String getUnitCodepay() {
-        return UnitCodepay;
+    public String getUnitcodepay() {
+        return unitcodepay;
     }
 
-    public void setUnitCodepay(String unitCodepay) {
-        UnitCodepay = unitCodepay;
+    public void setUnitcodepay(String unitcodepay) {
+        this.unitcodepay = unitcodepay;
     }
 
-    public String getShiftIdpay() {
-        return ShiftIdpay;
+    public String getShiftidpay() {
+        return shiftidpay;
     }
 
-    public void setShiftIdpay(String shiftIdpay) {
-        ShiftIdpay = shiftIdpay;
+    public void setShiftidpay(String shiftidpay) {
+        this.shiftidpay = shiftidpay;
     }
 
-    public String getChannelIdpay() {
-        return ChannelIdpay;
+    public String getChannelidpay() {
+        return channelidpay;
     }
 
-    public void setChannelIdpay(String channelIdpay) {
-        ChannelIdpay = channelIdpay;
+    public void setChannelidpay(String channelidpay) {
+        this.channelidpay = channelidpay;
     }
 
-    public String getChannelCodepay() {
-        return ChannelCodepay;
+    public String getChannelcodepay() {
+        return channelcodepay;
     }
 
-    public void setChannelCodepay(String channelCodepay) {
-        ChannelCodepay = channelCodepay;
+    public void setChannelcodepay(String channelcodepay) {
+        this.channelcodepay = channelcodepay;
     }
 
-    public LocalDateTime getTransactionBookedon() {
-        return TransactionBookedon;
+    public LocalDateTime getTransactionbookedon() {
+        return transactionbookedon;
     }
 
-    public void setTransactionBookedon(LocalDateTime transactionBookedon) {
-        TransactionBookedon = transactionBookedon;
+    public void setTransactionbookedon(LocalDateTime transactionbookedon) {
+        this.transactionbookedon = transactionbookedon;
     }
 
-    public LocalDateTime getTransactionBooktimeouton() {
-        return TransactionBooktimeouton;
+    public LocalDateTime getTransactionbooktimeouton() {
+        return transactionbooktimeouton;
     }
 
-    public void setTransactionBooktimeouton(LocalDateTime transactionBooktimeouton) {
-        TransactionBooktimeouton = transactionBooktimeouton;
+    public void setTransactionbooktimeouton(LocalDateTime transactionbooktimeouton) {
+        this.transactionbooktimeouton = transactionbooktimeouton;
     }
 
-    public LocalDateTime getTransactionPaytimeouton() {
-        return TransactionPaytimeouton;
+    public LocalDateTime getTransactionpaytimeouton() {
+        return transactionpaytimeouton;
     }
 
-    public void setTransactionPaytimeouton(LocalDateTime transactionPaytimeouton) {
-        TransactionPaytimeouton = transactionPaytimeouton;
+    public void setTransactionpaytimeouton(LocalDateTime transactionpaytimeouton) {
+        this.transactionpaytimeouton = transactionpaytimeouton;
     }
 
-    public LocalDateTime getTransactionPaidon() {
-        return TransactionPaidon;
+    public LocalDateTime getTransactionpaidon() {
+        return transactionpaidon;
     }
 
-    public void setTransactionPaidon(LocalDateTime transactionPaidon) {
-        TransactionPaidon = transactionPaidon;
+    public void setTransactionpaidon(LocalDateTime transactionpaidon) {
+        this.transactionpaidon = transactionpaidon;
     }
 
-    public Character getTransactionReroutestat() {
-        return TransactionReroutestat;
+    public Character getTransactionreroutestat() {
+        return transactionreroutestat;
     }
 
-    public void setTransactionReroutestat(Character transactionReroutestat) {
-        TransactionReroutestat = transactionReroutestat;
+    public void setTransactionreroutestat(Character transactionreroutestat) {
+        this.transactionreroutestat = transactionreroutestat;
     }
 
-    public Character getCransactionFlexiredeemstat() {
-        return cransactionFlexiredeemstat;
+    public Character getTransactionflexiredeemstat() {
+        return transactionflexiredeemstat;
     }
 
-    public void setCransactionFlexiredeemstat(Character cransactionFlexiredeemstat) {
-        this.cransactionFlexiredeemstat = cransactionFlexiredeemstat;
+    public void setTransactionflexiredeemstat(Character transactionflexiredeemstat) {
+        this.transactionflexiredeemstat = transactionflexiredeemstat;
     }
 
     public String getPsgname() {
-        return Psgname;
+        return psgname;
     }
 
     public void setPsgname(String psgname) {
-        Psgname = psgname;
+        this.psgname = psgname;
     }
 
     public String getPsgid() {
-        return Psgid;
+        return psgid;
     }
 
     public void setPsgid(String psgid) {
-        Psgid = psgid;
+        this.psgid = psgid;
     }
 
-    public String getStamformdetId() {
-        return StamformdetId;
+    public String getStamformdetid() {
+        return stamformdetid;
     }
 
-    public void setStamformdetId(String stamformdetId) {
-        StamformdetId = stamformdetId;
+    public void setStamformdetid(String stamformdetid) {
+        this.stamformdetid = stamformdetid;
     }
 
-    public String getStamformdetCode() {
-        return StamformdetCode;
+    public String getStamformdetcode() {
+        return stamformdetcode;
     }
 
-    public void setStamformdetCode(String stamformdetCode) {
-        StamformdetCode = stamformdetCode;
+    public void setStamformdetcode(String stamformdetcode) {
+        this.stamformdetcode = stamformdetcode;
     }
 
-    public String getWagondetId() {
-        return WagondetId;
+    public String getWagondetid() {
+        return wagondetid;
     }
 
-    public void setWagondetId(String wagondetId) {
-        WagondetId = wagondetId;
+    public void setWagondetid(String wagondetid) {
+        this.wagondetid = wagondetid;
     }
 
-    public String getWagondetRow() {
-        return WagondetRow;
+    public String getWagondetrow() {
+        return wagondetrow;
     }
 
-    public void setWagondetRow(String wagondetRow) {
-        WagondetRow = wagondetRow;
+    public void setWagondetrow(String wagondetrow) {
+        this.wagondetrow = wagondetrow;
     }
 
-    public String getWagondetCol() {
-        return WagondetCol;
+    public String getWagondetcol() {
+        return wagondetcol;
     }
 
-    public void setWagondetCol(String wagondetCol) {
-        WagondetCol = wagondetCol;
+    public void setWagondetcol(String wagondetcol) {
+        this.wagondetcol = wagondetcol;
     }
 
     public BigDecimal getAmount() {
-        return Amount;
+        return amount;
     }
 
     public void setAmount(BigDecimal amount) {
-        Amount = amount;
+        this.amount = amount;
     }
 
     public String getTicketnum() {
-        return Ticketnum;
+        return ticketnum;
     }
 
     public void setTicketnum(String ticketnum) {
-        Ticketnum = ticketnum;
+        this.ticketnum = ticketnum;
     }
 
-    public String getMemberId() {
-        return MemberId;
+    public String getMemberid() {
+        return memberid;
     }
 
-    public void setMemberId(String memberId) {
-        MemberId = memberId;
+    public void setMemberid(String memberid) {
+        this.memberid = memberid;
     }
 
-    public String getReductionId() {
-        return ReductionId;
+    public String getReductionid() {
+        return reductionid;
     }
 
-    public void setReductionId(String reductionId) {
-        ReductionId = reductionId;
+    public void setReductionid(String reductionid) {
+        this.reductionid = reductionid;
     }
 
-    public String getReductionName() {
-        return ReductionName;
+    public String getReductionname() {
+        return reductionname;
     }
 
-    public void setReductionName(String reductionName) {
-        ReductionName = reductionName;
+    public void setReductionname(String reductionname) {
+        this.reductionname = reductionname;
     }
 
-    public String getReductionAmount() {
-        return ReductionAmount;
+    public String getReductionamount() {
+        return reductionamount;
     }
 
-    public void setReductionAmount(String reductionAmount) {
-        ReductionAmount = reductionAmount;
+    public void setReductionamount(String reductionamount) {
+        this.reductionamount = reductionamount;
     }
 
-    public String getReductionAmounttype() {
-        return ReductionAmounttype;
+    public String getReductionamounttype() {
+        return reductionamounttype;
     }
 
-    public void setReductionAmounttype(String reductionAmounttype) {
-        ReductionAmounttype = reductionAmounttype;
+    public void setReductionamounttype(String reductionamounttype) {
+        this.reductionamounttype = reductionamounttype;
     }
 
-    public String getReductionAmountconvert() {
-        return ReductionAmountconvert;
+    public String getReductionamountconvert() {
+        return reductionamountconvert;
     }
 
-    public void setReductionAmountconvert(String reductionAmountconvert) {
-        ReductionAmountconvert = reductionAmountconvert;
+    public void setReductionamountconvert(String reductionamountconvert) {
+        this.reductionamountconvert = reductionamountconvert;
     }
 
-    public String getDiscountId() {
-        return DiscountId;
+    public String getDiscountid() {
+        return discountid;
     }
 
-    public void setDiscountId(String discountId) {
-        DiscountId = discountId;
+    public void setDiscountid(String discountid) {
+        this.discountid = discountid;
     }
 
-    public String getDiscountName() {
-        return DiscountName;
+    public String getDiscountname() {
+        return discountname;
     }
 
-    public void setDiscountName(String discountName) {
-        DiscountName = discountName;
+    public void setDiscountname(String discountname) {
+        this.discountname = discountname;
     }
 
-    public String getDiscountAmount() {
-        return DiscountAmount;
+    public String getDiscountamount() {
+        return discountamount;
     }
 
-    public void setDiscountAmount(String discountAmount) {
-        DiscountAmount = discountAmount;
+    public void setDiscountamount(String discountamount) {
+        this.discountamount = discountamount;
     }
 
-    public String getDiscountAmounttype() {
-        return DiscountAmounttype;
+    public String getDiscountamounttype() {
+        return discountamounttype;
     }
 
-    public void setDiscountAmounttype(String discountAmounttype) {
-        DiscountAmounttype = discountAmounttype;
+    public void setDiscountamounttype(String discountamounttype) {
+        this.discountamounttype = discountamounttype;
     }
 
-    public String getDiscountAmountconvert() {
-        return DiscountAmountconvert;
+    public String getDiscountamountconvert() {
+        return discountamountconvert;
     }
 
-    public void setDiscountAmountconvert(String discountAmountconvert) {
-        DiscountAmountconvert = discountAmountconvert;
+    public void setDiscountamountconvert(String discountamountconvert) {
+        this.discountamountconvert = discountamountconvert;
     }
 
-    public String getFareId() {
-        return FareId;
+    public String getFareid() {
+        return fareid;
     }
 
-    public void setFareId(String fareId) {
-        FareId = fareId;
+    public void setFareid(String fareid) {
+        this.fareid = fareid;
     }
 
-    public String getFareBasicfare() {
-        return FareBasicfare;
+    public String getFarebasicfare() {
+        return farebasicfare;
     }
 
-    public void setFareBasicfare(String fareBasicfare) {
-        FareBasicfare = fareBasicfare;
+    public void setFarebasicfare(String farebasicfare) {
+        this.farebasicfare = farebasicfare;
     }
 
-    public String getFareTuslahfee() {
-        return FareTuslahfee;
+    public String getFaretuslahfee() {
+        return faretuslahfee;
     }
 
-    public void setFareTuslahfee(String fareTuslahfee) {
-        FareTuslahfee = fareTuslahfee;
+    public void setFaretuslahfee(String faretuslahfee) {
+        this.faretuslahfee = faretuslahfee;
     }
 
-    public String getFareRsvfee() {
-        return FareRsvfee;
+    public String getFarersvfee() {
+        return farersvfee;
     }
 
-    public void setFareRsvfee(String fareRsvfee) {
-        FareRsvfee = fareRsvfee;
+    public void setFarersvfee(String farersvfee) {
+        this.farersvfee = farersvfee;
     }
 
-    public Integer getFareStfee() {
-        return FareStfee;
+    public Integer getFarestfee() {
+        return farestfee;
     }
 
-    public void setFareStfee(Integer fareStfee) {
-        FareStfee = fareStfee;
+    public void setFarestfee(Integer farestfee) {
+        this.farestfee = farestfee;
     }
 
-    public String getFareAddfee() {
-        return FareAddfee;
+    public String getFareaddfee() {
+        return fareaddfee;
     }
 
-    public void setFareAddfee(String fareAddfee) {
-        FareAddfee = fareAddfee;
+    public void setFareaddfee(String fareaddfee) {
+        this.fareaddfee = fareaddfee;
     }
 
-    public String getFareCompinsurance() {
-        return FareCompinsurance;
+    public String getFarecompinsurance() {
+        return farecompinsurance;
     }
 
-    public void setFareCompinsurance(String fareCompinsurance) {
-        FareCompinsurance = fareCompinsurance;
+    public void setFarecompinsurance(String farecompinsurance) {
+        this.farecompinsurance = farecompinsurance;
     }
 
-    public String getFareAddinsurance() {
-        return FareAddinsurance;
+    public String getFareaddinsurance() {
+        return fareaddinsurance;
     }
 
-    public void setFareAddinsurance(String fareAddinsurance) {
-        FareAddinsurance = fareAddinsurance;
+    public void setFareaddinsurance(String fareaddinsurance) {
+        this.fareaddinsurance = fareaddinsurance;
     }
 
-    public String getFarePsofare() {
-        return FarePsofare;
+    public String getFarepsofare() {
+        return farepsofare;
     }
 
-    public void setFarePsofare(String farePsofare) {
-        FarePsofare = farePsofare;
+    public void setFarepsofare(String farepsofare) {
+        this.farepsofare = farepsofare;
     }
 
-    public String getFareTotamount() {
-        return FareTotamount;
+    public String getFaretotamount() {
+        return faretotamount;
     }
 
-    public void setFareTotamount(String fareTotamount) {
-        FareTotamount = fareTotamount;
+    public void setFaretotamount(String faretotamount) {
+        this.faretotamount = faretotamount;
     }
 
-    public String getFlexiId() {
-        return FlexiId;
+    public String getFlexiid() {
+        return flexiid;
     }
 
-    public void setFlexiId(String flexiId) {
-        FlexiId = flexiId;
+    public void setFlexiid(String flexiid) {
+        this.flexiid = flexiid;
     }
 
-    public String getFlexiCode() {
-        return FlexiCode;
+    public String getFlexicode() {
+        return flexicode;
     }
 
-    public void setFlexiCode(String flexiCode) {
-        FlexiCode = flexiCode;
+    public void setFlexicode(String flexicode) {
+        this.flexicode = flexicode;
     }
 
-    public String getStasiunIdgatein() {
-        return StasiunIdgatein;
+    public String getStasiunidgatein() {
+        return stasiunidgatein;
     }
 
-    public void setStasiunIdgatein(String stasiunIdgatein) {
-        StasiunIdgatein = stasiunIdgatein;
+    public void setStasiunidgatein(String stasiunidgatein) {
+        this.stasiunidgatein = stasiunidgatein;
     }
 
-    public String getStasiunCodegateind() {
-        return StasiunCodegateind;
+    public String getStasiuncodegatein() {
+        return stasiuncodegatein;
     }
 
-    public void setStasiunCodegateind(String stasiunCodegateind) {
-        StasiunCodegateind = stasiunCodegateind;
+    public void setStasiuncodegatein(String stasiuncodegatein) {
+        this.stasiuncodegatein = stasiuncodegatein;
     }
 
-    public String getUnitIdgatein() {
-        return UnitIdgatein;
+    public String getUnitidgatein() {
+        return unitidgatein;
     }
 
-    public void setUnitIdgatein(String unitIdgatein) {
-        UnitIdgatein = unitIdgatein;
+    public void setUnitidgatein(String unitidgatein) {
+        this.unitidgatein = unitidgatein;
     }
 
-    public String getUnitCodegatein() {
-        return UnitCodegatein;
+    public String getUnitcodegatein() {
+        return unitcodegatein;
     }
 
-    public void setUnitCodegatein(String unitCodegatein) {
-        UnitCodegatein = unitCodegatein;
+    public void setUnitcodegatein(String unitcodegatein) {
+        this.unitcodegatein = unitcodegatein;
     }
 
     public LocalDateTime getGateinon() {
-        return Gateinon;
+        return gateinon;
     }
 
     public void setGateinon(LocalDateTime gateinon) {
-        Gateinon = gateinon;
+        this.gateinon = gateinon;
     }
 
-    public String getStasiunIdgateout() {
-        return StasiunIdgateout;
+    public String getStasiunidgateout() {
+        return stasiunidgateout;
     }
 
-    public void setStasiunIdgateout(String stasiunIdgateout) {
-        StasiunIdgateout = stasiunIdgateout;
+    public void setStasiunidgateout(String stasiunidgateout) {
+        this.stasiunidgateout = stasiunidgateout;
     }
 
-    public String getStasiunCodegateout() {
-        return StasiunCodegateout;
+    public String getStasiuncodegateout() {
+        return stasiuncodegateout;
     }
 
-    public void setStasiunCodegateout(String stasiunCodegateout) {
-        StasiunCodegateout = stasiunCodegateout;
+    public void setStasiuncodegateout(String stasiuncodegateout) {
+        this.stasiuncodegateout = stasiuncodegateout;
     }
 
-    public String getUnitIdgateout() {
-        return UnitIdgateout;
+    public String getUnitidgateout() {
+        return unitidgateout;
     }
 
-    public void setUnitIdgateout(String unitIdgateout) {
-        UnitIdgateout = unitIdgateout;
+    public void setUnitidgateout(String unitidgateout) {
+        this.unitidgateout = unitidgateout;
     }
 
-    public String getUnitCodegateout() {
-        return UnitCodegateout;
+    public String getUnitcodegateout() {
+        return unitcodegateout;
     }
 
-    public void setUnitCodegateout(String unitCodegateout) {
-        UnitCodegateout = unitCodegateout;
+    public void setUnitcodegateout(String unitcodegateout) {
+        this.unitcodegateout = unitcodegateout;
     }
 
     public LocalDateTime getGateouton() {
-        return Gateouton;
+        return gateouton;
     }
 
     public void setGateouton(LocalDateTime gateouton) {
-        Gateouton = gateouton;
+        this.gateouton = gateouton;
     }
 
-    public short getMaxPrint() {
-        return MaxPrint;
+    public short getMaxprint() {
+        return maxprint;
     }
 
-    public void setMaxPrint(short maxPrint) {
-        MaxPrint = maxPrint;
+    public void setMaxprint(short maxprint) {
+        this.maxprint = maxprint;
     }
 
     public short getRef() {
-        return Ref;
+        return ref;
     }
 
     public void setRef(short ref) {
-        Ref = ref;
+        this.ref = ref;
     }
 
     public short getStatus() {
-        return Status;
+        return status;
     }
 
     public void setStatus(short status) {
-        Status = status;
+        this.status = status;
     }
 
     public String getDomain() {
-        return Domain;
+        return domain;
     }
 
     public void setDomain(String domain) {
-        Domain = domain;
+        this.domain = domain;
     }
 
     public String getModifiedby() {
-        return Modifiedby;
+        return modifiedby;
     }
 
     public void setModifiedby(String modifiedby) {
-        Modifiedby = modifiedby;
+        this.modifiedby = modifiedby;
     }
 
     public LocalDateTime getModifiedon() {
-        return Modifiedon;
+        return modifiedon;
     }
 
     public void setModifiedon(LocalDateTime modifiedon) {
-        Modifiedon = modifiedon;
+        this.modifiedon = modifiedon;
     }
 
     public String getCreatedby() {
-        return Createdby;
+        return createdby;
     }
 
     public void setCreatedby(String createdby) {
-        Createdby = createdby;
+        this.createdby = createdby;
     }
 
     public LocalDateTime getCreatedon() {
-        return Createdon;
+        return createdon;
     }
 
     public void setCreatedon(LocalDateTime createdon) {
-        Createdon = createdon;
+        this.createdon = createdon;
     }
+
+    
 }
