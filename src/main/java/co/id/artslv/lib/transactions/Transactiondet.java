@@ -31,7 +31,7 @@ public class Transactiondet {
     private String id;
 
     @Column(name="c_transaction_id")
-    private String TransactionId;
+    private String transactionId;
 
     @Column(name="c_transaction_bookcode")
     private String TransactionBookcode;
@@ -346,11 +346,11 @@ public class Transactiondet {
     }
 
     public String getTransactionId() {
-        return TransactionId;
+        return transactionId;
     }
 
     public void setTransactionId(String transactionId) {
-        TransactionId = transactionId;
+        transactionId = transactionId;
     }
 
     public String getTransactionBookcode() {
