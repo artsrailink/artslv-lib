@@ -71,13 +71,13 @@ public class Transaction {
     private String email;
 
     @Column(name = "c_transaction_totpsgadult")
-    private double totpsgadult;
+    private int totpsgadult;
 
     @Column(name = "c_transaction_totpsgchild")
-    private Double totpsgchild;
+    private int totpsgchild;
 
     @Column(name = "c_transaction_totpsginfant")
-    private Double totpsginfant;
+    private int totpsginfant;
 
     @Column(name = "c_stasiun_idorg")
     private String stasiunidorg;
@@ -98,10 +98,10 @@ public class Transaction {
     private String schedulenoka;
 
     @Column(name = "c_schedule_localstat")
-    private Character schedulelocalstat;
+    private String schedulelocalstat;
 
     @Column(name = "c_schedule_trainname")
-    private Character scheduleTrainname;
+    private String scheduleTrainname;
 
     @Column(name = "c_trip_id")
     private String tripid;
@@ -196,22 +196,22 @@ public class Transaction {
     private LocalDateTime paidon;
 
     @Column(name = "c_transaction_smsbooksent")
-    private Character smsbooksent;
+    private String smsbooksent;
 
     @Column(name = "c_transaction_emailbooksent")
-    private Character emailbooksent;
+    private String emailbooksent;
 
     @Column(name = "c_transaction_smspaysent")
-    private Character smspaysent;
+    private String smspaysent;
 
     @Column(name = "c_transaction_emailpaysent")
-    private Character emailpaysent;
+    private String emailpaysent;
 
     @Column(name = "c_transaction_reroutestat")
-    private Character reroutestat;
+    private String reroutestat;
 
     @Column(name = "c_transaction_flexiredeemstat")
-    private Character flexiredeemstat;
+    private String flexiredeemstat;
 
     @Column(name = "c_transaction_ref1")
     private String ref1;
@@ -359,27 +359,27 @@ public class Transaction {
         this.email = email;
     }
 
-    public double getTotpsgadult() {
+    public int getTotpsgadult() {
         return totpsgadult;
     }
 
-    public void setTotpsgadult(double totpsgadult) {
+    public void setTotpsgadult(int totpsgadult) {
         this.totpsgadult = totpsgadult;
     }
 
-    public Double getTotpsgchild() {
+    public int getTotpsgchild() {
         return totpsgchild;
     }
 
-    public void setTotpsgchild(Double totpsgchild) {
+    public void setTotpsgchild(int totpsgchild) {
         this.totpsgchild = totpsgchild;
     }
 
-    public Double getTotpsginfant() {
+    public int getTotpsginfant() {
         return totpsginfant;
     }
 
-    public void setTotpsginfant(Double totpsginfant) {
+    public void setTotpsginfant(int totpsginfant) {
         this.totpsginfant = totpsginfant;
     }
 
@@ -431,19 +431,19 @@ public class Transaction {
         this.schedulenoka = schedulenoka;
     }
 
-    public Character getSchedulelocalstat() {
+    public String getSchedulelocalstat() {
         return schedulelocalstat;
     }
 
-    public void setSchedulelocalstat(Character schedulelocalstat) {
+    public void setSchedulelocalstat(String schedulelocalstat) {
         this.schedulelocalstat = schedulelocalstat;
     }
 
-    public Character getScheduleTrainname() {
+    public String getScheduleTrainname() {
         return scheduleTrainname;
     }
 
-    public void setScheduleTrainname(Character scheduleTrainname) {
+    public void setScheduleTrainname(String scheduleTrainname) {
         this.scheduleTrainname = scheduleTrainname;
     }
 
@@ -639,51 +639,51 @@ public class Transaction {
         this.paidon = paidon;
     }
 
-    public Character getSmsbooksent() {
+    public String getSmsbooksent() {
         return smsbooksent;
     }
 
-    public void setSmsbooksent(Character smsbooksent) {
+    public void setSmsbooksent(String smsbooksent) {
         this.smsbooksent = smsbooksent;
     }
 
-    public Character getEmailbooksent() {
+    public String getEmailbooksent() {
         return emailbooksent;
     }
 
-    public void setEmailbooksent(Character emailbooksent) {
+    public void setEmailbooksent(String emailbooksent) {
         this.emailbooksent = emailbooksent;
     }
 
-    public Character getSmspaysent() {
+    public String getSmspaysent() {
         return smspaysent;
     }
 
-    public void setSmspaysent(Character smspaysent) {
+    public void setSmspaysent(String smspaysent) {
         this.smspaysent = smspaysent;
     }
 
-    public Character getEmailpaysent() {
+    public String getEmailpaysent() {
         return emailpaysent;
     }
 
-    public void setEmailpaysent(Character emailpaysent) {
+    public void setEmailpaysent(String emailpaysent) {
         this.emailpaysent = emailpaysent;
     }
 
-    public Character getReroutestat() {
+    public String getReroutestat() {
         return reroutestat;
     }
 
-    public void setReroutestat(Character reroutestat) {
+    public void setReroutestat(String reroutestat) {
         this.reroutestat = reroutestat;
     }
 
-    public Character getFlexiredeemstat() {
+    public String getFlexiredeemstat() {
         return flexiredeemstat;
     }
 
-    public void setFlexiredeemstat(Character flexiredeemstat) {
+    public void setFlexiredeemstat(String flexiredeemstat) {
         this.flexiredeemstat = flexiredeemstat;
     }
 
