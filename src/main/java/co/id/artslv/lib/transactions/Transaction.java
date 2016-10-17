@@ -754,6 +754,7 @@ public class Transaction {
         Status = status;
     }
 
+
     public String getDomain() {
         return Domain;
     }
