@@ -38,15 +38,10 @@ public class Transaction {
     @Column(name = "c_transaction_transdate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
-    @JsonFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Transdate;
 
-    @Column(name = "c_transaction_departdate")
-    @JsonSerialize(using = LocalDateTimeSerializer.class)
-    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
-    @JsonFormat(pattern = "yyyy-MM-dd")
-    @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate Departdate;
 
     @Column(name = "c_transaction_totamount")
@@ -107,7 +102,11 @@ public class Transaction {
     private String TripId;
 
     @Column(name = "c_trip_date")
-    private String TripDate;
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    @Type(type = "org.hibernate.type.LocalDateType")
+    private LocalDate TripDate;
 
     @Column(name = "c_subclass_id")
     private String SubclassId;
@@ -166,28 +165,28 @@ public class Transaction {
     @Column(name = "c_transaction_bookedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
-    @JsonFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Bookedon;
 
     @Column(name = "c_transaction_booktimeouton")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
-    @JsonFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Booktimeouton;
 
     @Column(name = "c_transaction_paytimeouton")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
-    @JsonFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Paytimeouton;
 
     @Column(name = "c_transaction_paidon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
-    @JsonFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime Paidon;
 
@@ -451,11 +450,11 @@ public class Transaction {
         TripId = tripId;
     }
 
-    public String getTripDate() {
+    public LocalDate getTripDate() {
         return TripDate;
     }
 
-    public void setTripDate(String tripDate) {
+    public void setTripDate(LocalDate tripDate) {
         TripDate = tripDate;
     }
 
