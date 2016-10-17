@@ -312,7 +312,7 @@ public class Transactiondet {
     private short Ref;
 
     @Column(name="c_transactiondet_status")
-    private short Status;
+    private String Status;
 
     @Column(name="c_transactiondet_domain")
     private String Domain;
@@ -1009,11 +1009,11 @@ public class Transactiondet {
         Ref = ref;
     }
 
-    public short getStatus() {
+    public String getStatus() {
         return Status;
     }
 
-    public void setStatus(short status) {
+    public void setStatus(String status) {
         Status = status;
     }
 
