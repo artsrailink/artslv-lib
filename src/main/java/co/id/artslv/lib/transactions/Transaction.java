@@ -50,19 +50,19 @@ public class Transaction {
     private LocalDate departdate;
 
     @Column(name = "c_transaction_totamount")
-    private BigDecimal totamount;
+    private Double totamount;
 
     @Column(name = "c_transaction_extrafee")
-    private BigDecimal extrafee;
+    private Double extrafee;
 
     @Column(name = "c_transaction_netamount")
-    private BigDecimal netamount;
+    private Double netamount;
 
     @Column(name = "c_transaction_paidamount")
-    private BigDecimal paidamount;
+    private Double paidamount;
 
     @Column(name = "c_transaction_custname")
-    private BigDecimal custname;
+    private String custname;
 
     @Column(name = "c_transaction_phonenum")
     private String phonenum;
@@ -303,43 +303,43 @@ public class Transaction {
         this.departdate = departdate;
     }
 
-    public BigDecimal getTotamount() {
+    public Double getTotamount() {
         return totamount;
     }
 
-    public void setTotamount(BigDecimal totamount) {
+    public void setTotamount(Double totamount) {
         this.totamount = totamount;
     }
 
-    public BigDecimal getExtrafee() {
+    public Double getExtrafee() {
         return extrafee;
     }
 
-    public void setExtrafee(BigDecimal extrafee) {
+    public void setExtrafee(Double extrafee) {
         this.extrafee = extrafee;
     }
 
-    public BigDecimal getNetamount() {
+    public Double getNetamount() {
         return netamount;
     }
 
-    public void setNetamount(BigDecimal netamount) {
+    public void setNetamount(Double netamount) {
         this.netamount = netamount;
     }
 
-    public BigDecimal getPaidamount() {
+    public Double getPaidamount() {
         return paidamount;
     }
 
-    public void setPaidamount(BigDecimal paidamount) {
+    public void setPaidamount(Double paidamount) {
         this.paidamount = paidamount;
     }
 
-    public BigDecimal getCustname() {
+    public String getCustname() {
         return custname;
     }
 
-    public void setCustname(BigDecimal custname) {
+    public void setCustname(String custname) {
         this.custname = custname;
     }
 
