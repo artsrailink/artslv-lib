@@ -28,7 +28,7 @@ public class Pax {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String stamformdetcode;
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    private String wagondetrow;
+    private int wagondetrow;
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String wagondetcol;
     @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -106,11 +106,11 @@ public class Pax {
         this.stamformdetcode = stamformdetcode;
     }
 
-    public String getWagondetrow() {
+    public int getWagondetrow() {
         return wagondetrow;
     }
 
-    public void setWagondetrow(String wagondetrow) {
+    public void setWagondetrow(int wagondetrow) {
         this.wagondetrow = wagondetrow;
     }
 
