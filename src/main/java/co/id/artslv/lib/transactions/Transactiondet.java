@@ -49,7 +49,7 @@ public class Transactiondet {
     private LocalDateTime transactiontransdate;
 
     @Column(name="c_transaction_custname")
-    private BigDecimal transactioncustname;
+    private String transactioncustname;
 
     @Column(name="c_transaction_phonenum")
     private String transactionphonenum;
@@ -379,11 +379,11 @@ public class Transactiondet {
         this.transactiontransdate = transactiontransdate;
     }
 
-    public BigDecimal getTransactioncustname() {
+    public String getTransactioncustname() {
         return transactioncustname;
     }
 
-    public void setTransactioncustname(BigDecimal transactioncustname) {
+    public void setTransactioncustname(String transactioncustname) {
         this.transactioncustname = transactioncustname;
     }
 
