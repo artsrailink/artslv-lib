@@ -82,7 +82,7 @@ public class PropertySchedule {
     private String fareid;
 
     @Column(name="c_fare_totamount")
-    private int totamount;
+    private int faretotamount;
 
     @Column(name="c_seatavailable")
     private int seatavailable;
@@ -239,12 +239,12 @@ public class PropertySchedule {
         this.fareid = fareid;
     }
 
-    public int getTotamount() {
-        return totamount;
+    public int getFaretotamount() {
+        return faretotamount;
     }
 
-    public void setTotamount(int totamount) {
-        this.totamount = totamount;
+    public void setFaretotamount(int faretotamount) {
+        this.faretotamount = faretotamount;
     }
 
     public int getSeatavailable() {

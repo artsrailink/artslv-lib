@@ -10,11 +10,22 @@ import java.util.List;
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ScheduleData {
+
+    private String id;
     private String noka;
-    private String jambrangkat;
-    private String jamsampai;
+    private String trainname;
+    private String stopdeparture;
+    private String stoparrival;
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     private List<AllocationData> allocationDatas;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getNoka() {
         return noka;
@@ -24,6 +35,29 @@ public class ScheduleData {
         this.noka = noka;
     }
 
+    public String getTrainname() {
+        return trainname;
+    }
+
+    public void setTrainname(String trainname) {
+        this.trainname = trainname;
+    }
+
+    public String getStopdeparture() {
+        return stopdeparture;
+    }
+
+    public void setStopdeparture(String stopdeparture) {
+        this.stopdeparture = stopdeparture;
+    }
+
+    public String getStoparrival() {
+        return stoparrival;
+    }
+
+    public void setStoparrival(String stoparrival) {
+        this.stoparrival = stoparrival;
+    }
 
     public List<AllocationData> getAllocationDatas() {
         return allocationDatas;
@@ -31,22 +65,6 @@ public class ScheduleData {
 
     public void setAllocationDatas(List<AllocationData> allocationDatas) {
         this.allocationDatas = allocationDatas;
-    }
-
-    public String getJambrangkat() {
-        return jambrangkat;
-    }
-
-    public void setJambrangkat(String jambrangkat) {
-        this.jambrangkat = jambrangkat;
-    }
-
-    public String getJamsampai() {
-        return jamsampai;
-    }
-
-    public void setJamsampai(String jamsampai) {
-        this.jamsampai = jamsampai;
     }
 
     @Override
