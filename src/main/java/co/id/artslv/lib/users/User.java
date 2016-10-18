@@ -95,7 +95,7 @@ public class User {
     private LocalDate enddate;
 
     @Column(name = "c_usergroup_id")
-    private String usergroupId;
+    private String usergroupid;
 
     @Column(name = "c_user_status")
     private String status;
@@ -114,13 +114,13 @@ public class User {
     private LocalDateTime modifiedon;
 
     @Column(name = "c_stasiun_id")
-    private String stasiunId;
+    private String stasiunid;
 
-    @Column(name = "c_usertype_id")
-    private String usertypeId;
+    @Column(name = "c_user_type")
+    private String usertype;
 
     @Column(name = "c_user_bypassip")
-    private Character userBypassip;
+    private Character userbypassip;
 
     @Column(name = "c_user_createdby")
     private String createdby;
@@ -285,11 +285,11 @@ public class User {
     }
 
     public String getUsergroupId() {
-        return usergroupId;
+        return usergroupid;
     }
 
     public void setUsergroupId(String usergroupId) {
-        this.usergroupId = usergroupId;
+        this.usergroupid = usergroupId;
     }
 
     public String getStatus() {
@@ -324,28 +324,28 @@ public class User {
         this.modifiedon = modifiedon;
     }
 
-    public String getStasiunId() {
-        return stasiunId;
+    public String getStasiunid() {
+        return stasiunid;
     }
 
     public void setStasiunId(String stasiunId) {
-        this.stasiunId = stasiunId;
+        this.stasiunid = stasiunid;
     }
 
     public String getUsertypeId() {
-        return usertypeId;
+        return usertype;
     }
 
-    public void setUsertypeId(String usertypeId) {
-        this.usertypeId = usertypeId;
+    public void setUsertypeId(String usertype) {
+        this.usertype = usertype;
     }
 
     public Character getUserBypassip() {
-        return userBypassip;
+        return userbypassip;
     }
 
-    public void setUserBypassip(Character userBypassip) {
-        this.userBypassip = userBypassip;
+    public void setUserBypassip(Character userbypassip) {
+        this.userbypassip = userbypassip;
     }
 
     public String getCreatedby() {
