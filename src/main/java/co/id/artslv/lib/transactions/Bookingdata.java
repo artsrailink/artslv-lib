@@ -26,12 +26,21 @@ public class Bookingdata {
     private String org;
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String dest;    
+
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @JsonSerialize(using = LocalDateSerializer.class)
     @JsonDeserialize(using = LocalDateDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")    
     private LocalDate departdate;
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    @JsonSerialize(using = LocalDateSerializer.class)
+    @JsonDeserialize(using = LocalDateDeserializer.class)
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    @Type(type = "org.hibernate.type.LocalDateType")
+    private LocalDate arrivedate;
+
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String paycode;
     @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -74,9 +83,20 @@ public class Bookingdata {
     private BigDecimal bookbalance;
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private BigDecimal discamount;
-
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private String departtime;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private String arrivettime;
 
     List<Pax> paxlist;
+
+    public String getRqid() {
+        return rqid;
+    }
+
+    public void setRqid(String rqid) {
+        this.rqid = rqid;
+    }
 
     public String getOrg() {
         return org;
@@ -100,6 +120,22 @@ public class Bookingdata {
 
     public void setDepartdate(LocalDate departdate) {
         this.departdate = departdate;
+    }
+
+    public LocalDate getArrivedate() {
+        return arrivedate;
+    }
+
+    public void setArrivedate(LocalDate arrivedate) {
+        this.arrivedate = arrivedate;
+    }
+
+    public String getPaycode() {
+        return paycode;
+    }
+
+    public void setPaycode(String paycode) {
+        this.paycode = paycode;
     }
 
     public String getNoka() {
@@ -126,6 +162,22 @@ public class Bookingdata {
         this.totpsgadult = totpsgadult;
     }
 
+    public int getTotpsgchild() {
+        return totpsgchild;
+    }
+
+    public void setTotpsgchild(int totpsgchild) {
+        this.totpsgchild = totpsgchild;
+    }
+
+    public int getTotpsginfant() {
+        return totpsginfant;
+    }
+
+    public void setTotpsginfant(int totpsginfant) {
+        this.totpsginfant = totpsginfant;
+    }
+
     public String getSubclass() {
         return subclass;
     }
@@ -148,38 +200,6 @@ public class Bookingdata {
 
     public void setPhone(String phone) {
         this.phone = phone;
-    }
-
-    public List<Pax> getPaxlist() {
-        return paxlist;
-    }
-
-    public void setPaxlist(List<Pax> paxlist) {
-        this.paxlist = paxlist;
-    }
-
-    public String getPaycode() {
-        return paycode;
-    }
-
-    public void setPaycode(String paycode) {
-        this.paycode = paycode;
-    }
-
-    public int getTotpsgchild() {
-        return totpsgchild;
-    }
-
-    public void setTotpsgchild(int totpsgchild) {
-        this.totpsgchild = totpsgchild;
-    }
-
-    public int getTotpsginfant() {
-        return totpsginfant;
-    }
-
-    public void setTotpsginfant(int totpsginfant) {
-        this.totpsginfant = totpsginfant;
     }
 
     public String getEmail() {
@@ -228,7 +248,7 @@ public class Bookingdata {
 
     public void setTransdatetime(LocalDateTime transdatetime) {
         this.transdatetime = transdatetime;
-    }   
+    }
 
     public String getPropscheduleid() {
         return propscheduleid;
@@ -246,14 +266,6 @@ public class Bookingdata {
         this.bookcode = bookcode;
     }
 
-    public String getRqid() {
-        return rqid;
-    }
-
-    public void setRqid(String rqid) {
-        this.rqid = rqid;
-    }
-
     public BigDecimal getBookbalance() {
         return bookbalance;
     }
@@ -268,5 +280,29 @@ public class Bookingdata {
 
     public void setDiscamount(BigDecimal discamount) {
         this.discamount = discamount;
+    }
+
+    public String getDeparttime() {
+        return departtime;
+    }
+
+    public void setDeparttime(String departtime) {
+        this.departtime = departtime;
+    }
+
+    public String getArrivettime() {
+        return arrivettime;
+    }
+
+    public void setArrivettime(String arrivettime) {
+        this.arrivettime = arrivettime;
+    }
+
+    public List<Pax> getPaxlist() {
+        return paxlist;
+    }
+
+    public void setPaxlist(List<Pax> paxlist) {
+        this.paxlist = paxlist;
     }
 }
