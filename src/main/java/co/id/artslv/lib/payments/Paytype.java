@@ -60,7 +60,7 @@ public class Paytype {
     private Character Amounttype;
 
     @Column(name = "c_paytype_code")
-    private String Code;
+    private String code;
 
     @Column(name = "c_paytype_createdby")
     private String Createdby;
@@ -153,11 +153,11 @@ public class Paytype {
     }
 
     public String getCode() {
-        return Code;
+        return code;
     }
 
-    public void setCode(String Code) {
-        this.Code = Code;
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public String getCreatedby() {
