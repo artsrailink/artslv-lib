@@ -21,6 +21,8 @@ public class Pax {
     private String seat;
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private long amount;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private String ticketnum;
 
     public String getName() {
         return name;
@@ -78,4 +80,11 @@ public class Pax {
         this.amount = amount;
     }
 
+    public String getTicketnum() {
+        return ticketnum;
+    }
+
+    public void setTicketnum(String ticketnum) {
+        this.ticketnum = ticketnum;
+    }
 }
