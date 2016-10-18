@@ -23,6 +23,8 @@ public class Pax {
     private long amount;
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String ticketnum;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private String stamformdetcode;
 
     public String getName() {
         return name;
@@ -86,5 +88,13 @@ public class Pax {
 
     public void setTicketnum(String ticketnum) {
         this.ticketnum = ticketnum;
+    }
+
+    public String getStamformdetcode() {
+        return stamformdetcode;
+    }
+
+    public void setStamformdetcode(String stamformdetcode) {
+        this.stamformdetcode = stamformdetcode;
     }
 }
