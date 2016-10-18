@@ -76,10 +76,10 @@ public class Transactiondet {
     private String schedulenoka;
 
     @Column(name="c_schedule_localstat")
-    private Character schedulelocalstat;
+    private String schedulelocalstat;
 
     @Column(name="c_schedule_trainname")
-    private Character scheduletrainname;
+    private String scheduletrainname;
 
     @Column(name="c_trip_id")
     private String tripid;
@@ -168,10 +168,10 @@ public class Transactiondet {
     private LocalDateTime transactionpaidon;
 
     @Column(name="c_transaction_reroutestat")
-    private Character transactionreroutestat;
+    private String transactionreroutestat;
 
     @Column(name="c_transaction_flexiredeemstat")
-    private Character transactionflexiredeemstat;
+    private String transactionflexiredeemstat;
 
     @Column(name="c_transactiondet_psgname")
     private String psgname;
@@ -308,10 +308,10 @@ public class Transactiondet {
     private LocalDateTime gateouton;
 
     @Column(name="c_transactiondet_maxprint")
-    private short maxprint;
+    private int maxprint;
 
     @Column(name="c_transactiondet_ref")
-    private short ref;
+    private Integer ref;
 
     @Column(name="c_transactiondet_status")
     private String status;
@@ -451,19 +451,19 @@ public class Transactiondet {
         this.schedulenoka = schedulenoka;
     }
 
-    public Character getSchedulelocalstat() {
+    public String getSchedulelocalstat() {
         return schedulelocalstat;
     }
 
-    public void setSchedulelocalstat(Character schedulelocalstat) {
+    public void setSchedulelocalstat(String schedulelocalstat) {
         this.schedulelocalstat = schedulelocalstat;
     }
 
-    public Character getScheduletrainname() {
+    public String getScheduletrainname() {
         return scheduletrainname;
     }
 
-    public void setScheduletrainname(Character scheduletrainname) {
+    public void setScheduletrainname(String scheduletrainname) {
         this.scheduletrainname = scheduletrainname;
     }
 
@@ -643,19 +643,19 @@ public class Transactiondet {
         this.transactionpaidon = transactionpaidon;
     }
 
-    public Character getTransactionreroutestat() {
+    public String getTransactionreroutestat() {
         return transactionreroutestat;
     }
 
-    public void setTransactionreroutestat(Character transactionreroutestat) {
+    public void setTransactionreroutestat(String transactionreroutestat) {
         this.transactionreroutestat = transactionreroutestat;
     }
 
-    public Character getTransactionflexiredeemstat() {
+    public String getTransactionflexiredeemstat() {
         return transactionflexiredeemstat;
     }
 
-    public void setTransactionflexiredeemstat(Character transactionflexiredeemstat) {
+    public void setTransactionflexiredeemstat(String transactionflexiredeemstat) {
         this.transactionflexiredeemstat = transactionflexiredeemstat;
     }
 
@@ -995,19 +995,19 @@ public class Transactiondet {
         this.gateouton = gateouton;
     }
 
-    public short getMaxprint() {
+    public int getMaxprint() {
         return maxprint;
     }
 
-    public void setMaxprint(short maxprint) {
+    public void setMaxprint(int maxprint) {
         this.maxprint = maxprint;
     }
 
-    public short getRef() {
+    public Integer getRef() {
         return ref;
     }
 
-    public void setRef(short ref) {
+    public void setRef(Integer ref) {
         this.ref = ref;
     }
 
