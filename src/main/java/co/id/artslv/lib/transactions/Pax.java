@@ -2,6 +2,8 @@ package co.id.artslv.lib.transactions;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 
+import java.math.BigDecimal;
+
 /**
  * @author root
  */
@@ -20,7 +22,7 @@ public class Pax {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String seat;
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    private long amount;
+    private BigDecimal amount;
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String ticketnum;
     @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -80,11 +82,11 @@ public class Pax {
         this.idnum = idnum;
     }
 
-    public long getAmount() {
+    public BigDecimal getAmount() {
         return amount;
     }
 
-    public void setAmount(long amount) {
+    public void setAmount(BigDecimal amount) {
         this.amount = amount;
     }
 
