@@ -307,7 +307,7 @@ public class Transactiondet {
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime gateouton;
 
-    @Column(name="c_transactiondet_max_print")
+    @Column(name="c_transactiondet_maxprint")
     private short maxprint;
 
     @Column(name="c_transactiondet_ref")
