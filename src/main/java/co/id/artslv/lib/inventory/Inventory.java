@@ -22,96 +22,98 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "arts_t_inventory")
 public class Inventory {
-    @Column(name="c_inventory_id")
+
+    @Column(name = "c_inventory_id")
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name="c_schedule_id")
+    @Column(name = "c_schedule_id")
     private String scheduleid;
 
-    @Column(name="c_schedule_noka")
+    @Column(name = "c_schedule_noka")
     private String schedulenoka;
 
-    @Column(name="c_trip_id")
+    @Column(name = "c_trip_id")
     private String tripid;
 
-    @Column(name="c_trip_date")
+    @Column(name = "c_trip_date")
     @JsonSerialize(using = LocalDateSerializer.class)
     @JsonDeserialize(using = LocalDateDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate tripdate;
 
-    @Column(name="c_stop_id")
+    @Column(name = "c_stop_id")
     private String stopid;
 
-    @Column(name="c_stasiun_code")
+    @Column(name = "c_stasiun_code")
     private String stasiuncode;
 
-    @Column(name="c_stop_order")
+    @Column(name = "c_stop_order")
     private int stoporder;
 
-    @Column(name="c_stamformdet_id")
+    @Column(name = "c_stamformdet_id")
     private String stamformdetid;
 
-    @Column(name="c_stamformdet_code")
+    @Column(name = "c_stamformdet_code")
     private String stamformdetcode;
 
-    @Column(name="c_stamformdet_order")
+    @Column(name = "c_stamformdet_order")
     private int stamformdetorder;
 
-    @Column(name="c_wagondet_id")
+    @Column(name = "c_wagondet_id")
     private String wagondetid;
 
-    @Column(name="c_wagondet_row")
+    @Column(name = "c_wagondet_row")
     private int wagondetrow;
 
-    @Column(name="c_wagondet_col")
+    @Column(name = "c_wagondet_col")
     private String wagondetcol;
 
-    @Column(name="c_subclass_id")
+    @Column(name = "c_subclass_id")
     private String subclassid;
 
-    @Column(name="c_subclass_code")
+    @Column(name = "c_subclass_code")
     private String subclasscode;
 
-    @Column(name="c_inventory_bookstat")
+    @Column(name = "c_inventory_bookstat")
     private String bookstat;
 
-    @Column(name="c_inventory_status")
+    @Column(name = "c_inventory_status")
     private String status;
 
-    @Column(name="c_inventory_domain")
+    @Column(name = "c_inventory_domain")
     private String domain;
 
-    @Column(name="c_inventory_modifiedby")
+    @Column(name = "c_inventory_modifiedby")
     private String modifiedby;
 
-    @Column(name="c_inventory_modifiedon")
+    @Column(name = "c_inventory_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime modifiedon;
 
-    @Column(name="c_wagondet_colnum")
+    @Column(name = "c_wagondet_colnum")
     private int wagondetcolnum;
 
-    @Column(name="c_inventory_createdby")
+    @Column(name = "c_inventory_createdby")
     private String createdby;
 
-    @Column(name="c_inventory_createdon")
+    @Column(name = "c_inventory_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime createdon;
 
-    @Column(name="c_transaction_bookcode")
+    @Column(name = "c_transaction_bookcode")
     private String bookcode;
-
+    @Column(name = "c_transactiondet_order")
+    private int transactiondetorder;
 
     public String getId() {
         return id;
@@ -311,6 +313,14 @@ public class Inventory {
 
     public void setBookcode(String bookcode) {
         this.bookcode = bookcode;
+    }
+
+    public int getTransactiondetorder() {
+        return transactiondetorder;
+    }
+
+    public void setTransactiondetorder(int transactiondetorder) {
+        this.transactiondetorder = transactiondetorder;
     }
 
 }

@@ -8,6 +8,8 @@ import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
+
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -24,12 +26,21 @@ public class Bookingdata {
     private String org;
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String dest;    
+
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @JsonSerialize(using = LocalDateSerializer.class)
     @JsonDeserialize(using = LocalDateDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")    
     private LocalDate departdate;
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    @JsonSerialize(using = LocalDateSerializer.class)
+    @JsonDeserialize(using = LocalDateDeserializer.class)
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    @Type(type = "org.hibernate.type.LocalDateType")
+    private LocalDate arrivedate;
+
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String paycode;
     @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -51,13 +62,13 @@ public class Bookingdata {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String email;
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    private long totamount;
+    private BigDecimal totamount;
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    private long extrafee;
+    private BigDecimal extrafee;
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    private long netamount;
+    private BigDecimal netamount;
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    private long paidamoount;
+    private BigDecimal paidamoount;
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
@@ -67,9 +78,25 @@ public class Bookingdata {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String propscheduleid;
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    private String bookcode;    
-    
+    private String bookcode;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private BigDecimal bookbalance;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private BigDecimal discamount;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private String departtime;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private String arrivetime;
+
     List<Pax> paxlist;
+
+    public String getRqid() {
+        return rqid;
+    }
+
+    public void setRqid(String rqid) {
+        this.rqid = rqid;
+    }
 
     public String getOrg() {
         return org;
@@ -93,6 +120,22 @@ public class Bookingdata {
 
     public void setDepartdate(LocalDate departdate) {
         this.departdate = departdate;
+    }
+
+    public LocalDate getArrivedate() {
+        return arrivedate;
+    }
+
+    public void setArrivedate(LocalDate arrivedate) {
+        this.arrivedate = arrivedate;
+    }
+
+    public String getPaycode() {
+        return paycode;
+    }
+
+    public void setPaycode(String paycode) {
+        this.paycode = paycode;
     }
 
     public String getNoka() {
@@ -119,6 +162,22 @@ public class Bookingdata {
         this.totpsgadult = totpsgadult;
     }
 
+    public int getTotpsgchild() {
+        return totpsgchild;
+    }
+
+    public void setTotpsgchild(int totpsgchild) {
+        this.totpsgchild = totpsgchild;
+    }
+
+    public int getTotpsginfant() {
+        return totpsginfant;
+    }
+
+    public void setTotpsginfant(int totpsginfant) {
+        this.totpsginfant = totpsginfant;
+    }
+
     public String getSubclass() {
         return subclass;
     }
@@ -143,38 +202,6 @@ public class Bookingdata {
         this.phone = phone;
     }
 
-    public List<Pax> getPaxlist() {
-        return paxlist;
-    }
-
-    public void setPaxlist(List<Pax> paxlist) {
-        this.paxlist = paxlist;
-    }
-
-    public String getPaycode() {
-        return paycode;
-    }
-
-    public void setPaycode(String paycode) {
-        this.paycode = paycode;
-    }
-
-    public int getTotpsgchild() {
-        return totpsgchild;
-    }
-
-    public void setTotpsgchild(int totpsgchild) {
-        this.totpsgchild = totpsgchild;
-    }
-
-    public int getTotpsginfant() {
-        return totpsginfant;
-    }
-
-    public void setTotpsginfant(int totpsginfant) {
-        this.totpsginfant = totpsginfant;
-    }
-
     public String getEmail() {
         return email;
     }
@@ -183,35 +210,35 @@ public class Bookingdata {
         this.email = email;
     }
 
-    public long getTotamount() {
+    public BigDecimal getTotamount() {
         return totamount;
     }
 
-    public void setTotamount(long totamount) {
+    public void setTotamount(BigDecimal totamount) {
         this.totamount = totamount;
     }
 
-    public long getExtrafee() {
+    public BigDecimal getExtrafee() {
         return extrafee;
     }
 
-    public void setExtrafee(long extrafee) {
+    public void setExtrafee(BigDecimal extrafee) {
         this.extrafee = extrafee;
     }
 
-    public long getNetamount() {
+    public BigDecimal getNetamount() {
         return netamount;
     }
 
-    public void setNetamount(long netamount) {
+    public void setNetamount(BigDecimal netamount) {
         this.netamount = netamount;
     }
 
-    public long getPaidamoount() {
+    public BigDecimal getPaidamoount() {
         return paidamoount;
     }
 
-    public void setPaidamoount(long paidamoount) {
+    public void setPaidamoount(BigDecimal paidamoount) {
         this.paidamoount = paidamoount;
     }
 
@@ -221,7 +248,7 @@ public class Bookingdata {
 
     public void setTransdatetime(LocalDateTime transdatetime) {
         this.transdatetime = transdatetime;
-    }   
+    }
 
     public String getPropscheduleid() {
         return propscheduleid;
@@ -239,12 +266,43 @@ public class Bookingdata {
         this.bookcode = bookcode;
     }
 
-    public String getRqid() {
-        return rqid;
+    public BigDecimal getBookbalance() {
+        return bookbalance;
     }
 
-    public void setRqid(String rqid) {
-        this.rqid = rqid;
+    public void setBookbalance(BigDecimal bookbalance) {
+        this.bookbalance = bookbalance;
     }
-    
+
+    public BigDecimal getDiscamount() {
+        return discamount;
+    }
+
+    public void setDiscamount(BigDecimal discamount) {
+        this.discamount = discamount;
+    }
+
+    public String getDeparttime() {
+        return departtime;
+    }
+
+    public void setDeparttime(String departtime) {
+        this.departtime = departtime;
+    }
+
+    public String getArrivetime() {
+        return arrivetime;
+    }
+
+    public void setArrivetime(String arrivetime) {
+        this.arrivetime = arrivetime;
+    }
+
+    public List<Pax> getPaxlist() {
+        return paxlist;
+    }
+
+    public void setPaxlist(List<Pax> paxlist) {
+        this.paxlist = paxlist;
+    }
 }

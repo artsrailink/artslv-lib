@@ -2,6 +2,8 @@ package co.id.artslv.lib.transactions;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 
+import java.math.BigDecimal;
+
 /**
  * @author root
  */
@@ -20,7 +22,17 @@ public class Pax {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String seat;
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    private long amount;
+    private BigDecimal amount;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private String ticketnum;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private String stamformdetcode;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private String wagondetrow;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private String wagondetcol;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private String status;
 
     public String getName() {
         return name;
@@ -70,12 +82,51 @@ public class Pax {
         this.idnum = idnum;
     }
 
-    public long getAmount() {
+    public BigDecimal getAmount() {
         return amount;
     }
 
-    public void setAmount(long amount) {
+    public void setAmount(BigDecimal amount) {
         this.amount = amount;
     }
 
+    public String getTicketnum() {
+        return ticketnum;
+    }
+
+    public void setTicketnum(String ticketnum) {
+        this.ticketnum = ticketnum;
+    }
+
+    public String getStamformdetcode() {
+        return stamformdetcode;
+    }
+
+    public void setStamformdetcode(String stamformdetcode) {
+        this.stamformdetcode = stamformdetcode;
+    }
+
+    public String getWagondetrow() {
+        return wagondetrow;
+    }
+
+    public void setWagondetrow(String wagondetrow) {
+        this.wagondetrow = wagondetrow;
+    }
+
+    public String getWagondetcol() {
+        return wagondetcol;
+    }
+
+    public void setWagondetcol(String wagondetcol) {
+        this.wagondetcol = wagondetcol;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 }

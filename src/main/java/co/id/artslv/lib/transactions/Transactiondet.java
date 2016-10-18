@@ -19,69 +19,68 @@ import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
 
 /**
- * @author  root
+ * @author root
  */
-
 @Entity
-@Table(name="arts_t_transactiondet")
+@Table(name = "arts_t_transactiondet")
 public class Transactiondet {
 
-    @Column(name="c_transactiondet_id")
+    @Column(name = "c_transactiondet_id")
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name="c_transaction_id")
+    @Column(name = "c_transaction_id")
     private String transactionid;
 
-    @Column(name="c_transaction_bookcode")
+    @Column(name = "c_transaction_bookcode")
     private String transactionbookcode;
 
-    @Column(name="c_transaction_paycode")
+    @Column(name = "c_transaction_paycode")
     private String transactionpaycode;
 
-    @Column(name="c_transaction_transdate")
+    @Column(name = "c_transaction_transdate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime transactiontransdate;
 
-    @Column(name="c_transaction_custname")
+    @Column(name = "c_transaction_custname")
     private String transactioncustname;
 
-    @Column(name="c_transaction_phonenum")
+    @Column(name = "c_transaction_phonenum")
     private String transactionphonenum;
 
-    @Column(name="c_transaction_email")
+    @Column(name = "c_transaction_email")
     private String transactionemail;
 
-    @Column(name="c_stasiun_idorg")
+    @Column(name = "c_stasiun_idorg")
     private String stasiunidorg;
 
-    @Column(name="c_stasiun_codeorg")
+    @Column(name = "c_stasiun_codeorg")
     private String stasiuncodeorg;
 
-    @Column(name="c_stasiun_iddes")
+    @Column(name = "c_stasiun_iddes")
     private String stasiuniddes;
 
-    @Column(name="c_stasiun_codedes")
+    @Column(name = "c_stasiun_codedes")
     private String stasiuncodedes;
 
-    @Column(name="c_schedule_id")
+    @Column(name = "c_schedule_id")
     private String scheduleid;
 
-    @Column(name="c_schedule_noka")
+    @Column(name = "c_schedule_noka")
     private String schedulenoka;
 
-    @Column(name="c_schedule_localstat")
+    @Column(name = "c_schedule_localstat")
     private String schedulelocalstat;
 
-    @Column(name="c_schedule_trainname")
+    @Column(name = "c_schedule_trainname")
     private String scheduletrainname;
 
-    @Column(name="c_trip_id")
+    @Column(name = "c_trip_id")
     private String tripid;
 
     @Column(name = "c_trip_date")
@@ -91,253 +90,257 @@ public class Transactiondet {
     @Type(type = "org.hibernate.type.LocalDateType")
     private LocalDate tripdate;
 
-    @Column(name="c_subclass_id")
+    @Column(name = "c_subclass_id")
     private String subclassid;
 
-    @Column(name="c_subclass_code")
+    @Column(name = "c_subclass_code")
     private String subclasscode;
 
-    @Column(name="c_user_idbook")
+    @Column(name = "c_user_idbook")
     private String useridbook;
 
-    @Column(name="c_user_fullnamebook")
+    @Column(name = "c_user_fullnamebook")
     private String userfullnamebook;
 
-    @Column(name="c_unit_idbook")
+    @Column(name = "c_unit_idbook")
     private String unitidbook;
 
-    @Column(name="c_unit_codebook")
+    @Column(name = "c_unit_codebook")
     private String unitcodebook;
 
-    @Column(name="c_shift_idbook")
+    @Column(name = "c_shift_idbook")
     private String shiftidbook;
 
-    @Column(name="c_channel_idbook")
+    @Column(name = "c_channel_idbook")
     private String channelidbook;
 
-    @Column(name="c_channel_codebook")
+    @Column(name = "c_channel_codebook")
     private String channelcodebook;
 
-    @Column(name="c_user_idpay")
+    @Column(name = "c_user_idpay")
     private String useridpay;
 
-    @Column(name="c_user_fullnamepay")
+    @Column(name = "c_user_fullnamepay")
     private String userfullnamepay;
 
-    @Column(name="c_unit_idpay")
+    @Column(name = "c_unit_idpay")
     private String unitidpay;
 
-    @Column(name="c_unit_codepay")
+    @Column(name = "c_unit_codepay")
     private String unitcodepay;
 
-    @Column(name="c_shift_idpay")
+    @Column(name = "c_shift_idpay")
     private String shiftidpay;
 
-    @Column(name="c_channel_idpay")
+    @Column(name = "c_channel_idpay")
     private String channelidpay;
 
-    @Column(name="c_channel_codepay")
+    @Column(name = "c_channel_codepay")
     private String channelcodepay;
 
-    @Column(name="c_transaction_bookedon")
+    @Column(name = "c_transaction_bookedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime transactionbookedon;
 
-    @Column(name="c_transaction_booktimeouton")
+    @Column(name = "c_transaction_booktimeouton")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd  HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime transactionbooktimeouton;
 
-    @Column(name="c_transaction_paytimeouton")
+    @Column(name = "c_transaction_paytimeouton")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd  HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime transactionpaytimeouton;
 
-    @Column(name="c_transaction_paidon")
+    @Column(name = "c_transaction_paidon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime transactionpaidon;
 
-    @Column(name="c_transaction_reroutestat")
+    @Column(name = "c_transaction_reroutestat")
     private String transactionreroutestat;
 
-    @Column(name="c_transaction_flexiredeemstat")
+    @Column(name = "c_transaction_flexiredeemstat")
     private String transactionflexiredeemstat;
 
-    @Column(name="c_transactiondet_psgname")
+    @Column(name = "c_transactiondet_psgname")
     private String psgname;
 
-    @Column(name="c_transactiondet_psgid")
+    @Column(name = "c_transactiondet_psgid")
     private String psgid;
 
-    @Column(name="c_stamformdet_id")
+    @Column(name = "c_stamformdet_id")
     private String stamformdetid;
 
-    @Column(name="c_stamformdet_code")
+    @Column(name = "c_stamformdet_code")
     private String stamformdetcode;
 
-    @Column(name="c_wagondet_id")
+    @Column(name = "c_wagondet_id")
     private String wagondetid;
 
-    @Column(name="c_wagondet_row")
-    private String wagondetrow;
+    @Column(name = "c_wagondet_row")
+    private int wagondetrow;
 
-    @Column(name="c_wagondet_col")
+    @Column(name = "c_wagondet_col")
     private String wagondetcol;
 
-    @Column(name="c_transactiondet_amount")
+    @Column(name = "c_transactiondet_amount")
     private BigDecimal amount;
 
-    @Column(name="c_transactiondet_ticketnum")
+    @Column(name = "c_transactiondet_ticketnum")
     private String ticketnum;
 
-    @Column(name="c_member_id")
+    @Column(name = "c_member_id")
     private String memberid;
 
-    @Column(name="c_reduction_id")
+    @Column(name = "c_reduction_id")
     private String reductionid;
 
-    @Column(name="c_reduction_name")
+    @Column(name = "c_reduction_name")
     private String reductionname;
 
-    @Column(name="c_reduction_amount")
+    @Column(name = "c_reduction_amount")
     private String reductionamount;
 
-    @Column(name="c_reduction_amounttype")
+    @Column(name = "c_reduction_amounttype")
     private String reductionamounttype;
 
-    @Column(name="c_reduction_amountconvert")
+    @Column(name = "c_reduction_amountconvert")
     private String reductionamountconvert;
 
-    @Column(name="c_discount_id")
+    @Column(name = "c_discount_id")
     private String discountid;
 
-    @Column(name="c_discount_name")
+    @Column(name = "c_discount_name")
     private String discountname;
 
-    @Column(name="c_discount_amount")
+    @Column(name = "c_discount_amount")
     private String discountamount;
 
-    @Column(name="c_discount_amounttype")
+    @Column(name = "c_discount_amounttype")
     private String discountamounttype;
 
-    @Column(name="c_discount_amountconvert")
+    @Column(name = "c_discount_amountconvert")
     private String discountamountconvert;
 
-    @Column(name="c_fare_id")
+    @Column(name = "c_fare_id")
     private String fareid;
 
-    @Column(name="c_fare_basicfare")
-    private String farebasicfare;
+    @Column(name = "c_fare_basicfare")
+    private BigDecimal farebasicfare;
 
-    @Column(name="c_fare_tuslahfee")
-    private String faretuslahfee;
+    @Column(name = "c_fare_tuslahfee")
+    private BigDecimal faretuslahfee;
 
-    @Column(name="c_fare_rsvfee")
-    private String farersvfee;
+    @Column(name = "c_fare_rsvfee")
+    private BigDecimal farersvfee;
 
-    @Column(name="c_fare_stfee")
-    private Integer farestfee;
+    @Column(name = "c_fare_stfee")
+    private BigDecimal farestfee;
 
-    @Column(name="c_fare_addfee")
-    private String fareaddfee;
+    @Column(name = "c_fare_addfee")
+    private BigDecimal fareaddfee;
 
-    @Column(name="c_fare_compinsurance")
-    private String farecompinsurance;
+    @Column(name = "c_fare_compinsurance")
+    private BigDecimal farecompinsurance;
 
-    @Column(name="c_fare_addinsurance")
-    private String fareaddinsurance;
+    @Column(name = "c_fare_addinsurance")
+    private BigDecimal fareaddinsurance;
 
-    @Column(name="c_fare_psofare")
-    private String farepsofare;
+    @Column(name = "c_fare_psofare")
+    private BigDecimal farepsofare;
 
-    @Column(name="c_fare_totamount")
-    private String faretotamount;
+    @Column(name = "c_fare_totamount")
+    private BigDecimal faretotamount;
 
-    @Column(name="c_flexi_id")
+    @Column(name = "c_flexi_id")
     private String flexiid;
 
-    @Column(name="c_flexi_code")
+    @Column(name = "c_flexi_code")
     private String flexicode;
 
-    @Column(name="c_stasiun_idgatein")
+    @Column(name = "c_stasiun_idgatein")
     private String stasiunidgatein;
 
-    @Column(name="c_stasiun_codegatein")
+    @Column(name = "c_stasiun_codegatein")
     private String stasiuncodegatein;
 
-    @Column(name="c_unit_idgatein")
+    @Column(name = "c_unit_idgatein")
     private String unitidgatein;
 
-    @Column(name="c_unit_codegatein")
+    @Column(name = "c_unit_codegatein")
     private String unitcodegatein;
 
-    @Column(name="c_transactiondet_gateinon")
+    @Column(name = "c_transactiondet_gateinon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime gateinon;
 
-    @Column(name="c_stasiun_idgateout")
+    @Column(name = "c_stasiun_idgateout")
     private String stasiunidgateout;
 
-    @Column(name="c_stasiun_codegateout")
+    @Column(name = "c_stasiun_codegateout")
     private String stasiuncodegateout;
 
-    @Column(name="c_unit_idgateout")
+    @Column(name = "c_unit_idgateout")
     private String unitidgateout;
 
-    @Column(name="c_unit_codegateout")
+    @Column(name = "c_unit_codegateout")
     private String unitcodegateout;
 
-    @Column(name="c_transactiondet_gateouton")
+    @Column(name = "c_transactiondet_gateouton")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime gateouton;
 
-    @Column(name="c_transactiondet_maxprint")
+    @Column(name = "c_transactiondet_maxprint")
     private int maxprint;
 
-    @Column(name="c_transactiondet_ref")
+    @Column(name = "c_transactiondet_ref")
     private Integer ref;
 
-    @Column(name="c_transactiondet_status")
+    @Column(name = "c_transactiondet_status")
     private String status;
 
-    @Column(name="c_transactiondet_domain")
+    @Column(name = "c_transactiondet_domain")
     private String domain;
 
-    @Column(name="c_transactiondet_modifiedby")
+    @Column(name = "c_transactiondet_modifiedby")
     private String modifiedby;
 
-    @Column(name="c_transactiondet_modifiedon")
+    @Column(name = "c_transactiondet_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime modifiedon;
 
-    @Column(name="c_transactiondet_createdby")
+    @Column(name = "c_transactiondet_createdby")
     private String createdby;
 
-    @Column(name="c_transactiondet_createdon")
+    @Column(name = "c_transactiondet_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime createdon;
+    @Column(name = "c_transactiondet_order")
+    private int order;
+    @Column(name = "c_transactiondet_releasestat")
+    private String releasestat;
 
     public String getId() {
         return id;
@@ -699,11 +702,11 @@ public class Transactiondet {
         this.wagondetid = wagondetid;
     }
 
-    public String getWagondetrow() {
+    public int getWagondetrow() {
         return wagondetrow;
     }
 
-    public void setWagondetrow(String wagondetrow) {
+    public void setWagondetrow(int wagondetrow) {
         this.wagondetrow = wagondetrow;
     }
 
@@ -827,75 +830,75 @@ public class Transactiondet {
         this.fareid = fareid;
     }
 
-    public String getFarebasicfare() {
+    public BigDecimal getFarebasicfare() {
         return farebasicfare;
     }
 
-    public void setFarebasicfare(String farebasicfare) {
+    public void setFarebasicfare(BigDecimal farebasicfare) {
         this.farebasicfare = farebasicfare;
     }
 
-    public String getFaretuslahfee() {
+    public BigDecimal getFaretuslahfee() {
         return faretuslahfee;
     }
 
-    public void setFaretuslahfee(String faretuslahfee) {
+    public void setFaretuslahfee(BigDecimal faretuslahfee) {
         this.faretuslahfee = faretuslahfee;
     }
 
-    public String getFarersvfee() {
+    public BigDecimal getFarersvfee() {
         return farersvfee;
     }
 
-    public void setFarersvfee(String farersvfee) {
+    public void setFarersvfee(BigDecimal farersvfee) {
         this.farersvfee = farersvfee;
     }
 
-    public Integer getFarestfee() {
+    public BigDecimal getFarestfee() {
         return farestfee;
     }
 
-    public void setFarestfee(Integer farestfee) {
+    public void setFarestfee(BigDecimal farestfee) {
         this.farestfee = farestfee;
     }
 
-    public String getFareaddfee() {
+    public BigDecimal getFareaddfee() {
         return fareaddfee;
     }
 
-    public void setFareaddfee(String fareaddfee) {
+    public void setFareaddfee(BigDecimal fareaddfee) {
         this.fareaddfee = fareaddfee;
     }
 
-    public String getFarecompinsurance() {
+    public BigDecimal getFarecompinsurance() {
         return farecompinsurance;
     }
 
-    public void setFarecompinsurance(String farecompinsurance) {
+    public void setFarecompinsurance(BigDecimal farecompinsurance) {
         this.farecompinsurance = farecompinsurance;
     }
 
-    public String getFareaddinsurance() {
+    public BigDecimal getFareaddinsurance() {
         return fareaddinsurance;
     }
 
-    public void setFareaddinsurance(String fareaddinsurance) {
+    public void setFareaddinsurance(BigDecimal fareaddinsurance) {
         this.fareaddinsurance = fareaddinsurance;
     }
 
-    public String getFarepsofare() {
+    public BigDecimal getFarepsofare() {
         return farepsofare;
     }
 
-    public void setFarepsofare(String farepsofare) {
+    public void setFarepsofare(BigDecimal farepsofare) {
         this.farepsofare = farepsofare;
     }
 
-    public String getFaretotamount() {
+    public BigDecimal getFaretotamount() {
         return faretotamount;
     }
 
-    public void setFaretotamount(String faretotamount) {
+    public void setFaretotamount(BigDecimal faretotamount) {
         this.faretotamount = faretotamount;
     }
 
@@ -1059,5 +1062,20 @@ public class Transactiondet {
         this.createdon = createdon;
     }
 
+    public int getOrder() {
+        return order;
+    }
+
+    public void setOrder(int order) {
+        this.order = order;
+    }
+
+    public String getReleasestat() {
+        return releasestat;
+    }
+
+    public void setReleasestat(String releasestat) {
+        this.releasestat = releasestat;
+    }
 
 }
