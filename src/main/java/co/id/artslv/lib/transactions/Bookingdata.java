@@ -86,7 +86,7 @@ public class Bookingdata {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String departtime;
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    private String arrivettime;
+    private String arrivetime;
 
     List<Pax> paxlist;
 
@@ -290,12 +290,12 @@ public class Bookingdata {
         this.departtime = departtime;
     }
 
-    public String getArrivettime() {
-        return arrivettime;
+    public String getArrivetime() {
+        return arrivetime;
     }
 
-    public void setArrivettime(String arrivettime) {
-        this.arrivettime = arrivettime;
+    public void setArrivetime(String arrivetime) {
+        this.arrivetime = arrivetime;
     }
 
     public List<Pax> getPaxlist() {
