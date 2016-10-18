@@ -29,6 +29,8 @@ public class Pax {
     private String wagondetrow;
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String wagondetcol;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private String status;
 
     public String getName() {
         return name;
@@ -116,5 +118,13 @@ public class Pax {
 
     public void setWagondetcol(String wagondetcol) {
         this.wagondetcol = wagondetcol;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }
