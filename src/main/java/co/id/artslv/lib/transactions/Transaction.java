@@ -62,7 +62,7 @@ public class Transaction {
     private BigDecimal paidamount;
 
     @Column(name = "c_transaction_custname")
-    private BigDecimal custname;
+    private String custname;
 
     @Column(name = "c_transaction_phonenum")
     private String phonenum;
@@ -335,14 +335,15 @@ public class Transaction {
         this.paidamount = paidamount;
     }
 
-    public BigDecimal getCustname() {
+    public String getCustname() {
         return custname;
     }
 
-    public void setCustname(BigDecimal custname) {
+    public void setCustname(String custname) {
         this.custname = custname;
     }
-
+    
+    
     public String getPhonenum() {
         return phonenum;
     }
