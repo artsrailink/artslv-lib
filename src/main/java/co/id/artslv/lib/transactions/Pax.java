@@ -25,6 +25,10 @@ public class Pax {
     private String ticketnum;
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String stamformdetcode;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private String wagondetrow;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private String wagondetcol;
 
     public String getName() {
         return name;
@@ -96,5 +100,21 @@ public class Pax {
 
     public void setStamformdetcode(String stamformdetcode) {
         this.stamformdetcode = stamformdetcode;
+    }
+
+    public String getWagondetrow() {
+        return wagondetrow;
+    }
+
+    public void setWagondetrow(String wagondetrow) {
+        this.wagondetrow = wagondetrow;
+    }
+
+    public String getWagondetcol() {
+        return wagondetcol;
+    }
+
+    public void setWagondetcol(String wagondetcol) {
+        this.wagondetcol = wagondetcol;
     }
 }
