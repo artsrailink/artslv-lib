@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
  * @author root
  */
 public class Pax {
-    
+
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String idnum;
     @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -15,10 +15,12 @@ public class Pax {
     private String address;
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String phone;
-    @JsonInclude(JsonInclude.Include.NON_NULL)    
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private String inventoryid;
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String seat;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private long amount;
 
     public String getName() {
         return name;
@@ -58,7 +60,7 @@ public class Pax {
 
     public void setSeat(String seat) {
         this.seat = seat;
-    } 
+    }
 
     public String getIdnum() {
         return idnum;
@@ -66,6 +68,14 @@ public class Pax {
 
     public void setIdnum(String idnum) {
         this.idnum = idnum;
-    }   
-    
+    }
+
+    public long getAmount() {
+        return amount;
+    }
+
+    public void setAmount(long amount) {
+        this.amount = amount;
+    }
+
 }

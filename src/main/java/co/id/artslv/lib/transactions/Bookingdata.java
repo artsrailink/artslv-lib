@@ -19,6 +19,8 @@ import org.hibernate.annotations.Type;
 public class Bookingdata {
     
     @JsonInclude(JsonInclude.Include.NON_NULL)
+    private String rqid;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private String org;
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String dest;    
@@ -225,6 +227,14 @@ public class Bookingdata {
 
     public void setBookcode(String bookcode) {
         this.bookcode = bookcode;
+    }
+
+    public String getRqid() {
+        return rqid;
+    }
+
+    public void setRqid(String rqid) {
+        this.rqid = rqid;
     }
     
 }

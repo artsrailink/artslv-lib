@@ -43,7 +43,7 @@ public class PropertySchedule {
     private LocalDate tripdate;
 
     @Column(name="c_stasiun_idorg")
-    private String stasiunorg;
+    private String stasiunidorg;
 
     @Column(name="c_stasiun_codeorg")
     private String stasiuncodeorg;
@@ -55,7 +55,7 @@ public class PropertySchedule {
     private String stopdeparture;
 
     @Column(name="c_stasiun_iddes")
-    private String statsiuniddes;
+    private String stasiuniddes;
 
     @Column(name="c_stasiun_codedes")
     private String stasiuncodedes;
@@ -135,14 +135,6 @@ public class PropertySchedule {
         this.tripdate = tripdate;
     }
 
-    public String getStasiunorg() {
-        return stasiunorg;
-    }
-
-    public void setStasiunorg(String stasiunorg) {
-        this.stasiunorg = stasiunorg;
-    }
-
     public String getStasiuncodeorg() {
         return stasiuncodeorg;
     }
@@ -165,14 +157,6 @@ public class PropertySchedule {
 
     public void setStopdeparture(String stopdeparture) {
         this.stopdeparture = stopdeparture;
-    }
-
-    public String getStatsiuniddes() {
-        return statsiuniddes;
-    }
-
-    public void setStatsiuniddes(String statsiuniddes) {
-        this.statsiuniddes = statsiuniddes;
     }
 
     public String getStasiuncodedes() {
@@ -254,4 +238,21 @@ public class PropertySchedule {
     public void setSeatavailable(int seatavailable) {
         this.seatavailable = seatavailable;
     }
+
+    public String getStasiunidorg() {
+        return stasiunidorg;
+    }
+
+    public void setStasiunidorg(String stasiunidorg) {
+        this.stasiunidorg = stasiunidorg;
+    }
+
+    public String getStasiuniddes() {
+        return stasiuniddes;
+    }
+
+    public void setStasiuniddes(String stasiuniddes) {
+        this.stasiuniddes = stasiuniddes;
+    }
+    
 }
