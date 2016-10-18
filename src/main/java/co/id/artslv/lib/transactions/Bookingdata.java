@@ -35,6 +35,8 @@ public class Bookingdata {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String noka;
     @JsonInclude(JsonInclude.Include.NON_NULL)
+    private String trainname;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private int totpsgadult;
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private int totpsgchild;
@@ -99,6 +101,14 @@ public class Bookingdata {
 
     public void setNoka(String noka) {
         this.noka = noka;
+    }
+
+    public String getTrainname() {
+        return trainname;
+    }
+
+    public void setTrainname(String trainname) {
+        this.trainname = trainname;
     }
 
     public int getTotpsgadult() {
