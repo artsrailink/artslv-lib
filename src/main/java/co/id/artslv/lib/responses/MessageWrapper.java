@@ -4,8 +4,10 @@ import co.id.artslv.lib.utility.CustomErrorResponse;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectReader;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -94,11 +96,13 @@ public class MessageWrapper<T>{
         this.customErrorResponse = customErrorResponse;
     }
     @JsonIgnore
-    public <V> V getValue(String json,String name,Class<V> v) throws IOException {
+    public <V> V getValue(String json, String name, TypeReference<V> tf) throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
         JsonNode jsonNode = objectMapper.readTree(json);
         JsonNode jsonNode1 = jsonNode.path("response");
 
-        return objectMapper.treeToValue(jsonNode1.path(name),v);
+        ObjectReader reader = objectMapper.readerFor(tf);
+
+        return reader.readValue(jsonNode1.path(name));
     }
 }
