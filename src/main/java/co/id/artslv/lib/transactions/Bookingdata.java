@@ -67,8 +67,10 @@ public class Bookingdata {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String propscheduleid;
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    private String bookcode;    
-    
+    private String bookcode;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private long bookbalance;
+
     List<Pax> paxlist;
 
     public String getOrg() {
@@ -246,5 +248,12 @@ public class Bookingdata {
     public void setRqid(String rqid) {
         this.rqid = rqid;
     }
-    
+
+    public long getBookbalance() {
+        return bookbalance;
+    }
+
+    public void setBookbalance(long bookbalance) {
+        this.bookbalance = bookbalance;
+    }
 }
