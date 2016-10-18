@@ -72,6 +72,9 @@ public class Bookingdata {
     private String bookcode;
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private BigDecimal bookbalance;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private BigDecimal discamount;
+
 
     List<Pax> paxlist;
 
@@ -257,5 +260,13 @@ public class Bookingdata {
 
     public void setBookbalance(BigDecimal bookbalance) {
         this.bookbalance = bookbalance;
+    }
+
+    public BigDecimal getDiscamount() {
+        return discamount;
+    }
+
+    public void setDiscamount(BigDecimal discamount) {
+        this.discamount = discamount;
     }
 }
