@@ -39,12 +39,16 @@ public class MessageWrapper<T>{
         this.status = status;
         this.message = message;
         for(T t:values){
-            if (t.getClass()==List.class || t.getClass()==ArrayList.class ){
-                String key = ((List)t).get(0).getClass().getSimpleName().toLowerCase()+"list";
-                response.put(key,t);
-            }else{
-                String key = t.getClass().getSimpleName().toLowerCase();
-                response.put(key,t);
+            if(t!=null){
+                if (t.getClass()==List.class || t.getClass()==ArrayList.class ){
+                    if(!((List)t).isEmpty()){
+                        String key = ((List)t).get(0).getClass().getSimpleName().toLowerCase()+"list";
+                        response.put(key,t);
+                    }
+                }else{
+                    String key = t.getClass().getSimpleName().toLowerCase();
+                    response.put(key,t);
+                }
             }
         }
     }
