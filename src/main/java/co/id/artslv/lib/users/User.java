@@ -29,108 +29,108 @@ public class User {
     private String id;
 
     @Column(name = "c_user_username")
-    private String Username;
+    private String username;
 
     @Column(name = "c_user_password")
-    private String Password;
+    private String password;
 
     @Column(name = "c_user_rqid")
-    private String Rqid;
+    private String rqid;
 
     @Column(name = "c_user_firstname")
-    private String Firstname;
+    private String firstname;
 
     @Column(name = "c_user_lastname")
-    private String Lastname;
+    private String lastname;
 
     @Column(name = "c_user_callname")
-    private String Callname;
+    private String callname;
 
     @Column(name = "c_user_dateofbirth")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
-    private LocalDate Dateofbirth;
+    private LocalDate dateofbirth;
 
     @Column(name = "c_user_phone")
-    private String Phone;
+    private String phone;
 
     @Column(name = "c_user_fax")
-    private String Fax;
+    private String fax;
 
     @Column(name = "c_user_mobile")
-    private String Mobile;
+    private String mobile;
 
     @Column(name = "c_user_email")
-    private String Email;
+    private String email;
 
     @Column(name = "c_user_altemail")
-    private String Altemail;
+    private String altemail;
 
     @Column(name = "c_user_address1")
-    private String Address1;
+    private String address1;
 
     @Column(name = "c_user_address2")
-    private String Address2;
+    private String address2;
 
     @Column(name = "c_user_postalcode")
-    private String Postalcode;
+    private String postalcode;
 
     @Column(name = "c_user_loginattempt")
-    private double Loginattempt;
+    private double loginattempt;
 
     @Column(name = "c_user_startdate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
-    private LocalDate Startdate;
+    private LocalDate startdate;
 
     @Column(name = "c_user_enddate")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
-    private LocalDate Enddate;
+    private LocalDate enddate;
 
     @Column(name = "c_usergroup_id")
-    private String UsergroupId;
+    private String usergroupId;
 
     @Column(name = "c_user_status")
-    private String Status;
+    private String status;
 
     @Column(name = "c_user_domain")
-    private String Domain;
+    private String domain;
 
     @Column(name = "c_user_modifiedby")
-    private String Modifiedby;
+    private String modifiedby;
 
     @Column(name = "c_user_modifiedon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
-    private LocalDateTime Modifiedon;
+    private LocalDateTime modifiedon;
 
     @Column(name = "c_stasiun_id")
-    private String StasiunId;
+    private String stasiunId;
 
     @Column(name = "c_usertype_id")
-    private String UsertypeId;
+    private String usertypeId;
 
     @Column(name = "c_user_bypassip")
-    private Character UserBypassip;
+    private Character userBypassip;
 
     @Column(name = "c_user_createdby")
-    private String Createdby;
+    private String createdby;
 
     @Column(name = "c_user_createdon")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Type(type = "org.hibernate.type.LocalDateTimeType")
-    private LocalDateTime Createdon;
+    private LocalDateTime createdon;
 
     public String getId() {
         return id;
@@ -141,229 +141,226 @@ public class User {
     }
 
     public String getUsername() {
-        return Username;
+        return username;
     }
 
-    public void setUsername(String Username) {
-        this.Username = Username;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
-        return Password;
+        return password;
     }
 
-    public void setPassword(String Password) {
-        this.Password = Password;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getRqid() {
-        return Rqid;
+        return rqid;
     }
 
-    public void setRqid(String Rqid) {
-        this.Rqid = Rqid;
+    public void setRqid(String rqid) {
+        this.rqid = rqid;
     }
 
     public String getFirstname() {
-        return Firstname;
+        return firstname;
     }
 
-    public void setFirstname(String Firstname) {
-        this.Firstname = Firstname;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
 
     public String getLastname() {
-        return Lastname;
+        return lastname;
     }
 
-    public void setLastname(String Lastname) {
-        this.Lastname = Lastname;
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
     public String getCallname() {
-        return Callname;
+        return callname;
     }
 
-    public void setCallname(String Callname) {
-        this.Callname = Callname;
+    public void setCallname(String callname) {
+        this.callname = callname;
     }
 
     public LocalDate getDateofbirth() {
-        return Dateofbirth;
+        return dateofbirth;
     }
 
-    public void setDateofbirth(LocalDate Dateofbirth) {
-        this.Dateofbirth = Dateofbirth;
+    public void setDateofbirth(LocalDate dateofbirth) {
+        this.dateofbirth = dateofbirth;
     }
 
     public String getPhone() {
-        return Phone;
+        return phone;
     }
 
-    public void setPhone(String Phone) {
-        this.Phone = Phone;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public String getFax() {
-        return Fax;
+        return fax;
     }
 
-    public void setFax(String Fax) {
-        this.Fax = Fax;
+    public void setFax(String fax) {
+        this.fax = fax;
     }
 
     public String getMobile() {
-        return Mobile;
+        return mobile;
     }
 
-    public void setMobile(String Mobile) {
-        this.Mobile = Mobile;
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
-    public void setEmail(String Email) {
-        this.Email = Email;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getAltemail() {
-        return Altemail;
+        return altemail;
     }
 
-    public void setAltemail(String Altemail) {
-        this.Altemail = Altemail;
+    public void setAltemail(String altemail) {
+        this.altemail = altemail;
     }
 
     public String getAddress1() {
-        return Address1;
+        return address1;
     }
 
-    public void setAddress1(String Address1) {
-        this.Address1 = Address1;
+    public void setAddress1(String address1) {
+        this.address1 = address1;
     }
 
     public String getAddress2() {
-        return Address2;
+        return address2;
     }
 
-    public void setAddress2(String Address2) {
-        this.Address2 = Address2;
+    public void setAddress2(String address2) {
+        this.address2 = address2;
     }
 
     public String getPostalcode() {
-        return Postalcode;
+        return postalcode;
     }
 
-    public void setPostalcode(String Postalcode) {
-        this.Postalcode = Postalcode;
+    public void setPostalcode(String postalcode) {
+        this.postalcode = postalcode;
     }
 
     public double getLoginattempt() {
-        return Loginattempt;
+        return loginattempt;
     }
 
-    public void setLoginattempt(double Loginattempt) {
-        this.Loginattempt = Loginattempt;
+    public void setLoginattempt(double loginattempt) {
+        this.loginattempt = loginattempt;
     }
 
     public LocalDate getStartdate() {
-        return Startdate;
+        return startdate;
     }
 
-    public void setStartdate(LocalDate Startdate) {
-        this.Startdate = Startdate;
+    public void setStartdate(LocalDate startdate) {
+        this.startdate = startdate;
     }
 
     public LocalDate getEnddate() {
-        return Enddate;
+        return enddate;
     }
 
-    public void setEnddate(LocalDate Enddate) {
-        this.Enddate = Enddate;
+    public void setEnddate(LocalDate enddate) {
+        this.enddate = enddate;
     }
 
     public String getUsergroupId() {
-        return UsergroupId;
+        return usergroupId;
     }
 
-    public void setUsergroupId(String UsergroupId) {
-        this.UsergroupId = UsergroupId;
+    public void setUsergroupId(String usergroupId) {
+        this.usergroupId = usergroupId;
     }
 
     public String getStatus() {
-        return Status;
+        return status;
     }
 
-    public void setStatus(String Status) {
-        this.Status = Status;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public String getDomain() {
-        return Domain;
+        return domain;
     }
 
-    public void setDomain(String Domain) {
-        this.Domain = Domain;
+    public void setDomain(String domain) {
+        this.domain = domain;
     }
 
     public String getModifiedby() {
-        return Modifiedby;
+        return modifiedby;
     }
 
-    public void setModifiedby(String Modifiedby) {
-        this.Modifiedby = Modifiedby;
+    public void setModifiedby(String modifiedby) {
+        this.modifiedby = modifiedby;
     }
 
     public LocalDateTime getModifiedon() {
-        return Modifiedon;
+        return modifiedon;
     }
 
-    public void setModifiedon(LocalDateTime Modifiedon) {
-        this.Modifiedon = Modifiedon;
+    public void setModifiedon(LocalDateTime modifiedon) {
+        this.modifiedon = modifiedon;
     }
 
     public String getStasiunId() {
-        return StasiunId;
+        return stasiunId;
     }
 
-    public void setStasiunId(String StasiunId) {
-        this.StasiunId = StasiunId;
+    public void setStasiunId(String stasiunId) {
+        this.stasiunId = stasiunId;
     }
 
     public String getUsertypeId() {
-        return UsertypeId;
+        return usertypeId;
     }
 
-    public void setUsertypeId(String UsertypeId) {
-        this.UsertypeId = UsertypeId;
+    public void setUsertypeId(String usertypeId) {
+        this.usertypeId = usertypeId;
     }
 
     public Character getUserBypassip() {
-        return UserBypassip;
+        return userBypassip;
     }
 
-    public void setUserBypassip(Character UserBypassip) {
-        this.UserBypassip = UserBypassip;
+    public void setUserBypassip(Character userBypassip) {
+        this.userBypassip = userBypassip;
     }
 
     public String getCreatedby() {
-        return Createdby;
+        return createdby;
     }
 
-    public void setCreatedby(String Createdby) {
-        this.Createdby = Createdby;
+    public void setCreatedby(String createdby) {
+        this.createdby = createdby;
     }
 
     public LocalDateTime getCreatedon() {
-        return Createdon;
+        return createdon;
     }
 
-    public void setCreatedon(LocalDateTime Createdon) {
-        this.Createdon = Createdon;
+    public void setCreatedon(LocalDateTime createdon) {
+        this.createdon = createdon;
     }
-
-        
-    
 }
