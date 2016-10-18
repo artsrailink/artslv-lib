@@ -7,6 +7,8 @@ import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
+
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import javax.persistence.Column;
@@ -51,16 +53,16 @@ public class Transaction {
     private LocalDate departdate;
 
     @Column(name = "c_transaction_totamount")
-    private Double totamount;
+    private BigDecimal totamount;
 
     @Column(name = "c_transaction_extrafee")
-    private Double extrafee;
+    private BigDecimal extrafee;
 
     @Column(name = "c_transaction_netamount")
-    private Double netamount;
+    private BigDecimal netamount;
 
     @Column(name = "c_transaction_paidamount")
-    private Double paidamount;
+    private BigDecimal paidamount;
 
     @Column(name = "c_transaction_custname")
     private String custname;
@@ -304,35 +306,35 @@ public class Transaction {
         this.departdate = departdate;
     }
 
-    public Double getTotamount() {
+    public BigDecimal getTotamount() {
         return totamount;
     }
 
-    public void setTotamount(Double totamount) {
+    public void setTotamount(BigDecimal totamount) {
         this.totamount = totamount;
     }
 
-    public Double getExtrafee() {
+    public BigDecimal getExtrafee() {
         return extrafee;
     }
 
-    public void setExtrafee(Double extrafee) {
+    public void setExtrafee(BigDecimal extrafee) {
         this.extrafee = extrafee;
     }
 
-    public Double getNetamount() {
+    public BigDecimal getNetamount() {
         return netamount;
     }
 
-    public void setNetamount(Double netamount) {
+    public void setNetamount(BigDecimal netamount) {
         this.netamount = netamount;
     }
 
-    public Double getPaidamount() {
+    public BigDecimal getPaidamount() {
         return paidamount;
     }
 
-    public void setPaidamount(Double paidamount) {
+    public void setPaidamount(BigDecimal paidamount) {
         this.paidamount = paidamount;
     }
 
