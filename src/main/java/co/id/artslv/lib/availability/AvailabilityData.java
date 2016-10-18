@@ -1,7 +1,6 @@
 package co.id.artslv.lib.availability;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
@@ -10,7 +9,6 @@ import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
 import org.hibernate.annotations.Type;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.List;
 
 /**
@@ -19,38 +17,72 @@ import java.util.List;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class AvailabilityData {
 
+    private String id;
+
     @JsonSerialize(using = LocalDateSerializer.class)
     @JsonDeserialize(using = LocalDateDeserializer.class)
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Type(type = "org.hibernate.type.LocalDateType")
-    private LocalDate departdate;
-    private String stationOrg;
-    private String stationDest;
+    private LocalDate tripdate;
+
+    private String stasiunnameorg;
+
+    private String stasiunnamedes;
+
+    private String stasiuncodeorg;
+
+    private String stasiuncodedes;
+
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     private List<ScheduleData> scheduleDatas;
 
-    public LocalDate getDepartdate() {
-        return departdate;
+
+    public String getId() {
+        return id;
     }
 
-    public void setDepartdate(LocalDate departdate) {
-        this.departdate = departdate;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public String getStationOrg() {
-        return stationOrg;
+    public LocalDate getTripdate() {
+        return tripdate;
     }
 
-    public void setStationOrg(String stationOrg) {
-        this.stationOrg = stationOrg;
+    public void setTripdate(LocalDate tripdate) {
+        this.tripdate = tripdate;
     }
 
-    public String getStationDest() {
-        return stationDest;
+    public String getStasiunnameorg() {
+        return stasiunnameorg;
     }
 
-    public void setStationDest(String stationDest) {
-        this.stationDest = stationDest;
+    public void setStasiunnameorg(String stasiunnameorg) {
+        this.stasiunnameorg = stasiunnameorg;
+    }
+
+    public String getStasiunnamedes() {
+        return stasiunnamedes;
+    }
+
+    public void setStasiunnamedes(String stasiunnamedes) {
+        this.stasiunnamedes = stasiunnamedes;
+    }
+
+    public String getStasiuncodeorg() {
+        return stasiuncodeorg;
+    }
+
+    public void setStasiuncodeorg(String stasiuncodeorg) {
+        this.stasiuncodeorg = stasiuncodeorg;
+    }
+
+    public String getStasiuncodedes() {
+        return stasiuncodedes;
+    }
+
+    public void setStasiuncodedes(String stasiuncodedes) {
+        this.stasiuncodedes = stasiuncodedes;
     }
 
     public List<ScheduleData> getScheduleDatas() {
@@ -68,15 +100,15 @@ public class AvailabilityData {
 
         AvailabilityData that = (AvailabilityData) o;
 
-        if (!stationOrg.equals(that.stationOrg)) return false;
-        return stationDest.equals(that.stationDest);
+        if (!stasiuncodeorg.equals(that.stasiuncodeorg)) return false;
+        return stasiuncodedes.equals(that.stasiuncodedes);
 
     }
 
     @Override
     public int hashCode() {
-        int result = stationOrg.hashCode();
-        result = 31 * result + stationDest.hashCode();
+        int result = stasiuncodeorg.hashCode();
+        result = 31 * result + stasiuncodedes.hashCode();
         return result;
     }
 }
