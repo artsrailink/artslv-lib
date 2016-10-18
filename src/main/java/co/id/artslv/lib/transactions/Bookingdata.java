@@ -8,6 +8,8 @@ import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
+
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -51,13 +53,13 @@ public class Bookingdata {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String email;
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    private long totamount;
+    private BigDecimal totamount;
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    private long extrafee;
+    private BigDecimal extrafee;
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    private long netamount;
+    private BigDecimal netamount;
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    private long paidamoount;
+    private BigDecimal paidamoount;
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
@@ -69,7 +71,7 @@ public class Bookingdata {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String bookcode;
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    private long bookbalance;
+    private BigDecimal bookbalance;
 
     List<Pax> paxlist;
 
@@ -185,35 +187,35 @@ public class Bookingdata {
         this.email = email;
     }
 
-    public long getTotamount() {
+    public BigDecimal getTotamount() {
         return totamount;
     }
 
-    public void setTotamount(long totamount) {
+    public void setTotamount(BigDecimal totamount) {
         this.totamount = totamount;
     }
 
-    public long getExtrafee() {
+    public BigDecimal getExtrafee() {
         return extrafee;
     }
 
-    public void setExtrafee(long extrafee) {
+    public void setExtrafee(BigDecimal extrafee) {
         this.extrafee = extrafee;
     }
 
-    public long getNetamount() {
+    public BigDecimal getNetamount() {
         return netamount;
     }
 
-    public void setNetamount(long netamount) {
+    public void setNetamount(BigDecimal netamount) {
         this.netamount = netamount;
     }
 
-    public long getPaidamoount() {
+    public BigDecimal getPaidamoount() {
         return paidamoount;
     }
 
-    public void setPaidamoount(long paidamoount) {
+    public void setPaidamoount(BigDecimal paidamoount) {
         this.paidamoount = paidamoount;
     }
 
@@ -249,11 +251,11 @@ public class Bookingdata {
         this.rqid = rqid;
     }
 
-    public long getBookbalance() {
+    public BigDecimal getBookbalance() {
         return bookbalance;
     }
 
-    public void setBookbalance(long bookbalance) {
+    public void setBookbalance(BigDecimal bookbalance) {
         this.bookbalance = bookbalance;
     }
 }
