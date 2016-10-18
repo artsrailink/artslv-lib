@@ -79,6 +79,13 @@ public class Boarding {
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime modifiedon;
 
+    @Column(name = "c_boarding_time")
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @Type(type = "org.hibernate.type.LocalDateTimeType")
+    private LocalDateTime time;
+
     public String getId() {
         return id;
     }
@@ -189,5 +196,13 @@ public class Boarding {
 
     public void setModifiedon(LocalDateTime modifiedon) {
         this.modifiedon = modifiedon;
+    }
+
+    public LocalDateTime getTime() {
+        return time;
+    }
+
+    public void setTime(LocalDateTime time) {
+        this.time = time;
     }
 }
