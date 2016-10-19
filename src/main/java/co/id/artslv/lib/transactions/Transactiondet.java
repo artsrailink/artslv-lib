@@ -338,7 +338,7 @@ public class Transactiondet {
     @Type(type = "org.hibernate.type.LocalDateTimeType")
     private LocalDateTime createdon;
     @Column(name = "c_transactiondet_order")
-    private int order;
+    private Integer order;
     @Column(name = "c_transactiondet_releasestat")
     private String releasestat;
 
@@ -1062,11 +1062,11 @@ public class Transactiondet {
         this.createdon = createdon;
     }
 
-    public int getOrder() {
+    public Integer getOrder() {
         return order;
     }
 
-    public void setOrder(int order) {
+    public void setOrder(Integer order) {
         this.order = order;
     }
 

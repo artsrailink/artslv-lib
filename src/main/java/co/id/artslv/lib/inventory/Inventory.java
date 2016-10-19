@@ -113,7 +113,7 @@ public class Inventory {
     @Column(name = "c_transaction_bookcode")
     private String bookcode;
     @Column(name = "c_transactiondet_order")
-    private int transactiondetorder;
+    private Integer transactiondetorder;
 
     public String getId() {
         return id;
@@ -315,11 +315,11 @@ public class Inventory {
         this.bookcode = bookcode;
     }
 
-    public int getTransactiondetorder() {
+    public Integer getTransactiondetorder() {
         return transactiondetorder;
     }
 
-    public void setTransactiondetorder(int transactiondetorder) {
+    public void setTransactiondetorder(Integer transactiondetorder) {
         this.transactiondetorder = transactiondetorder;
     }
 
