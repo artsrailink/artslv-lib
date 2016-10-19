@@ -9,3 +9,4 @@ artslv-lib.iml
 #maven ignore
 target
 
+/.project
