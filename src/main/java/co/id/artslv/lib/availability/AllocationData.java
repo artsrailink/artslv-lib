@@ -4,6 +4,7 @@ package co.id.artslv.lib.availability;
  * Created by root on 13/10/16.
  */
 public class AllocationData {
+    private String id;
     private String subclasscode;
     private int seatavailable;
     private int faretotamount;
@@ -30,5 +31,13 @@ public class AllocationData {
 
     public void setFaretotamount(int faretotamount) {
         this.faretotamount = faretotamount;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }
