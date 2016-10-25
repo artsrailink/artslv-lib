@@ -101,7 +101,7 @@ public class MessageWrapper<T>{
         ObjectMapper objectMapper = new ObjectMapper();
         JsonNode jsonNode = objectMapper.readTree(json);
         JsonNode jsonNode1 = jsonNode.path("response");
-        if(jsonNode1.asText().equals("")){
+        if(jsonNode1.toString().equals("")){
             return null;
         }
 
