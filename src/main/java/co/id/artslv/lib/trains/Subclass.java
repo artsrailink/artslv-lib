@@ -142,4 +142,5 @@ public class Subclass {
     public String toString() {
         return subclasscode+", "+note;
     }
+
 }
