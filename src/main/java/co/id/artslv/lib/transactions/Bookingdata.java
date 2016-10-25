@@ -25,7 +25,11 @@ public class Bookingdata {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String org;
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    private String dest;    
+    private String dest;  
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private String orgname;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private String destname;        
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @JsonSerialize(using = LocalDateSerializer.class)
@@ -305,4 +309,22 @@ public class Bookingdata {
     public void setPaidamount(BigDecimal paidamount) {
         this.paidamount = paidamount;
     }
+
+    public String getOrgname() {
+        return orgname;
+    }
+
+    public void setOrgname(String orgname) {
+        this.orgname = orgname;
+    }
+
+    public String getDestname() {
+        return destname;
+    }
+
+    public void setDestname(String destname) {
+        this.destname = destname;
+    }
+    
+    
 }
