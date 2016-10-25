@@ -68,7 +68,7 @@ public class Bookingdata {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private BigDecimal netamount;
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    private BigDecimal paidamoount;
+    private BigDecimal paidamount;
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
@@ -234,14 +234,6 @@ public class Bookingdata {
         this.netamount = netamount;
     }
 
-    public BigDecimal getPaidamoount() {
-        return paidamoount;
-    }
-
-    public void setPaidamoount(BigDecimal paidamoount) {
-        this.paidamoount = paidamoount;
-    }
-
     public LocalDateTime getTransdatetime() {
         return transdatetime;
     }
@@ -304,5 +296,13 @@ public class Bookingdata {
 
     public void setPaxlist(List<Pax> paxlist) {
         this.paxlist = paxlist;
+    }
+
+    public BigDecimal getPaidamount() {
+        return paidamount;
+    }
+
+    public void setPaidamount(BigDecimal paidamount) {
+        this.paidamount = paidamount;
     }
 }
