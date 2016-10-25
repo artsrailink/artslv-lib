@@ -21,6 +21,7 @@ import java.util.Map;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(value = { "customErrorResponse"})
 public class MessageWrapper<T>{
+    private static final ObjectMapper om = new ObjectMapper();
     private T wrapped;
     private Map<String,T> response = new HashMap<>();
     private String status;
@@ -100,9 +101,22 @@ public class MessageWrapper<T>{
         ObjectMapper objectMapper = new ObjectMapper();
         JsonNode jsonNode = objectMapper.readTree(json);
         JsonNode jsonNode1 = jsonNode.path("response");
+        if(jsonNode1.asText().equals("")){
+            return null;
+        }
 
         ObjectReader reader = objectMapper.readerFor(tf);
 
         return reader.readValue(jsonNode1.path(name));
+    }
+
+    public static MessageWrapper<Object> getMessageAndStatus(String jsondata){
+        try {
+            MessageWrapper<Object> result = om.readValue(jsondata,MessageWrapper.class);
+            return result;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 }
