@@ -137,4 +137,9 @@ public class Subclass {
     public void setCreatedon(LocalDateTime createdon) {
         this.createdon = createdon;
     }
+
+    @Override
+    public String toString() {
+        return subclasscode+", "+note;
+    }
 }
