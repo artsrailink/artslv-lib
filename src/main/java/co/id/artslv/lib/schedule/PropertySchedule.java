@@ -87,6 +87,12 @@ public class PropertySchedule {
     @Column(name="c_seatavailable")
     private int seatavailable;
 
+    @Column(name = "c_stop_orderorg")
+    private int stoporderorg;
+
+    @Column(name = "c_stop_orderdes")
+    private int stoporderdest;
+
     public String getId() {
         return id;
     }
@@ -254,5 +260,20 @@ public class PropertySchedule {
     public void setStasiuniddes(String stasiuniddes) {
         this.stasiuniddes = stasiuniddes;
     }
-    
+
+    public int getStoporderorg() {
+        return stoporderorg;
+    }
+
+    public void setStoporderorg(int stoporderorg) {
+        this.stoporderorg = stoporderorg;
+    }
+
+    public int getStoporderdest() {
+        return stoporderdest;
+    }
+
+    public void setStoporderdest(int stoporderdest) {
+        this.stoporderdest = stoporderdest;
+    }
 }
